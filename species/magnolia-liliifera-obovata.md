@@ -56,7 +56,7 @@ Fine, even Magnoliaceae wood with marginal parenchyma lines and greenish heartwo
 
 DNA/origin.
 
-## Image sources for 10x end-grain photographs
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Magnolia+liliifera+var.+obovata)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Magnolia+liliifera+var.+obovata)

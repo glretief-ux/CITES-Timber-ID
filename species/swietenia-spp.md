@@ -68,7 +68,13 @@ Microscopy separates Swietenia from Khaya (ray structure, crystals); DNA/MS for 
 | *Swietenia humilis* | Pacific coast mahogany | Pacific Mexico to Costa Rica | Annotation #4. |
 | *Swietenia mahagoni* | Cuban / West Indian mahogany | Caribbean, S Florida | Annotation #5; denser, finer. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Swietenia spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/melswie.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Swietenia+macrophylla)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Swietenia+macrophylla)

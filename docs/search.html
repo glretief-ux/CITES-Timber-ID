@@ -173,6 +173,15 @@ function show(e){
      ${sp.trade?`<tr><td>Trade names</td><td>${esc(sp.trade)}</td></tr>`:""}
      ${sp.range?`<tr><td>Range</td><td>${esc(sp.range)}</td></tr>`:""}
      ${sp.notes?`<tr><td>Notes</td><td>${esc(sp.notes)}</td></tr>`:""}</table>` : "";
+  const pl=t.photo_links||[];
+  const g=w=>norm(w).split(" ");
+  const want=sp? g(sp.name.replace(/\(.*?\)/g,"")) : g(searched);
+  const match=p=>{const k=norm(p.taxon); return want.length>1 && want[0]!=="" && k.includes(want[0]) && (k.includes(want[1]) || new RegExp("\\b"+want[1]).test(k));};
+  const best=pl.filter(match), rest=pl.filter(p=>!match(p));
+  const linkBtn=(p,primary)=>`<a class="lkbtn" style="display:inline-block;text-decoration:none;${primary?"background:#12355b;color:#fff":""}" href="${p.url}" target="_blank" rel="noopener">View 10x photo: <i>${esc(p.taxon)}</i></a>`;
+  const photoLinks = pl.length
+    ? `<p style="margin:0 0 4px">Transverse section at about 10x from verified reference specimens (CITESwoodID, Thünen Institute). Opens in a new tab.</p>${best.map(p=>linkBtn(p,true)).join("")}${rest.length?(best.length?`<details class="lk"><summary>Other species in this listing (${rest.length})</summary><div>${rest.map(p=>linkBtn(p,false)).join("")}</div></details>`:rest.map(p=>linkBtn(p,pl.length===1)).join("")):""}<p class="small" style="margin-top:8px">Images © Thünen Institute — linked, not copied.</p>`
+    : `<p class="cn">No online 10x reference photo found for this taxon yet. See the image sources below.</p>`;
   const photos=(t.photos||[]).map(p=>`<a href="photos/${t.id}/${encodeURIComponent(p.file)}" target="_blank"><img src="photos/${t.id}/${encodeURIComponent(p.file)}" alt="10x"></a>`).join("");
   $("#out").innerHTML=`<div class="card">
    <div class="head">
@@ -211,8 +220,9 @@ function show(e){
      <tr><td>Sapwood</td><td>${esc(t.sapwood)}</td></tr>
      <tr><td>Density</td><td>${esc(t.density)}</td></tr>
      <tr><td>Odour</td><td>${esc(t.odour)}</td></tr></table>
-   </div><div class="card"><h2>10x photographs</h2>
-   ${photos?`<div class="photos">${photos}</div>`:`<p class="cn">No verified reference photo added yet. View published 10x end-grain photos via the sources below.</p>`}
+   </div><div class="card"><h2>10x end-grain photographs</h2>
+   ${photoLinks}
+   ${photos?`<div class="photos">${photos}</div>`:""}
    </div><div class="card"><h2>Look-alikes</h2><ul>${t.lookalikes.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>
    </div><div class="card"><h2>Laboratory confirmation</h2><p>${esc(t.lab_methods)}</p>
    ${(t.species_included||[]).length?`</div><div class="card"><h2>All taxa covered by this listing</h2><table><tr><th>Taxon</th><th>Trade name</th><th>Range</th></tr>${t.species_included.map((s,i)=>`<tr${sp&&i===e.si?' class="hl"':""}><td><a href="#" class="gosp" data-ti="${e.ti}" data-si="${i}"><i>${esc(s.name)}</i></a></td><td>${esc(s.trade)}</td><td>${esc(s.range)}</td></tr>`).join("")}</table>`:""}

@@ -67,7 +67,13 @@ Microscopy; DNA.
 | *Gonystylus bancanus* | Ramin telur | Sumatra, Borneo, Peninsular Malaysia | Main commercial species. |
 | *All other Gonystylus spp. (c. 30)* | Ramin | Malesia to Pacific |  |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Gonystylus spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/thygony.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Gonystylus)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Gonystylus)

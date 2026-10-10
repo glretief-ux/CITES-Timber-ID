@@ -83,7 +83,31 @@ DART-TOF mass spectrometry, NIR spectroscopy and DNA barcoding are used to reach
 | *Dalbergia frutescens* | Brazilian tulipwood/ jacarandá-rosa | Brazil |  |
 | *All other Dalbergia species* |  | Pantropical | Full list: CITES Dalbergia checklist (Kew) and Species+. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Dalbergia melanoxylon* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdamel.htm)
+- [*Dalbergia baronii* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdabar.htm)
+- [*Dalbergia louvelii, D. maritima* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdamar.htm)
+- [*Dalbergia madagascariensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdamad.htm)
+- [*Dalbergia greveana* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdagrv.htm)
+- [*Dalbergia latifolia* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdala.htm)
+- [*Dalbergia sissoo* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdasis.htm)
+- [*Dalbergia retusa, D. granadillo* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdare.htm)
+- [*Dalbergia stevensonii* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdast.htm)
+- [*Dalbergia tucurensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdatuc.htm)
+- [*Dalbergia cochinchinensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdaco.htm)
+- [*Dalbergia oliveri* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdaoli.htm)
+- [*Dalbergia bariensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabfabri.htm)
+- [*Dalbergia odorifera* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabfaodo.htm)
+- [*Dalbergia cearensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdace.htm)
+- [*Dalbergia decipularis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdadec.htm)
+- [*Dalbergia spruceana* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabdasp.htm)
+- [*Dalbergia congestiflora* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabfacon.htm)
+- [*Dalbergia palo-escrito* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabfaesc.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Dalbergia)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Dalbergia)

@@ -58,7 +58,13 @@ Reddish non-resin-canal softwood with very narrow regular growth rings and cedar
 
 Microscopy of cross-field pitting; DNA.
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Fitzroya cupressoides* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/cupficu.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Fitzroya+cupressoides)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Fitzroya+cupressoides)

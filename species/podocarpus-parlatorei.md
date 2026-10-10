@@ -56,7 +56,13 @@ Featureless, uniform yellowish softwood without resin canals and with indistinct
 
 DNA for species.
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Podocarpus spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/podpospp.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Podocarpus+parlatorei)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Podocarpus+parlatorei)

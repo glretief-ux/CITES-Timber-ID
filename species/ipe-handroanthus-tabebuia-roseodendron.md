@@ -71,7 +71,15 @@ Lapachol spot test (field); DNA/MS for species.
 | *Tabebuia spp. (c. 70 spp., e.g. T. rosea, T. cassinoides)* | Roble, caixeta | Neotropics | Usually lighter, paler, few or no yellow deposits. |
 | *Roseodendron donnell-smithii, R. chryseum* | Primavera, white mahogany | Mexico-Central America, Colombia/Venezuela | Pale yellowish-white light wood. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Handroanthus spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/bigtabe.htm)
+- [*Tabebuia spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/bigtaros.htm)
+- [*Roseodendron donnell-smithii* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/bigroseo.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Handroanthus)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Handroanthus)

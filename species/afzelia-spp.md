@@ -68,7 +68,13 @@ Separation from Intsia needs microscopy/DNA - check stated origin.
 | *Afzelia quanzensis* | Pod mahogany, chanfuta, mkora | East & southern Africa |  |
 | *Afzelia bella, A. parviflora and other African spp.* |  |  |  |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Afzelia spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/caesafz.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Afzelia)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Afzelia)

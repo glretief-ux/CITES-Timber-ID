@@ -58,7 +58,13 @@ Typical white oak: ring porous, broad rays, tyloses in pores, flame-like latewoo
 
 DNA, stable isotopes for origin (Russia vs China/Japan/EU).
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Quercus mongolica* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fagqumon.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Quercus+mongolica)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Quercus+mongolica)

@@ -67,7 +67,16 @@ DNA / mass spec for species.
 | *Pterocarpus mildbraedii* |  | West & Central Africa |  |
 | *Pterocarpus erinaceus, P. tinctorius* |  |  | See separate entries. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Pterocarpus soyauxii, P. osun* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabptsoy.htm)
+- [*Pterocarpus angolensis* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabptan.htm)
+- [*Pterocarpus erinaceus* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabpter.htm)
+- [*Pterocarpus tinctorius* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/fabpttin.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pterocarpus)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Pterocarpus)

@@ -859,3 +859,59 @@ NON_TIMBER_LISTED_TREES = [
     "Palms such as Dypsis decipiens (App. I), and other horticultural trees",
     "Commiphora wightii (guggul resin) and other resin/medicinal trees",
 ]
+
+
+# ---------------------------------------------------------------------------
+# Direct links to ~10x transverse (end-grain) photographs in CITESwoodID
+# (Richter, Gembruch & Koch, Thünen Institute; www.delta-intkey.com/citeswood).
+# Images are (c) Thünen-Institut: LINK ONLY - do not copy them into this repo
+# without written permission from Dr. G. Koch.
+# ---------------------------------------------------------------------------
+_CW = "https://www.delta-intkey.com/citeswood/en/www/"
+PHOTO_LINKS = {
+    "dalbergia-nigra": [("Dalbergia nigra", "fabdani")],
+    "dalbergia-spp": [
+        ("Dalbergia melanoxylon", "fabdamel"), ("Dalbergia baronii", "fabdabar"),
+        ("Dalbergia louvelii, D. maritima", "fabdamar"), ("Dalbergia madagascariensis", "fabdamad"),
+        ("Dalbergia greveana", "fabdagrv"), ("Dalbergia latifolia", "fabdala"), ("Dalbergia sissoo", "fabdasis"),
+        ("Dalbergia retusa, D. granadillo", "fabdare"), ("Dalbergia stevensonii", "fabdast"),
+        ("Dalbergia tucurensis", "fabdatuc"), ("Dalbergia cochinchinensis", "fabdaco"),
+        ("Dalbergia oliveri", "fabdaoli"), ("Dalbergia bariensis", "fabfabri"), ("Dalbergia odorifera", "fabfaodo"),
+        ("Dalbergia cearensis", "fabdace"), ("Dalbergia decipularis", "fabdadec"), ("Dalbergia spruceana", "fabdasp"),
+        ("Dalbergia congestiflora", "fabfacon"), ("Dalbergia palo-escrito", "fabfaesc")],
+    "guibourtia-bubinga": [("Guibourtia demeusei, G. pellegriniana, G. tessmannii", "caesguib")],
+    "pterocarpus-erinaceus": [("Pterocarpus erinaceus", "fabpter")],
+    "pterocarpus-santalinus": [("Pterocarpus santalinus", "fabptsa")],
+    "pterocarpus-tinctorius": [("Pterocarpus tinctorius", "fabpttin")],
+    "pterocarpus-africa": [("Pterocarpus soyauxii, P. osun", "fabptsoy"), ("Pterocarpus angolensis", "fabptan"),
+                           ("Pterocarpus erinaceus", "fabpter"), ("Pterocarpus tinctorius", "fabpttin")],
+    "khaya-spp": [("Khaya spp.", "melkhay")],
+    "afzelia-spp": [("Afzelia spp.", "caesafz")],
+    "pericopsis-elata": [("Pericopsis elata", "fabpeel")],
+    "diospyros-madagascar": [("Diospyros spp. (Madagascar)", "ebedispp")],
+    "osyris-lanceolata": [("Osyris lanceolata (as O. quadripartita)", "sanosyqu")],
+    "widdringtonia-whytei": [("Widdringtonia whytei", "cupwidwh")],
+    "swietenia-spp": [("Swietenia spp.", "melswie")],
+    "cedrela-spp": [("Cedrela spp.", "melceod")],
+    "ipe-handroanthus-tabebuia-roseodendron": [("Handroanthus spp.", "bigtabe"), ("Tabebuia spp.", "bigtaros"),
+                                               ("Roseodendron donnell-smithii", "bigroseo")],
+    "dipteryx-spp": [("Dipteryx spp.", "fabdipol")],
+    "paubrasilia-echinata": [("Paubrasilia echinata", "caecaech")],
+    "gonystylus-spp": [("Gonystylus spp.", "thygony")],
+    "aquilaria-gyrinops": [("Aquilaria spp., Gyrinops spp.", "thyaqu")],
+    "platymiscium-parviflorum": [("Platymiscium spp.", "fabplspp")],
+    "bulnesia-sarmientoi": [("Bulnesia (Gonopterodendron) sarmientoi", "zygbusa")],
+    "guaiacum-spp": [("Guaiacum spp.", "zygguai")],
+    "aniba-rosaeodora": [("Aniba rosaeodora", "lauanro")],
+    "taxus-spp": [("Taxus spp.", "taxtaspp")],
+    "pinus-koraiensis": [("Pinus koraiensis", "pinpinko")],
+    "quercus-mongolica": [("Quercus mongolica", "fagqumon")],
+    "fraxinus-mandshurica": [("Fraxinus mandshurica", "oleframa")],
+    "araucaria-araucana": [("Araucaria araucana", "araara")],
+    "fitzroya-cupressoides": [("Fitzroya cupressoides", "cupficu")],
+    "pilgerodendron-uviferum": [("Pilgerodendron uviferum", "cuppiluv")],
+    "podocarpus-parlatorei": [("Podocarpus spp.", "podpospp")],
+    "podocarpus-neriifolius": [("Podocarpus spp.", "podpospp")],
+}
+PHOTO_LINKS = {k: [{"taxon": t, "url": _CW + f + ".htm", "source": "CITESwoodID (Thünen Institute)"} for t, f in v]
+               for k, v in PHOTO_LINKS.items()}

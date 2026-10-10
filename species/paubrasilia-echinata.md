@@ -60,7 +60,13 @@ Very heavy, fine-textured orange-red wood (bow blanks!). CoP20 adopted new decis
 
 DART-TOF MS, NIR and DNA used for bow sticks; fluorescence of extracts.
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Paubrasilia echinata* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/caecaech.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Paubrasilia+echinata)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Paubrasilia+echinata)

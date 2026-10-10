@@ -65,7 +65,13 @@ DNA/provenance; macroscopic ID = Diospyros genus only.
 |---|---|---|---|
 | *Diospyros perrieri, D. aculeata, D. gracilipes and c. 80+ other Malagasy spp.* | Ebony | Madagascar | Madagascar export ban + CITES zero export quota. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Diospyros spp. (Madagascar)* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/ebedispp.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Diospyros)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Diospyros)

@@ -23,7 +23,7 @@ from urllib.parse import quote_plus
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
-from species_data import SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES  # noqa: E402
+from species_data import SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES, PHOTO_LINKS  # noqa: E402
 
 
 # ----------------------------------------------------------------- references
@@ -289,7 +289,12 @@ def md_page(sp):
         L += ["## Species included in this listing", "", "| Taxon | Trade name | Range | Notes |", "|---|---|---|---|"]
         L += [f"| *{s['name']}* | {s['trade']} | {s['range']} | {s['notes']} |" for s in sp["species_included"]]
         L += [""]
-    L += ["## Image sources for 10x end-grain photographs", ""]
+    if PHOTO_LINKS.get(sp["id"]):
+        L += ["## View 10x end-grain photographs (CITESwoodID)", "",
+              "Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.", ""]
+        L += [f"- [*{p['taxon']}* - 10x transverse section]({p['url']})" for p in PHOTO_LINKS[sp["id"]]]
+        L += [""]
+    L += ["## Other image sources for 10x end-grain photographs", ""]
     L += [f"- [{t}]({u})" for t, u in reference_links(sp)]
     L += ["", "---", "[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [Feature glossary](../guides/feature-glossary.md)"]
     return "\n".join(L) + "\n"
@@ -342,6 +347,7 @@ def main():
         rec = dict(sp)
         rec["schematic"] = f"schematics/{sp['id']}.svg"
         rec["references"] = [{"title": t, "url": u} for t, u in reference_links(sp)]
+        rec["photo_links"] = PHOTO_LINKS.get(sp["id"], [])
         data["taxa"].append(rec)
         with open(os.path.join(ROOT, "docs", "schematics", f"{sp['id']}.svg"), "w", encoding="utf-8") as f:
             f.write(schematic_svg(sp))

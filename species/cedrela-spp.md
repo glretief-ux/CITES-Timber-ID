@@ -68,7 +68,13 @@ Toona vs Cedrela: microscopy/DNA.
 | *Cedrela montana* | Cedro de montaña | Andes |  |
 | *Cedrela angustifolia, C. lilloi, C. salvadorensis, C. tonduzii, C. saltensis and others (c. 17 spp.)* | Cedro | Neotropics | All covered at genus level. |
 
-## Image sources for 10x end-grain photographs
+## View 10x end-grain photographs (CITESwoodID)
+
+Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
+
+- [*Cedrela spp.* - 10x transverse section](https://www.delta-intkey.com/citeswood/en/www/melceod.htm)
+
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Cedrela)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Cedrela)

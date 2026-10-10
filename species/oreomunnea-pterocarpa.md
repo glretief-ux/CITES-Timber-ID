@@ -55,7 +55,7 @@ Rarely encountered in trade; walnut-like Juglandaceae wood.
 
 Microscopy/DNA.
 
-## Image sources for 10x end-grain photographs
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Oreomunnea+pterocarpa)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Oreomunnea+pterocarpa)

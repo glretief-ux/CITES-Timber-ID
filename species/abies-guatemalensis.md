@@ -57,7 +57,7 @@ Pale, non-resinous softwood with NO resin canals and no colour difference betwee
 
 DNA/provenance only; macroscopic ID cannot separate from other firs.
 
-## Image sources for 10x end-grain photographs
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Abies+guatemalensis)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Abies+guatemalensis)

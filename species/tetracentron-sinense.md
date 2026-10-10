@@ -56,7 +56,7 @@ Vesselless angiosperm: no pores, but rays wider than any softwood. Very rare in 
 
 Microscopy.
 
-## Image sources for 10x end-grain photographs
+## Other image sources for 10x end-grain photographs
 
 - [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Tetracentron+sinense)
 - [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Tetracentron+sinense)

@@ -179,7 +179,8 @@ function card(t,miss){
   <div class="body">
    ${miss?'<span class="score">1 feature differs</span>':""}
    <div class="cn">${t.common_names.join(" · ")} — ${t.family}</div>
-   ${photos?`<div class="photos">${photos}</div>`:'<div class="cn">No real 10x photo added yet — see image sources below.</div>'}
+   ${photos?`<div class="photos">${photos}</div>`:""}
+   ${(t.photo_links||[]).length?`<a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff;margin:0 0 8px" href="${t.photo_links[0].url}" target="_blank" rel="noopener">View 10x photo${t.photo_links.length>1?"s ("+t.photo_links.length+")":""}</a>${t.photo_links.length>1?`<details class="lk"><summary>10x photos per species</summary><ul>${t.photo_links.map(p=>`<li><a href="${p.url}" target="_blank" rel="noopener"><i>${p.taxon}</i></a></li>`).join("")}</ul></details>`:""}`:'<div class="cn">No online 10x reference photo yet — see image sources below.</div>'}
    <div class="key">${t.key_diagnostic}</div>
    <details class="lk"><summary>10x features & characteristics</summary><table>
     <tr><td>Porosity</td><td>${e.porosity}</td></tr>
