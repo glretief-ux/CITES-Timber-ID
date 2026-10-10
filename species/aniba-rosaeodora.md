@@ -1,0 +1,70 @@
+# Aniba rosaeodora
+
+**Family:** Lauraceae  
+**Trade / common names:** Brazilian rosewood (oil), pau-rosa, bois de rose (oil)  
+**CITES Appendix:** **II**  
+**Annotation:** #12 — Logs, sawn wood, veneer sheets, plywood and extracts.  
+**Population covered:** All populations  
+**First listed (approx. year in force):** 2010  
+**Native range:** Amazon basin (Brazil, Peru, Guianas, Colombia, Venezuela).
+
+> Always confirm the live listing on [Species+](https://speciesplus.net) before seizure decisions.
+
+## 10x end-grain view
+
+| Real photographs (reference specimens) | Schematic |
+|---|---|
+| See [`photos/aniba-rosaeodora/`](../photos/aniba-rosaeodora/) and the image links below | ![schematic](../docs/schematics/aniba-rosaeodora.svg) |
+
+## Key diagnostic summary
+
+NOT a 'rosewood' timber in the Dalbergia sense; traded mostly as oil. Wood: fragrant yellowish-brown Lauraceae.
+
+## Macroscopic features (hand lens, 10x, freshly cut transverse surface)
+
+| Feature | Observation |
+|---|---|
+| Wood type | hardwood |
+| Porosity | diffuse |
+| Pore size | small |
+| Pore frequency | moderate |
+| Pore arrangement | mixed |
+| Pore contents / deposits | none noted |
+| Axial parenchyma | vasicentric |
+| Rays | fine |
+| Ripple marks (storied structure, tangential face) | no |
+| Resin canals (softwoods) | no |
+
+**Other features:**
+
+- Oil cells (Lauraceae) visible at higher magnification
+- Mainly traded as essential oil
+
+## Physical characteristics
+
+- **Heartwood:** Yellowish-brown to brownish.
+- **Sapwood:** Not distinct.
+- **Density:** ~800 kg/m3
+- **Odour:** Strong floral/ linalool (rose) scent - source of rosewood essential oil.
+
+## Look-alikes (check these before concluding)
+
+- Other Aniba / Ocotea spp.
+
+## Confirming beyond the hand lens
+
+Oil GC-MS, DNA.
+
+## Image sources for 10x end-grain photographs
+
+- [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Aniba+rosaeodora)
+- [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Aniba+rosaeodora)
+- [InsideWood (anatomy database, NC State)](https://insidewood.lib.ncsu.edu/search)
+- [CITES Timber ID repository (manuals, keys, photo atlases)](https://cites.org/eng/timber/timber-ID-repository)
+- [CITESwoodID (Thünen Institute, macroscopic key with images)](https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy)
+- [Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)](https://plantwood.cirad.fr)
+- [Wikimedia Commons (free-licence images)](https://commons.wikimedia.org/w/index.php?search=Aniba+rosaeodora+wood&title=Special:MediaSearch&type=image)
+- [GBIF (distribution)](https://www.gbif.org/species/search?q=Aniba+rosaeodora)
+
+---
+[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [Feature glossary](../guides/feature-glossary.md)

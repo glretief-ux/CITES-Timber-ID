@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 466" width="420" height="466" font-family="Verdana, sans-serif">
+<title>Schematic end grain: Pilgerodendron uviferum</title>
+<defs><clipPath id="c"><circle cx="210" cy="210" r="205"/></clipPath></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g clip-path="url(#c)">
+<rect width="420" height="420" fill="#d2b06a"/>
+<rect x="0" y="98.3" width="420" height="50.7" fill="#73603a" opacity="0.6"/>
+<rect x="0" y="267.3" width="420" height="50.7" fill="#73603a" opacity="0.6"/>
+<rect x="0" y="417.4" width="420" height="42.6" fill="#73603a" opacity="0.6"/>
+<rect x="13.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="27.4" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="42.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="57.8" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="71.2" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="86.6" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="97.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="107.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="123.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="135.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="146.0" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="155.4" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="170.7" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="179.9" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="189.4" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="198.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="210.3" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="223.7" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="234.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="245.0" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="254.3" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="264.6" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="274.7" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="290.7" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="300.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="315.6" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="328.0" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="337.1" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="350.9" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="366.4" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="379.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="394.0" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="408.7" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+<rect x="423.5" y="0" width="0.8" height="420" fill="#e3cea2" opacity="0.55"/>
+</g>
+<circle cx="210" cy="210" r="205" fill="none" stroke="#444" stroke-width="3"/>
+<line x1="300" y1="392" x2="370" y2="392" stroke="#fff" stroke-width="4"/><line x1="300" y1="392" x2="370" y2="392" stroke="#000" stroke-width="2"/>
+<text x="335" y="384" font-size="11" text-anchor="middle" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke">≈1 mm</text>
+<text x="210.0" y="438" font-size="13" text-anchor="middle" fill="#222" font-style="italic">Pilgerodendron uviferum</text>
+<text x="210.0" y="456" font-size="11" text-anchor="middle" fill="#b00">SCHEMATIC of 10x end grain - not a photograph</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 466" width="420" height="466" font-family="Verdana, sans-serif">
+<title>Schematic end grain: Taxus chinensis, T. cuspidata, T. fuana, T. sumatrana, T. wallichiana (and their infraspecific taxa)</title>
+<defs><clipPath id="c"><circle cx="210" cy="210" r="205"/></clipPath></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g clip-path="url(#c)">
+<rect width="420" height="420" fill="#c2662f"/>
+<rect x="0" y="105.3" width="420" height="53.7" fill="#6a3819" opacity="0.6"/>
+<rect x="0" y="264.7" width="420" height="45.3" fill="#6a3819" opacity="0.6"/>
+<rect x="0" y="415.0" width="420" height="45.0" fill="#6a3819" opacity="0.6"/>
+<rect x="9.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="19.7" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="32.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="43.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="52.6" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="65.2" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="79.0" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="88.6" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="100.8" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="111.2" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="121.0" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="130.9" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="142.4" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="157.5" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="170.6" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="185.2" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="197.0" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="212.7" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="222.3" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="237.6" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="251.0" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="262.5" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="275.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="289.0" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="304.9" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="318.9" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="329.7" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="345.7" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="355.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="367.9" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="379.8" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="393.4" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="403.7" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="415.2" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+<rect x="428.1" y="0" width="0.8" height="420" fill="#d9a07e" opacity="0.55"/>
+</g>
+<circle cx="210" cy="210" r="205" fill="none" stroke="#444" stroke-width="3"/>
+<line x1="300" y1="392" x2="370" y2="392" stroke="#fff" stroke-width="4"/><line x1="300" y1="392" x2="370" y2="392" stroke="#000" stroke-width="2"/>
+<text x="335" y="384" font-size="11" text-anchor="middle" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke">≈1 mm</text>
+<text x="210.0" y="438" font-size="13" text-anchor="middle" fill="#222" font-style="italic">Taxus chinensis, T. cuspidata, T. fuana, T. sumatrana, T. wa</text>
+<text x="210.0" y="456" font-size="11" text-anchor="middle" fill="#b00">SCHEMATIC of 10x end grain - not a photograph</text>
+</svg>

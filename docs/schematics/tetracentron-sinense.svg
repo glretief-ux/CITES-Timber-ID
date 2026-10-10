@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 466" width="420" height="466" font-family="Verdana, sans-serif">
+<title>Schematic end grain: Tetracentron sinense</title>
+<defs><clipPath id="c"><circle cx="210" cy="210" r="205"/></clipPath></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g clip-path="url(#c)">
+<rect width="420" height="420" fill="#8f6542"/>
+<rect x="0" y="89.9" width="420" height="47.1" fill="#4e3724" opacity="0.6"/>
+<rect x="0" y="255.3" width="420" height="50.7" fill="#4e3724" opacity="0.6"/>
+<rect x="0" y="413.8" width="420" height="46.2" fill="#4e3724" opacity="0.6"/>
+<rect x="26.3" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="55.4" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="75.3" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="102.0" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="130.0" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="152.1" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="171.2" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="196.3" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="225.8" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="251.0" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="272.8" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="299.8" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="318.3" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="344.4" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="366.2" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="394.1" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="416.5" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+<rect x="436.9" y="0" width="4.5" height="420" fill="#4e3724" opacity="0.55"/>
+</g>
+<circle cx="210" cy="210" r="205" fill="none" stroke="#444" stroke-width="3"/>
+<line x1="300" y1="392" x2="370" y2="392" stroke="#fff" stroke-width="4"/><line x1="300" y1="392" x2="370" y2="392" stroke="#000" stroke-width="2"/>
+<text x="335" y="384" font-size="11" text-anchor="middle" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke">≈1 mm</text>
+<text x="210.0" y="438" font-size="13" text-anchor="middle" fill="#222" font-style="italic">Tetracentron sinense</text>
+<text x="210.0" y="456" font-size="11" text-anchor="middle" fill="#b00">SCHEMATIC of 10x end grain - not a photograph</text>
+</svg>

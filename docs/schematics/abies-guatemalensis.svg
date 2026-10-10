@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 466" width="420" height="466" font-family="Verdana, sans-serif">
+<title>Schematic end grain: Abies guatemalensis</title>
+<defs><clipPath id="c"><circle cx="210" cy="210" r="205"/></clipPath></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g clip-path="url(#c)">
+<rect width="420" height="420" fill="#e8dab4"/>
+<rect x="0" y="96.9" width="420" height="50.1" fill="#7f7763" opacity="0.6"/>
+<rect x="0" y="249.9" width="420" height="44.1" fill="#7f7763" opacity="0.6"/>
+<rect x="0" y="410.2" width="420" height="49.8" fill="#7f7763" opacity="0.6"/>
+<rect x="15.4" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="26.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="41.9" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="56.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="67.8" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="78.0" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="94.0" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="109.7" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="118.8" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="134.1" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="144.9" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="155.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="164.6" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="178.8" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="189.6" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="200.8" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="213.2" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="229.2" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="239.6" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="252.0" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="267.0" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="278.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="292.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="304.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="314.4" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="328.9" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="343.3" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="355.2" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="367.8" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="381.3" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="395.7" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="408.5" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+<rect x="420.2" y="0" width="0.8" height="420" fill="#f0e8d0" opacity="0.55"/>
+</g>
+<circle cx="210" cy="210" r="205" fill="none" stroke="#444" stroke-width="3"/>
+<line x1="300" y1="392" x2="370" y2="392" stroke="#fff" stroke-width="4"/><line x1="300" y1="392" x2="370" y2="392" stroke="#000" stroke-width="2"/>
+<text x="335" y="384" font-size="11" text-anchor="middle" fill="#000" stroke="#fff" stroke-width="3" paint-order="stroke">≈1 mm</text>
+<text x="210.0" y="438" font-size="13" text-anchor="middle" fill="#222" font-style="italic">Abies guatemalensis</text>
+<text x="210.0" y="456" font-size="11" text-anchor="middle" fill="#b00">SCHEMATIC of 10x end grain - not a photograph</text>
+</svg>

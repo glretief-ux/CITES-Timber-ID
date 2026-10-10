@@ -1,0 +1,3627 @@
+{
+  "version": "2026-10",
+  "listing_basis": "CITES Appendices in force after CoP20 (Samarkand, 24 Nov - 5 Dec 2025). CoP20 adopted no new timber listings; proposals to remove Central African Afzelia bipindensis and Pterocarpus soyauxii were rejected; the Paubrasilia echinata annotation #10 was amended.",
+  "disclaimer": "Macroscopic identification is a screening tool, usually reliable only to genus or group. Confirm species with an accredited wood-anatomy, DNA or mass-spectrometry laboratory and the live Species+ listing.",
+  "annotations": {
+    "none": "No annotation - ALL parts and derivatives are covered (including finished products).",
+    "#1": "All parts and derivatives, except seeds/spores/pollen, seedlings or tissue cultures in vitro, cut flowers of artificially propagated plants (timber, finished goods covered).",
+    "#2": "All parts and derivatives except seeds and pollen, and finished products packaged and ready for retail trade.",
+    "#4": "All parts and derivatives except seeds, spores and pollen, seedling/tissue cultures, cut flowers of artificially propagated plants and a few plant-specific items (Vanilla, Opuntia etc.). For timber: logs, sawn wood, veneer, plywood, chips AND finished products ARE covered.",
+    "#5": "Logs, sawn wood and veneer sheets.",
+    "#6": "Logs, sawn wood, veneer sheets and plywood.",
+    "#7": "Logs, wood chips, powder and extracts.",
+    "#10": "Amended at CoP20 (2025): in principle ALL parts and derivatives (incl. bows, bow blanks, logs, sawn wood), except finished musical instruments, parts and accessories moved NON-commercially (performance, personal use, exhibition, repair etc.) without change of ownership. Check Species+ for the exact text.",
+    "#11": "Logs, sawn wood, veneer sheets, plywood, powder and extracts (finished products containing extracts as ingredients are exempt).",
+    "#12": "Logs, sawn wood, veneer sheets, plywood and extracts.",
+    "#14": "All parts and derivatives except seeds/pollen, seedling cultures, fruits, leaves, exhausted agarwood powder and finished retail products (agarwood chips, oil, powder ARE covered).",
+    "#15": "All parts and derivatives except (a) leaves, flowers, pollen, fruits, seeds; (b) finished products up to 10 kg wood of listed species per shipment; (c) finished musical instruments, parts and accessories; (d) D. cochinchinensis (covered by #4); (e) Dalbergia spp. from Mexico (covered by #6).",
+    "#17": "Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09, e.g. decking, flooring strips)."
+  },
+  "non_timber_listed_trees": [
+    "Balmea stormiae (App. I, Mexico/Central America - shrubby tree, not a timber)",
+    "Tree ferns Cyatheaceae/Dicksoniaceae (App. II - trunks traded as fibre/horticultural)",
+    "Palms such as Dypsis decipiens (App. I), and other horticultural trees",
+    "Commiphora wightii (guggul resin) and other resin/medicinal trees"
+  ],
+  "taxa": [
+    {
+      "id": "dalbergia-nigra",
+      "scientific_name": "Dalbergia nigra",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Brazilian rosewood",
+        "Rio rosewood",
+        "Bahia rosewood",
+        "jacarandá-da-bahia",
+        "palissandre de Rio"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1992,
+      "range": "Atlantic coastal forest of eastern Brazil (Bahia to Minas Gerais / Espírito Santo).",
+      "wood_type": "hardwood",
+      "heartwood": "Dark chocolate-brown to purplish/reddish brown with irregular black streaks (spider-web figure); oily feel.",
+      "sapwood": "Pale yellowish-white, sharply demarcated.",
+      "density": "~830-900 kg/m3 (heavy)",
+      "odour": "Distinct sweet, rose-like scent when freshly cut.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "banded"
+        ],
+        "ripple_marks": "variable",
+        "rays": "fine",
+        "deposits": "dark red-brown gum in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Parenchyma forms fine wavy tangential bands and lozenge-aliform patches around pores"
+        ]
+      },
+      "key_diagnostic": "Dark heartwood with black streaks + rose scent + medium pores (few, solitary/short multiples) + banded/aliform parenchyma + very fine rays. Cannot be separated reliably from other Dalbergia (esp. D. spruceana, D. latifolia) by hand lens alone.",
+      "lookalikes": [
+        "Dalbergia spruceana (Amazon rosewood)",
+        "Dalbergia latifolia (Indian rosewood)",
+        "Machaerium scleroxylon (Santos rosewood / pau ferro)",
+        "Dalbergia baronii / D. maritima (Madagascar)"
+      ],
+      "lab_methods": "Fluorescence of ethanol extract, DART-TOF mass spectrometry and DNA have been used to separate D. nigra from look-alikes; macroscopic ID = genus level only.",
+      "species_included": [],
+      "schematic": "schematics/dalbergia-nigra.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Dalbergia+nigra"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Dalbergia+nigra"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Dalbergia+nigra+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Dalbergia+nigra"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "abies-guatemalensis",
+      "scientific_name": "Abies guatemalensis",
+      "rank": "species",
+      "family": "Pinaceae",
+      "common_names": [
+        "Guatemalan fir",
+        "pinabete"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Highlands of southern Mexico, Guatemala, Honduras, El Salvador.",
+      "wood_type": "softwood",
+      "heartwood": "Creamy white to pale buff; no distinct heartwood colour.",
+      "sapwood": "Not distinct from heartwood.",
+      "density": "~400-450 kg/m3 (light)",
+      "odour": "Faint, sometimes unpleasant when green; non-resinous.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Growth rings distinct; earlywood-latewood transition fairly abrupt",
+          "No normal resin canals (traumatic canals in tangential rows possible)"
+        ]
+      },
+      "key_diagnostic": "Pale, non-resinous softwood with NO resin canals and no colour difference between heartwood and sapwood. Typical 'fir' - genus level only. Mostly traded as Christmas trees/branches rather than timber.",
+      "lookalikes": [
+        "Other Abies spp.",
+        "Picea spp. (spruce - but spruce HAS small resin canals)",
+        "Tsuga spp."
+      ],
+      "lab_methods": "DNA/provenance only; macroscopic ID cannot separate from other firs.",
+      "species_included": [],
+      "schematic": "schematics/abies-guatemalensis.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Abies+guatemalensis"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Abies+guatemalensis"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Abies+guatemalensis+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Abies+guatemalensis"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "araucaria-araucana",
+      "scientific_name": "Araucaria araucana",
+      "rank": "species",
+      "family": "Araucariaceae",
+      "common_names": [
+        "Monkey puzzle",
+        "Chilean pine",
+        "pehuén",
+        "araucaria"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Andes of south-central Chile and western Argentina.",
+      "wood_type": "softwood",
+      "heartwood": "Pale yellowish to light brown, sometimes with a pinkish tinge.",
+      "sapwood": "Not clearly distinct.",
+      "density": "~500-600 kg/m3",
+      "odour": "None distinctive.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Growth rings indistinct to faint; gradual transition",
+          "Very uniform, fine texture",
+          "Resin-filled ray cells may appear as tiny dark specks"
+        ]
+      },
+      "key_diagnostic": "Uniform, fine-textured softwood with faint growth rings and no resin canals. Separation from other Araucaria (e.g. Paraná pine A. angustifolia) needs microscopy or DNA.",
+      "lookalikes": [
+        "Araucaria angustifolia (Paraná pine)",
+        "Agathis spp. (kauri)"
+      ],
+      "lab_methods": "Microscopy (araucarioid pitting) for genus; DNA for species.",
+      "species_included": [],
+      "schematic": "schematics/araucaria-araucana.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Araucaria+araucana"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Araucaria+araucana"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Araucaria+araucana+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Araucaria+araucana"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "fitzroya-cupressoides",
+      "scientific_name": "Fitzroya cupressoides",
+      "rank": "species",
+      "family": "Cupressaceae",
+      "common_names": [
+        "Alerce",
+        "Patagonian cypress",
+        "lahuán"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Coastal and Andean ranges of southern Chile and adjacent Argentina.",
+      "wood_type": "softwood",
+      "heartwood": "Reddish-brown to dark red-brown; old-growth wood often with very narrow, regular rings.",
+      "sapwood": "Narrow, pale yellowish.",
+      "density": "~420-500 kg/m3",
+      "odour": "Mild cedar-like scent.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Growth rings distinct, often extremely narrow (old trees > 1,000 years)",
+          "Gradual earlywood-latewood transition",
+          "Axial parenchyma (resinous) sometimes visible as dark dots"
+        ]
+      },
+      "key_diagnostic": "Reddish non-resin-canal softwood with very narrow regular growth rings and cedar scent. Typical shingles, roof tiles, furniture of old-growth origin.",
+      "lookalikes": [
+        "Pilgerodendron uviferum",
+        "Sequoia sempervirens (redwood)",
+        "Thuja plicata (western red cedar)"
+      ],
+      "lab_methods": "Microscopy of cross-field pitting; DNA.",
+      "species_included": [],
+      "schematic": "schematics/fitzroya-cupressoides.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Fitzroya+cupressoides"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Fitzroya+cupressoides"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Fitzroya+cupressoides+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Fitzroya+cupressoides"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pilgerodendron-uviferum",
+      "scientific_name": "Pilgerodendron uviferum",
+      "rank": "species",
+      "family": "Cupressaceae",
+      "common_names": [
+        "Guaitecas cypress",
+        "ciprés de las Guaitecas"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Southern Chile and Argentina (Patagonia), wetlands.",
+      "wood_type": "softwood",
+      "heartwood": "Yellowish to light reddish-brown.",
+      "sapwood": "Pale.",
+      "density": "~450-500 kg/m3",
+      "odour": "Aromatic, cypress-like.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Narrow distinct growth rings",
+          "Very durable, fine and even texture"
+        ]
+      },
+      "key_diagnostic": "Aromatic, fine-textured cypress-type softwood without resin canals; from Patagonia. Hand lens gives family level only.",
+      "lookalikes": [
+        "Fitzroya cupressoides",
+        "Austrocedrus chilensis",
+        "Chamaecyparis spp."
+      ],
+      "lab_methods": "Microscopy/DNA.",
+      "species_included": [],
+      "schematic": "schematics/pilgerodendron-uviferum.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pilgerodendron+uviferum"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pilgerodendron+uviferum"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pilgerodendron+uviferum+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pilgerodendron+uviferum"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "podocarpus-parlatorei",
+      "scientific_name": "Podocarpus parlatorei",
+      "rank": "species",
+      "family": "Podocarpaceae",
+      "common_names": [
+        "Parlatore's podocarp",
+        "pino del cerro"
+      ],
+      "appendix": "I",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Andean Yungas of Argentina and Bolivia.",
+      "wood_type": "softwood",
+      "heartwood": "Uniform pale yellowish-brown.",
+      "sapwood": "Not distinct.",
+      "density": "~500 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Growth rings indistinct",
+          "Very uniform texture, no resin canals"
+        ]
+      },
+      "key_diagnostic": "Featureless, uniform yellowish softwood without resin canals and with indistinct rings (typical Podocarpus).",
+      "lookalikes": [
+        "Other Podocarpus spp.",
+        "Prumnopitys spp."
+      ],
+      "lab_methods": "DNA for species.",
+      "species_included": [],
+      "schematic": "schematics/podocarpus-parlatorei.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Podocarpus+parlatorei"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Podocarpus+parlatorei"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Podocarpus+parlatorei+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Podocarpus+parlatorei"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "dalbergia-spp",
+      "scientific_name": "Dalbergia spp.",
+      "rank": "genus",
+      "family": "Fabaceae",
+      "common_names": [
+        "Rosewoods",
+        "palisanders",
+        "blackwoods",
+        "hongmu (part)"
+      ],
+      "appendix": "II",
+      "annotation": "#15",
+      "population_scope": "All species except D. nigra (App. I). D. cochinchinensis = #4; Mexican populations = #6.",
+      "listed_since": 2017,
+      "range": "Pantropical: Central & South America, Africa, Madagascar, South & Southeast Asia (c. 250-300 species).",
+      "wood_type": "hardwood",
+      "heartwood": "Very variable: purple-brown, red-orange, chocolate, nearly black; often streaked.",
+      "sapwood": "Pale, sharply demarcated.",
+      "density": "~750-1,300 kg/m3 (medium-heavy to very heavy)",
+      "odour": "Many species fragrant (rose, spicy, sweet) when cut or sanded.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "banded"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "red-brown to black gum in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Rays and parenchyma storied: ripple marks often visible on tangential face",
+          "Fine, regularly spaced parenchyma bands (sometimes wavy) between pores",
+          "Rays very fine - barely visible even at 10x"
+        ]
+      },
+      "key_diagnostic": "GENUS LEVEL: diffuse-porous, few medium/large pores, fine banded + aliform parenchyma, storied rays (ripple marks), dark often fragrant heartwood. Treat any wood matching this pattern as SUSPECT Dalbergia (CITES App II) until proven otherwise.",
+      "lookalikes": [
+        "Machaerium spp. (pau ferro, Bolivian rosewood - NOT listed)",
+        "Pterocarpus spp.",
+        "Millettia laurentii (wenge)",
+        "Swartzia spp.",
+        "Diospyros spp. (ebony)",
+        "Bobgunnia",
+        "Microberlinia (zebrawood)"
+      ],
+      "lab_methods": "DART-TOF mass spectrometry, NIR spectroscopy and DNA barcoding are used to reach species level; macroscopic = genus/group.",
+      "species_included": [
+        {
+          "name": "Dalbergia latifolia",
+          "trade": "Indian rosewood, sonokeling",
+          "range": "India, Indonesia (plantations)",
+          "notes": "Purple-brown with darker streaks; medium-coarse texture; ~830 kg/m3."
+        },
+        {
+          "name": "Dalbergia sissoo",
+          "trade": "Sheesham, shisham",
+          "range": "Indian subcontinent",
+          "notes": "Golden to medium brown; lighter, less figured. Widely traded as furniture (#15 10-kg rule applies to finished goods)."
+        },
+        {
+          "name": "Dalbergia retusa",
+          "trade": "Cocobolo",
+          "range": "Pacific Central America",
+          "notes": "Orange-red to purplish with black lines, very oily, ~1,100 kg/m3, causes skin sensitisation."
+        },
+        {
+          "name": "Dalbergia granadillo",
+          "trade": "Granadillo, cocobolo (Mexico)",
+          "range": "Mexico",
+          "notes": "Similar to D. retusa; Mexican populations under annotation #6."
+        },
+        {
+          "name": "Dalbergia stevensonii",
+          "trade": "Honduran rosewood",
+          "range": "Belize, Guatemala",
+          "notes": "Pinkish-brown to purplish, very dense (~1,050), xylophone bars."
+        },
+        {
+          "name": "Dalbergia tucurensis",
+          "trade": "Central American rosewood",
+          "range": "Guatemala, Nicaragua, Honduras",
+          "notes": "Previously App III; now covered by the genus listing."
+        },
+        {
+          "name": "Dalbergia cochinchinensis",
+          "trade": "Siamese rosewood, Thailand rosewood, hongmu",
+          "range": "Thailand, Laos, Cambodia, Vietnam",
+          "notes": "Red to purple-brown with black stripes; very dense (~1,090); annotation #4 (all parts)."
+        },
+        {
+          "name": "Dalbergia oliveri (incl. D. bariensis)",
+          "trade": "Burmese rosewood, tamalan",
+          "range": "Myanmar, Thailand, Indochina",
+          "notes": "Orange/red-brown with darker stripes; hongmu trade."
+        },
+        {
+          "name": "Dalbergia odorifera",
+          "trade": "Huanghuali, fragrant rosewood",
+          "range": "Hainan (China)",
+          "notes": "Golden to reddish-brown, strongly fragrant; very high value."
+        },
+        {
+          "name": "Dalbergia melanoxylon",
+          "trade": "African blackwood, mpingo",
+          "range": "East & southern Africa",
+          "notes": "Black-purple, extremely dense (~1,270), very fine texture; clarinets, oboes."
+        },
+        {
+          "name": "Dalbergia baronii, D. maritima, D. louvelii and other Malagasy spp.",
+          "trade": "Bois de rose, Madagascar rosewood, palissandre",
+          "range": "Madagascar",
+          "notes": "Red to purple; trade banned by Madagascar export ban + CITES zero-quota guidance. ~48 Malagasy species."
+        },
+        {
+          "name": "Dalbergia cearensis",
+          "trade": "Kingwood",
+          "range": "NE Brazil",
+          "notes": "Violet-brown with black stripes; small billets."
+        },
+        {
+          "name": "Dalbergia decipularis",
+          "trade": "Tulipwood",
+          "range": "NE Brazil",
+          "notes": "Cream to pink-salmon striped; small billets."
+        },
+        {
+          "name": "Dalbergia spruceana",
+          "trade": "Amazon rosewood",
+          "range": "Amazon basin",
+          "notes": "Main look-alike of D. nigra."
+        },
+        {
+          "name": "Dalbergia frutescens",
+          "trade": "Brazilian tulipwood/ jacarandá-rosa",
+          "range": "Brazil",
+          "notes": ""
+        },
+        {
+          "name": "All other Dalbergia species",
+          "trade": "",
+          "range": "Pantropical",
+          "notes": "Full list: CITES Dalbergia checklist (Kew) and Species+."
+        }
+      ],
+      "schematic": "schematics/dalbergia-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Dalbergia"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Dalbergia"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Dalbergia+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Dalbergia"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "guibourtia-bubinga",
+      "scientific_name": "Guibourtia demeusei, G. pellegriniana, G. tessmannii",
+      "rank": "species group",
+      "family": "Fabaceae",
+      "common_names": [
+        "Bubinga",
+        "kevazingo (rotary veneer)",
+        "African rosewood",
+        "essingang"
+      ],
+      "appendix": "II",
+      "annotation": "#15",
+      "population_scope": "All populations of the three species",
+      "listed_since": 2017,
+      "range": "Central Africa: Cameroon, Gabon, Equatorial Guinea, Rep. Congo, DR Congo.",
+      "wood_type": "hardwood",
+      "heartwood": "Pinkish-red to reddish-brown with darker purple or red veins; figured (pommele, waterfall).",
+      "sapwood": "Pale straw, distinct.",
+      "density": "~800-900 kg/m3",
+      "odour": "Unpleasant when wet/green, none when dry.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "vasicentric",
+          "aliform",
+          "confluent",
+          "marginal"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": "reddish-brown gum common in pores",
+        "resin_canals": "no",
+        "special": [
+          "Gum (resin) streaks; occasional axial intercellular canals",
+          "Interlocked/ wavy grain"
+        ]
+      },
+      "key_diagnostic": "Pinkish-red, purple-veined heartwood; medium pores often gum-filled; aliform-confluent parenchyma; NO ripple marks (helps separate from Dalbergia and Pterocarpus). Three listed species cannot be separated from each other or from unlisted Guibourtia (e.g. G. ehie - ovangkol) by hand lens.",
+      "lookalikes": [
+        "Guibourtia ehie (ovangkol/shedua - not listed)",
+        "Guibourtia coleosperma (Rhodesian copalwood)",
+        "Dalbergia spp.",
+        "Pterocarpus soyauxii"
+      ],
+      "lab_methods": "DNA/mass spec for species.",
+      "species_included": [
+        {
+          "name": "Guibourtia demeusei",
+          "trade": "Bubinga",
+          "range": "Cameroon to DR Congo",
+          "notes": ""
+        },
+        {
+          "name": "Guibourtia pellegriniana",
+          "trade": "Bubinga",
+          "range": "Gabon, Equatorial Guinea, Cameroon",
+          "notes": ""
+        },
+        {
+          "name": "Guibourtia tessmannii",
+          "trade": "Bubinga, kevazingo",
+          "range": "Cameroon, Gabon, Equatorial Guinea",
+          "notes": "Main source of kevazingo veneer and 'bubinga' slabs."
+        }
+      ],
+      "schematic": "schematics/guibourtia-bubinga.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Guibourtia+demeusei"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Guibourtia+demeusei"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Guibourtia+demeusei+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Guibourtia+demeusei"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pterocarpus-erinaceus",
+      "scientific_name": "Pterocarpus erinaceus",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Kosso",
+        "African rosewood",
+        "vène",
+        "barwood",
+        "hongmu (part)"
+      ],
+      "appendix": "II",
+      "annotation": "none",
+      "population_scope": "All populations (also covered by the 2023 African Pterocarpus listing)",
+      "listed_since": 2016,
+      "range": "West African savanna: Senegal to Cameroon / Central African Republic.",
+      "wood_type": "hardwood",
+      "heartwood": "Golden-red to purplish red-brown with darker streaks.",
+      "sapwood": "Pale, wide.",
+      "density": "~800-900 kg/m3",
+      "odour": "Faint, slightly sweet.",
+      "endgrain": {
+        "porosity": "semi-ring",
+        "pore_size": "medium",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "banded",
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "dark red gum in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Distinct fine wavy parenchyma bands (Pterocarpus pattern)",
+          "Pores tend to be larger in earlywood (semi-ring porous tendency)",
+          "Ripple marks clear on tangential face"
+        ]
+      },
+      "key_diagnostic": "Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). No annotation - all parts covered.",
+      "lookalikes": [
+        "Pterocarpus tinctorius",
+        "Pterocarpus santalinus",
+        "Dalbergia spp.",
+        "Pterocarpus soyauxii (padauk)"
+      ],
+      "lab_methods": "DART-TOF MS and NIR separate P. erinaceus from P. tinctorius/santalinus; DNA.",
+      "species_included": [],
+      "schematic": "schematics/pterocarpus-erinaceus.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pterocarpus+erinaceus"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pterocarpus+erinaceus"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pterocarpus+erinaceus+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pterocarpus+erinaceus"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pterocarpus-santalinus",
+      "scientific_name": "Pterocarpus santalinus",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Red sanders",
+        "red sandalwood",
+        "rakta chandana",
+        "zitan (part)"
+      ],
+      "appendix": "II",
+      "annotation": "#7",
+      "population_scope": "All populations",
+      "listed_since": 1995,
+      "range": "Endemic to the southern Eastern Ghats, Andhra Pradesh / Tamil Nadu, India.",
+      "wood_type": "hardwood",
+      "heartwood": "Very dark blood-red to purplish-black; red pigment (santalin) stains water and fingers.",
+      "sapwood": "Whitish, sharply demarcated.",
+      "density": "~1,000-1,200 kg/m3 (sinks in water)",
+      "odour": "None (despite the name it is NOT fragrant - unlike true sandalwood Santalum).",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "banded",
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "dark red deposits",
+        "resin_canals": "no",
+        "special": [
+          "Wavy-grain ('wavy red sanders') prized",
+          "Shavings in water give red colour (santalin) - quick field indicator",
+          "Typically traded as billets/logs with bark removed, often smuggled as roots/chips"
+        ]
+      },
+      "key_diagnostic": "Extremely dense, very dark red, non-fragrant wood; parenchyma in fine wavy bands; ripple marks; red dye leaches into water/alcohol. Annotation #7: logs, chips, powder and extracts only.",
+      "lookalikes": [
+        "Pterocarpus tinctorius (mukula)",
+        "Pterocarpus erinaceus",
+        "Dalbergia cochinchinensis",
+        "Adenanthera pavonina",
+        "Caesalpinia sappan (sappanwood)"
+      ],
+      "lab_methods": "Mass spectrometry and NIR distinguish from P. tinctorius; DNA.",
+      "species_included": [],
+      "schematic": "schematics/pterocarpus-santalinus.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pterocarpus+santalinus"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pterocarpus+santalinus"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pterocarpus+santalinus+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pterocarpus+santalinus"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pterocarpus-tinctorius",
+      "scientific_name": "Pterocarpus tinctorius",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Mukula",
+        "African padauk (east/south)",
+        "mulombe"
+      ],
+      "appendix": "II",
+      "annotation": "#6 (2019); African populations now also #17",
+      "population_scope": "All populations",
+      "listed_since": 2019,
+      "range": "DR Congo (Katanga), Zambia, Tanzania, Malawi, Angola, Mozambique.",
+      "wood_type": "hardwood",
+      "heartwood": "Bright red to deep red-brown, darkening with exposure.",
+      "sapwood": "Pale.",
+      "density": "~700-900 kg/m3",
+      "odour": "None distinctive.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "banded",
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "red gum",
+        "resin_canals": "no",
+        "special": [
+          "Very similar to P. santalinus; often traded fraudulently as 'red sandalwood'"
+        ]
+      },
+      "key_diagnostic": "Red Pterocarpus pattern (banded parenchyma, ripple marks). Shipments of red logs out of southern/eastern Africa to Asia should be treated as suspect mukula/red sanders.",
+      "lookalikes": [
+        "Pterocarpus santalinus",
+        "Pterocarpus angolensis",
+        "Pterocarpus erinaceus"
+      ],
+      "lab_methods": "DART-TOF MS / NIR.",
+      "species_included": [],
+      "schematic": "schematics/pterocarpus-tinctorius.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pterocarpus+tinctorius"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pterocarpus+tinctorius"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pterocarpus+tinctorius+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pterocarpus+tinctorius"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pterocarpus-africa",
+      "scientific_name": "Pterocarpus spp. (African populations)",
+      "rank": "genus",
+      "family": "Fabaceae",
+      "common_names": [
+        "African padauk",
+        "muninga",
+        "mukwa",
+        "kiaat",
+        "barwood"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "Populations of Africa only",
+      "listed_since": 2023,
+      "range": "Sub-Saharan Africa.",
+      "wood_type": "hardwood",
+      "heartwood": "Orange-red (padauk) to golden-brown (kiaat/muninga).",
+      "sapwood": "Pale.",
+      "density": "~550-850 kg/m3",
+      "odour": "Faint.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "large",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "banded",
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "red-brown gum",
+        "resin_canals": "no",
+        "special": [
+          "Parenchyma in fine wavy bands alternating with pores",
+          "Storied structure"
+        ]
+      },
+      "key_diagnostic": "Same genus pattern as above. Proposal at CoP20 to remove Central African P. soyauxii was REJECTED - still listed.",
+      "lookalikes": [
+        "Dalbergia spp.",
+        "Baphia nitida (camwood)",
+        "Guibourtia spp."
+      ],
+      "lab_methods": "DNA / mass spec for species.",
+      "species_included": [
+        {
+          "name": "Pterocarpus soyauxii",
+          "trade": "African padauk",
+          "range": "Central Africa",
+          "notes": "Bright orange-red; large pores visible unaided."
+        },
+        {
+          "name": "Pterocarpus angolensis",
+          "trade": "Muninga, mukwa, kiaat",
+          "range": "Southern & East Africa",
+          "notes": "Golden-brown, lighter."
+        },
+        {
+          "name": "Pterocarpus osun",
+          "trade": "Camwood/ African padauk",
+          "range": "West Africa",
+          "notes": ""
+        },
+        {
+          "name": "Pterocarpus mildbraedii",
+          "trade": "",
+          "range": "West & Central Africa",
+          "notes": ""
+        },
+        {
+          "name": "Pterocarpus erinaceus, P. tinctorius",
+          "trade": "",
+          "range": "",
+          "notes": "See separate entries."
+        }
+      ],
+      "schematic": "schematics/pterocarpus-africa.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pterocarpus"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pterocarpus"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pterocarpus+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pterocarpus"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "swietenia-spp",
+      "scientific_name": "Swietenia macrophylla, S. humilis, S. mahagoni",
+      "rank": "genus",
+      "family": "Meliaceae",
+      "common_names": [
+        "Big-leaf mahogany",
+        "Honduras mahogany",
+        "genuine mahogany",
+        "caoba",
+        "Cuban mahogany",
+        "Pacific coast mahogany"
+      ],
+      "appendix": "II",
+      "annotation": "S. macrophylla #6 (Neotropical populations); S. humilis #4; S. mahagoni #5",
+      "population_scope": "S. macrophylla: Neotropics only (plantations in Asia/Fiji not covered)",
+      "listed_since": 1992,
+      "range": "Mexico through Central America to the Amazon (S. macrophylla); Pacific dry forest of Mexico-Costa Rica (S. humilis); Caribbean & Florida (S. mahagoni).",
+      "wood_type": "hardwood",
+      "heartwood": "Light pinkish to deep reddish-brown, darkening; lustrous with ribbon figure.",
+      "sapwood": "Yellowish-white.",
+      "density": "~500-650 kg/m3 (S. mahagoni up to ~800)",
+      "odour": "None to faint.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "marginal",
+          "vasicentric"
+        ],
+        "ripple_marks": "variable",
+        "rays": "fine",
+        "deposits": "dark red-brown gum and/or white deposits in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Distinct pale lines of marginal (terminal) parenchyma delimit growth rings",
+          "Ripple marks frequently present on tangential face",
+          "Rays visible at 10x, reddish"
+        ]
+      },
+      "key_diagnostic": "Diffuse-porous reddish wood with medium pores (solitary + short radial multiples), white or dark gum deposits, distinct marginal parenchyma lines and frequent ripple marks.",
+      "lookalikes": [
+        "Khaya spp. (African mahogany - usually no ripple marks, often no marginal lines)",
+        "Carapa guianensis (andiroba)",
+        "Cedrela spp.",
+        "Entandrophragma spp. (sapele, sipo)",
+        "Toona spp."
+      ],
+      "lab_methods": "Microscopy separates Swietenia from Khaya (ray structure, crystals); DNA/MS for species.",
+      "species_included": [
+        {
+          "name": "Swietenia macrophylla",
+          "trade": "Big-leaf / Brazilian / Honduras mahogany",
+          "range": "Mexico to Bolivia & Brazil",
+          "notes": "Annotation #6; plantations outside Neotropics excluded."
+        },
+        {
+          "name": "Swietenia humilis",
+          "trade": "Pacific coast mahogany",
+          "range": "Pacific Mexico to Costa Rica",
+          "notes": "Annotation #4."
+        },
+        {
+          "name": "Swietenia mahagoni",
+          "trade": "Cuban / West Indian mahogany",
+          "range": "Caribbean, S Florida",
+          "notes": "Annotation #5; denser, finer."
+        }
+      ],
+      "schematic": "schematics/swietenia-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Swietenia+macrophylla"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Swietenia+macrophylla"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Swietenia+macrophylla+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Swietenia+macrophylla"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "cedrela-spp",
+      "scientific_name": "Cedrela spp. (Neotropical populations)",
+      "rank": "genus",
+      "family": "Meliaceae",
+      "common_names": [
+        "Spanish cedar",
+        "cigar-box cedar",
+        "cedro",
+        "cedro rosado"
+      ],
+      "appendix": "II",
+      "annotation": "#6",
+      "population_scope": "Neotropical populations only",
+      "listed_since": 2020,
+      "range": "Mexico & Caribbean to northern Argentina.",
+      "wood_type": "hardwood",
+      "heartwood": "Light pinkish to reddish-brown; may exude resin/gum.",
+      "sapwood": "Pinkish-white.",
+      "density": "~400-550 kg/m3 (light)",
+      "odour": "Strong, characteristic spicy-cedar scent (cigar boxes) - key field feature.",
+      "endgrain": {
+        "porosity": "ring",
+        "pore_size": "large",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "marginal",
+          "vasicentric"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": "dark red gum in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Ring-porous to semi-ring-porous: large earlywood pores in a row, smaller latewood pores",
+          "Marginal parenchyma band with the earlywood pores",
+          "Soft, light; aromatic"
+        ]
+      },
+      "key_diagnostic": "Light, soft, aromatic reddish wood that is ring/semi-ring porous with marginal parenchyma - the scent plus ring porosity separates it from Swietenia.",
+      "lookalikes": [
+        "Toona spp. (Asian/Australian red cedar - not listed)",
+        "Swietenia spp.",
+        "Carapa spp.",
+        "Cedrela plantations outside the Neotropics (Africa) - not covered"
+      ],
+      "lab_methods": "Toona vs Cedrela: microscopy/DNA.",
+      "species_included": [
+        {
+          "name": "Cedrela odorata",
+          "trade": "Spanish cedar, cedro amargo",
+          "range": "Mexico to Argentina, Caribbean",
+          "notes": "Main traded species."
+        },
+        {
+          "name": "Cedrela fissilis",
+          "trade": "Cedro, cedro rosa",
+          "range": "Costa Rica to Argentina",
+          "notes": ""
+        },
+        {
+          "name": "Cedrela montana",
+          "trade": "Cedro de montaña",
+          "range": "Andes",
+          "notes": ""
+        },
+        {
+          "name": "Cedrela angustifolia, C. lilloi, C. salvadorensis, C. tonduzii, C. saltensis and others (c. 17 spp.)",
+          "trade": "Cedro",
+          "range": "Neotropics",
+          "notes": "All covered at genus level."
+        }
+      ],
+      "schematic": "schematics/cedrela-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Cedrela"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Cedrela"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Cedrela+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Cedrela"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "khaya-spp",
+      "scientific_name": "Khaya spp. (African populations)",
+      "rank": "genus",
+      "family": "Meliaceae",
+      "common_names": [
+        "African mahogany",
+        "acajou d'Afrique",
+        "khaya",
+        "lagos mahogany",
+        "mbawa"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "Populations of Africa",
+      "listed_since": 2023,
+      "range": "Tropical Africa (West, Central, East) and Madagascar.",
+      "wood_type": "hardwood",
+      "heartwood": "Pale pinkish-brown to reddish-brown; ribbon/stripe figure from interlocked grain.",
+      "sapwood": "Creamy to yellowish, not always sharply distinct.",
+      "density": "~500-800 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "vasicentric",
+          "scanty"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": "dark red-brown gum in some pores",
+        "resin_canals": "no",
+        "special": [
+          "Growth ring boundaries often indistinct (no or faint marginal parenchyma)",
+          "Interlocked grain giving ribbon stripe on quartersawn faces",
+          "Woolly surface when sawn"
+        ]
+      },
+      "key_diagnostic": "Mahogany-type wood without ripple marks and usually with indistinct ring boundaries, interlocked grain. Hand lens: Khaya-group (vs Swietenia ripple marks + marginal lines).",
+      "lookalikes": [
+        "Swietenia spp.",
+        "Entandrophragma spp. (sapele, sipo, tiama, kosipo - NOT listed)",
+        "Lovoa trichilioides",
+        "Carapa procera"
+      ],
+      "lab_methods": "Microscopy/DNA for species; mass spec.",
+      "species_included": [
+        {
+          "name": "Khaya ivorensis",
+          "trade": "Lagos / Ivory Coast mahogany",
+          "range": "West & Central Africa",
+          "notes": ""
+        },
+        {
+          "name": "Khaya grandifoliola",
+          "trade": "Large-leaf African mahogany",
+          "range": "West to East Africa",
+          "notes": "Denser."
+        },
+        {
+          "name": "Khaya anthotheca",
+          "trade": "White mahogany, mangona",
+          "range": "West to East Africa",
+          "notes": ""
+        },
+        {
+          "name": "Khaya senegalensis",
+          "trade": "Dry-zone mahogany, caïlcédrat",
+          "range": "Sahel / Sudanian savanna",
+          "notes": "Densest (~800)."
+        },
+        {
+          "name": "Khaya madagascariensis",
+          "trade": "Madagascar mahogany",
+          "range": "Madagascar",
+          "notes": ""
+        },
+        {
+          "name": "Khaya nyasica",
+          "trade": "Red mahogany (East Africa)",
+          "range": "East & southern Africa",
+          "notes": "Sometimes merged with K. anthotheca."
+        }
+      ],
+      "schematic": "schematics/khaya-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Khaya"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Khaya"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Khaya+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Khaya"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "afzelia-spp",
+      "scientific_name": "Afzelia spp. (African populations)",
+      "rank": "genus",
+      "family": "Fabaceae",
+      "common_names": [
+        "Doussié",
+        "afzelia",
+        "pod mahogany",
+        "chanfuta",
+        "lingue",
+        "mkora"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "Populations of Africa only (Asian merbau Intsia and Asian Afzelia xylocarpa NOT covered)",
+      "listed_since": 2023,
+      "range": "Tropical Africa.",
+      "wood_type": "hardwood",
+      "heartwood": "Light brown to reddish-/orange-brown, darkening.",
+      "sapwood": "Pale, distinct.",
+      "density": "~700-850 kg/m3",
+      "odour": "Faint, slightly leathery.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "large",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "marginal"
+        ],
+        "ripple_marks": "variable",
+        "rays": "fine",
+        "deposits": "YELLOW to whitish deposits in pores (characteristic)",
+        "resin_canals": "no",
+        "special": [
+          "Bright yellow/white powdery deposits in vessels (afzelin) - visible as yellow dots/streaks",
+          "Lozenge-aliform and confluent parenchyma, plus marginal bands"
+        ]
+      },
+      "key_diagnostic": "Large, few pores with YELLOWISH-WHITE deposits + lozenge/confluent parenchyma + orange-brown heartwood. Proposal at CoP20 to remove Central African A. bipindensis was rejected - still listed.",
+      "lookalikes": [
+        "Intsia bijuga / I. palembanica (merbau - not listed, also has yellow deposits)",
+        "Afzelia xylocarpa (Asian, not covered)",
+        "Pericopsis elata",
+        "Milicia excelsa (iroko - has white deposits)"
+      ],
+      "lab_methods": "Separation from Intsia needs microscopy/DNA - check stated origin.",
+      "species_included": [
+        {
+          "name": "Afzelia africana",
+          "trade": "Doussié, lingue",
+          "range": "West Africa savanna/forest",
+          "notes": ""
+        },
+        {
+          "name": "Afzelia bipindensis",
+          "trade": "Doussié (Cameroon)",
+          "range": "Central Africa",
+          "notes": ""
+        },
+        {
+          "name": "Afzelia pachyloba",
+          "trade": "Doussié",
+          "range": "Central Africa",
+          "notes": ""
+        },
+        {
+          "name": "Afzelia quanzensis",
+          "trade": "Pod mahogany, chanfuta, mkora",
+          "range": "East & southern Africa",
+          "notes": ""
+        },
+        {
+          "name": "Afzelia bella, A. parviflora and other African spp.",
+          "trade": "",
+          "range": "",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/afzelia-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Afzelia"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Afzelia"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Afzelia+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Afzelia"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "ipe-handroanthus-tabebuia-roseodendron",
+      "scientific_name": "Handroanthus spp., Roseodendron spp., Tabebuia spp.",
+      "rank": "genus",
+      "family": "Bignoniaceae",
+      "common_names": [
+        "Ipê",
+        "ipe",
+        "lapacho",
+        "Brazilian walnut",
+        "trumpet tree",
+        "guayacán",
+        "primavera (Roseodendron)"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "All populations",
+      "listed_since": 2024,
+      "range": "Mexico & Caribbean to Argentina (Handroanthus mostly Amazon/Cerrado).",
+      "wood_type": "hardwood",
+      "heartwood": "Olive-brown to dark brown with greenish/yellowish cast (Handroanthus); Roseodendron & many Tabebuia much paler.",
+      "sapwood": "Yellowish-white.",
+      "density": "~950-1,150 kg/m3 for Handroanthus (sinks); Tabebuia/Roseodendron lighter",
+      "odour": "None; fine dust is irritant (lapachol).",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "many",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "YELLOW powder (lapachol) in pores - Handroanthus",
+        "resin_canals": "no",
+        "special": [
+          "Pores small, numerous, many filled with yellow lapachol",
+          "Winged-aliform parenchyma, often confluent",
+          "Very regular ripple marks (storied rays + parenchyma)",
+          "Field test: a drop of ammonia/alkali (e.g. 10% NaOH) on the yellow deposits turns RED (lapachol test)"
+        ]
+      },
+      "key_diagnostic": "Very heavy olive-brown wood, small numerous pores with YELLOW deposits that turn red with alkali, storied structure. Common products: decking (HS 4409) - covered by #17.",
+      "lookalikes": [
+        "Dipteryx spp. (cumaru - no yellow powder, vanilla scent)",
+        "Tabebuia lighter species",
+        "Diplotropis/ sucupira",
+        "Manilkara (massaranduba - red, no ripple marks)",
+        "Hymenaea (jatoba)"
+      ],
+      "lab_methods": "Lapachol spot test (field); DNA/MS for species.",
+      "species_included": [
+        {
+          "name": "Handroanthus serratifolius",
+          "trade": "Ipê amarelo, yellow ipê",
+          "range": "Amazon, Cerrado",
+          "notes": "Major decking species."
+        },
+        {
+          "name": "Handroanthus impetiginosus",
+          "trade": "Ipê roxo, lapacho, pink ipê",
+          "range": "Mexico to Argentina",
+          "notes": "Also bark (pau d'arco) - bark not covered by #17."
+        },
+        {
+          "name": "Handroanthus chrysotrichus, H. capitatus, H. guayacan, H. heptaphyllus, H. ochraceus and others (c. 30 spp.)",
+          "trade": "Ipê, guayacán",
+          "range": "Neotropics",
+          "notes": ""
+        },
+        {
+          "name": "Tabebuia spp. (c. 70 spp., e.g. T. rosea, T. cassinoides)",
+          "trade": "Roble, caixeta",
+          "range": "Neotropics",
+          "notes": "Usually lighter, paler, few or no yellow deposits."
+        },
+        {
+          "name": "Roseodendron donnell-smithii, R. chryseum",
+          "trade": "Primavera, white mahogany",
+          "range": "Mexico-Central America, Colombia/Venezuela",
+          "notes": "Pale yellowish-white light wood."
+        }
+      ],
+      "schematic": "schematics/ipe-handroanthus-tabebuia-roseodendron.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Handroanthus"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Handroanthus"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Handroanthus+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Handroanthus"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "dipteryx-spp",
+      "scientific_name": "Dipteryx spp.",
+      "rank": "genus",
+      "family": "Fabaceae",
+      "common_names": [
+        "Cumaru",
+        "shihuahuaco",
+        "Brazilian teak",
+        "tonka bean tree",
+        "almendro (D. oleifera)"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "All populations",
+      "listed_since": 2024,
+      "range": "Central America, Amazon basin, Cerrado.",
+      "wood_type": "hardwood",
+      "heartwood": "Medium yellowish- to reddish-brown, sometimes purplish streaks; darkens.",
+      "sapwood": "Pale, distinct.",
+      "density": "~1,000-1,100 kg/m3",
+      "odour": "Faint vanilla/cinnamon (coumarin) scent when worked.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "occasional yellowish/brown deposits",
+        "resin_canals": "no",
+        "special": [
+          "Lozenge/winged-aliform parenchyma, short confluent bands",
+          "Extremely fine regular ripple marks",
+          "Waxy/oily feel"
+        ]
+      },
+      "key_diagnostic": "Very heavy brown wood with storied structure and winged-aliform parenchyma; coumarin (vanilla) scent; NO yellow lapachol powder (separates from ipê).",
+      "lookalikes": [
+        "Handroanthus (ipê)",
+        "Hymenaea courbaril (jatoba)",
+        "Pericopsis elata",
+        "Diplotropis purpurea"
+      ],
+      "lab_methods": "DNA/MS.",
+      "species_included": [
+        {
+          "name": "Dipteryx odorata",
+          "trade": "Cumaru, tonka",
+          "range": "Amazon",
+          "notes": ""
+        },
+        {
+          "name": "Dipteryx micrantha",
+          "trade": "Shihuahuaco",
+          "range": "Peru, Bolivia, W Brazil",
+          "notes": "Major Peruvian export."
+        },
+        {
+          "name": "Dipteryx oleifera (= D. panamensis)",
+          "trade": "Almendro",
+          "range": "Central America, Colombia",
+          "notes": "Formerly App III (CR, NI)."
+        },
+        {
+          "name": "Dipteryx alata, D. polyphylla, D. rosea, D. ferrea and others",
+          "trade": "Baru, cumaru",
+          "range": "",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/dipteryx-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Dipteryx"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Dipteryx"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Dipteryx+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Dipteryx"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "paubrasilia-echinata",
+      "scientific_name": "Paubrasilia echinata (syn. Caesalpinia echinata)",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Pernambuco",
+        "pau-brasil",
+        "Brazilwood",
+        "bois de Pernambouc"
+      ],
+      "appendix": "II",
+      "annotation": "#10 (amended at CoP20, 2025)",
+      "population_scope": "All populations",
+      "listed_since": 2007,
+      "range": "Atlantic coastal forest of eastern Brazil.",
+      "wood_type": "hardwood",
+      "heartwood": "Bright orange to orange-red when fresh, darkening to deep red-brown; lustrous.",
+      "sapwood": "Pale yellowish, distinct.",
+      "density": "~1,100-1,300 kg/m3 (very heavy)",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "vasicentric",
+          "aliform"
+        ],
+        "ripple_marks": "variable",
+        "rays": "fine",
+        "deposits": "red-brown deposits",
+        "resin_canals": "no",
+        "special": [
+          "Very fine, even texture",
+          "Red dye (brazilin) - wood shavings colour water/alcohol red-orange",
+          "Main product: violin/cello BOW STICKS and bow blanks"
+        ]
+      },
+      "key_diagnostic": "Very heavy, fine-textured orange-red wood (bow blanks!). CoP20 adopted new decisions on traceability of bows, blanks and stockpiles - scrutinise bow-maker consignments.",
+      "lookalikes": [
+        "Caesalpinia/Biancaea sappan (sappanwood)",
+        "Haematoxylum brasiletto",
+        "Manilkara bidentata (massaranduba - used for cheap bows)",
+        "Handroanthus (ipê - 'pau ferro' bows)",
+        "Pterocarpus spp."
+      ],
+      "lab_methods": "DART-TOF MS, NIR and DNA used for bow sticks; fluorescence of extracts.",
+      "species_included": [],
+      "schematic": "schematics/paubrasilia-echinata.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Paubrasilia+echinata"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Paubrasilia+echinata"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Paubrasilia+echinata+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Paubrasilia+echinata"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "gonystylus-spp",
+      "scientific_name": "Gonystylus spp.",
+      "rank": "genus",
+      "family": "Thymelaeaceae",
+      "common_names": [
+        "Ramin",
+        "melawis",
+        "lanutan-bagyo"
+      ],
+      "appendix": "II",
+      "annotation": "#4",
+      "population_scope": "All populations",
+      "listed_since": 2004,
+      "range": "Peat-swamp forests of Malaysia, Indonesia (Sumatra, Borneo), Philippines, Pacific (c. 30 spp.).",
+      "wood_type": "hardwood",
+      "heartwood": "Uniform pale straw to creamy white (no heartwood colour).",
+      "sapwood": "Not distinct.",
+      "density": "~550-700 kg/m3",
+      "odour": "Unpleasant when fresh; none dry.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "banded"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Long-winged aliform parenchyma often joining into wavy confluent bands",
+          "Uniform pale colour - typical products: mouldings, dowels, picture frames, blinds, billiard cues, rulers",
+          "Bark contains irritant fibres"
+        ]
+      },
+      "key_diagnostic": "Featureless pale wood used for dowels/mouldings with distinct winged-aliform to confluent parenchyma under the lens. Annotation #4 covers finished products.",
+      "lookalikes": [
+        "Alstonia (pulai)",
+        "Dyera (jelutong)",
+        "Fagus (beech)",
+        "Tilia (basswood)",
+        "Koompassia/ Paraserianthes"
+      ],
+      "lab_methods": "Microscopy; DNA.",
+      "species_included": [
+        {
+          "name": "Gonystylus bancanus",
+          "trade": "Ramin telur",
+          "range": "Sumatra, Borneo, Peninsular Malaysia",
+          "notes": "Main commercial species."
+        },
+        {
+          "name": "All other Gonystylus spp. (c. 30)",
+          "trade": "Ramin",
+          "range": "Malesia to Pacific",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/gonystylus-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Gonystylus"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Gonystylus"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Gonystylus+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Gonystylus"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "aquilaria-gyrinops",
+      "scientific_name": "Aquilaria spp. and Gyrinops spp.",
+      "rank": "genus",
+      "family": "Thymelaeaceae",
+      "common_names": [
+        "Agarwood",
+        "gaharu",
+        "oud",
+        "aloeswood",
+        "eaglewood",
+        "chen xiang",
+        "jinkoh"
+      ],
+      "appendix": "II",
+      "annotation": "#14",
+      "population_scope": "All populations",
+      "listed_since": 2005,
+      "range": "South & Southeast Asia to New Guinea.",
+      "wood_type": "hardwood",
+      "heartwood": "Healthy wood: pale yellowish-white, very light, soft. Resinous agarwood: dark brown to black patches/streaks, heavy (may sink).",
+      "sapwood": "Not distinct.",
+      "density": "~350-450 kg/m3 healthy; resinous agarwood much heavier",
+      "odour": "Resin-impregnated wood: strong sweet, balsamic fragrance, especially when warmed/burned.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "multiples",
+        "parenchyma": [
+          "scanty"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": "dark resin in tissues of agarwood",
+        "resin_canals": "no",
+        "special": [
+          "INCLUDED (interxylary) PHLOEM: scattered islands of soft tissue across the end grain - diagnostic of the group",
+          "Resin accumulates in/around the included phloem islands",
+          "Pores in radial multiples"
+        ]
+      },
+      "key_diagnostic": "Light pale wood with scattered islands of INCLUDED PHLOEM, or dark resinous chips/ 'wood' with strong fragrance. Traded as chips, powder, oil, beads, carvings - #14 covers most.",
+      "lookalikes": [
+        "Fake/impregnated agarwood (other woods soaked in oil/resin)",
+        "Excoecaria agallocha",
+        "Gonystylus (also Thymelaeaceae)"
+      ],
+      "lab_methods": "Microscopy (included phloem) for genus; chemistry (chromones) to confirm genuine agarwood.",
+      "species_included": [
+        {
+          "name": "Aquilaria malaccensis",
+          "trade": "Gaharu",
+          "range": "India to Indonesia",
+          "notes": "Main traded species."
+        },
+        {
+          "name": "Aquilaria crassna",
+          "trade": "Kalamet",
+          "range": "Indochina",
+          "notes": ""
+        },
+        {
+          "name": "Aquilaria sinensis",
+          "trade": "Chen xiang",
+          "range": "S China",
+          "notes": ""
+        },
+        {
+          "name": "Aquilaria filaria, A. microcarpa, A. beccariana, A. subintegra and others (c. 20 spp.)",
+          "trade": "",
+          "range": "",
+          "notes": ""
+        },
+        {
+          "name": "Gyrinops versteegii, G. walla and others (c. 10 spp.)",
+          "trade": "Gaharu",
+          "range": "Sri Lanka, E Indonesia, New Guinea",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/aquilaria-gyrinops.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Aquilaria++and+Gyrinops"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Aquilaria++and+Gyrinops"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Aquilaria++and+Gyrinops+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Aquilaria++and+Gyrinops"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pericopsis-elata",
+      "scientific_name": "Pericopsis elata",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Afrormosia",
+        "assamela",
+        "kokrodua",
+        "African teak"
+      ],
+      "appendix": "II",
+      "annotation": "#17",
+      "population_scope": "All populations",
+      "listed_since": 1992,
+      "range": "Côte d'Ivoire, Ghana, Cameroon, Rep. Congo, DR Congo, CAR.",
+      "wood_type": "hardwood",
+      "heartwood": "Yellowish-brown when fresh, darkening to golden/olive-brown (teak-like), lustrous.",
+      "sapwood": "Pale, distinct.",
+      "density": "~650-750 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "vasicentric"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "occasional dark deposits",
+        "resin_canals": "no",
+        "special": [
+          "Fine ripple marks",
+          "Interlocked grain",
+          "Unlike teak: not ring-porous, not greasy, no leathery smell"
+        ]
+      },
+      "key_diagnostic": "Teak-coloured wood that is diffuse porous with storied structure and aliform-confluent parenchyma (teak is semi-ring porous, oily, without ripple marks).",
+      "lookalikes": [
+        "Tectona grandis (teak)",
+        "Milicia excelsa (iroko)",
+        "Afzelia spp.",
+        "Nauclea diderrichii (opepe)"
+      ],
+      "lab_methods": "DNA/MS.",
+      "species_included": [],
+      "schematic": "schematics/pericopsis-elata.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pericopsis+elata"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pericopsis+elata"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pericopsis+elata+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pericopsis+elata"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "platymiscium-parviflorum",
+      "scientific_name": "Platymiscium parviflorum",
+      "rank": "species",
+      "family": "Fabaceae",
+      "common_names": [
+        "Trebol",
+        "macacaúba (genus)",
+        "Panama redwood (genus)"
+      ],
+      "appendix": "II",
+      "annotation": "#4",
+      "population_scope": "All populations",
+      "listed_since": 2017,
+      "range": "Central America (Mexico to Panama).",
+      "wood_type": "hardwood",
+      "heartwood": "Red to reddish-brown/ purplish with darker stripes.",
+      "sapwood": "Pale.",
+      "density": "~850-950 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "few",
+        "grouping": "mixed",
+        "parenchyma": [
+          "aliform",
+          "confluent",
+          "banded"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "reddish gum",
+        "resin_canals": "no",
+        "special": [
+          "Distinct ripple marks",
+          "Rosewood-like appearance"
+        ]
+      },
+      "key_diagnostic": "Red striped rosewood-like wood with storied structure. Only P. parviflorum listed - other Platymiscium (macacaúba, P. pinnatum) are not.",
+      "lookalikes": [
+        "Dalbergia spp.",
+        "Other Platymiscium spp. (not listed)",
+        "Pterocarpus spp."
+      ],
+      "lab_methods": "DNA/MS.",
+      "species_included": [],
+      "schematic": "schematics/platymiscium-parviflorum.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Platymiscium+parviflorum"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Platymiscium+parviflorum"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Platymiscium+parviflorum+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Platymiscium+parviflorum"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "diospyros-madagascar",
+      "scientific_name": "Diospyros spp. (Madagascar populations)",
+      "rank": "genus",
+      "family": "Ebenaceae",
+      "common_names": [
+        "Madagascar ebony",
+        "ébène",
+        "hazomainty"
+      ],
+      "appendix": "II",
+      "annotation": "#5",
+      "population_scope": "Populations of Madagascar only",
+      "listed_since": 2013,
+      "range": "Madagascar (c. 100+ endemic species).",
+      "wood_type": "hardwood",
+      "heartwood": "Jet black, sometimes with grey/brown streaks.",
+      "sapwood": "Pale greyish, distinct.",
+      "density": "~900-1,200 kg/m3",
+      "odour": "None (slight acrid smell when worked).",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "few",
+        "grouping": "multiples",
+        "parenchyma": [
+          "diffuse",
+          "reticulate"
+        ],
+        "ripple_marks": "variable",
+        "rays": "fine",
+        "deposits": "black deposits in pores",
+        "resin_canals": "no",
+        "special": [
+          "Very fine, close tangential lines of parenchyma (reticulate) hard to see in black wood - wet the surface or view sapwood",
+          "Pores small, radial multiples of 2-4",
+          "Rays very fine"
+        ]
+      },
+      "key_diagnostic": "Jet black, very heavy fine-textured wood; small pores in short radial multiples; fine reticulate parenchyma lines. Origin is decisive (only Madagascar listed).",
+      "lookalikes": [
+        "Diospyros crassiflora (Gabon ebony - not listed)",
+        "Diospyros celebica (macassar)",
+        "Dalbergia melanoxylon",
+        "Dyed/ blackened woods"
+      ],
+      "lab_methods": "DNA/provenance; macroscopic ID = Diospyros genus only.",
+      "species_included": [
+        {
+          "name": "Diospyros perrieri, D. aculeata, D. gracilipes and c. 80+ other Malagasy spp.",
+          "trade": "Ebony",
+          "range": "Madagascar",
+          "notes": "Madagascar export ban + CITES zero export quota."
+        }
+      ],
+      "schematic": "schematics/diospyros-madagascar.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Diospyros"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Diospyros"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Diospyros+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Diospyros"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "bulnesia-sarmientoi",
+      "scientific_name": "Bulnesia sarmientoi",
+      "rank": "species",
+      "family": "Zygophyllaceae",
+      "common_names": [
+        "Argentine lignum vitae",
+        "palo santo (Gran Chaco)",
+        "verawood (trade)",
+        "guaiac wood"
+      ],
+      "appendix": "II",
+      "annotation": "#11",
+      "population_scope": "All populations",
+      "listed_since": 2010,
+      "range": "Gran Chaco: Paraguay, Argentina, Bolivia.",
+      "wood_type": "hardwood",
+      "heartwood": "Olive-green to brown, darkening; oily.",
+      "sapwood": "Yellowish.",
+      "density": "~950-1,100 kg/m3",
+      "odour": "Pleasant, incense/rose-like (guaiac wood oil) - strong when sanded or burned.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "solitary",
+        "parenchyma": [
+          "vasicentric",
+          "banded"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "resin",
+        "resin_canals": "no",
+        "special": [
+          "Very fine, regular ripple marks",
+          "Heavily interlocked grain",
+          "Traded as wood, sawdust, guaiac oil"
+        ]
+      },
+      "key_diagnostic": "Green-olive, oily, fragrant, very heavy wood with small solitary pores and very fine ripple marks. Do not confuse the trade name 'palo santo' with Bursera graveolens (not listed).",
+      "lookalikes": [
+        "Guaiacum spp.",
+        "Bulnesia arborea (verawood - not listed)",
+        "Bursera graveolens (palo santo sticks)"
+      ],
+      "lab_methods": "DNA/MS.",
+      "species_included": [],
+      "schematic": "schematics/bulnesia-sarmientoi.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Bulnesia+sarmientoi"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Bulnesia+sarmientoi"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Bulnesia+sarmientoi+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Bulnesia+sarmientoi"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "guaiacum-spp",
+      "scientific_name": "Guaiacum spp.",
+      "rank": "genus",
+      "family": "Zygophyllaceae",
+      "common_names": [
+        "Lignum vitae",
+        "guayacán",
+        "gaïac"
+      ],
+      "appendix": "II",
+      "annotation": "#2",
+      "population_scope": "All populations",
+      "listed_since": 2003,
+      "range": "Caribbean, Mexico, Central America, northern South America.",
+      "wood_type": "hardwood",
+      "heartwood": "Dark greenish-brown to almost black; very oily/ waxy.",
+      "sapwood": "Pale yellow, sharply demarcated.",
+      "density": "~1,200-1,350 kg/m3 (one of the heaviest woods)",
+      "odour": "Mild perfumed scent when worked.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "solitary",
+        "parenchyma": [
+          "diffuse",
+          "banded"
+        ],
+        "ripple_marks": "yes",
+        "rays": "fine",
+        "deposits": "resin",
+        "resin_canals": "no",
+        "special": [
+          "Very fine storied rays (ripple marks)",
+          "Strongly interlocked grain",
+          "Resin (guaiacin) turns blue/green with oxidisers"
+        ]
+      },
+      "key_diagnostic": "Extremely heavy, oily, green-brown wood with tiny solitary pores and very fine ripple marks. Traded as bearings, mallets, carvings.",
+      "lookalikes": [
+        "Bulnesia spp.",
+        "Handroanthus (ipê)",
+        "Diospyros"
+      ],
+      "lab_methods": "Microscopy/DNA.",
+      "species_included": [
+        {
+          "name": "Guaiacum officinale",
+          "trade": "Lignum vitae",
+          "range": "Caribbean, N South America",
+          "notes": ""
+        },
+        {
+          "name": "Guaiacum sanctum",
+          "trade": "Holywood lignum vitae",
+          "range": "Florida keys, Caribbean, Mexico, Central America",
+          "notes": ""
+        },
+        {
+          "name": "Guaiacum coulteri, G. unijugum and others",
+          "trade": "",
+          "range": "Mexico",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/guaiacum-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Guaiacum"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Guaiacum"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Guaiacum+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Guaiacum"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "osyris-lanceolata",
+      "scientific_name": "Osyris lanceolata",
+      "rank": "species",
+      "family": "Santalaceae",
+      "common_names": [
+        "East African sandalwood",
+        "African sandalwood"
+      ],
+      "appendix": "II",
+      "annotation": "#2",
+      "population_scope": "Burundi, Ethiopia, Kenya, Rwanda, Uganda, Tanzania",
+      "listed_since": 2013,
+      "range": "East Africa (listed populations); species ranges into southern Africa, Mediterranean, Asia.",
+      "wood_type": "hardwood",
+      "heartwood": "Yellowish to light brown, oily.",
+      "sapwood": "Pale.",
+      "density": "~900 kg/m3",
+      "odour": "Sandalwood-like fragrance, weaker than Santalum album.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "many",
+        "grouping": "solitary",
+        "parenchyma": [
+          "diffuse"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Very fine, uniform texture; pores barely visible at 10x",
+          "Often smuggled as roots and stem pieces for oil distillation"
+        ]
+      },
+      "key_diagnostic": "Small fragrant yellowish logs/roots from East Africa with very fine texture. Smell + origin are key.",
+      "lookalikes": [
+        "Santalum album (Indian sandalwood - not CITES)",
+        "Santalum spicatum"
+      ],
+      "lab_methods": "Oil chemistry, DNA.",
+      "species_included": [],
+      "schematic": "schematics/osyris-lanceolata.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Osyris+lanceolata"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Osyris+lanceolata"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Osyris+lanceolata+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Osyris+lanceolata"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "prunus-africana",
+      "scientific_name": "Prunus africana",
+      "rank": "species",
+      "family": "Rosaceae",
+      "common_names": [
+        "African cherry",
+        "pygeum",
+        "red stinkwood"
+      ],
+      "appendix": "II",
+      "annotation": "#4",
+      "population_scope": "All populations",
+      "listed_since": 1995,
+      "range": "Afromontane forests of Africa and Madagascar.",
+      "wood_type": "hardwood",
+      "heartwood": "Pinkish-brown to reddish-brown.",
+      "sapwood": "Pale.",
+      "density": "~700-800 kg/m3",
+      "odour": "Bitter-almond smell when fresh (hence 'stinkwood').",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "many",
+        "grouping": "mixed",
+        "parenchyma": [
+          "scanty"
+        ],
+        "ripple_marks": "no",
+        "rays": "medium",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Mainly traded as BARK (medicinal - pygeum extract), not timber"
+        ]
+      },
+      "key_diagnostic": "Usually encountered as dried bark chips/powder (prostate medicine) - bitter almond odour. Wood is a fine cherry-like hardwood.",
+      "lookalikes": [
+        "Other Prunus spp."
+      ],
+      "lab_methods": "Chemistry of bark; DNA.",
+      "species_included": [],
+      "schematic": "schematics/prunus-africana.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Prunus+africana"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Prunus+africana"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Prunus+africana+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Prunus+africana"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "aniba-rosaeodora",
+      "scientific_name": "Aniba rosaeodora",
+      "rank": "species",
+      "family": "Lauraceae",
+      "common_names": [
+        "Brazilian rosewood (oil)",
+        "pau-rosa",
+        "bois de rose (oil)"
+      ],
+      "appendix": "II",
+      "annotation": "#12",
+      "population_scope": "All populations",
+      "listed_since": 2010,
+      "range": "Amazon basin (Brazil, Peru, Guianas, Colombia, Venezuela).",
+      "wood_type": "hardwood",
+      "heartwood": "Yellowish-brown to brownish.",
+      "sapwood": "Not distinct.",
+      "density": "~800 kg/m3",
+      "odour": "Strong floral/ linalool (rose) scent - source of rosewood essential oil.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "vasicentric"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Oil cells (Lauraceae) visible at higher magnification",
+          "Mainly traded as essential oil"
+        ]
+      },
+      "key_diagnostic": "NOT a 'rosewood' timber in the Dalbergia sense; traded mostly as oil. Wood: fragrant yellowish-brown Lauraceae.",
+      "lookalikes": [
+        "Other Aniba / Ocotea spp."
+      ],
+      "lab_methods": "Oil GC-MS, DNA.",
+      "species_included": [],
+      "schematic": "schematics/aniba-rosaeodora.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Aniba+rosaeodora"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Aniba+rosaeodora"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Aniba+rosaeodora+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Aniba+rosaeodora"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "oreomunnea-pterocarpa",
+      "scientific_name": "Oreomunnea pterocarpa",
+      "rank": "species",
+      "family": "Juglandaceae",
+      "common_names": [
+        "Gavilán",
+        "caribe"
+      ],
+      "appendix": "II",
+      "annotation": "#4",
+      "population_scope": "All populations",
+      "listed_since": 1975,
+      "range": "Mexico to Panama (montane).",
+      "wood_type": "hardwood",
+      "heartwood": "Light brown to pinkish brown.",
+      "sapwood": "Pale.",
+      "density": "~550-650 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "medium",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "banded",
+          "diffuse"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Walnut-family pattern: fine tangential parenchyma lines between rays"
+        ]
+      },
+      "key_diagnostic": "Rarely encountered in trade; walnut-like Juglandaceae wood.",
+      "lookalikes": [
+        "Alfaroa spp.",
+        "Juglans spp."
+      ],
+      "lab_methods": "Microscopy/DNA.",
+      "species_included": [],
+      "schematic": "schematics/oreomunnea-pterocarpa.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Oreomunnea+pterocarpa"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Oreomunnea+pterocarpa"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Oreomunnea+pterocarpa+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Oreomunnea+pterocarpa"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "taxus-spp",
+      "scientific_name": "Taxus chinensis, T. cuspidata, T. fuana, T. sumatrana, T. wallichiana (and their infraspecific taxa)",
+      "rank": "species group",
+      "family": "Taxaceae",
+      "common_names": [
+        "Asian yews",
+        "Chinese yew",
+        "Japanese yew",
+        "Himalayan yew"
+      ],
+      "appendix": "II",
+      "annotation": "#2",
+      "population_scope": "All populations of the listed species",
+      "listed_since": 1995,
+      "range": "Himalaya, China, Russian Far East, Japan, Korea, Southeast Asia.",
+      "wood_type": "softwood",
+      "heartwood": "Orange-red to purplish brown.",
+      "sapwood": "Thin, creamy white, sharply demarcated.",
+      "density": "~600-700 kg/m3 (heavy for a softwood)",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "NO resin canals",
+          "Narrow, wavy growth rings; dense latewood",
+          "Spiral thickenings in tracheids (microscope) - diagnostic for Taxus",
+          "Mainly traded for taxanes (paclitaxel) from bark/needles"
+        ]
+      },
+      "key_diagnostic": "Dense orange-red softwood without resin canals, very narrow rings and thin white sapwood. Species not separable by wood - origin/DNA.",
+      "lookalikes": [
+        "Taxus baccata (European yew - not listed)",
+        "Taxus brevifolia (Pacific yew)",
+        "Torreya spp."
+      ],
+      "lab_methods": "Microscopy (spiral thickenings), DNA.",
+      "species_included": [
+        {
+          "name": "Taxus chinensis",
+          "trade": "Chinese yew",
+          "range": "China",
+          "notes": ""
+        },
+        {
+          "name": "Taxus cuspidata",
+          "trade": "Japanese yew",
+          "range": "Japan, Korea, Russian Far East, NE China",
+          "notes": ""
+        },
+        {
+          "name": "Taxus fuana",
+          "trade": "Himalayan yew",
+          "range": "W Himalaya",
+          "notes": ""
+        },
+        {
+          "name": "Taxus sumatrana",
+          "trade": "Sumatran yew",
+          "range": "SE Asia",
+          "notes": ""
+        },
+        {
+          "name": "Taxus wallichiana",
+          "trade": "Himalayan yew",
+          "range": "Himalaya to SE Asia",
+          "notes": ""
+        }
+      ],
+      "schematic": "schematics/taxus-spp.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Taxus+chinensis"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Taxus+chinensis"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Taxus+chinensis+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Taxus+chinensis"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "widdringtonia-whytei",
+      "scientific_name": "Widdringtonia whytei",
+      "rank": "species",
+      "family": "Cupressaceae",
+      "common_names": [
+        "Mulanje cedar"
+      ],
+      "appendix": "II",
+      "annotation": "none",
+      "population_scope": "All populations",
+      "listed_since": 2019,
+      "range": "Mount Mulanje, Malawi (endemic).",
+      "wood_type": "softwood",
+      "heartwood": "Pale reddish- to pinkish-brown.",
+      "sapwood": "Pale.",
+      "density": "~450-500 kg/m3",
+      "odour": "Strong aromatic cedar scent.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "No resin canals; distinct growth rings; fine even texture"
+        ]
+      },
+      "key_diagnostic": "Aromatic reddish cypress-family softwood from Malawi; curios, planks. Origin key.",
+      "lookalikes": [
+        "Widdringtonia nodiflora / W. cedarbergensis",
+        "Juniperus procera (African pencil cedar)"
+      ],
+      "lab_methods": "DNA.",
+      "species_included": [],
+      "schematic": "schematics/widdringtonia-whytei.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Widdringtonia+whytei"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Widdringtonia+whytei"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Widdringtonia+whytei+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Widdringtonia+whytei"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "pinus-koraiensis",
+      "scientific_name": "Pinus koraiensis",
+      "rank": "species",
+      "family": "Pinaceae",
+      "common_names": [
+        "Korean pine",
+        "Korean cedar",
+        "hong song",
+        "kedr (RU)"
+      ],
+      "appendix": "III",
+      "annotation": "#5",
+      "population_scope": "Population of the Russian Federation (listed by Russia)",
+      "listed_since": 2010,
+      "range": "Russian Far East, NE China, Korea, Japan.",
+      "wood_type": "softwood",
+      "heartwood": "Light reddish-brown / pinkish.",
+      "sapwood": "Yellowish-white.",
+      "density": "~420-480 kg/m3",
+      "odour": "Resinous (pine).",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "yes",
+        "special": [
+          "NORMAL RESIN CANALS present - visible as small light/dark dots, mostly in latewood",
+          "Gradual earlywood-latewood transition (soft/white pine group)",
+          "Even texture"
+        ]
+      },
+      "key_diagnostic": "Soft pine with resin canals and GRADUAL earlywood-latewood transition (white pine type) - separates it from Scots pine/larch with abrupt transition.",
+      "lookalikes": [
+        "Pinus sibirica (Siberian pine - not listed)",
+        "Pinus strobus",
+        "Pinus sylvestris (abrupt transition)",
+        "Larix (abrupt transition, fewer canals)"
+      ],
+      "lab_methods": "Microscopy of cross-field pits separates soft pines from hard pines; P. koraiensis vs P. sibirica = DNA.",
+      "species_included": [],
+      "schematic": "schematics/pinus-koraiensis.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Pinus+koraiensis"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Pinus+koraiensis"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pinus+koraiensis+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Pinus+koraiensis"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "quercus-mongolica",
+      "scientific_name": "Quercus mongolica",
+      "rank": "species",
+      "family": "Fagaceae",
+      "common_names": [
+        "Mongolian oak",
+        "Japanese oak (mizunara)",
+        "Manchurian oak"
+      ],
+      "appendix": "III",
+      "annotation": "#5",
+      "population_scope": "Population of the Russian Federation (listed by Russia)",
+      "listed_since": 2014,
+      "range": "Russian Far East, NE China, Korea, Japan, Mongolia.",
+      "wood_type": "hardwood",
+      "heartwood": "Light yellowish- to medium brown.",
+      "sapwood": "Paler.",
+      "density": "~650-750 kg/m3",
+      "odour": "Faint oak/ tannin smell.",
+      "endgrain": {
+        "porosity": "ring",
+        "pore_size": "large",
+        "pore_density": "moderate",
+        "grouping": "solitary",
+        "parenchyma": [
+          "diffuse"
+        ],
+        "ripple_marks": "no",
+        "rays": "broad",
+        "deposits": "tyloses fill earlywood pores",
+        "resin_canals": "no",
+        "special": [
+          "BROAD MULTISERIATE RAYS clearly visible unaided (oak)",
+          "Earlywood pores large, filled with tyloses (white oak group)",
+          "Latewood pores small, in radial/flame-shaped patches"
+        ]
+      },
+      "key_diagnostic": "Typical white oak: ring porous, broad rays, tyloses in pores, flame-like latewood pore pattern. Cannot be separated from other white oaks by hand lens - origin (Russia) and documents are key.",
+      "lookalikes": [
+        "Quercus robur / Q. petraea (European oak)",
+        "Quercus alba (American white oak)",
+        "Quercus crispula"
+      ],
+      "lab_methods": "DNA, stable isotopes for origin (Russia vs China/Japan/EU).",
+      "species_included": [],
+      "schematic": "schematics/quercus-mongolica.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Quercus+mongolica"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Quercus+mongolica"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Quercus+mongolica+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Quercus+mongolica"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "fraxinus-mandshurica",
+      "scientific_name": "Fraxinus mandshurica",
+      "rank": "species",
+      "family": "Oleaceae",
+      "common_names": [
+        "Manchurian ash",
+        "tamo (figured)",
+        "Japanese ash (yachidamo)"
+      ],
+      "appendix": "III",
+      "annotation": "#5",
+      "population_scope": "Population of the Russian Federation (listed by Russia)",
+      "listed_since": 2014,
+      "range": "Russian Far East, NE China, Korea, Japan.",
+      "wood_type": "hardwood",
+      "heartwood": "Light greyish-brown to light brown.",
+      "sapwood": "Whitish, not always distinct.",
+      "density": "~600-700 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "ring",
+        "pore_size": "large",
+        "pore_density": "moderate",
+        "grouping": "mixed",
+        "parenchyma": [
+          "vasicentric",
+          "confluent"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Ring porous: large earlywood pores in 2-4 rows",
+          "Latewood pores small, solitary or pairs, surrounded by parenchyma - becoming confluent towards ring end",
+          "Rays fine (NOT broad - separates from oak)"
+        ]
+      },
+      "key_diagnostic": "Ring-porous ash: large earlywood pores, latewood pores with vasicentric/confluent parenchyma, fine rays. Separation from other ashes needs DNA/origin.",
+      "lookalikes": [
+        "Fraxinus excelsior (European ash)",
+        "Fraxinus americana (white ash)",
+        "Fraxinus chinensis/ F. rhynchophylla",
+        "Castanea (chestnut)"
+      ],
+      "lab_methods": "DNA, isotopes.",
+      "species_included": [],
+      "schematic": "schematics/fraxinus-mandshurica.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Fraxinus+mandshurica"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Fraxinus+mandshurica"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Fraxinus+mandshurica+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Fraxinus+mandshurica"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "podocarpus-neriifolius",
+      "scientific_name": "Podocarpus neriifolius",
+      "rank": "species",
+      "family": "Podocarpaceae",
+      "common_names": [
+        "Oleander podocarp",
+        "thitmin"
+      ],
+      "appendix": "III",
+      "annotation": "#1",
+      "population_scope": "Population of Nepal (listed by Nepal)",
+      "listed_since": 1975,
+      "range": "Nepal and India to SE Asia, New Guinea, Fiji.",
+      "wood_type": "softwood",
+      "heartwood": "Uniform pale yellowish-brown.",
+      "sapwood": "Not distinct.",
+      "density": "~500 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "none",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Indistinct growth rings, very uniform texture"
+        ]
+      },
+      "key_diagnostic": "Featureless Podocarpus wood; only Nepal-origin material is listed.",
+      "lookalikes": [
+        "Other Podocarpus spp.",
+        "Nageia spp."
+      ],
+      "lab_methods": "DNA/origin.",
+      "species_included": [],
+      "schematic": "schematics/podocarpus-neriifolius.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Podocarpus+neriifolius"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Podocarpus+neriifolius"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Podocarpus+neriifolius+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Podocarpus+neriifolius"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "tetracentron-sinense",
+      "scientific_name": "Tetracentron sinense",
+      "rank": "species",
+      "family": "Trochodendraceae",
+      "common_names": [
+        "Spur-leaf tree",
+        "shui qing shu"
+      ],
+      "appendix": "III",
+      "annotation": "#1",
+      "population_scope": "Population of Nepal (listed by Nepal) - VERIFY current status on Species+",
+      "listed_since": 1975,
+      "range": "Himalaya (Nepal, NE India, Myanmar) to China.",
+      "wood_type": "hardwood",
+      "heartwood": "Light brown.",
+      "sapwood": "Pale.",
+      "density": "~500 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "vesselless",
+        "pore_size": null,
+        "pore_density": null,
+        "grouping": null,
+        "parenchyma": [],
+        "ripple_marks": "no",
+        "rays": "medium",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "A HARDWOOD WITHOUT VESSELS (pores) - looks like a softwood on end grain but has wide visible rays",
+          "Rare in trade"
+        ]
+      },
+      "key_diagnostic": "Vesselless angiosperm: no pores, but rays wider than any softwood. Very rare in trade.",
+      "lookalikes": [
+        "Trochodendron aralioides (also vesselless)",
+        "Drimys spp."
+      ],
+      "lab_methods": "Microscopy.",
+      "species_included": [],
+      "schematic": "schematics/tetracentron-sinense.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Tetracentron+sinense"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Tetracentron+sinense"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Tetracentron+sinense+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Tetracentron+sinense"
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "magnolia-liliifera-obovata",
+      "scientific_name": "Magnolia liliifera var. obovata",
+      "rank": "variety",
+      "family": "Magnoliaceae",
+      "common_names": [
+        "Champ (Nepal)"
+      ],
+      "appendix": "III",
+      "annotation": "#1",
+      "population_scope": "Population of Nepal (listed by Nepal) - VERIFY current status on Species+",
+      "listed_since": 1975,
+      "range": "Nepal / Eastern Himalaya.",
+      "wood_type": "hardwood",
+      "heartwood": "Olive-greenish to yellowish-brown.",
+      "sapwood": "Pale.",
+      "density": "~500-600 kg/m3",
+      "odour": "None.",
+      "endgrain": {
+        "porosity": "diffuse",
+        "pore_size": "small",
+        "pore_density": "many",
+        "grouping": "multiples",
+        "parenchyma": [
+          "marginal"
+        ],
+        "ripple_marks": "no",
+        "rays": "fine",
+        "deposits": null,
+        "resin_canals": "no",
+        "special": [
+          "Distinct pale marginal parenchyma lines (Magnoliaceae)",
+          "Greenish heartwood"
+        ]
+      },
+      "key_diagnostic": "Fine, even Magnoliaceae wood with marginal parenchyma lines and greenish heartwood. Only Nepal origin listed.",
+      "lookalikes": [
+        "Michelia/ Magnolia spp.",
+        "Liriodendron"
+      ],
+      "lab_methods": "DNA/origin.",
+      "species_included": [],
+      "schematic": "schematics/magnolia-liliifera-obovata.svg",
+      "references": [
+        {
+          "title": "Species+ (official CITES listing & annotation)",
+          "url": "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Magnolia+liliifera+var.+obovata"
+        },
+        {
+          "title": "The Wood Database (has a 10x end-grain photo per species)",
+          "url": "https://www.wood-database.com/?s=Magnolia+liliifera+var.+obovata"
+        },
+        {
+          "title": "InsideWood (anatomy database, NC State)",
+          "url": "https://insidewood.lib.ncsu.edu/search"
+        },
+        {
+          "title": "CITES Timber ID repository (manuals, keys, photo atlases)",
+          "url": "https://cites.org/eng/timber/timber-ID-repository"
+        },
+        {
+          "title": "CITESwoodID (Thünen Institute, macroscopic key with images)",
+          "url": "https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy"
+        },
+        {
+          "title": "Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)",
+          "url": "https://plantwood.cirad.fr"
+        },
+        {
+          "title": "Wikimedia Commons (free-licence images)",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Magnolia+liliifera+var.+obovata+wood&title=Special:MediaSearch&type=image"
+        },
+        {
+          "title": "GBIF (distribution)",
+          "url": "https://www.gbif.org/species/search?q=Magnolia+liliifera+var.+obovata"
+        }
+      ],
+      "photos": []
+    }
+  ]
+}

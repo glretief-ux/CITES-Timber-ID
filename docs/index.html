@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CITES Timber ID</title>
+<style>
+:root{--bg:#f6f3ee;--card:#fff;--ink:#1d1b18;--muted:#6b645b;--line:#e2dbd0;--acc:#7a3e1d;--I:#b3261e;--II:#b26a00;--III:#2f6f3e;--chip:#efe8dd}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171513;--card:#211e1b;--ink:#eee8df;--muted:#a59d92;--line:#3a352f;--acc:#e09b6b;--chip:#2d2925}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:18px 16px 8px;max-width:1200px;margin:auto}
+h1{margin:0;font-size:22px}header p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.warn{max-width:1200px;margin:8px auto;padding:10px 14px;border-left:4px solid var(--I);background:var(--card);font-size:13px;border-radius:6px}
+main{max-width:1200px;margin:auto;padding:8px 16px 40px;display:grid;grid-template-columns:300px 1fr;gap:18px}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+aside{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;align-self:start;position:sticky;top:8px}
+@media(max-width:800px){aside{position:static}}
+fieldset{border:0;margin:0 0 10px;padding:0}legend{font-weight:600;font-size:13px;margin-bottom:4px}
+.opts{display:flex;flex-wrap:wrap;gap:5px}
+.opts label{background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12.5px;cursor:pointer;user-select:none}
+.opts input{display:none}.opts input:checked+span{color:var(--acc);font-weight:700}
+.opts label:has(input:checked){border-color:var(--acc)}
+input[type=search]{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:14px}
+button{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.count{color:var(--muted);font-size:13px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:420/466;object-fit:contain;background:#fff}
+.body{padding:10px 12px}
+.badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;border-radius:5px;padding:1px 7px;margin-right:6px}
+.b-I{background:var(--I)}.b-II{background:var(--II)}.b-III{background:var(--III)}
+.sci{font-style:italic;font-weight:600}
+.cn{color:var(--muted);font-size:12.5px;margin:2px 0 6px}
+.score{float:right;font-size:12px;color:var(--muted)}
+.key{font-size:13px}
+details{margin-top:6px;font-size:13px}summary{cursor:pointer;color:var(--acc);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:12.5px;margin:6px 0}td{border-top:1px solid var(--line);padding:3px 4px;vertical-align:top}td:first-child{color:var(--muted);width:42%}
+a{color:var(--acc)}ul{padding-left:18px;margin:4px 0}
+.photos{display:flex;gap:6px;overflow-x:auto;margin:6px 0}.photos img{height:110px;width:auto;border-radius:6px}
+footer{max-width:1200px;margin:auto;padding:0 16px 30px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>CITES Timber ID — 10x end-grain screening key</h1>
+  <p id="basis">Loading…</p>
+</header>
+<div class="warn"><b>Screening tool only.</b> Hand-lens identification is usually reliable to genus or group, not species. Drawings are <b>schematic</b>; compare with real 10x photographs of reference specimens and confirm with a wood-ID laboratory (anatomy, DNA, mass spectrometry) and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
+<main>
+<aside>
+  <input type="search" id="q" placeholder="Search name, trade name, family…">
+  <details id="fbox" open><summary style="margin:8px 0">10x features seen</summary><div id="filters"></div></details>
+  <button id="reset">Clear all</button>
+</aside>
+<section>
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid"></div>
+</section>
+</main>
+<footer>Data: <code>data/species.json</code> — edit <code>tools/species_data.py</code> and run <code>python tools/build.py</code>. Photos: add to <code>photos/</code> and <code>photos/manifest.csv</code>.</footer>
+<script>
+const FILTERS = [
+  {k:"wood", t:"Wood type", o:[["hardwood","Hardwood (pores)"],["softwood","Softwood (no pores)"],["vesselless","No pores but wide rays"]]},
+  {k:"porosity", t:"Porosity (hardwoods)", o:[["diffuse","Diffuse"],["semi-ring","Semi-ring"],["ring","Ring porous"]]},
+  {k:"pore_size", t:"Pore size at 10x", o:[["small","Small"],["medium","Medium"],["large","Large / visible unaided"]]},
+  {k:"grouping", t:"Pore arrangement", o:[["solitary","Mostly solitary"],["multiples","Radial multiples"],["mixed","Mixed"]]},
+  {k:"parenchyma", t:"Parenchyma seen (tick all)", multi:true, o:[["vasicentric","Halo round pores"],["aliform","Wings / lozenge"],["confluent","Joined pores"],["banded","Fine bands"],["marginal","Line at ring edge"],["reticulate","Net / fine lines"],["none","None visible"]]},
+  {k:"rays", t:"Rays", o:[["fine","Fine"],["medium","Medium"],["broad","Broad (oak-like)"]]},
+  {k:"ripple", t:"Ripple marks (side grain)", o:[["yes","Present"],["no","Absent"]]},
+  {k:"deposits", t:"Pore deposits", o:[["yellow","Yellow"],["white","White"],["dark","Dark / red gum"],["tyloses","Tyloses (froth)"]]},
+  {k:"canals", t:"Resin canals (softwood)", o:[["yes","Present"],["no","Absent"]]},
+  {k:"colour", t:"Heartwood colour", o:[["black","Black"],["red","Red / orange"],["purple","Purple / rosewood"],["brown","Brown"],["olive","Olive / green"],["pale","Pale / cream"]]},
+  {k:"heavy", t:"Density", o:[["heavy","Very heavy (sinks)"],["light","Light"]]},
+  {k:"scent", t:"Smell", o:[["yes","Distinct scent"],["no","No scent"]]},
+  {k:"special", t:"Special feature", o:[["phloem","Islands of included phloem"],["dye","Colours water red"],["lapachol","Yellow powder → red with ammonia"]]},
+  {k:"appendix", t:"CITES Appendix", o:[["I","I"],["II","II"],["III","III"]]},
+];
+let DATA, state = {};
+const $ = s => document.querySelector(s);
+
+function traits(t){
+  const e=t.endgrain, low=s=>(s||"").toLowerCase();
+  const all=low([t.heartwood,t.odour,(e.special||[]).join(" "),e.deposits].join(" "));
+  const dens=low(t.density), hw=low(t.heartwood);
+  const firstNum = parseInt((t.density.match(/(\d[\d,]*)/)||["","0"])[1].replace(",",""));
+  const col = [];
+  if(/black/.test(hw)) col.push("black");
+  if(/red|orange/.test(hw)) col.push("red");
+  if(/purpl|violet/.test(hw)) col.push("purple");
+  if(/brown|chocolate/.test(hw)) col.push("brown");
+  if(/olive|green/.test(hw)) col.push("olive");
+  if(/pale|cream|white|straw|yellowish/.test(hw)) col.push("pale");
+  const dep=[]; const d=low(e.deposits);
+  if(/yellow/.test(d)) dep.push("yellow"); if(/white/.test(d)) dep.push("white");
+  if(/dark|red|black|gum|resin/.test(d)) dep.push("dark"); if(/tylos/.test(d)) dep.push("tyloses");
+  const sp=[]; if(/included|interxylary/.test(all)) sp.push("phloem"); if(/colour water|stains water|colour.*water|leaches/.test(all)) sp.push("dye"); if(/lapachol/.test(all)) sp.push("lapachol");
+  return {
+    wood: e.porosity==="vesselless" ? ["vesselless"] : [t.wood_type],
+    porosity:[e.porosity], pore_size:[e.pore_size], grouping:[e.grouping],
+    parenchyma:(e.parenchyma&&e.parenchyma.length)? e.parenchyma.concat(e.parenchyma.includes("scanty")?["none"]:[]) : ["none"],
+    rays:[e.rays], ripple: e.ripple_marks==="variable"?["yes","no"]:[e.ripple_marks],
+    deposits:dep, canals:[e.resin_canals], colour:col,
+    heavy: (firstNum>=950||/very heavy|sinks/.test(dens)) ? ["heavy"] : (firstNum && firstNum<=520 ? ["light"]:[]),
+    scent: /^none/.test(low(t.odour)) ? ["no"] : ["yes"], special:sp, appendix:[t.appendix]
+  };
+}
+
+function build(){
+  const f=$("#filters");
+  FILTERS.forEach(F=>{
+    const fs=document.createElement("fieldset");
+    fs.innerHTML=`<legend>${F.t}</legend><div class="opts">${F.o.map(([v,l])=>`<label><input type="${F.multi?"checkbox":"checkbox"}" data-k="${F.k}" value="${v}"><span>${l}</span></label>`).join("")}</div>`;
+    f.appendChild(fs);
+  });
+  f.addEventListener("change",ev=>{
+    const i=ev.target, k=i.dataset.k, F=FILTERS.find(x=>x.k===k);
+    if(!F.multi){ f.querySelectorAll(`input[data-k="${k}"]`).forEach(o=>{ if(o!==i) o.checked=false; }); }
+    state[k]=[...f.querySelectorAll(`input[data-k="${k}"]:checked`)].map(o=>o.value);
+    render();
+  });
+  $("#q").addEventListener("input",render);
+  $("#reset").onclick=()=>{state={};f.querySelectorAll("input").forEach(i=>i.checked=false);$("#q").value="";render();};
+}
+
+function render(){
+  const q=$("#q").value.trim().toLowerCase();
+  const active=Object.entries(state).filter(([k,v])=>v.length);
+  const rows=DATA.taxa.map(t=>{
+    const tr=traits(t); let score=0, hard=0;
+    for(const [k,vals] of active){
+      const have=tr[k]||[];
+      const hit=vals.filter(v=>have.includes(v)).length;
+      if(k==="parenchyma"){ score+=hit/vals.length; if(hit===0) hard++; }
+      else if(hit) score++; else hard++;
+    }
+    const text=[t.scientific_name,t.family,t.common_names.join(" "),(t.species_included||[]).map(s=>s.name+" "+s.trade).join(" ")].join(" ").toLowerCase();
+    return {t,score,miss:hard,qok:!q||text.includes(q)};
+  }).filter(r=>r.qok && r.miss<=1)
+    .sort((a,b)=>a.miss-b.miss||b.score-a.score||a.t.appendix.localeCompare(b.t.appendix));
+  $("#count").textContent = active.length
+    ? `${rows.filter(r=>!r.miss).length} full match(es); ${rows.filter(r=>r.miss===1).length} with one feature different (shown after). ${active.length} feature(s) selected.`
+    : `${rows.length} CITES-listed timber entries. Tick what you see under the lens to narrow down.`;
+  $("#grid").innerHTML=rows.map(({t,miss})=>card(t,miss)).join("");
+}
+
+function card(t,miss){
+  const e=t.endgrain;
+  const photos=(t.photos||[]).map(p=>`<a href="photos/${t.id}/${p.file}" target="_blank"><img src="photos/${t.id}/${p.file}" alt="10x ${t.scientific_name}"></a>`).join("");
+  const inc=(t.species_included||[]).length?`<details><summary>Species covered (${t.species_included.length})</summary><ul>${t.species_included.map(s=>`<li><i>${s.name}</i>${s.trade?" — "+s.trade:""}${s.notes?` <span style="color:var(--muted)">(${s.notes})</span>`:""}</li>`).join("")}</ul></details>`:"";
+  return `<article class="card">
+  <img loading="lazy" src="${t.schematic}" alt="Schematic 10x end grain of ${t.scientific_name}">
+  <div class="body">
+   ${miss?'<span class="score">1 feature differs</span>':""}
+   <span class="badge b-${t.appendix}">App. ${t.appendix}</span><span class="sci">${t.scientific_name}</span>
+   <div class="cn">${t.common_names.join(" · ")} — ${t.family}</div>
+   ${photos?`<div class="photos">${photos}</div>`:'<div class="cn">No real 10x photo added yet — see image sources below.</div>'}
+   <div class="key">${t.key_diagnostic}</div>
+   <details><summary>10x features & characteristics</summary><table>
+    <tr><td>Porosity</td><td>${e.porosity}</td></tr>
+    <tr><td>Pores</td><td>${[e.pore_size,e.pore_density,e.grouping].filter(Boolean).join(", ")||"—"}</td></tr>
+    <tr><td>Deposits</td><td>${e.deposits||"—"}</td></tr>
+    <tr><td>Parenchyma</td><td>${(e.parenchyma||[]).join(", ")||"—"}</td></tr>
+    <tr><td>Rays / ripple marks</td><td>${e.rays} / ${e.ripple_marks}</td></tr>
+    <tr><td>Resin canals</td><td>${e.resin_canals}</td></tr>
+    <tr><td>Heartwood</td><td>${t.heartwood}</td></tr>
+    <tr><td>Sapwood</td><td>${t.sapwood}</td></tr>
+    <tr><td>Density</td><td>${t.density}</td></tr>
+    <tr><td>Odour</td><td>${t.odour}</td></tr>
+    <tr><td>Range</td><td>${t.range}</td></tr>
+   </table><ul>${(e.special||[]).map(s=>`<li>${s}</li>`).join("")}</ul></details>
+   <details><summary>Listing & annotation</summary><table>
+    <tr><td>Appendix</td><td>${t.appendix}</td></tr>
+    <tr><td>Annotation</td><td>${t.annotation}<br><span style="color:var(--muted)">${DATA.annotations[(t.annotation.match(/#\d+|none/)||["none"])[0]]||""}</span></td></tr>
+    <tr><td>Population</td><td>${t.population_scope}</td></tr>
+    <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
+   </table></details>
+   <details><summary>Look-alikes</summary><ul>${t.lookalikes.map(l=>`<li>${l}</li>`).join("")}</ul><p>${t.lab_methods}</p></details>
+   ${inc}
+   <details><summary>10x photo sources & references</summary><ul>${t.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${r.title}</a></li>`).join("")}</ul></details>
+  </div></article>`;
+}
+
+if(window.matchMedia("(max-width:800px)").matches) document.getElementById("fbox").open=false;
+fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;$("#basis").textContent=d.listing_basis;build();render();})
+ .catch(()=>{$("#basis").textContent="Could not load data.json — open this page via GitHub Pages or a local web server (python -m http.server).";});
+</script>
+</body>
+</html>
