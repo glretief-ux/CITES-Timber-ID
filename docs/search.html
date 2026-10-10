@@ -63,6 +63,29 @@ tr.hl td{background:#e4edf8;font-weight:600}
 .maptabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
 .maptabs button{padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:12.5px;cursor:pointer;font-style:italic}
 .maptabs button.on{background:#12355b;color:#fff;border-color:#12355b}
+.amx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.amx table{min-width:760px;font-size:12.5px}
+.amx th{position:sticky;top:0;text-align:center;white-space:normal;line-height:1.2}
+.amx th:first-child,.amx td:first-child{text-align:left}
+.amx td{text-align:center;vertical-align:middle}
+.amx td:first-child{white-space:nowrap;font-weight:700;color:var(--brand)}
+.amx td.y{background:#e3f1e6;color:#1e6b34;font-weight:700}
+.amx td.n{background:#f6f8fb;color:#aab3bf}
+.amx td.p{background:#fff4e5;color:#8a5a00;font-weight:700}
+.amx tr.cur td{box-shadow:inset 0 2px 0 #12355b,inset 0 -2px 0 #12355b}
+.amx tr.cur td:first-child{box-shadow:inset 2px 2px 0 #12355b,inset 0 -2px 0 #12355b}
+.steps{counter-reset:st;list-style:none;padding:0;margin:8px 0}
+.steps li{counter-increment:st;position:relative;padding:6px 0 6px 38px;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps li:before{content:counter(st);position:absolute;left:0;top:6px;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+.ex td:first-child{width:auto;color:var(--ink)}
+.ex td:last-child{white-space:nowrap}
+.verdict{display:inline-block;padding:1px 9px;border-radius:99px;font-size:11px;font-weight:700;color:#fff}
+.verdict.y{background:var(--hi)}.verdict.n{background:var(--lo)}
+.anntaxa i{white-space:nowrap}
+.card .anntaxa td:first-child{width:90px;color:var(--brand)}.card .anntaxa td:nth-child(2){width:28%}
+.card .amx td:first-child{width:auto}
+.card .ex td:first-child{width:auto}
 @media print{.searchbox,.chips,.lkbtn,footer,header .hl{display:none}body{background:#fff}.card{box-shadow:none;border:1px solid var(--line)}}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -85,6 +108,52 @@ tr.hl td{background:#e4edf8;font-weight:600}
 <div class="chips" id="examples"><span class="small">Try: </span></div>
 </div>
 <div id="out"></div>
+<div id="annotations">
+<div class="card"><h2>CITES annotations — how they work</h2>
+<p>A CITES listing names a species and an <b>Appendix</b>. Many timber listings also carry an <b>annotation</b> — a number such as <b>#15</b> or <b>#17</b> written after the name. The annotation decides <b>which parts and products of that species are controlled</b>. Anything the annotation does not cover can be traded <b>without CITES documents</b>, even though the species itself is listed.</p>
+<ul>
+<li><b>No annotation</b> = every part and product is covered: logs, planks, furniture, carvings, chips, even small souvenirs (e.g. kosso, <i>Pterocarpus erinaceus</i>; all Appendix I species).</li>
+<li><b>Narrow annotations</b> (#5, #6, #17) cover only primary products — logs, sawn wood, veneer, plywood and (for #17) transformed wood such as decking. A finished chair made of mahogany (#6) needs no CITES permit.</li>
+<li><b>Broad annotations</b> (#1, #2, #4, #10, #15) cover almost everything, with a few listed exceptions such as seeds, retail-packaged goods, small finished items under 10 kg (#15), or musical instruments.</li>
+</ul>
+<p><b>The Appendix decides what documents are needed:</b> Appendix I — export permit <u>and</u> import permit, commercial trade essentially prohibited · Appendix II — export permit (or re-export certificate) from the exporting country · Appendix III — export permit from the listing country, certificate of origin from other countries.</p>
+</div>
+
+<div class="card"><h2>Is this consignment covered? — 5 checks</h2>
+<ol class="steps">
+<li><b>Species:</b> does the wood match a CITES-listed taxon? (use this lookup and the 10x key; confirm with a laboratory if needed)</li>
+<li><b>Population:</b> is the origin inside the listed population? e.g. <i>Khaya</i>, <i>Afzelia</i>, African <i>Pterocarpus</i> = Africa only; <i>Cedrela</i>, <i>Swietenia macrophylla</i> = Neotropics only; <i>Diospyros</i> = Madagascar only; Appendix III = listing country only. Plantation wood from outside the range is not covered.</li>
+<li><b>Product form:</b> what is it — log, plank, veneer, plywood, decking, chips, oil, furniture, instrument? Use the HS code on the declaration (see matrix below).</li>
+<li><b>Annotation:</b> does the annotation of that listing include this product form? Check the matrix.</li>
+<li><b>Documents:</b> if covered, the correct CITES permit/certificate for the Appendix must accompany the shipment and match species, quantity and origin. If not covered — no CITES document required (other laws such as EUTR/EUDR or national export bans may still apply).</li>
+</ol>
+</div>
+
+<div class="card"><h2>Annotation matrix — which products are controlled <span class="small">green = controlled · orange = partly · grey = not controlled</span></h2>
+<div class="amx"><table id="amxT"></table></div>
+<p class="small" style="margin-top:8px">CITES definitions (Res. Conf. 10.13 interpretation): <b>logs</b> = HS 44.03 · <b>sawn wood</b> = HS 44.06/44.07 · <b>veneer sheets</b> = HS 44.08 · <b>plywood</b> = HS 44.12 · <b>transformed wood</b> = HS 44.09 (e.g. decking, flooring strips, mouldings). Simplified for field use — always read the full annotation text on <a href="https://cites.org/eng/app/appendices.php" target="_blank" rel="noopener">the CITES Appendices</a>.</p>
+</div>
+
+<div class="card"><h2>Annotations and the species they apply to</h2>
+<table id="annTaxa" class="anntaxa"></table>
+</div>
+
+<div class="card"><h2>Worked examples</h2>
+<table class="ex">
+<tr><th>Situation</th><th>Listing / annotation</th><th>CITES permit needed?</th></tr>
+<tr><td>Container of ipê <b>decking boards</b> (HS 4409) from Brazil</td><td><i>Handroanthus</i> · App. II · #17</td><td><span class="verdict y">YES</span> transformed wood is covered</td></tr>
+<tr><td><b>Bubinga dining table</b>, 60 kg of wood, one shipment</td><td><i>Guibourtia</i> · App. II · #15</td><td><span class="verdict y">YES</span> finished product over 10 kg</td></tr>
+<tr><td>Single <b>bubinga bowl</b>, 2 kg, sent alone</td><td><i>Guibourtia</i> · App. II · #15</td><td><span class="verdict n">NO</span> finished product ≤ 10 kg per shipment</td></tr>
+<tr><td><b>Kosso furniture</b> from Togo</td><td><i>Pterocarpus erinaceus</i> · App. II · no annotation</td><td><span class="verdict y">YES</span> every product is covered</td></tr>
+<tr><td><b>Mahogany chairs</b> (finished) from Peru</td><td><i>Swietenia macrophylla</i> · App. II · #6</td><td><span class="verdict n">NO</span> #6 = logs, sawn wood, veneer, plywood only</td></tr>
+<tr><td><b>Red sanders chips/powder</b> declared as "dye wood"</td><td><i>Pterocarpus santalinus</i> · App. II · #7</td><td><span class="verdict y">YES</span> chips, powder and extracts are covered</td></tr>
+<tr><td>Sawn <b>African mahogany</b> from a plantation in <b>Brazil</b></td><td><i>Khaya</i> · App. II · #17 · Africa only</td><td><span class="verdict n">NO</span> origin outside the listed population — check documents carefully</td></tr>
+<tr><td>Sawn <b>Mongolian oak</b> from <b>Russia</b></td><td><i>Quercus mongolica</i> · App. III (Russia) · #5</td><td><span class="verdict y">YES</span> Russian export permit required</td></tr>
+<tr><td>Agarwood <b>chips and oil</b></td><td><i>Aquilaria</i> · App. II · #14</td><td><span class="verdict y">YES</span> chips, powder and oil are covered</td></tr>
+</table>
+<p class="small" style="margin-top:8px">Examples are simplified guidance for screening. National legislation (e.g. EU Wildlife Trade Regulations, Annex A–D) can be stricter than CITES.</p>
+</div>
+</div>
 <footer><span id="basis"></span></footer>
 </div>
 <script>
@@ -211,7 +280,7 @@ function show(e){
    </div><div class="card"><h2>CITES listing</h2><table>
      <tr><td>Listing</td><td><i>${esc(t.scientific_name)}</i> (${esc(t.rank)})</td></tr>
      <tr><td>Appendix</td><td>${t.appendix}</td></tr>
-     <tr><td>Annotation</td><td><b>${esc(t.annotation)}</b><br>${esc(DATA.annotations[ann]||"")}</td></tr>
+     <tr><td>Annotation</td><td><b>${esc(t.annotation)}</b><br>${esc(DATA.annotations[ann]||"")}<br><a href="#annotations" class="annlink">What does this annotation cover? See the matrix ↓</a></td></tr>
      <tr><td>Population covered</td><td>${esc(t.population_scope)}</td></tr>
      <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
      <tr><td>Native range</td><td>${esc(t.range)}</td></tr>
@@ -251,6 +320,7 @@ function show(e){
   document.querySelectorAll(".gosp").forEach(a=>a.onclick=ev=>{ev.preventDefault(); const ti=+a.dataset.ti, si=+a.dataset.si; const s=DATA.taxa[ti].species_included[si]; $("#q").value=s.name.replace(/\(.*?\)/g,"").trim(); show({ti,si,kind:"species",label:s.name});});
   bindGo();
   drawRange(t, sp, e, searched);
+  highlightAnn(t);
   $("#out").scrollIntoView({behavior:"smooth",block:"start"});
 }
 // ---------------- distribution map (GBIF occurrence data, loaded live)
@@ -317,8 +387,51 @@ function drawRange(t, sp, e, searched){
 }
 function bindGo(){document.querySelectorAll(".go").forEach(a=>a.onclick=ev=>{ev.preventDefault();const ti=+a.dataset.ti;$("#q").value=DATA.taxa[ti].scientific_name;show({ti,kind:"entry",label:DATA.taxa[ti].scientific_name});});}
 
+// ---------------- annotation matrix
+const PRODUCTS=["Logs<br>44.03","Sawn wood<br>44.06/07","Veneer<br>44.08","Plywood<br>44.12","Decking, flooring<br>44.09","Chips, powder<br>44.01","Extracts, oil","Finished products<br>(furniture, carvings)","Musical instruments"];
+// y = controlled, n = not, p = partly
+const ANN_MATRIX={
+ "none":["y","y","y","y","y","y","y","y","y","All parts and products"],
+ "#1":  ["y","y","y","y","y","y","y","y","y","All parts and products except seeds, seedlings, cut flowers"],
+ "#2":  ["y","y","y","y","y","y","y","p","p","All, except seeds, pollen and finished products packaged for retail"],
+ "#4":  ["y","y","y","y","y","y","y","y","y","All, except seeds, seedlings, cut flowers and a few plant items"],
+ "#5":  ["y","y","y","n","n","n","n","n","n","Logs, sawn wood, veneer only"],
+ "#6":  ["y","y","y","y","n","n","n","n","n","Logs, sawn wood, veneer, plywood"],
+ "#7":  ["y","n","n","n","n","y","y","n","n","Logs, chips, powder, extracts"],
+ "#10": ["y","y","y","y","y","y","y","y","p","All (CoP20); finished instruments moved non-commercially exempt"],
+ "#11": ["y","y","y","y","n","p","y","n","n","Logs, sawn wood, veneer, plywood, powder, extracts"],
+ "#12": ["y","y","y","y","n","n","y","n","n","Logs, sawn wood, veneer, plywood, extracts"],
+ "#14": ["y","y","y","y","y","y","y","p","p","All incl. chips, powder, oil; retail-packaged finished products exempt"],
+ "#15": ["y","y","y","y","y","y","y","p","n","All, except finished products ≤10 kg/shipment and finished musical instruments"],
+ "#17": ["y","y","y","y","y","n","n","n","n","Logs, sawn wood, veneer, plywood, transformed wood"],
+};
+const SYM={y:"✓",n:"—",p:"partly"};
+function annsOf(t){
+  if(/^S\. macrophylla/.test(t.annotation)) return ["#6","#4","#5"];
+  const m=t.annotation.match(/#\d+/g); return m? [...new Set(m)] : (/^none/.test(t.annotation)?["none"]:[]);
+}
+function annLabel(t,a){
+  if(t.id==="swietenia-spp") return {"#6":"Swietenia macrophylla (Neotropics)","#4":"Swietenia humilis","#5":"Swietenia mahagoni"}[a]||t.scientific_name;
+  if(t.id==="pterocarpus-tinctorius") return a==="#17"?"Pterocarpus tinctorius (African populations)":"Pterocarpus tinctorius";
+  return t.scientific_name.replace(/\s*\(.*?\)/g,"");
+}
+function buildAnnotations(){
+  const order=Object.keys(ANN_MATRIX);
+  $("#amxT").innerHTML=`<tr><th>Annotation</th>${PRODUCTS.map(p=>`<th>${p}</th>`).join("")}</tr>`+
+    order.map(a=>`<tr data-ann="${a}"><td>${a==="none"?"None":a}</td>${ANN_MATRIX[a].slice(0,9).map(v=>`<td class="${v}">${SYM[v]}</td>`).join("")}</tr>`).join("");
+  const by={}; DATA.taxa.forEach((t,ti)=>annsOf(t).forEach(a=>(by[a]=by[a]||[]).push(ti)));
+  $("#annTaxa").innerHTML=`<tr><th style="width:90px">Annotation</th><th>Covers</th><th>Applies to</th></tr>`+
+    order.filter(a=>by[a]).map(a=>`<tr data-ann="${a}"><td><b>${a==="none"?"None":a}</b></td><td>${esc(ANN_MATRIX[a][9])}</td><td>${by[a].map(ti=>`<a href="#" class="go" data-ti="${ti}"><i>${esc(annLabel(DATA.taxa[ti],a))}</i></a>`).join(" · ")}</td></tr>`).join("");
+  bindGo();
+}
+function highlightAnn(t){
+  const cur=t?annsOf(t):[];
+  document.querySelectorAll("#amxT tr[data-ann],#annTaxa tr[data-ann]").forEach(r=>r.classList.toggle("cur",cur.includes(r.dataset.ann)));
+  document.querySelectorAll("#annTaxa tr[data-ann]").forEach(r=>r.style.background=cur.includes(r.dataset.ann)?"#e4edf8":"");
+}
 function init(){
   buildIndex();
+  buildAnnotations();
   $("#basis").textContent=DATA.listing_basis;
   ["Dalbergia nigra","Dalbergia latifolia","Pterocarpus santalinus","Swietenia macrophylla","Khaya ivorensis","Handroanthus serratifolius","Aquilaria malaccensis","Quercus mongolica"].forEach(n=>{
     const b=document.createElement("button"); b.className="lkchip"; b.textContent=n; b.onclick=()=>{$("#q").value=n; lookup(n);}; $("#examples").appendChild(b);});
