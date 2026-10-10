@@ -10,6 +10,7 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 
 | Path | Contents |
 |---|---|
+| [`docs/search.html`](docs/search.html) | **Species lookup** — type a scientific name, synonym or trade name and get the full profile (listing, annotation, 10x features, characteristics, look-alikes, photo sources). Recognises any species of a listed genus and warns about non-listed look-alikes. Shareable link per species, printable |
 | [`docs/index.html`](docs/index.html) | **Interactive identification key** — tick what you see under the lens, get ranked candidates (works on phone; publish with GitHub Pages) |
 | [`species/`](species/README.md) | One field-guide page per listed taxon: listing, annotation, 10x features, colour, density, smell, look-alikes, species covered, photo sources |
 | [`data/species.json`](data/species.json), [`data/species.csv`](data/species.csv) | Full database (opens in Excel) |
