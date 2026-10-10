@@ -54,8 +54,17 @@ details.lk>div,details.lk>ul,details.lk>p{margin:8px 12px}details.lk>table{margi
 .card ul{margin:6px 0;padding-left:20px}
 .photos{display:flex;gap:8px;overflow-x:auto}.photos img{height:160px;border-radius:8px}
 tr.hl td{background:#e4edf8;font-weight:600}
+#rangeMap{height:420px;border-radius:8px;border:1px solid var(--line);background:#e9eef3}
+@media(max-width:700px){#rangeMap{height:300px}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:12px;color:var(--mute);align-items:center}
+.legend b{display:inline-block;width:12px;height:12px;vertical-align:middle;margin-right:5px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.maptabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.maptabs button{padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:12.5px;cursor:pointer;font-style:italic}
+.maptabs button.on{background:#12355b;color:#fff;border-color:#12355b}
 @media print{.searchbox,.chips,.lkbtn,footer,header .hl{display:none}body{background:#fff}.card{box-shadow:none;border:1px solid var(--line)}}
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -205,6 +214,14 @@ function show(e){
      <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
      <tr><td>Native range</td><td>${esc(t.range)}</td></tr>
      <tr><td>Official record</td><td><a href="${t.references[0].url}" target="_blank" rel="noopener">Species+</a></td></tr></table>
+   </div><div class="card"><h2>Where it grows <span class="small" id="mapNote"></span></h2>
+     <div class="maptabs" id="mapTabs"></div>
+     <div id="rangeMap"></div>
+     <div class="legend">
+       <span><b style="background:#fed976"></b><b style="background:#fd8d3c"></b><b style="background:#bd0026"></b>GBIF occurrence records (darker = more records)</span>
+       <span>Native range: ${esc(t.range)}${t.population_scope && !/^All populations$/.test(t.population_scope)?" · <b>CITES covers:</b> "+esc(t.population_scope):""}</span>
+       <span>Records include plantations, cultivated trees and some misidentifications — use the native range above to judge origin claims.</span>
+     </div>
    </div><div class="card"><h2>10x end-grain features</h2><table>
      <tr><td>Wood type</td><td>${esc(t.wood_type)}</td></tr>
      <tr><td>Porosity</td><td>${esc(eg.porosity)}</td></tr>
@@ -231,7 +248,70 @@ function show(e){
   $("#share").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(location.href); $("#share").textContent="Link copied";};
   document.querySelectorAll(".gosp").forEach(a=>a.onclick=ev=>{ev.preventDefault(); const ti=+a.dataset.ti, si=+a.dataset.si; const s=DATA.taxa[ti].species_included[si]; $("#q").value=s.name.replace(/\(.*?\)/g,"").trim(); show({ti,si,kind:"species",label:s.name});});
   bindGo();
+  drawRange(t, sp, e, searched);
   $("#out").scrollIntoView({behavior:"smooth",block:"start"});
+}
+// ---------------- distribution map (GBIF occurrence data, loaded live)
+let MAP=null;
+const GBIF="https://api.gbif.org";
+function namesFor(t, sp, e, searched){
+  const clean=n=>n.replace(/\(.*?\)/g,"").replace(/ and others.*$/i,"").replace(/ and c\..*$/i,"").trim();
+  const expand=str=>{const out=[]; let genus="";
+    clean(str).split(/,| and /).forEach(n=>{n=n.trim(); if(!n||/^all /i.test(n)) return;
+      if(/^[A-Z]\.\s/.test(n)) n=genus+" "+n.replace(/^[A-Z]\.\s*/,""); else genus=n.split(/\s+/)[0];
+      n=n.replace(/\s+spp\.?$/,""); out.push(n.split(/\s+/).slice(0,n.split(/\s+/).length>2&&/var\./.test(n)?4:2).join(" "));});
+    return out;};
+  if(sp) return expand(sp.name);
+  if(e.kind==="genus-fallback") return [clean(e.label).split(/\s+/).slice(0,2).join(" ")];
+  if(e.kind==="entry" && !/spp/.test(t.scientific_name) && t.rank!=="species group") return [clean(searched).split(/\s+/).slice(0,2).join(" ")];
+  return expand(t.scientific_name);
+}
+async function gbifMatch(name){
+  const rank = name.trim().split(/\s+/).length===1 ? "&rank=GENUS" : "";
+  const r=await fetch(`${GBIF}/v1/species/match?name=${encodeURIComponent(name)}${rank}&kingdom=Plantae`);
+  const j=await r.json();
+  if(!j.usageKey || j.matchType==="NONE" || j.matchType==="HIGHERRANK") return null;
+  return {key:j.acceptedUsageKey||j.usageKey, name:j.scientificName||name, rank:j.rank};
+}
+function drawRange(t, sp, e, searched){
+  if(MAP){ MAP.remove(); MAP=null; }
+  const el=document.getElementById("rangeMap"); if(!el) return;
+  if(typeof L==="undefined"){ el.innerHTML='<p class="small" style="padding:12px">The map library could not load (no internet?).</p>'; return; }
+  MAP=L.map(el,{worldCopyJump:true,minZoom:1,maxZoom:10,zoomSnap:0.5}).setView([5,20],1.5);
+  L.tileLayer("https://tile.gbif.org/3857/omt/{z}/{x}/{y}@1x.png?style=osm-bright",{maxZoom:10,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a>, <a href="https://www.gbif.org">GBIF</a>'}).addTo(MAP);
+  const names=namesFor(t, sp, e, searched).slice(0,20);
+  const tabs=document.getElementById("mapTabs"), note=document.getElementById("mapNote");
+  let layer=null;
+  const show=async(m, btn)=>{
+    tabs.querySelectorAll("button").forEach(b=>b.classList.toggle("on", b===btn));
+    if(layer) MAP.removeLayer(layer);
+    layer=L.tileLayer(`${GBIF}/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?style=classic.poly&bin=hex&hexPerTile=48&taxonKey=${m.key}`,{maxZoom:10,opacity:0.85}).addTo(MAP);
+    note.textContent="loading…";
+    try{
+      const [cnt,cap]=await Promise.all([
+        fetch(`${GBIF}/v1/occurrence/search?taxonKey=${m.key}&hasCoordinate=true&hasGeospatialIssue=false&limit=0`).then(r=>r.json()),
+        fetch(`${GBIF}/v2/map/occurrence/density/capabilities.json?taxonKey=${m.key}`).then(r=>r.json())]);
+      note.innerHTML=`(${(cnt.count||0).toLocaleString()} mapped records for <i>${esc(m.name)}</i> · <a style="color:#cfe0f5" href="https://www.gbif.org/species/${m.key}" target="_blank" rel="noopener">open in GBIF</a>)`;
+      if(cap && cap.total>0 && cap.minLat!=null){
+        const b=L.latLngBounds([cap.minLat,cap.minLng],[cap.maxLat,cap.maxLng]);
+        MAP.fitBounds(b.pad(0.15),{maxZoom:5});
+      } else { MAP.setView([5,20],1.5); if(!cnt.count) note.textContent="(no mapped GBIF records for this name)"; }
+    }catch(err){ note.textContent="(could not reach GBIF)"; }
+  };
+  note.textContent="loading…";
+  Promise.all(names.map(n=>gbifMatch(n).catch(()=>null))).then(ms=>{
+    const ok=ms.map((m,i)=>m?{...m,label:names[i]}:null).filter(Boolean);
+    if(!ok.length){ note.textContent="(name not found in GBIF)"; return; }
+    if(ok.length>1){
+      const want=norm(searched).split(" ").slice(0,2).join(" ");
+      const start=Math.max(0, ok.findIndex(m=>norm(m.label)===want));
+      tabs.innerHTML=ok.map((m,i)=>`<button data-i="${i}">${esc(m.label)}</button>`).join("");
+      tabs.querySelectorAll("button").forEach(b=>b.onclick=()=>show(ok[+b.dataset.i], b));
+      show(ok[start], tabs.querySelectorAll("button")[start]);
+    } else { tabs.innerHTML=""; show(ok[0], null); }
+  });
+  setTimeout(()=>MAP&&MAP.invalidateSize(),300);
 }
 function bindGo(){document.querySelectorAll(".go").forEach(a=>a.onclick=ev=>{ev.preventDefault();const ti=+a.dataset.ti;$("#q").value=DATA.taxa[ti].scientific_name;show({ti,kind:"entry",label:DATA.taxa[ti].scientific_name});});}
 
