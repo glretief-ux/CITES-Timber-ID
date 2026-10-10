@@ -17,6 +17,7 @@ import json
 import math
 import os
 import random
+import shutil
 import sys
 from urllib.parse import quote_plus
 
@@ -390,6 +391,8 @@ def main():
                         e["porosity"], e.get("pore_size") or "", e.get("pore_density") or "", e.get("grouping") or "",
                         e.get("deposits") or "", "; ".join(e.get("parenchyma") or []), e.get("rays"), e.get("ripple_marks"),
                         e.get("resin_canals"), sp["heartwood"], sp["density"], sp["odour"], sp["key_diagnostic"], "; ".join(sp["lookalikes"])])
+
+    shutil.copy2(os.path.join(ROOT, "data", "species.csv"), os.path.join(ROOT, "docs", "species.csv"))
 
     # species index
     L = ["# CITES-listed timber taxa — index", "",

@@ -5,52 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CITES Species Lookup</title>
 <style>
-:root{--bg:#f6f3ee;--card:#fff;--ink:#1d1b18;--muted:#6b645b;--line:#e2dbd0;--acc:#7a3e1d;--I:#b3261e;--II:#b26a00;--III:#2f6f3e;--chip:#efe8dd;--ok:#2f6f3e;--warn:#b26a00}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171513;--card:#211e1b;--ink:#eee8df;--muted:#a59d92;--line:#3a352f;--acc:#e09b6b;--chip:#2d2925}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:1000px;margin:auto;padding:16px}
-nav{display:flex;gap:14px;font-size:14px;margin-bottom:6px}nav a{color:var(--acc);text-decoration:none}nav a.on{font-weight:700;text-decoration:underline}
-h1{font-size:24px;margin:6px 0 2px}.sub{color:var(--muted);font-size:13px;margin:0 0 14px}
+:root{--ink:#1c2733;--mute:#66758a;--line:#e3e8ef;--bg:#f5f7fa;--card:#fff;--brand:#12355b;
+--hi:#c0392b;--med:#e08a00;--lo:#2e8b57;--r:10px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:12px}
+.toplogo{text-align:center;margin:2px 0 10px}.toplogo img{height:84px;max-width:92%;width:auto;display:inline-block}
+header{background:var(--brand);color:#fff;border-radius:var(--r);padding:16px 18px;margin-bottom:12px}
+header h1{margin:0 0 2px;font-size:19px}
+header .sub{opacity:.8;font-size:12px}
+header .hl a{color:#cfe0f5;text-decoration:underline}header .hl a.on{color:#fff;font-weight:700;text-decoration:none}
+.banner{border-radius:var(--r);padding:10px 14px;margin-bottom:12px;font-size:13px;background:#fff4d6;border:1px solid #f0d58a}
+.card{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:0 1px 2px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
+.card h2{font-size:14px;margin:-14px -16px 12px;padding:10px 16px;background:var(--brand);color:#fff;letter-spacing:.2px}
+.card h2 .small{color:#c9d9ee;font-weight:400}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:11px;font-weight:700;color:#fff;vertical-align:middle}
+.chip.I{background:var(--hi)}.chip.II{background:var(--med)}.chip.III{background:var(--lo)}.chip.none{background:#8894a5}
+.small{font-size:11.5px;color:var(--mute)}
+a{color:#1656a3}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f0f3f7;text-align:left;padding:8px;font-size:11px;text-transform:uppercase;letter-spacing:.3px;color:var(--mute)}
+td{padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}
+footer{color:var(--mute);font-size:11.5px;padding:8px 2px 24px}
+.lkchip{display:inline-block;margin:4px 6px 0 0;padding:3px 10px;border-radius:999px;background:#eaf0f7;color:#12355b;font-size:12.5px;cursor:pointer;border:0;font-style:italic}
+.lkbtn{padding:8px 12px;border:1px solid #12355b;border-radius:8px;background:#fff;color:#12355b;font:inherit;font-weight:600;cursor:pointer;margin:10px 8px 0 0}
+details.lk{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:#fff}
+details.lk>summary{padding:8px 12px;cursor:pointer;list-style:none;font-weight:600;color:#12355b;font-size:13px}
+details.lk>summary::-webkit-details-marker{display:none}
+details.lk>summary:before{content:"\25B8";margin-right:8px}
+details.lk[open]>summary:before{content:"\25BE"}
+details.lk[open]>summary{border-bottom:1px solid var(--line);background:#f6f8fb;border-radius:10px 10px 0 0}
+details.lk>div,details.lk>ul,details.lk>p{margin:8px 12px}details.lk>table{margin:6px 12px;width:calc(100% - 24px)}
+
 .searchbox{position:relative}
-#q{width:100%;font-size:18px;padding:14px 16px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);outline:none}
-#q:focus{border-color:var(--acc)}
-#sugg{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;max-height:360px;overflow:auto;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.15);display:none}
+#q{width:100%;font:inherit;font-size:17px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);outline:none}
+#q:focus{border-color:var(--brand);box-shadow:0 0 0 3px #12355b22}
+#sugg{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fff;border:1px solid var(--line);border-radius:10px;max-height:360px;overflow:auto;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.12);display:none}
 #sugg div{padding:9px 14px;cursor:pointer;border-top:1px solid var(--line)}#sugg div:first-child{border-top:0}
-#sugg div.act,#sugg div:hover{background:var(--chip)}
-#sugg small{color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
-.chips button{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:14px;padding:4px 10px;font-size:13px;cursor:pointer;font-style:italic}
-.badge{display:inline-block;color:#fff;font-weight:700;border-radius:6px;padding:2px 9px;font-size:14px}
-.b-I{background:var(--I)}.b-II{background:var(--II)}.b-III{background:var(--III)}.b-none{background:#666}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:14px}
+#sugg div.act,#sugg div:hover{background:#f6f8fb}#sugg small{color:var(--mute)}
+.chips{margin:8px 0 0}
 .head{display:grid;grid-template-columns:260px 1fr;gap:18px}@media(max-width:700px){.head{grid-template-columns:1fr}}
 .head img{width:100%;max-width:300px;border-radius:8px;background:#fff}
-.sci{font-size:24px;font-style:italic;font-weight:700;margin:6px 0 0}
-.cn{color:var(--muted)}
-.note{border-left:4px solid var(--acc);background:var(--chip);padding:8px 12px;border-radius:6px;margin:10px 0;font-size:14px}
-.note.warn{border-color:var(--warn)}.note.no{border-color:#666}
-h2{font-size:17px;margin:20px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
-table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-top:1px solid var(--line);padding:6px;vertical-align:top;text-align:left}td:first-child{color:var(--muted);width:36%}
-ul{margin:4px 0;padding-left:20px}a{color:var(--acc)}
+.sci{font-size:22px;font-style:italic;font-weight:700;margin:6px 0 0;color:var(--brand)}
+.cn{color:var(--mute)}
+.note{border-left:4px solid var(--brand);background:#e8f1fb;padding:8px 12px;border-radius:0 8px 8px 0;margin:10px 0;font-size:13.5px}
+.note.warn{border-color:var(--med);background:#fff4e5}.note.no{border-color:#8894a5;background:#f6f8fb}
+.card td:first-child{color:var(--mute);width:34%}
+.card ul{margin:6px 0;padding-left:20px}
 .photos{display:flex;gap:8px;overflow-x:auto}.photos img{height:160px;border-radius:8px}
-.hl{background:#f3d27a55;font-weight:600}
-.act-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.act-row button{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
-footer{color:var(--muted);font-size:12px;margin:24px 0}
-@media print{nav,.searchbox,.chips,.act-row,footer{display:none}body{background:#fff;color:#000}.panel{border:0}}
+tr.hl td{background:#e4edf8;font-weight:600}
+@media print{.searchbox,.chips,.lkbtn,footer,header .hl{display:none}body{background:#fff}.card{box-shadow:none;border:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a href="search.html" class="on">Species lookup</a><a href="index.html">10x identification key</a><a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></nav>
-<h1>CITES timber species lookup</h1>
-<p class="sub">Type a scientific name (genus, species or synonym) or a trade name. Any species of a listed genus is recognised.</p>
+<div class="toplogo"><img src="assets/aircop-ccp-logo.png" alt="AIRCOP - Container Control Programme"></div>
+<header>
+  <h1>CITES Timber ID — Species lookup</h1>
+  <div class="sub">Type a scientific name (genus, species or synonym) or a trade name. Any species of a listed genus is recognised.</div>
+  <div class="sub hl"><a href="search.html" class="on">Species lookup</a> &nbsp;|&nbsp; <a href="index.html">10x identification key</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
+</header>
+<div class="banner"><b>Screening tool.</b> Hand-lens identification usually reaches genus, not species. Confirm with a wood-ID laboratory and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
+<div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search by scientific name</h2>
 <div class="searchbox">
   <input id="q" type="search" placeholder="e.g. Dalbergia latifolia, Pterocarpus santalinus, Swietenia…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Scientific name">
   <div id="sugg" role="listbox"></div>
 </div>
-<div class="chips" id="examples"></div>
+<div class="chips" id="examples"><span class="small">Try: </span></div>
+</div>
 <div id="out"></div>
-<footer>Screening information only — confirm species with a wood-identification laboratory and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>. <span id="basis"></span></footer>
+<footer><span id="basis"></span></footer>
 </div>
 <script>
 let DATA, INDEX=[], active=-1;
@@ -128,7 +152,7 @@ function lookup(q){
 function notListed(q){
   const n=norm(q), genus=n.split(" ")[0];
   const asLook=DATA.taxa.filter(t=>t.lookalikes.some(l=>norm(l).split(" ").includes(genus)));
-  $("#out").innerHTML=`<div class="panel"><span class="badge b-none">Not found</span>
+  $("#out").innerHTML=`<div class="card"><span class="chip none">Not found</span>
   <p class="sci">${esc(q)}</p>
   <div class="note no">This name is <b>not in the CITES timber listings covered by this database</b>. Check spelling and confirm on <a href="https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Species+</a> — the name may be a synonym, or listed for non-timber reasons.</div>
   ${asLook.length?`<div class="note warn"><b>Look-alike warning:</b> Wood of this genus is a known look-alike of: ${asLook.map(t=>`<a href="#" data-ti="${DATA.taxa.indexOf(t)}" class="go"><i>${esc(t.scientific_name)}</i></a> (App. ${t.appendix})`).join(", ")}. Declared as this species? Check the wood against the listed taxon.</div>`:""}</div>`;
@@ -144,27 +168,27 @@ function show(e){
   const coverMsg = e.kind==="genus-fallback"
     ? `<div class="note warn"><b><i>${esc(e.label)}</i></b> is not named individually here, but <b>all species of this genus</b> in the population covered are listed under <i>${esc(t.scientific_name)}</i> (Appendix ${t.appendix}). Population covered: ${esc(t.population_scope)}.</div>`
     : (sp||e.kind==="species") ? `<div class="note"><b><i>${esc(sp?sp.name:e.label)}</i></b> is covered by the listing <i>${esc(t.scientific_name)}</i>.</div>` : "";
-  const spBlock = sp ? `<h2>This species</h2><table>
+  const spBlock = sp ? `</div><div class="card"><h2>This species</h2><table>
      <tr><td>Name</td><td><i>${esc(sp.name)}</i></td></tr>
      ${sp.trade?`<tr><td>Trade names</td><td>${esc(sp.trade)}</td></tr>`:""}
      ${sp.range?`<tr><td>Range</td><td>${esc(sp.range)}</td></tr>`:""}
      ${sp.notes?`<tr><td>Notes</td><td>${esc(sp.notes)}</td></tr>`:""}</table>` : "";
   const photos=(t.photos||[]).map(p=>`<a href="photos/${t.id}/${encodeURIComponent(p.file)}" target="_blank"><img src="photos/${t.id}/${encodeURIComponent(p.file)}" alt="10x"></a>`).join("");
-  $("#out").innerHTML=`<div class="panel">
+  $("#out").innerHTML=`<div class="card">
    <div class="head">
      <div><img src="${t.schematic}" alt="Schematic 10x end grain"><div class="cn" style="font-size:12px">Schematic 10x end grain — not a photograph</div></div>
      <div>
-       <span class="badge b-${t.appendix}">CITES Appendix ${t.appendix}</span>
+       <span class="chip ${t.appendix}">CITES Appendix ${t.appendix}</span>
        <p class="sci">${esc(searched)}</p>
        <div class="cn">${esc(t.family)} · ${esc(t.common_names.join(", "))}</div>
        ${isSyn?`<div class="note">Synonym — accepted name: <i>${esc(t.scientific_name.replace(/\s*\(.*\)/,""))}</i></div>`:""}
        ${coverMsg}
        <p><b>Key identification:</b> ${esc(t.key_diagnostic)}</p>
-       <div class="act-row"><button id="share">Copy link</button><button onclick="window.print()">Print / PDF</button></div>
+       <button class="lkbtn" id="share">Copy link</button><button class="lkbtn" onclick="window.print()">Print / PDF</button>
      </div>
    </div>
    ${spBlock}
-   <h2>CITES listing</h2><table>
+   </div><div class="card"><h2>CITES listing</h2><table>
      <tr><td>Listing</td><td><i>${esc(t.scientific_name)}</i> (${esc(t.rank)})</td></tr>
      <tr><td>Appendix</td><td>${t.appendix}</td></tr>
      <tr><td>Annotation</td><td><b>${esc(t.annotation)}</b><br>${esc(DATA.annotations[ann]||"")}</td></tr>
@@ -172,7 +196,7 @@ function show(e){
      <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
      <tr><td>Native range</td><td>${esc(t.range)}</td></tr>
      <tr><td>Official record</td><td><a href="${t.references[0].url}" target="_blank" rel="noopener">Species+</a></td></tr></table>
-   <h2>10x end-grain features</h2><table>
+   </div><div class="card"><h2>10x end-grain features</h2><table>
      <tr><td>Wood type</td><td>${esc(t.wood_type)}</td></tr>
      <tr><td>Porosity</td><td>${esc(eg.porosity)}</td></tr>
      <tr><td>Pores</td><td>${esc([eg.pore_size,eg.pore_density,eg.grouping].filter(Boolean).join(", ")||"—")}</td></tr>
@@ -182,17 +206,17 @@ function show(e){
      <tr><td>Ripple marks</td><td>${esc(eg.ripple_marks)}</td></tr>
      <tr><td>Resin canals</td><td>${esc(eg.resin_canals)}</td></tr></table>
    ${(eg.special||[]).length?`<ul>${eg.special.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>`:""}
-   <h2>Physical characteristics</h2><table>
+   </div><div class="card"><h2>Physical characteristics</h2><table>
      <tr><td>Heartwood</td><td>${esc(t.heartwood)}</td></tr>
      <tr><td>Sapwood</td><td>${esc(t.sapwood)}</td></tr>
      <tr><td>Density</td><td>${esc(t.density)}</td></tr>
      <tr><td>Odour</td><td>${esc(t.odour)}</td></tr></table>
-   <h2>10x photographs</h2>
+   </div><div class="card"><h2>10x photographs</h2>
    ${photos?`<div class="photos">${photos}</div>`:`<p class="cn">No verified reference photo added yet. View published 10x end-grain photos via the sources below.</p>`}
-   <h2>Look-alikes</h2><ul>${t.lookalikes.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>
-   <h2>Laboratory confirmation</h2><p>${esc(t.lab_methods)}</p>
-   ${(t.species_included||[]).length?`<h2>All taxa covered by this listing</h2><table><tr><th>Taxon</th><th>Trade name</th><th>Range</th></tr>${t.species_included.map((s,i)=>`<tr${sp&&i===e.si?' class="hl"':""}><td><a href="#" class="gosp" data-ti="${e.ti}" data-si="${i}"><i>${esc(s.name)}</i></a></td><td>${esc(s.trade)}</td><td>${esc(s.range)}</td></tr>`).join("")}</table>`:""}
-   <h2>References & 10x photo sources</h2><ul>${t.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></li>`).join("")}</ul>
+   </div><div class="card"><h2>Look-alikes</h2><ul>${t.lookalikes.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>
+   </div><div class="card"><h2>Laboratory confirmation</h2><p>${esc(t.lab_methods)}</p>
+   ${(t.species_included||[]).length?`</div><div class="card"><h2>All taxa covered by this listing</h2><table><tr><th>Taxon</th><th>Trade name</th><th>Range</th></tr>${t.species_included.map((s,i)=>`<tr${sp&&i===e.si?' class="hl"':""}><td><a href="#" class="gosp" data-ti="${e.ti}" data-si="${i}"><i>${esc(s.name)}</i></a></td><td>${esc(s.trade)}</td><td>${esc(s.range)}</td></tr>`).join("")}</table>`:""}
+   </div><div class="card"><h2>References & 10x photo sources</h2><ul>${t.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${esc(r.title)}</a></li>`).join("")}</ul>
   </div>`;
   $("#share").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(location.href); $("#share").textContent="Link copied";};
   document.querySelectorAll(".gosp").forEach(a=>a.onclick=ev=>{ev.preventDefault(); const ti=+a.dataset.ti, si=+a.dataset.si; const s=DATA.taxa[ti].species_included[si]; $("#q").value=s.name.replace(/\(.*?\)/g,"").trim(); show({ti,si,kind:"species",label:s.name});});
@@ -205,7 +229,7 @@ function init(){
   buildIndex();
   $("#basis").textContent=DATA.listing_basis;
   ["Dalbergia nigra","Dalbergia latifolia","Pterocarpus santalinus","Swietenia macrophylla","Khaya ivorensis","Handroanthus serratifolius","Aquilaria malaccensis","Quercus mongolica"].forEach(n=>{
-    const b=document.createElement("button"); b.textContent=n; b.onclick=()=>{$("#q").value=n; lookup(n);}; $("#examples").appendChild(b);});
+    const b=document.createElement("button"); b.className="lkchip"; b.textContent=n; b.onclick=()=>{$("#q").value=n; lookup(n);}; $("#examples").appendChild(b);});
   const q=$("#q");
   q.addEventListener("input",showSugg);
   q.addEventListener("keydown",ev=>{
@@ -218,7 +242,7 @@ function init(){
   const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h && norm(h)!==norm(q.value)){q.value=h; lookup(h);}};
   window.addEventListener("hashchange",fromHash); fromHash();
 }
-fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;init();}).catch(()=>{$("#out").innerHTML='<div class="panel">Could not load data.json — open via GitHub Pages or a local web server.</div>';});
+fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;init();}).catch(()=>{$("#out").innerHTML='<div class="card">Could not load data.json — open via GitHub Pages or a local web server.</div>';});
 </script>
 </body>
 </html>

@@ -5,50 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CITES Timber ID</title>
 <style>
-:root{--bg:#f6f3ee;--card:#fff;--ink:#1d1b18;--muted:#6b645b;--line:#e2dbd0;--acc:#7a3e1d;--I:#b3261e;--II:#b26a00;--III:#2f6f3e;--chip:#efe8dd}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171513;--card:#211e1b;--ink:#eee8df;--muted:#a59d92;--line:#3a352f;--acc:#e09b6b;--chip:#2d2925}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{padding:18px 16px 8px;max-width:1200px;margin:auto}
-h1{margin:0;font-size:22px}header p{margin:4px 0 0;color:var(--muted);font-size:13px}
-.warn{max-width:1200px;margin:8px auto;padding:10px 14px;border-left:4px solid var(--I);background:var(--card);font-size:13px;border-radius:6px}
-main{max-width:1200px;margin:auto;padding:8px 16px 40px;display:grid;grid-template-columns:300px 1fr;gap:18px}
+:root{--ink:#1c2733;--mute:#66758a;--line:#e3e8ef;--bg:#f5f7fa;--card:#fff;--brand:#12355b;
+--hi:#c0392b;--med:#e08a00;--lo:#2e8b57;--r:10px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:12px}
+.toplogo{text-align:center;margin:2px 0 10px}.toplogo img{height:84px;max-width:92%;width:auto;display:inline-block}
+header{background:var(--brand);color:#fff;border-radius:var(--r);padding:16px 18px;margin-bottom:12px}
+header h1{margin:0 0 2px;font-size:19px}
+header .sub{opacity:.8;font-size:12px}
+header .hl a{color:#cfe0f5;text-decoration:underline}header .hl a.on{color:#fff;font-weight:700;text-decoration:none}
+.banner{border-radius:var(--r);padding:10px 14px;margin-bottom:12px;font-size:13px;background:#fff4d6;border:1px solid #f0d58a}
+.card{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:0 1px 2px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
+.card h2{font-size:14px;margin:-14px -16px 12px;padding:10px 16px;background:var(--brand);color:#fff;letter-spacing:.2px}
+.card h2 .small{color:#c9d9ee;font-weight:400}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:11px;font-weight:700;color:#fff;vertical-align:middle}
+.chip.I{background:var(--hi)}.chip.II{background:var(--med)}.chip.III{background:var(--lo)}.chip.none{background:#8894a5}
+.small{font-size:11.5px;color:var(--mute)}
+a{color:#1656a3}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{background:#f0f3f7;text-align:left;padding:8px;font-size:11px;text-transform:uppercase;letter-spacing:.3px;color:var(--mute)}
+td{padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}
+footer{color:var(--mute);font-size:11.5px;padding:8px 2px 24px}
+.lkchip{display:inline-block;margin:4px 6px 0 0;padding:3px 10px;border-radius:999px;background:#eaf0f7;color:#12355b;font-size:12.5px;cursor:pointer;border:0;font-style:italic}
+.lkbtn{padding:8px 12px;border:1px solid #12355b;border-radius:8px;background:#fff;color:#12355b;font:inherit;font-weight:600;cursor:pointer;margin:10px 8px 0 0}
+details.lk{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:#fff}
+details.lk>summary{padding:8px 12px;cursor:pointer;list-style:none;font-weight:600;color:#12355b;font-size:13px}
+details.lk>summary::-webkit-details-marker{display:none}
+details.lk>summary:before{content:"\25B8";margin-right:8px}
+details.lk[open]>summary:before{content:"\25BE"}
+details.lk[open]>summary{border-bottom:1px solid var(--line);background:#f6f8fb;border-radius:10px 10px 0 0}
+details.lk>div,details.lk>ul,details.lk>p{margin:8px 12px}details.lk>table{margin:6px 12px;width:calc(100% - 24px)}
+
+
+main{display:grid;grid-template-columns:300px 1fr;gap:12px}
 @media(max-width:800px){main{grid-template-columns:1fr}}
-aside{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;align-self:start;position:sticky;top:8px}
-@media(max-width:800px){aside{position:static}}
-fieldset{border:0;margin:0 0 10px;padding:0}legend{font-weight:600;font-size:13px;margin-bottom:4px}
+aside.card{align-self:start;position:sticky;top:8px}
+@media(max-width:800px){aside.card{position:static}}
+fieldset{border:0;margin:0 0 10px;padding:0}legend{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mute);margin-bottom:4px}
 .opts{display:flex;flex-wrap:wrap;gap:5px}
-.opts label{background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12.5px;cursor:pointer;user-select:none}
-.opts input{display:none}.opts input:checked+span{color:var(--acc);font-weight:700}
-.opts label:has(input:checked){border-color:var(--acc)}
-input[type=search]{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:14px}
-button{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
-.count{color:var(--muted);font-size:13px;margin:0 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
-.card img{width:100%;aspect-ratio:420/466;object-fit:contain;background:#fff}
-.body{padding:10px 12px}
-.badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;border-radius:5px;padding:1px 7px;margin-right:6px}
-.b-I{background:var(--I)}.b-II{background:var(--II)}.b-III{background:var(--III)}
-.sci{font-style:italic;font-weight:600}
-.cn{color:var(--muted);font-size:12.5px;margin:2px 0 6px}
-.score{float:right;font-size:12px;color:var(--muted)}
+.opts label{background:#f6f8fb;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12.5px;cursor:pointer;user-select:none}
+.opts input{display:none}
+.opts label:has(input:checked){background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+input[type=search]{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font:inherit;color:var(--ink);margin-bottom:8px}
+#fbox>summary{font-weight:600;color:var(--brand);cursor:pointer;margin:4px 0 8px}
+.count{color:var(--mute);font-size:13px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.grid .card{margin:0;display:flex;flex-direction:column}
+.grid .card h2{display:flex;gap:8px;align-items:center;font-style:italic}
+.grid .card img{width:100%;aspect-ratio:420/466;object-fit:contain;background:#fff;margin-top:-4px}
+.cn{color:var(--mute);font-size:12.5px;margin:2px 0 6px}
+.score{display:inline-block;background:#fff4e5;border:1px solid #f0c78a;color:#8a5a00;border-radius:999px;font-size:11px;padding:1px 8px;margin-bottom:6px}
 .key{font-size:13px}
-details{margin-top:6px;font-size:13px}summary{cursor:pointer;color:var(--acc);font-weight:600}
-table{border-collapse:collapse;width:100%;font-size:12.5px;margin:6px 0}td{border-top:1px solid var(--line);padding:3px 4px;vertical-align:top}td:first-child{color:var(--muted);width:42%}
-a{color:var(--acc)}ul{padding-left:18px;margin:4px 0}
+.grid td:first-child{color:var(--mute);width:40%}
 .photos{display:flex;gap:6px;overflow-x:auto;margin:6px 0}.photos img{height:110px;width:auto;border-radius:6px}
-footer{max-width:1200px;margin:auto;padding:0 16px 30px;color:var(--muted);font-size:12px}
+#reset{padding:8px 12px;border:1px solid #12355b;border-radius:8px;background:#fff;color:#12355b;font:inherit;font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
+<div class="wrap">
+<div class="toplogo"><img src="assets/aircop-ccp-logo.png" alt="AIRCOP - Container Control Programme"></div>
 <header>
-  <nav style="display:flex;gap:14px;font-size:14px;margin-bottom:6px"><a href="search.html" style="color:var(--acc)">Species lookup</a><a href="index.html" style="color:var(--acc);font-weight:700">10x identification key</a></nav>
-  <h1>CITES Timber ID — 10x end-grain screening key</h1>
-  <p id="basis">Loading…</p>
+  <h1>CITES Timber ID — 10x end-grain identification key</h1>
+  <div class="sub" id="basis">Loading…</div>
+  <div class="sub hl"><a href="search.html">Species lookup</a> &nbsp;|&nbsp; <a href="index.html" class="on">10x identification key</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
 </header>
-<div class="warn"><b>Screening tool only.</b> Hand-lens identification is usually reliable to genus or group, not species. Drawings are <b>schematic</b>; compare with real 10x photographs of reference specimens and confirm with a wood-ID laboratory (anatomy, DNA, mass spectrometry) and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
+<div class="banner"><b>Screening tool only.</b> Hand-lens identification is usually reliable to genus or group, not species. Drawings are <b>schematic</b>; compare with real 10x photographs of reference specimens and confirm with a wood-ID laboratory and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
 <main>
-<aside>
+<aside class="card"><h2>What do you see at 10x?</h2>
   <input type="search" id="q" placeholder="Search name, trade name, family…">
   <details id="fbox" open><summary style="margin:8px 0">10x features seen</summary><div id="filters"></div></details>
   <button id="reset">Clear all</button>
@@ -59,6 +83,7 @@ footer{max-width:1200px;margin:auto;padding:0 16px 30px;color:var(--muted);font-
 </section>
 </main>
 <footer>Data: <code>data/species.json</code> — edit <code>tools/species_data.py</code> and run <code>python tools/build.py</code>. Photos: add to <code>photos/</code> and <code>photos/manifest.csv</code>.</footer>
+</div>
 <script>
 const FILTERS = [
   {k:"wood", t:"Wood type", o:[["hardwood","Hardwood (pores)"],["softwood","Softwood (no pores)"],["vesselless","No pores but wide rays"]]},
@@ -147,16 +172,16 @@ function render(){
 function card(t,miss){
   const e=t.endgrain;
   const photos=(t.photos||[]).map(p=>`<a href="photos/${t.id}/${p.file}" target="_blank"><img src="photos/${t.id}/${p.file}" alt="10x ${t.scientific_name}"></a>`).join("");
-  const inc=(t.species_included||[]).length?`<details><summary>Species covered (${t.species_included.length})</summary><ul>${t.species_included.map(s=>`<li><i>${s.name}</i>${s.trade?" — "+s.trade:""}${s.notes?` <span style="color:var(--muted)">(${s.notes})</span>`:""}</li>`).join("")}</ul></details>`:"";
+  const inc=(t.species_included||[]).length?`<details class="lk"><summary>Species covered (${t.species_included.length})</summary><ul>${t.species_included.map(s=>`<li><i>${s.name}</i>${s.trade?" — "+s.trade:""}${s.notes?` <span style="color:var(--muted)">(${s.notes})</span>`:""}</li>`).join("")}</ul></details>`:"";
   return `<article class="card">
+  <h2><span class="chip ${t.appendix}" style="font-style:normal">App. ${t.appendix}</span>${t.scientific_name}</h2>
   <img loading="lazy" src="${t.schematic}" alt="Schematic 10x end grain of ${t.scientific_name}">
   <div class="body">
    ${miss?'<span class="score">1 feature differs</span>':""}
-   <span class="badge b-${t.appendix}">App. ${t.appendix}</span><span class="sci">${t.scientific_name}</span>
    <div class="cn">${t.common_names.join(" · ")} — ${t.family}</div>
    ${photos?`<div class="photos">${photos}</div>`:'<div class="cn">No real 10x photo added yet — see image sources below.</div>'}
    <div class="key">${t.key_diagnostic}</div>
-   <details><summary>10x features & characteristics</summary><table>
+   <details class="lk"><summary>10x features & characteristics</summary><table>
     <tr><td>Porosity</td><td>${e.porosity}</td></tr>
     <tr><td>Pores</td><td>${[e.pore_size,e.pore_density,e.grouping].filter(Boolean).join(", ")||"—"}</td></tr>
     <tr><td>Deposits</td><td>${e.deposits||"—"}</td></tr>
@@ -169,15 +194,15 @@ function card(t,miss){
     <tr><td>Odour</td><td>${t.odour}</td></tr>
     <tr><td>Range</td><td>${t.range}</td></tr>
    </table><ul>${(e.special||[]).map(s=>`<li>${s}</li>`).join("")}</ul></details>
-   <details><summary>Listing & annotation</summary><table>
+   <details class="lk"><summary>Listing & annotation</summary><table>
     <tr><td>Appendix</td><td>${t.appendix}</td></tr>
     <tr><td>Annotation</td><td>${t.annotation}<br><span style="color:var(--muted)">${DATA.annotations[(t.annotation.match(/#\d+|none/)||["none"])[0]]||""}</span></td></tr>
     <tr><td>Population</td><td>${t.population_scope}</td></tr>
     <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
    </table></details>
-   <details><summary>Look-alikes</summary><ul>${t.lookalikes.map(l=>`<li>${l}</li>`).join("")}</ul><p>${t.lab_methods}</p></details>
+   <details class="lk"><summary>Look-alikes</summary><ul>${t.lookalikes.map(l=>`<li>${l}</li>`).join("")}</ul><p>${t.lab_methods}</p></details>
    ${inc}
-   <details><summary>10x photo sources & references</summary><ul>${t.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${r.title}</a></li>`).join("")}</ul></details>
+   <details class="lk"><summary>10x photo sources & references</summary><ul>${t.references.map(r=>`<li><a href="${r.url}" target="_blank" rel="noopener">${r.title}</a></li>`).join("")}</ul></details>
   </div></article>`;
 }
 
