@@ -86,6 +86,32 @@ tr.hl td{background:#e4edf8;font-weight:600}
 .card .anntaxa td:first-child{width:90px;color:var(--brand)}.card .anntaxa td:nth-child(2){width:28%}
 .card .amx td:first-child{width:auto}
 .card .ex td:first-child{width:auto}
+.tabs{display:flex;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+.tabs button{padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--brand)}
+.tabs button.on{background:#12355b;color:#fff;border-color:#12355b}
+.keywrap{display:grid;grid-template-columns:300px 1fr;gap:12px}
+@media(max-width:820px){.keywrap{grid-template-columns:1fr}}
+.keyside{align-self:start;position:sticky;top:8px;max-height:calc(100vh - 16px);overflow:auto}
+@media(max-width:820px){.keyside{position:static;max-height:none}}
+.keyside fieldset{border:0;margin:0 0 10px;padding:0}
+.keyside legend{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mute);margin-bottom:4px}
+.kopts{display:flex;flex-wrap:wrap;gap:5px}
+.kopts label{background:#f6f8fb;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:12.5px;cursor:pointer;user-select:none}
+.kopts input{display:none}
+.kopts label.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.kc{background:#fff;border-radius:var(--r);box-shadow:0 1px 2px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;border:2px solid transparent}
+.kc:hover{border-color:#12355b33}
+.kc .kh .chip{white-space:nowrap;flex:0 0 auto}
+.kc .kh{background:var(--brand);color:#fff;padding:8px 12px;font-weight:600;font-style:italic;font-size:13.5px;display:flex;gap:8px;align-items:center}
+.kc img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top;background:#fff}
+.kc .kb{padding:8px 12px 12px;font-size:12.5px}
+.kc .kb .cn{font-size:12px}
+.kc .miss{display:inline-block;background:#fff4e5;border:1px solid #f0c78a;color:#8a5a00;border-radius:999px;font-size:11px;padding:1px 8px;margin-bottom:4px}
+.kc .open{margin-top:8px;font-weight:700;color:#12355b}
+.backkey{display:none}
+body.fromkey .backkey{display:inline-block}
+@media print{.tabs,#paneKey,.backkey{display:none}}
 @media print{.searchbox,.chips,.lkbtn,footer,header .hl{display:none}body{background:#fff}.card{box-shadow:none;border:1px solid var(--line)}}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -97,15 +123,31 @@ tr.hl td{background:#e4edf8;font-weight:600}
 <header>
   <h1>CITES Timber ID — Species lookup</h1>
   <div class="sub">Type a scientific name (genus, species or synonym) or a trade name. Any species of a listed genus is recognised.</div>
-  <div class="sub hl"><a href="search.html" class="on">Species lookup</a> &nbsp;|&nbsp; <a href="index.html">10x identification key</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
+  <div class="sub hl"><a href="#" class="on" data-tab="name">Species lookup</a> &nbsp;|&nbsp; <a href="#key" data-tab="key">10x identification key</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
 </header>
 <div class="banner"><b>Screening tool.</b> Hand-lens identification usually reaches genus, not species. Confirm with a wood-ID laboratory and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
+<div class="tabs" id="mainTabs"><button class="on" data-tab="name">Search by scientific name</button><button data-tab="key">Identify by 10x features</button></div>
+<div id="paneName">
 <div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search by scientific name</h2>
 <div class="searchbox">
   <input id="q" type="search" placeholder="e.g. Dalbergia latifolia, Pterocarpus santalinus, Swietenia…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Scientific name">
   <div id="sugg" role="listbox"></div>
 </div>
 <div class="chips" id="examples"><span class="small">Try: </span></div>
+</div>
+</div>
+<div id="paneKey" hidden>
+<div class="keywrap">
+  <div class="card keyside"><h2>What do you see at 10x?</h2>
+    <p class="small" style="margin:0 0 8px">Cut the end grain clean, wet it, look through the lens and tick what you see. Unsure? Leave it blank.</p>
+    <div id="kFilters"></div>
+    <button class="lkbtn" id="kReset" style="margin-top:4px">Clear all</button>
+  </div>
+  <div>
+    <div class="card" style="padding:10px 14px"><span id="kCount" class="small"></span></div>
+    <div id="kGrid" class="kgrid"></div>
+  </div>
+</div>
 </div>
 <div id="out"></div>
 <div id="annotations">
@@ -273,7 +315,7 @@ function show(e){
        ${isSyn?`<div class="note">Synonym — accepted name: <i>${esc(t.scientific_name.replace(/\s*\(.*\)/,""))}</i></div>`:""}
        ${coverMsg}
        <p><b>Key identification:</b> ${esc(t.key_diagnostic)}</p>
-       <button class="lkbtn" id="share">Copy link</button><button class="lkbtn" onclick="window.print()">Print / PDF</button>
+       <button class="lkbtn backkey" onclick="setTab('key');window.scrollTo({top:0})">← Back to 10x key results</button><button class="lkbtn" id="share">Copy link</button><button class="lkbtn" onclick="window.print()">Print / PDF</button>
      </div>
    </div>
    ${spBlock}
@@ -429,14 +471,96 @@ function highlightAnn(t){
   document.querySelectorAll("#amxT tr[data-ann],#annTaxa tr[data-ann]").forEach(r=>r.classList.toggle("cur",cur.includes(r.dataset.ann)));
   document.querySelectorAll("#annTaxa tr[data-ann]").forEach(r=>r.style.background=cur.includes(r.dataset.ann)?"#e4edf8":"");
 }
+// ---------------- 10x identification key (merged)
+const FILTERS = [
+  {k:"wood", t:"Wood type", o:[["hardwood","Hardwood (pores)"],["softwood","Softwood (no pores)"],["vesselless","No pores but wide rays"]]},
+  {k:"porosity", t:"Porosity (hardwoods)", o:[["diffuse","Diffuse"],["semi-ring","Semi-ring"],["ring","Ring porous"]]},
+  {k:"pore_size", t:"Pore size at 10x", o:[["small","Small"],["medium","Medium"],["large","Large / visible unaided"]]},
+  {k:"grouping", t:"Pore arrangement", o:[["solitary","Mostly solitary"],["multiples","Radial multiples"],["mixed","Mixed"]]},
+  {k:"parenchyma", t:"Parenchyma seen (tick all)", multi:true, o:[["vasicentric","Halo round pores"],["aliform","Wings / lozenge"],["confluent","Joined pores"],["banded","Fine bands"],["marginal","Line at ring edge"],["reticulate","Net / fine lines"],["none","None visible"]]},
+  {k:"rays", t:"Rays", o:[["fine","Fine"],["medium","Medium"],["broad","Broad (oak-like)"]]},
+  {k:"ripple", t:"Ripple marks (side grain)", o:[["yes","Present"],["no","Absent"]]},
+  {k:"deposits", t:"Pore deposits", o:[["yellow","Yellow"],["white","White"],["dark","Dark / red gum"],["tyloses","Tyloses (froth)"]]},
+  {k:"canals", t:"Resin canals (softwood)", o:[["yes","Present"],["no","Absent"]]},
+  {k:"colour", t:"Heartwood colour", o:[["black","Black"],["red","Red / orange"],["purple","Purple / rosewood"],["brown","Brown"],["olive","Olive / green"],["pale","Pale / cream"]]},
+  {k:"heavy", t:"Density", o:[["heavy","Very heavy (sinks)"],["light","Light"]]},
+  {k:"scent", t:"Smell", o:[["yes","Distinct scent"],["no","No scent"]]},
+  {k:"special", t:"Special feature", o:[["phloem","Islands of included phloem"],["dye","Colours water red"],["lapachol","Yellow powder → red with ammonia"]]},
+  {k:"appendix", t:"CITES Appendix", o:[["I","I"],["II","II"],["III","III"]]},
+];
+let KSTATE={};
+function traits(t){
+  const e=t.endgrain, low=x=>(x||"").toLowerCase();
+  const all=low([t.heartwood,t.odour,(e.special||[]).join(" "),e.deposits].join(" "));
+  const dens=low(t.density), hw=low(t.heartwood);
+  const firstNum=parseInt((t.density.match(/(\d[\d,]*)/)||["","0"])[1].replace(",",""));
+  const col=[];
+  if(/black/.test(hw)) col.push("black"); if(/red|orange/.test(hw)) col.push("red"); if(/purpl|violet/.test(hw)) col.push("purple");
+  if(/brown|chocolate/.test(hw)) col.push("brown"); if(/olive|green/.test(hw)) col.push("olive"); if(/pale|cream|white|straw|yellowish/.test(hw)) col.push("pale");
+  const dep=[], d=low(e.deposits);
+  if(/yellow/.test(d)) dep.push("yellow"); if(/white/.test(d)) dep.push("white"); if(/dark|red|black|gum|resin/.test(d)) dep.push("dark"); if(/tylos/.test(d)) dep.push("tyloses");
+  const sp=[]; if(/included|interxylary/.test(all)) sp.push("phloem"); if(/colour water|stains water|colour.*water|leaches/.test(all)) sp.push("dye"); if(/lapachol/.test(all)) sp.push("lapachol");
+  return {wood:e.porosity==="vesselless"?["vesselless"]:[t.wood_type], porosity:[e.porosity], pore_size:[e.pore_size], grouping:[e.grouping],
+    parenchyma:(e.parenchyma&&e.parenchyma.length)?e.parenchyma.concat(e.parenchyma.includes("scanty")?["none"]:[]):["none"],
+    rays:[e.rays], ripple:e.ripple_marks==="variable"?["yes","no"]:[e.ripple_marks], deposits:dep, canals:[e.resin_canals], colour:col,
+    heavy:(firstNum>=950||/very heavy|sinks/.test(dens))?["heavy"]:(firstNum&&firstNum<=520?["light"]:[]),
+    scent:/^none/.test(low(t.odour))?["no"]:["yes"], special:sp, appendix:[t.appendix]};
+}
+function buildKey(){
+  $("#kFilters").innerHTML=FILTERS.map(F=>`<fieldset><legend>${F.t}</legend><div class="kopts">${F.o.map(([v,l])=>`<label data-k="${F.k}" data-v="${v}">${l}</label>`).join("")}</div></fieldset>`).join("");
+  $("#kFilters").addEventListener("click",ev=>{
+    const lab=ev.target.closest("label[data-k]"); if(!lab) return;
+    const k=lab.dataset.k, v=lab.dataset.v, F=FILTERS.find(x=>x.k===k), cur=KSTATE[k]||[];
+    KSTATE[k]= cur.includes(v) ? cur.filter(x=>x!==v) : (F.multi ? cur.concat(v) : [v]);
+    document.querySelectorAll(`#kFilters label[data-k="${k}"]`).forEach(l=>l.classList.toggle("on",KSTATE[k].includes(l.dataset.v)));
+    renderKey();
+  });
+  $("#kReset").onclick=()=>{KSTATE={}; document.querySelectorAll("#kFilters label").forEach(l=>l.classList.remove("on")); renderKey();};
+  $("#kGrid").addEventListener("click",ev=>{
+    const c=ev.target.closest(".kc"); if(!c) return;
+    const ti=+c.dataset.ti; const t=DATA.taxa[ti];
+    document.body.classList.add("fromkey"); setTab("name");
+    $("#q").value=t.scientific_name.replace(/\s*\(.*?\)/g,""); show({ti,kind:"entry",label:t.scientific_name});
+  });
+  renderKey();
+}
+function renderKey(){
+  const active=Object.entries(KSTATE).filter(([k,v])=>v.length);
+  const rows=DATA.taxa.map((t,ti)=>{
+    const tr=traits(t); let score=0, miss=0;
+    for(const [k,vals] of active){
+      const have=tr[k]||[], hit=vals.filter(v=>have.includes(v)).length;
+      if(k==="parenchyma"){ score+=hit/vals.length; if(!hit) miss++; } else if(hit) score++; else miss++;
+    }
+    return {t,ti,score,miss};
+  }).filter(r=>r.miss<=1).sort((a,b)=>a.miss-b.miss||b.score-a.score||a.t.appendix.localeCompare(b.t.appendix));
+  const full=rows.filter(r=>!r.miss).length;
+  $("#kCount").innerHTML = active.length
+    ? `<b>${full}</b> full match${full===1?"":"es"} · ${rows.length-full} with one feature different (shown after) · ${active.length} feature${active.length===1?"":"s"} selected. Tap a card for the full profile, map and annotation.`
+    : `${rows.length} CITES-listed timber entries. Tick what you see under the lens to narrow down. Tap a card for the full profile.`;
+  $("#kGrid").innerHTML=rows.map(({t,ti,miss})=>`<div class="kc" data-ti="${ti}" role="button" tabindex="0">
+     <div class="kh"><span class="chip ${t.appendix}" style="font-style:normal">App. ${t.appendix}</span>${esc(t.scientific_name)}</div>
+     <img loading="lazy" src="${t.schematic}" alt="Schematic 10x end grain">
+     <div class="kb">${miss?'<span class="miss">1 feature differs</span><br>':""}<div class="cn">${esc(t.common_names.slice(0,3).join(" · "))}</div>
+     ${esc(t.key_diagnostic.length>170?t.key_diagnostic.slice(0,167)+"…":t.key_diagnostic)}
+     <div class="open">Open full profile →</div></div></div>`).join("");
+}
+function setTab(tab){
+  document.querySelectorAll("#mainTabs button").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
+  document.querySelectorAll("header .hl a[data-tab]").forEach(a=>a.classList.toggle("on",a.dataset.tab===tab));
+  $("#paneName").hidden = tab!=="name"; $("#paneKey").hidden = tab!=="key";
+  if(tab==="key"){ $("#out").innerHTML=""; document.body.classList.remove("fromkey"); if(MAP){MAP.remove();MAP=null;} history.replaceState(null,"","#key"); }
+}
 function init(){
   buildIndex();
   buildAnnotations();
+  buildKey();
+  document.querySelectorAll('#mainTabs button, header .hl a[data-tab]').forEach(b=>b.addEventListener('click',ev=>{ev.preventDefault(); setTab(b.dataset.tab); window.scrollTo({top:0,behavior:'smooth'});}));
   $("#basis").textContent=DATA.listing_basis;
   ["Dalbergia nigra","Dalbergia latifolia","Pterocarpus santalinus","Swietenia macrophylla","Khaya ivorensis","Handroanthus serratifolius","Aquilaria malaccensis","Quercus mongolica"].forEach(n=>{
     const b=document.createElement("button"); b.className="lkchip"; b.textContent=n; b.onclick=()=>{$("#q").value=n; lookup(n);}; $("#examples").appendChild(b);});
   const q=$("#q");
-  q.addEventListener("input",showSugg);
+  q.addEventListener("input",()=>{document.body.classList.remove("fromkey"); showSugg();});
   q.addEventListener("keydown",ev=>{
     const box=$("#sugg"), items=[...box.querySelectorAll("div")];
     if(ev.key==="ArrowDown"||ev.key==="ArrowUp"){ if(!items.length) return; ev.preventDefault(); active=(active+(ev.key==="ArrowDown"?1:-1)+items.length)%items.length; items.forEach((d,i)=>d.classList.toggle("act",i===active)); }
@@ -444,7 +568,7 @@ function init(){
     else if(ev.key==="Escape"){ box.style.display="none"; }
   });
   document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) $("#sugg").style.display="none";});
-  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h && norm(h)!==norm(q.value)){q.value=h; lookup(h);}};
+  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"){setTab("key");return;} if(h==="annotations") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
   window.addEventListener("hashchange",fromHash); fromHash();
 }
 fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;init();}).catch(()=>{$("#out").innerHTML='<div class="card">Could not load data.json — open via GitHub Pages or a local web server.</div>';});
