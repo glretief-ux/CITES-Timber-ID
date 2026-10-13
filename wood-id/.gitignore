@@ -6,3 +6,4 @@ data/splits.csv
 models/*.pt
 __pycache__/
 *.pyc
+data/external/*/*/
