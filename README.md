@@ -16,6 +16,8 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 | [`data/species.json`](data/species.json), [`data/species.csv`](data/species.csv) | Full database (opens in Excel) |
 | [`docs/schematics/`](docs/schematics) | Schematic 10x end-grain drawing for every taxon (clearly labelled *not a photograph*) |
 | [`photos/`](photos) | 10x photo library — one folder per taxon, with what to photograph; `manifest.csv` lists added photos |
+| [`docs/identify/`](docs/identify/index.html) | **Identify from photo (in development)** — upload a 10x end-grain photo and get a CITES-listed vs unlisted African timber lead, computed in the browser. Needs a trained model; none is installed yet |
+| [`wood-id/`](wood-id/README.md) | Training pipeline, imaging protocol and CITES African scope table for that model |
 | [`guides/field-procedure.md`](guides/field-procedure.md) | How to cut, observe, test, document and sample suspect timber |
 | [`guides/feature-glossary.md`](guides/feature-glossary.md) | What each end-grain feature looks like |
 | [`guides/photo-protocol.md`](guides/photo-protocol.md) | How to take and add 10x reference photos |

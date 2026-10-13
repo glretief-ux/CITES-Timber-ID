@@ -1,0 +1,2 @@
+image_path,species,specimen_id,source,label_confidence,session_date,pixels_per_mm,sapwood_heartwood,moisture,notes
+raw/Dalbergia_nigra/TW-0001/TW-0001_001.png,Dalbergia_nigra,TW-0001,Tervuren xylarium Tw-0001,vouchered,2026-10-20,420,heartwood,dry,example row

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>African Timber ID - CITES Timber ID</title>
+<style>
+:root{--ink:#1c2733;--mute:#66758a;--line:#e3e8ef;--bg:#f5f7fa;--card:#fff;--brand:#12355b;
+--hi:#c0392b;--med:#e08a00;--lo:#2e8b57;--r:10px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:12px}
+.toplogo{text-align:center;margin:2px 0 10px}.toplogo img{height:84px;max-width:92%;width:auto;display:inline-block}
+header{background:var(--brand);color:#fff;border-radius:var(--r);padding:16px 18px;margin-bottom:12px}
+header h1{margin:0 0 2px;font-size:19px}
+header .sub{opacity:.8;font-size:12px}
+header .hl{margin-top:8px;font-size:13px}
+header .hl a{color:#cfe0f5;text-decoration:underline}header .hl a.on{color:#fff;font-weight:700;text-decoration:none}
+.banner{border-radius:var(--r);padding:10px 14px;margin-bottom:12px;font-size:13px;background:#fff4d6;border:1px solid #f0d58a}
+.card{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:0 1px 2px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
+.card h2{font-size:14px;margin:-14px -16px 12px;padding:10px 16px;background:var(--brand);color:#fff;letter-spacing:.2px}
+.card p{margin:6px 0}
+.status{padding:10px 14px;border-radius:var(--r);margin-bottom:12px;font-size:13px;background:var(--card);border:1px solid var(--line)}
+.status.ok{background:#e7f5ed;border-color:#a9d9bd}
+.status.warn,.card.warn{background:#fff4d6;border:1px solid #f0d58a;box-shadow:none}
+label.pick{display:block;border:2px dashed #b9c6d6;border-radius:var(--r);padding:22px 14px;text-align:center;cursor:pointer;background:var(--card);margin-bottom:10px}
+label.pick strong{color:var(--brand);font-size:16px}
+input[type=file]{display:none}
+#thumbs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
+#thumbs img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+button{font:inherit;border:0;border-radius:8px;padding:13px 18px;background:var(--brand);color:#fff;width:100%;font-weight:700;cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+button.secondary{background:#fff;color:var(--brand);border:1px solid var(--brand);margin-top:4px}
+details{margin:10px 0;color:var(--mute);font-size:13px}
+details summary{cursor:pointer;color:var(--brand);font-weight:600}
+details input{font:inherit;width:110px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.verdict{border:2px solid var(--line)}
+.verdict .vlabel{font-size:20px;font-weight:800}
+.verdict .vnums{color:var(--mute);font-size:13px;margin-top:4px}
+.verdict.listed{background:#fdecea;border-color:var(--hi)}.verdict.listed .vlabel{color:var(--hi)}
+.verdict.notlisted{background:#e7f5ed;border-color:var(--lo)}.verdict.notlisted .vlabel{color:var(--lo)}
+.verdict.inconclusive{background:#fff4d6;border-color:var(--med)}.verdict.inconclusive .vlabel{color:#8a5a00}
+.row{margin:11px 0}
+.rowhead{display:flex;justify-content:space-between;gap:8px}
+.name{font-style:italic;font-weight:600}
+.track{height:8px;background:#e8edf3;border-radius:99px;overflow:hidden;margin-top:4px}
+.fill{height:100%;background:var(--brand)}
+.sub,.fine{color:var(--mute);font-size:12px;margin-top:3px}
+#progress{color:var(--mute);font-size:13px;min-height:1.2em;margin:8px 0}
+a{color:#1656a3}
+footer{color:var(--mute);font-size:11.5px;padding:8px 2px 24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="toplogo"><img src="../assets/aircop-ccp-logo.png" alt="AIRCOP - Container Control Programme" onerror="this.parentNode.style.display='none'"></div>
+  <header>
+    <h1>African Timber ID</h1>
+    <div class="sub">Upload a 10x end-grain photo to check for CITES-listed African timbers</div>
+    <div class="hl"><a href="../search.html">Species lookup</a> · <a href="../index.html">10x identification key</a> · <a class="on">Identify from photo</a></div>
+  </header>
+
+  <div class="banner">
+    <strong>Investigative lead only, not forensic proof.</strong> Confirm by wood anatomy or laboratory analysis before any enforcement action.
+    Photos are analysed in your browser and are not uploaded.
+  </div>
+
+  <div id="status" class="status">Loading model...</div>
+
+  <label class="pick" for="file"><strong>Choose photos</strong><br><span class="fine">One or several clean snapshots of the same sample, taken with the Dino-Lite app (not screenshots).</span></label>
+  <input id="file" type="file" accept="image/*" multiple>
+  <div id="thumbs"></div>
+
+  <details>
+    <summary>Settings</summary>
+    <p>Patch size in source pixels: <input id="patchPx" type="number" min="128" step="64" value="1024"><br>
+    <span class="fine">Keep this the same as the value used when the model was trained.</span></p>
+  </details>
+
+  <button id="go" disabled>Identify</button>
+  <div id="progress"></div>
+  <div id="result"></div>
+
+  <footer>
+    <div id="modelinfo"></div>
+    <div>Scope: CITES-listed African timbers per the CITES Secretariat overview of African tree species, plus common unlisted look-alikes.
+    Listings change at every CoP: check the live listing on <a href="https://speciesplus.net/" target="_blank" rel="noopener">Species+</a> before enforcement action.</div>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

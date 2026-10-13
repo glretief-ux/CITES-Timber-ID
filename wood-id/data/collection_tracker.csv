@@ -1,0 +1,44 @@
+class_name,role,priority,cites_status,specimens_have,specimens_min,specimens_target,notes
+Afzelia_africana,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23
+Afzelia_bipindensis,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23
+Afzelia_pachyloba,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23
+Afzelia_quanzensis,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23
+Dalbergia_melanoxylon,cites_target,1,App II #15,0,5,20,Includes African blackwood D
+Dalbergia_nigra,cites_target,1,App I,0,5,20,Brazilian rosewood
+Diospyros_spp,cites_target,1,App II #5,0,5,20,Madagascar populations only
+Guibourtia_demeusei,cites_target,1,App II #15,0,5,20,Only these three Guibourtia species are listed; G
+Guibourtia_pellegriniana,cites_target,1,App II #15,0,5,20,
+Guibourtia_tessmannii,cites_target,1,App II #15,0,5,20,"Equatorial Guinea, Gabon, Cameroon selected for review of significant trade."
+Khaya_anthotheca,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Khaya_grandifoliola,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Khaya_ivorensis,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Khaya_senegalensis,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Osyris_lanceolata,cites_target,1,App II #2,0,5,20,Listed for those range states only.
+Pericopsis_elata,cites_target,1,App II #17,0,5,20,Annotation amended at CoP18
+Prunus_africana,cites_target,1,App II #4,0,5,20,"All parts and derivatives with listed exemptions (annotation #4 amended at CoP20, in force 2026-03-05 per USFWS bulletin)"
+Pterocarpus_angolensis,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Pterocarpus_erinaceus,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Pterocarpus_soyauxii,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Pterocarpus_tessmannii,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Pterocarpus_tinctorius,cites_target,1,App II #17,0,5,20,In force from 2023-02-23
+Widdringtonia_whytei,cites_target,1,App II,0,5,20,"Malawi endemic, listed at CoP18 (2019), no annotation."
+Aucoumea_klaineana,background_lookalike,2,not listed (confirm),0,5,20,
+Baillonella_toxisperma,background_lookalike,2,not listed (confirm),0,5,20,
+Diospyros_crassiflora,background_lookalike,2,not listed (confirm),0,5,20,Mainland African ebony
+Distemonanthus_benthamianus,background_lookalike,2,not listed (confirm),0,5,20,
+Entandrophragma_angolense,background_lookalike,2,not listed (confirm),0,5,20,Not listed
+Entandrophragma_candollei,background_lookalike,2,not listed (confirm),0,5,20,Not listed
+Entandrophragma_cylindricum,background_lookalike,2,not listed (confirm),0,5,20,Not listed
+Entandrophragma_utile,background_lookalike,2,not listed (confirm),0,5,20,Not listed
+Erythrophleum_ivorense,background_lookalike,2,not listed (confirm),0,5,20,
+Gossweilerodendron_balsamiferum,background_lookalike,2,not listed (confirm),0,5,20,
+Guibourtia_ehie,background_lookalike,2,not listed (confirm),0,5,20,Look-alike of the listed bubinga species
+Lophira_alata,background_lookalike,2,not listed (confirm),0,5,20,
+Mansonia_altissima,background_lookalike,2,not listed (confirm),0,5,20,
+Milicia_excelsa,background_lookalike,2,not listed (confirm),0,5,20,
+Millettia_laurentii,background_lookalike,2,not listed (confirm),0,5,20,Not in the CITES African tree overview; confirm on Species+.
+Millettia_stuhlmannii,background_lookalike,2,not listed (confirm),0,5,20,Pterocarpus-like East African timber
+Nauclea_diderrichii,background_lookalike,2,not listed (confirm),0,5,20,
+Terminalia_superba,background_lookalike,2,not listed (confirm),0,5,20,
+Triplochiton_scleroxylon,background_lookalike,2,not listed (confirm),0,5,20,
+Pterocarpus_santalinus,comparator,3,App II #7,0,5,20,"Asian species, separate listing from the African Pterocarpus."

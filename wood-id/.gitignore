@@ -1,0 +1,8 @@
+data/raw/
+data/patches/
+data/patches.csv
+data/rejected_patches.csv
+data/splits.csv
+models/*.pt
+__pycache__/
+*.pyc
