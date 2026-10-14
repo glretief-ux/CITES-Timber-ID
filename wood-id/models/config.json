@@ -1,0 +1,24 @@
+{
+  "arch": "resnet18",
+  "classes": [
+    "Afzelia_quanzensis",
+    "Khaya_anthotheca",
+    "Pericopsis_elata",
+    "Pterocarpus_angolensis"
+  ],
+  "input_size": 224,
+  "patch_size_px": 640,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "created": "2026-10-14",
+  "demo": true,
+  "demo_note": "DEMO ONLY: trained from scratch on 1 specimen per species (4 species), never tested on unseen wood. Answers are not results."
+}

@@ -7,3 +7,5 @@ models/*.pt
 __pycache__/
 *.pyc
 data/external/*/*/
+models/*.onnx
+data/splits_warnings.txt

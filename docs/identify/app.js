@@ -44,7 +44,8 @@
         state.session = s;
         els.model.textContent = "Model: " + state.cfg.arch + ", " + state.cfg.classes.length +
           " classes, built " + state.cfg.created;
-        setStatus("Model ready. Choose one or more photos of the same sample.", "ok");
+        if (state.cfg.demo) setStatus("DEMO MODEL: " + (state.cfg.demo_note || "not a real result") + " Choose photos to try the flow.", "warn");
+        else setStatus("Model ready. Choose one or more photos of the same sample.", "ok");
         els.go.disabled = els.file.files.length === 0;
       })
       .catch(function (e) {
@@ -146,6 +147,8 @@
     var v = C.verdict(mass, top[0].p);
     var res = els.result;
 
+    if (cfg.demo) v = { level: "inconclusive", label: "DEMO MODEL - NOT A RESULT",
+      text: (cfg.demo_note || "This model has not been tested.") + " Do not use this output to decide anything." };
     var card = el("div", "card verdict " + v.level);
     card.appendChild(el("div", "vlabel", v.label));
     card.appendChild(el("div", "vtext", v.text));

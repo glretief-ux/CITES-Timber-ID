@@ -37,6 +37,11 @@ GENUS_SPECIES = {
     "Diospyros": [],       # Madagascar populations: choose with a Malagasy-wood expert
     "Entandrophragma": ["cylindricum", "utile", "angolense", "candollei"],
 }
+# Open-data images we hold or can get (not Dino-Lite; kept out of git)
+OPEN_DATA = {
+    "Prunus_africana": "61 phone/24x images (GOIMAI, CC BY-SA 4.0); not Dino-Lite",
+    "Pericopsis_elata": "available from GOIMAI (558 MB), not yet downloaded",
+}
 TARGET_SPECIMENS = 20
 MIN_SPECIMENS = 5
 
@@ -121,6 +126,7 @@ def build_tracker():
                 "specimens_have": int(have.get(n, 0)),
                 "specimens_min": MIN_SPECIMENS, "specimens_target": TARGET_SPECIMENS,
                 "notes": r["scope_note"].split(". ")[0][:160],
+                "open_data_images": OPEN_DATA.get(n, ""),
             })
     out = DATA / "collection_tracker.csv"
     with open(out, "w", newline="", encoding="utf-8") as f:

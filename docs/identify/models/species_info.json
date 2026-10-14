@@ -1,0 +1,46 @@
+{
+  "Afzelia_quanzensis": {
+    "genus": "Afzelia",
+    "listed": true,
+    "appendix": "II",
+    "annotation": "#17",
+    "role": "cites_target",
+    "common_names": "doussie; afzelia",
+    "basis": "genus-wide listing",
+    "check_status": "verified in source",
+    "note": "Listing in force from 2023-02-23. African populations only. Brief names A. africana, A. bipindensis, A. pachyloba, A. quanzensis and look-alikes A. bella, A. parviflora, A. peturei. CoP20 rejected Congo/Gabon proposal to remove A. bipindensis from App II."
+  },
+  "Khaya_anthotheca": {
+    "genus": "Khaya",
+    "listed": true,
+    "appendix": "II",
+    "annotation": "#17",
+    "role": "cites_target",
+    "common_names": "African mahogany; khaya",
+    "basis": "genus-wide listing",
+    "check_status": "verified in source",
+    "note": "In force from 2023-02-23. Five recognised species per brief; nomenclature unresolved (Decision 19.284)."
+  },
+  "Pericopsis_elata": {
+    "genus": "Pericopsis",
+    "listed": true,
+    "appendix": "II",
+    "annotation": "#17",
+    "role": "cites_target",
+    "common_names": "afrormosia; assamela",
+    "basis": "species row",
+    "check_status": "verified in source",
+    "note": "Annotation amended at CoP18. Cote d'Ivoire trade suspension recommendation since 2012."
+  },
+  "Pterocarpus_angolensis": {
+    "genus": "Pterocarpus",
+    "listed": true,
+    "appendix": "II",
+    "annotation": "#17",
+    "role": "cites_target",
+    "common_names": "padouk; kosso; mukula; muninga",
+    "basis": "genus-wide listing",
+    "check_status": "verified in source",
+    "note": "In force from 2023-02-23. 12 African species incl. P. angolensis, P. soyauxii, P. tessmannii; P. erinaceus (listed 2016) and P. tinctorius (listed 2019) earlier. P. santalinus (Asia) is separate (App II, #7). CoP20 rejected Congo/Gabon proposal to remove P. soyauxii."
+  }
+}
