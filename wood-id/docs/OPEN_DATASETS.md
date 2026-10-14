@@ -11,3 +11,15 @@ Only what was read on the dataset pages. Download links and licences must be re-
 | Wood Species Dataset, [Zenodo 2545611](https://zenodo.org/records/2545611) | 8,544 macroscopic images, numbered categories | Species not named on the page: unknown | CC BY 4.0, 47.5 MB |
 
 Different camera, lighting and scale from our Dino-Lite photos: keep each source labelled and never mix them without a camera label.
+
+## Image libraries checked for reuse terms (2026-10-14)
+
+| Source | Terms found | Use here |
+|---|---|---|
+| [The Wood Database](https://www.wood-database.com/afrormosia/) | "Copyright 2008-2026 Eric Meier. All Rights Reserved." No reuse licence | Link only; ask for written permission before showing or using images |
+| [InsideWood](https://insidewood.lib.ncsu.edu/citingus) | Copies for nonprofit own/organisation use with acknowledgement; no redistribution for gain; large-scale processing or redistribution needs written permission; each image copyright belongs to its photographer and institution | Mostly microscopic sections; ask NC State before any bulk use |
+| [DELTA wood ID, Thuenen Institute](https://www.delta-intkey.com/wood/en/contacts.htm) | Images not to be distributed further without prior permission of the authors | Ask the authors |
+| [Tervuren Xylarium on GBIF](https://www.gbif.org/dataset/b0cb000d-9381-4881-98d9-1594acf59c89) | 10,189 specimen records; the page shows no images or licence | Records only as far as checked; the museum holds the physical collection |
+
+Finding: no large openly licensed image set of African CITES timbers was found beyond GOIMAI (two species).
+The realistic route is access to physical xylarium samples that can be photographed with our own Dino-Lite.
