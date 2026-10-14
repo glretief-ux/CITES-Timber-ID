@@ -2,7 +2,7 @@ class_name,role,priority,cites_status,specimens_have,specimens_min,specimens_tar
 Afzelia_africana,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23,
 Afzelia_bipindensis,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23,
 Afzelia_pachyloba,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23,
-Afzelia_quanzensis,cites_target,1,App II #17,0,5,20,Listing in force from 2023-02-23,
+Afzelia_quanzensis,cites_target,1,App II #17,1,5,20,Listing in force from 2023-02-23,
 Dalbergia_melanoxylon,cites_target,1,App II #15,0,5,20,Includes African blackwood D,
 Dalbergia_nigra,cites_target,1,App I,0,5,20,Brazilian rosewood,
 Diospyros_spp,cites_target,1,App II #5,0,5,20,Madagascar populations only,
