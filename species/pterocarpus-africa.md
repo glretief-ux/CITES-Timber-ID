@@ -66,6 +66,11 @@ DNA / mass spec for species.
 | *Pterocarpus osun* | Camwood/ African padauk | West Africa |  |
 | *Pterocarpus mildbraedii* |  | West & Central Africa |  |
 | *Pterocarpus erinaceus, P. tinctorius* |  |  | See separate entries. |
+| *Pterocarpus brenanii* |  | Africa |  |
+| *Pterocarpus lucens* |  | Africa |  |
+| *Pterocarpus rotundifolius* |  | Africa |  |
+| *Pterocarpus santalinoides* |  | Africa / Neotropics |  |
+| *Pterocarpus tessmannii* |  | Central Africa |  |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

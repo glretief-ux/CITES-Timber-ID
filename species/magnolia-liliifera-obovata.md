@@ -4,7 +4,7 @@
 **Trade / common names:** Champ (Nepal)  
 **CITES Appendix:** **III**  
 **Annotation:** #1 — All parts and derivatives, except seeds/spores/pollen, seedlings or tissue cultures in vitro, cut flowers of artificially propagated plants (timber, finished goods covered).  
-**Population covered:** Population of Nepal (listed by Nepal) - VERIFY current status on Species+  
+**Population covered:** Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)  
 **First listed (approx. year in force):** 1975  
 **Native range:** Nepal / Eastern Himalaya.
 

@@ -67,6 +67,9 @@ Toona vs Cedrela: microscopy/DNA.
 | *Cedrela fissilis* | Cedro, cedro rosa | Costa Rica to Argentina |  |
 | *Cedrela montana* | Cedro de montaña | Andes |  |
 | *Cedrela angustifolia, C. lilloi, C. salvadorensis, C. tonduzii, C. saltensis and others (c. 17 spp.)* | Cedro | Neotropics | All covered at genus level. |
+| *Cedrela angustifolia (= C. lilloi)* | Cedro | Andes - App. III #5 (some countries) |  |
+| *Cedrela oaxacensis* | Cedro | Mexico |  |
+| *Cedrela tonduzii* | Cedro dulce | Central America |  |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

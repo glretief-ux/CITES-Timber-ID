@@ -334,7 +334,7 @@ Only add images you own or that carry an open licence (public domain, CC-BY, CC-
 def main():
     data = {
         "version": "2026-10",
-        "listing_basis": "CITES Appendices in force after CoP20 (Samarkand, 24 Nov - 5 Dec 2025). CoP20 adopted no new timber listings; proposals to remove Central African Afzelia bipindensis and Pterocarpus soyauxii were rejected; the Paubrasilia echinata annotation #10 was amended.",
+        "listing_basis": "CITES Appendices in force after CoP20 (Samarkand, 24 Nov - 5 Dec 2025). Amendments adopted at CoP20 entered into force on 5 March 2026 (including a revised annotation #10 for Paubrasilia echinata). Proposals to remove Central African Afzelia bipindensis and Pterocarpus soyauxii were rejected. Cross-checked against the BfN list of protected timber species (Aug 2026); the genus-wide listings cover all species of the genus, including ones not named here.",
         "disclaimer": "Macroscopic identification is a screening tool, usually reliable only to genus or group. Confirm species with an accredited wood-anatomy, DNA or mass-spectrometry laboratory and the live Species+ listing.",
         "annotations": ANNOTATIONS,
         "non_timber_listed_trees": NON_TIMBER_LISTED_TREES,

@@ -14,6 +14,7 @@ Generated from `tools/species_data.py`. Listing basis: CITES Appendices after Co
 | II | [*Aniba rosaeodora*](aniba-rosaeodora.md) | Lauraceae | Brazilian rosewood (oil), pau-rosa, bois de rose (oil) | #12 | hardwood |
 | II | [*Aquilaria spp. and Gyrinops spp.*](aquilaria-gyrinops.md) | Thymelaeaceae | Agarwood, gaharu, oud | #14 | hardwood |
 | II | [*Bulnesia sarmientoi*](bulnesia-sarmientoi.md) | Zygophyllaceae | Argentine lignum vitae, palo santo (Gran Chaco), verawood (trade) | #11 | hardwood |
+| II | [*Caryocar costaricense*](caryocar-costaricense.md) | Caryocaraceae | Ajillo, Costus, piquia (genus) | #4 | hardwood |
 | II | [*Cedrela spp. (Neotropical populations)*](cedrela-spp.md) | Meliaceae | Spanish cedar, cigar-box cedar, cedro | #6 | hardwood |
 | II | [*Dalbergia spp.*](dalbergia-spp.md) | Fabaceae | Rosewoods, palisanders, blackwoods | #15 | hardwood |
 | II | [*Diospyros spp. (Madagascar populations)*](diospyros-madagascar.md) | Ebenaceae | Madagascar ebony, ébène, hazomainty | #5 | hardwood |
@@ -27,7 +28,7 @@ Generated from `tools/species_data.py`. Listing basis: CITES Appendices after Co
 | II | [*Osyris lanceolata*](osyris-lanceolata.md) | Santalaceae | East African sandalwood, African sandalwood | #2 | hardwood |
 | II | [*Paubrasilia echinata (syn. Caesalpinia echinata)*](paubrasilia-echinata.md) | Fabaceae | Pernambuco, pau-brasil, Brazilwood | #10 (amended at CoP20, 2025) | hardwood |
 | II | [*Pericopsis elata*](pericopsis-elata.md) | Fabaceae | Afrormosia, assamela, kokrodua | #17 | hardwood |
-| II | [*Platymiscium parviflorum*](platymiscium-parviflorum.md) | Fabaceae | Trebol, macacaúba (genus), Panama redwood (genus) | #4 | hardwood |
+| II | [*Platymiscium pleiostachyum*](platymiscium-pleiostachyum.md) | Fabaceae | Cristobal, Macacauba, Trebol | #4 | hardwood |
 | II | [*Prunus africana*](prunus-africana.md) | Rosaceae | African cherry, pygeum, red stinkwood | #4 | hardwood |
 | II | [*Pterocarpus erinaceus*](pterocarpus-erinaceus.md) | Fabaceae | Kosso, African rosewood, vène | none | hardwood |
 | II | [*Pterocarpus santalinus*](pterocarpus-santalinus.md) | Fabaceae | Red sanders, red sandalwood, rakta chandana | #7 | hardwood |
@@ -48,4 +49,9 @@ Generated from `tools/species_data.py`. Listing basis: CITES Appendices after Co
 - Balmea stormiae (App. I, Mexico/Central America - shrubby tree, not a timber)
 - Tree ferns Cyatheaceae/Dicksoniaceae (App. II - trunks traded as fibre/horticultural)
 - Palms such as Dypsis decipiens (App. I), and other horticultural trees
-- Commiphora wightii (guggul resin) and other resin/medicinal trees
+- Commiphora wightii (guggul resin; App. II #19)
+- Adansonia grandidieri (Grandidier's baobab; App. II #16 - seeds, fruits, oils)
+- Senna meridionalis (App. II, Madagascar)
+- Jubaea chilensis (Chilean wine palm; App. I)
+- Beaucarnea spp. (elephant-foot trees; App. II)
+- Boswellia spp. and other resin trees are NOT CITES-listed (EU-only Annex D / national rules)

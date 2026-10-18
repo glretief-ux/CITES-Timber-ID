@@ -67,6 +67,13 @@ DNA/MS.
 | *Dipteryx micrantha* | Shihuahuaco | Peru, Bolivia, W Brazil | Major Peruvian export. |
 | *Dipteryx oleifera (= D. panamensis)* | Almendro | Central America, Colombia | Formerly App III (CR, NI). |
 | *Dipteryx alata, D. polyphylla, D. rosea, D. ferrea and others* | Baru, cumaru |  |  |
+| *Dipteryx casiquiarensis* |  | Neotropics |  |
+| *Dipteryx charapilla* |  | Neotropics |  |
+| *Dipteryx lacunifera* |  | Neotropics |  |
+| *Dipteryx magnifica* |  | Neotropics |  |
+| *Dipteryx punctata* |  | Neotropics |  |
+| *Dipteryx tetraphylla* |  | Neotropics |  |
+| *Dipteryx trifoliolata* |  | Neotropics |  |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

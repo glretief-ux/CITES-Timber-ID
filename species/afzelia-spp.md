@@ -67,6 +67,7 @@ Separation from Intsia needs microscopy/DNA - check stated origin.
 | *Afzelia pachyloba* | Doussié | Central Africa |  |
 | *Afzelia quanzensis* | Pod mahogany, chanfuta, mkora | East & southern Africa |  |
 | *Afzelia bella, A. parviflora and other African spp.* |  |  |  |
+| *Afzelia peturei* |  | Central Africa |  |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

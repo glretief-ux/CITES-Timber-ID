@@ -69,6 +69,8 @@ Microscopy/DNA for species; mass spec.
 | *Khaya senegalensis* | Dry-zone mahogany, caïlcédrat | Sahel / Sudanian savanna | Densest (~800). |
 | *Khaya madagascariensis* | Madagascar mahogany | Madagascar |  |
 | *Khaya nyasica* | Red mahogany (East Africa) | East & southern Africa | Sometimes merged with K. anthotheca. |
+| *Khaya agboensis* | African mahogany | West Africa |  |
+| *Khaya euryphylla* | African mahogany | Central Africa |  |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

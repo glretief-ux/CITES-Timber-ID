@@ -29,7 +29,7 @@ ANNOTATIONS = {
     "none": "No annotation - ALL parts and derivatives are covered (including finished products).",
     "#1": "All parts and derivatives, except seeds/spores/pollen, seedlings or tissue cultures in vitro, cut flowers of artificially propagated plants (timber, finished goods covered).",
     "#2": "All parts and derivatives except seeds and pollen, and finished products packaged and ready for retail trade.",
-    "#4": "All parts and derivatives except seeds, spores and pollen, seedling/tissue cultures, cut flowers of artificially propagated plants and a few plant-specific items (Vanilla, Opuntia etc.). For timber: logs, sawn wood, veneer, plywood, chips AND finished products ARE covered.",
+    "#4": "All parts and derivatives except seeds, spores and pollen, in-vitro seedling/tissue cultures, cut flowers of artificially propagated plants and a few plant-specific items (certain Vanilla, Cactaceae, Opuntia/Selenicereus stems, finished Euphorbia antisyphilitica products). For timber: logs, sawn wood, veneer, plywood, chips AND finished products ARE covered.",
     "#5": "Logs, sawn wood and veneer sheets.",
     "#6": "Logs, sawn wood, veneer sheets and plywood.",
     "#7": "Logs, wood chips, powder and extracts.",
@@ -38,6 +38,8 @@ ANNOTATIONS = {
     "#12": "Logs, sawn wood, veneer sheets, plywood and extracts.",
     "#14": "All parts and derivatives except seeds/pollen, seedling cultures, fruits, leaves, exhausted agarwood powder and finished retail products (agarwood chips, oil, powder ARE covered).",
     "#15": "All parts and derivatives except (a) leaves, flowers, pollen, fruits, seeds; (b) finished products up to 10 kg wood of listed species per shipment; (c) finished musical instruments, parts and accessories; (d) D. cochinchinensis (covered by #4); (e) Dalbergia spp. from Mexico (covered by #6).",
+    "#16": "Seeds, fruits and oils (Adansonia grandidieri) - not timber.",
+    "#19": "All parts and derivatives except seeds and pollen, seedling/tissue cultures, cut flowers, and finished products packaged for retail trade (Commiphora wightii) - not timber.",
     "#17": "Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09, e.g. decking, flooring strips).",
 }
 
@@ -141,7 +143,7 @@ SPECIES = [
     {
         "id": "podocarpus-parlatorei", "scientific_name": "Podocarpus parlatorei", "rank": "species",
         "family": "Podocarpaceae", "common_names": ["Parlatore's podocarp", "pino del cerro"],
-        "appendix": "I", "annotation": "none", "population_scope": "All populations", "listed_since": 1975,
+        "appendix": "I", "annotation": "none", "population_scope": "All populations (App. I per BfN list Aug 2026; some older sources give a later transfer - confirm on Species+)", "listed_since": 1975,
         "range": "Andean Yungas of Argentina and Bolivia.",
         "wood_type": "softwood",
         "heartwood": "Uniform pale yellowish-brown.",
@@ -534,8 +536,8 @@ SPECIES = [
         "species_included": [],
     },
     {
-        "id": "platymiscium-parviflorum", "scientific_name": "Platymiscium parviflorum", "rank": "species",
-        "family": "Fabaceae", "common_names": ["Trebol", "macacaúba (genus)", "Panama redwood (genus)"],
+        "id": "platymiscium-pleiostachyum", "scientific_name": "Platymiscium pleiostachyum", "rank": "species",
+        "family": "Fabaceae", "common_names": ["Cristobal", "Macacauba", "Trebol", "Panama redwood (genus)"],
         "appendix": "II", "annotation": "#4", "population_scope": "All populations", "listed_since": 2017,
         "range": "Central America (Mexico to Panama).",
         "wood_type": "hardwood",
@@ -547,7 +549,7 @@ SPECIES = [
                      "parenchyma": ["aliform", "confluent", "banded"], "ripple_marks": "yes", "rays": "fine",
                      "deposits": "reddish gum", "resin_canals": "no",
                      "special": ["Distinct ripple marks", "Rosewood-like appearance"]},
-        "key_diagnostic": "Red striped rosewood-like wood with storied structure. Only P. parviflorum listed - other Platymiscium (macacaúba, P. pinnatum) are not.",
+        "key_diagnostic": "Red striped rosewood-like wood with storied structure. Only P. pleiostachyum listed (BfN list, Aug 2026; formerly given as P. parviflorum) - other Platymiscium (macacaúba, P. pinnatum) are not.",
         "lookalikes": ["Dalbergia spp.", "Other Platymiscium spp. (not listed)", "Pterocarpus spp."],
         "lab_methods": "DNA/MS.",
         "species_included": [],
@@ -816,7 +818,7 @@ SPECIES = [
     {
         "id": "tetracentron-sinense", "scientific_name": "Tetracentron sinense", "rank": "species",
         "family": "Trochodendraceae", "common_names": ["Spur-leaf tree", "shui qing shu"],
-        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal) - VERIFY current status on Species+", "listed_since": 1975,
+        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)", "listed_since": 1975,
         "range": "Himalaya (Nepal, NE India, Myanmar) to China.",
         "wood_type": "hardwood",
         "heartwood": "Light brown.",
@@ -835,7 +837,7 @@ SPECIES = [
     {
         "id": "magnolia-liliifera-obovata", "scientific_name": "Magnolia liliifera var. obovata", "rank": "variety",
         "family": "Magnoliaceae", "common_names": ["Champ (Nepal)"],
-        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal) - VERIFY current status on Species+", "listed_since": 1975,
+        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)", "listed_since": 1975,
         "range": "Nepal / Eastern Himalaya.",
         "wood_type": "hardwood",
         "heartwood": "Olive-greenish to yellowish-brown.",
@@ -853,11 +855,58 @@ SPECIES = [
     },
 ]
 
+SPECIES.append({
+    "id": "caryocar-costaricense", "scientific_name": "Caryocar costaricense", "rank": "species",
+    "family": "Caryocaraceae", "common_names": ["Ajillo", "Costus", "piquia (genus)"],
+    "appendix": "II", "annotation": "#4", "population_scope": "All populations", "listed_since": 2002,
+    "range": "Costa Rica, Panama, Colombia, Ecuador (lowland wet forest).",
+    "wood_type": "hardwood",
+    "heartwood": "Yellowish to light brown, often with olive tint.",
+    "sapwood": "Paler, not always distinct.",
+    "density": "~700-850 kg/m3 (genus Caryocar, heavy)",
+    "odour": "None distinct.",
+    "endgrain": {"porosity": "diffuse", "pore_size": "medium", "pore_density": "few", "grouping": "mixed",
+                 "parenchyma": ["banded", "vasicentric"], "ripple_marks": "no", "rays": "fine",
+                 "deposits": "gum/tyloses in some pores", "resin_canals": "no",
+                 "special": ["Genus-level description (Caryocar); not verified for this species", "Fine tangential parenchyma bands and solitary / radial-multiple pores"]},
+    "key_diagnostic": "Heavy yellow-brown hardwood, few medium pores in radial multiples, fine banded parenchyma. Genus level only - send to a laboratory.",
+    "lookalikes": ["Other Caryocar spp. (not listed)", "Vochysiaceae", "Hymenaea spp."],
+    "lab_methods": "Wood anatomy and DNA at genus level.",
+    "species_included": [],
+})
+
+def _sp(name, trade="", rng="", notes=""):
+    return {"name": name, "trade": trade, "range": rng, "notes": notes}
+
+def _extend(tid, items):
+    t = next(x for x in SPECIES if x["id"] == tid)
+    have = {x["name"] for x in t["species_included"]}
+    t["species_included"].extend(i for i in items if i["name"] not in have)
+
+# Species names added from the BfN list of protected timber species (Aug 2026, CITES status 5 Mar 2026).
+# Lists of accepted species change with taxonomy: genus-wide listings cover ALL species of the genus.
+_extend("khaya-spp", [_sp("Khaya agboensis", "African mahogany", "West Africa"),
+                      _sp("Khaya euryphylla", "African mahogany", "Central Africa")])
+_extend("pterocarpus-africa", [_sp("Pterocarpus brenanii", "", "Africa"), _sp("Pterocarpus lucens", "", "Africa"),
+                               _sp("Pterocarpus rotundifolius", "", "Africa"), _sp("Pterocarpus santalinoides", "", "Africa / Neotropics"),
+                               _sp("Pterocarpus tessmannii", "", "Central Africa")])
+_extend("afzelia-spp", [_sp("Afzelia peturei", "", "Central Africa")])
+_extend("dipteryx-spp", [_sp(n, "", "Neotropics") for n in (
+    "Dipteryx casiquiarensis", "Dipteryx charapilla", "Dipteryx lacunifera", "Dipteryx magnifica",
+    "Dipteryx punctata", "Dipteryx tetraphylla", "Dipteryx trifoliolata")])
+_extend("cedrela-spp", [_sp("Cedrela angustifolia (= C. lilloi)", "Cedro", "Andes - App. III #5 (some countries)"),
+                        _sp("Cedrela oaxacensis", "Cedro", "Mexico"), _sp("Cedrela tonduzii", "Cedro dulce", "Central America")])
+
 NON_TIMBER_LISTED_TREES = [
     "Balmea stormiae (App. I, Mexico/Central America - shrubby tree, not a timber)",
     "Tree ferns Cyatheaceae/Dicksoniaceae (App. II - trunks traded as fibre/horticultural)",
     "Palms such as Dypsis decipiens (App. I), and other horticultural trees",
-    "Commiphora wightii (guggul resin) and other resin/medicinal trees",
+    "Commiphora wightii (guggul resin; App. II #19)",
+    "Adansonia grandidieri (Grandidier's baobab; App. II #16 - seeds, fruits, oils)",
+    "Senna meridionalis (App. II, Madagascar)",
+    "Jubaea chilensis (Chilean wine palm; App. I)",
+    "Beaucarnea spp. (elephant-foot trees; App. II)",
+    "Boswellia spp. and other resin trees are NOT CITES-listed (EU-only Annex D / national rules)",
 ]
 
 
@@ -899,7 +948,7 @@ PHOTO_LINKS = {
     "paubrasilia-echinata": [("Paubrasilia echinata", "caecaech")],
     "gonystylus-spp": [("Gonystylus spp.", "thygony")],
     "aquilaria-gyrinops": [("Aquilaria spp., Gyrinops spp.", "thyaqu")],
-    "platymiscium-parviflorum": [("Platymiscium spp.", "fabplspp")],
+    "platymiscium-pleiostachyum": [("Platymiscium spp.", "fabplspp")],
     "bulnesia-sarmientoi": [("Bulnesia (Gonopterodendron) sarmientoi", "zygbusa")],
     "guaiacum-spp": [("Guaiacum spp.", "zygguai")],
     "aniba-rosaeodora": [("Aniba rosaeodora", "lauanro")],

@@ -4,7 +4,7 @@
 **Trade / common names:** Parlatore's podocarp, pino del cerro  
 **CITES Appendix:** **I**  
 **Annotation:** none — No annotation - ALL parts and derivatives are covered (including finished products).  
-**Population covered:** All populations  
+**Population covered:** All populations (App. I per BfN list Aug 2026; some older sources give a later transfer - confirm on Species+)  
 **First listed (approx. year in force):** 1975  
 **Native range:** Andean Yungas of Argentina and Bolivia.
 

@@ -3,7 +3,7 @@
 **Family:** Thymelaeaceae  
 **Trade / common names:** Ramin, melawis, lanutan-bagyo  
 **CITES Appendix:** **II**  
-**Annotation:** #4 — All parts and derivatives except seeds, spores and pollen, seedling/tissue cultures, cut flowers of artificially propagated plants and a few plant-specific items (Vanilla, Opuntia etc.). For timber: logs, sawn wood, veneer, plywood, chips AND finished products ARE covered.  
+**Annotation:** #4 — All parts and derivatives except seeds, spores and pollen, in-vitro seedling/tissue cultures, cut flowers of artificially propagated plants and a few plant-specific items (certain Vanilla, Cactaceae, Opuntia/Selenicereus stems, finished Euphorbia antisyphilitica products). For timber: logs, sawn wood, veneer, plywood, chips AND finished products ARE covered.  
 **Population covered:** All populations  
 **First listed (approx. year in force):** 2004  
 **Native range:** Peat-swamp forests of Malaysia, Indonesia (Sumatra, Borneo), Philippines, Pacific (c. 30 spp.).

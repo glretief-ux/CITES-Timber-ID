@@ -1,9 +1,9 @@
-# 10x photos — Platymiscium parviflorum
+# 10x photos — Platymiscium pleiostachyum
 
 Put **real** 10x end-grain photographs of verified reference specimens here.
 
-File naming: `platymiscium-parviflorum_<xylarium-or-agency>_<specimen-no>_<n>.jpg`
-(e.g. `platymiscium-parviflorum_MADw_12345_1.jpg`)
+File naming: `platymiscium-pleiostachyum_<xylarium-or-agency>_<specimen-no>_<n>.jpg`
+(e.g. `platymiscium-pleiostachyum_MADw_12345_1.jpg`)
 
 For every photo add one row to [`../manifest.csv`](../manifest.csv).
 
@@ -14,6 +14,6 @@ For every photo add one row to [`../manifest.csv`](../manifest.csv).
 4. Optional: UV (365 nm) fluorescence of the end grain.
 
 ## Features the photo must show
-Red striped rosewood-like wood with storied structure. Only P. parviflorum listed - other Platymiscium (macacaúba, P. pinnatum) are not.
+Red striped rosewood-like wood with storied structure. Only P. pleiostachyum listed (BfN list, Aug 2026; formerly given as P. parviflorum) - other Platymiscium (macacaúba, P. pinnatum) are not.
 
 Only add images you own or that carry an open licence (public domain, CC-BY, CC-BY-SA). Record the licence and author in the manifest.
