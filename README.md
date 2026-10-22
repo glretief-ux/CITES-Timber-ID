@@ -25,6 +25,7 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 | [`guides/photo-protocol.md`](guides/photo-protocol.md) | How to take and add 10x reference photos |
 | [`tools/wildlife_data.py`](tools/wildlife_data.py) | Curated fauna and flora groups (common names, what is traded, what to check) behind the two tabs, built into `docs/wildlife.json` |
 | [`tools/build_checklist.py`](tools/build_checklist.py), `docs/checklist-fauna.json`, `docs/checklist-flora.json` | Full checklist data for the Fauna and Flora tabs. To refresh: download the *CITES listed species* CSV from [Species+](https://speciesplus.net) (Downloads) and run `python tools/build_checklist.py <file.csv>` (the raw CSV is not stored in the repo) |
+| [`tools/build_names.py`](tools/build_names.py), `docs/names-fauna.json`, `docs/names-flora.json` | Common names (English, Spanish, French) and old-name synonyms for the Fauna and Flora search, from the *Index of CITES Species* PDF (Checklist of CITES species, UNEP-WCMC / CITES Secretariat). Run `build_checklist.py` first, then `pip install pymupdf` and `python tools/build_names.py <Index_of_CITES_Species.pdf>` |
 | [`tools/species_data.py`](tools/species_data.py) | **The single source** — edit here, then everything is rebuilt |
 
 ## Coverage (listing basis: after CoP20, Samarkand, Nov–Dec 2025)

@@ -627,7 +627,29 @@ function init(){
 
 // ---------------- fauna & flora (full CITES checklist + curated group guidance)
 const WL={fauna:{list:[],idx:[]},flora:{list:[],idx:[]}}, WLK={fauna:"Fauna",flora:"Flora"};
-const WLC={fauna:null,flora:null}, WLP={fauna:null,flora:null};
+const WLC={fauna:null,flora:null}, WLP={fauna:null,flora:null}, WLN={fauna:null,flora:null};
+const wlFold=x=>(x||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
+// common names (English/Spanish/French) and synonyms from the Index of CITES Species, loaded after the checklist
+function wlNamesPrep(n){
+  const map=new Map(), keys=[];
+  n.c.forEach((e,i)=>{ const ks=new Set([wlFold(e[0])]); const m=e[0].match(/^([^,]+),\s*(.+)$/); if(m) ks.add(wlFold(m[2]+" "+m[1]));
+    ks.forEach(k=>{ if(!k) return; let a=map.get(k); if(!a){a=[]; map.set(k,a); keys.push(k);} a.push(i); }); });
+  n.map=map; n.keys=keys.sort(); n.syn=new Map(Object.entries(n.s)); return n;
+}
+const wlLangName={E:"English",S:"Spanish",F:"French"};
+function wlCommonMatches(kind,q,prefix){
+  const n=WLN[kind]; if(!n) return [];
+  const f=wlFold(q); if(!f) return [];
+  const hit=new Set();
+  if(!prefix){ (n.map.get(f)||[]).forEach(i=>hit.add(i)); }
+  else { for(const k of n.keys){ if(k.startsWith(f)){ n.map.get(k).forEach(i=>hit.add(i)); if(hit.size>40) break; } } }
+  return [...hit].map(i=>n.c[i]);
+}
+function wlTargets(kind,list){ // distinct scientific targets of a list of common-name records
+  const seen=new Map();
+  list.forEach(e=>{ const t=e[2].split(" / ")[0].replace(/\s+(spp|sp)\.?$/i,"").trim(); const k=t.toLowerCase(); if(!seen.has(k)) seen.set(k,{target:t,names:[]}); const o=seen.get(k); if(o.names.length<4&&!o.names.includes(e[0])) o.names.push(e[0]); });
+  return [...seen.values()];
+}
 let WLM=null, TG=null;
 const timberGenera=()=>TG||(TG=new Set(INDEX.filter(e=>e.kind!=="trade").map(e=>e.key.split(" ")[0])));
 const WL_EXTRA={
@@ -701,12 +723,14 @@ function wlStat(kind,err){
   const K=WLK[kind], d=WLC[kind], el=$("#stat"+K); if(!el) return;
   if(err) el.textContent="Could not load the full checklist — showing the main groups only.";
   else if(!d) el.textContent="Loading the full CITES checklist…";
-  else el.innerHTML=`Full CITES checklist loaded: <b>${d.count.toLocaleString("en")}</b> listed ${kind==="fauna"?"animal":"plant"} taxa${d.meta&&d.meta.date?` (Species+ export of ${esc(d.meta.date)})`:""}. Search a species, genus or family; common names work for the main groups.`;
+  else el.innerHTML=`Full CITES checklist loaded: <b>${d.count.toLocaleString("en")}</b> listed ${kind==="fauna"?"animal":"plant"} taxa${d.meta&&d.meta.date?` (Species+ export of ${esc(d.meta.date)})`:""}. Search a scientific name, genus or family${WLN[kind]?", or a common name in English, Spanish or French, or an old (synonym) name":"; common names work for the main groups"}.`;
 }
 function wlEnsure(kind){
   if(WLP[kind]) return WLP[kind];
   wlStat(kind);
-  return WLP[kind]=fetch("checklist-"+kind+".json").then(r=>r.json()).then(d=>{WLC[kind]=wlPrep(d); wlStat(kind); wlBrowse(kind); return d;}).catch(()=>{WLP[kind]=null; wlStat(kind,true);});
+  return WLP[kind]=fetch("checklist-"+kind+".json").then(r=>r.json()).then(d=>{WLC[kind]=wlPrep(d); wlStat(kind); wlBrowse(kind);
+    fetch("names-"+kind+".json").then(r=>r.json()).then(n=>{WLN[kind]=wlNamesPrep(n); wlStat(kind);}).catch(()=>{});
+    return d;}).catch(()=>{WLP[kind]=null; wlStat(kind,true);});
 }
 function wlEnsureAll(first){ wlEnsure(first).then(()=>wlEnsure(first==="fauna"?"flora":"fauna")); }
 
@@ -718,6 +742,12 @@ function wlSuggest(kind,q){
     for(let i=0;i<d.low.length && starts.length<12;i++){ if(d.low[i].startsWith(n)) starts.push(i); }
     if(starts.length<8){ for(let i=0;i<d.low.length && epi.length<8;i++){ const w=d.low[i].split(" ")[1]; if(w && !d.low[i].startsWith(n) && w.startsWith(n)) epi.push(i); } }
     for(const i of starts.concat(epi)){ if(out.length>=10) break; const t=d.T[i]; if(seen.has(d.low[i])) continue; seen.add(d.low[i]); out.push({label:t[0],sub:`App. ${t[5]} · ${d.S[t[2]]}`}); }
+  }
+  if(WLN[kind] && n.length>=3){
+    const have=new Set(out.map(o=>o.label.toLowerCase()));
+    const cm=wlCommonMatches(kind,n,true); const done=new Set();
+    for(const e of cm){ if(out.length>=14) break; const k=e[0].toLowerCase(); if(have.has(k)||done.has(k+e[2])) continue; done.add(k+e[2]);
+      out.push({label:e[0],sub:`${wlLangName[e[1]]} name → ${e[2].replace(/\s+(spp|sp)\.?$/i," spp.")}`}); }
   }
   return out;
 }
@@ -755,6 +785,7 @@ function wlTaxon(kind,i,searched,flag){
     ${appChips(t[5])}${t[1]?` <span class="chip none">${t[1]===1?"subspecies":"variety"}</span>`:""}${g?` <span class="chip none">${esc(g.name)}</span>`:""}
     <p class="sci">${esc(t[0])}</p>
     <div class="cn">${esc(S[t[2]])}${S[t[3]]?" · "+esc(S[t[3]]):""}${S[t[4]]?" · "+esc(S[t[4]]):""}</div>
+    ${flag==="syn"?`<div class="note">“${esc(searched)}” is an older or alternative name; the accepted CITES name is <i>${esc(t[0])}</i>.</div>`:""}
     ${flag==="sub"&&norm(searched)!==norm(t[0])?`<div class="note">“${esc(searched)}” is not listed separately; the listing for <i>${esc(t[0])}</i> applies. Check subspecies and population details on Species+.</div>`:""}
     ${apps.length>1?`<div class="note warn"><b>Listed in more than one Appendix.</b> Which one applies depends on the population or the annotation, read the listing notes below.</div>`:""}
     ${spBtn(t[0],`Check <i>${esc(t[0])}</i> on Species+`)}
@@ -775,7 +806,7 @@ function wlTaxon(kind,i,searched,flag){
 }
 function wlSummary(kind,level,key,idxs){
   const K=WLK[kind], d=WLC[kind], S=d.S, out=$("#out"+K), first=d.T[idxs[0]];
-  const label=level==="genus"?first[0].split(" ")[0]:level==="family"?S[first[2]]:S[first[3]];
+  const label=level==="species"?first[0].split(" ").slice(0,2).join(" "):level==="genus"?first[0].split(" ")[0]:level==="family"?S[first[2]]:S[first[3]];
   const cnt={}, gc={}; idxs.forEach(i=>{const t=d.T[i]; t[5].split("/").forEach(a=>cnt[a]=(cnt[a]||0)+1); const gid=S[t[11]]; if(gid) gc[gid]=(gc[gid]||0)+1;});
   const best=Object.entries(gc).sort((a,b)=>b[1]-a[1])[0], g=best&&best[1]>=idxs.length*0.6?wlGroup(kind,best[0]):null;
   const chips=Object.keys(cnt).sort().map(a=>`<span class="chip ${a}">Appendix ${a}: ${cnt[a].toLocaleString("en")}</span>`).join(" ");
@@ -852,6 +883,7 @@ function wlLookup(kind,q){
   const d=WLC[kind], low=q.toLowerCase().replace(/\s+(spp|sp)\.?$/,"");
   if(d){
     let a=d.byName.get(low); if(a) return wlTaxon(kind,a[0],q);
+    if(low.split(" ").length===2){ const pre=[]; for(let i=0;i<d.low.length;i++) if(d.low[i].startsWith(low+" ")) pre.push(i); if(pre.length) return wlSummary(kind,"species",low,pre); }
     const w=low.split(" ");
     if(w.length>=3){ a=d.byName.get(w.slice(0,2).join(" ")); if(a) return wlTaxon(kind,a[0],q,"sub"); }
     if(w.length===1){
@@ -860,7 +892,24 @@ function wlLookup(kind,q){
       if(d.byOrd.has(low)) return wlSummary(kind,"order",low,d.byOrd.get(low));
     }
   }
-  const e=wlFind(kind,q); if(e) wlShow(kind,e.gi,q); else wlNotFound(kind,q);
+  const nm=WLN[kind];
+  if(nm){
+    const sy=nm.syn.get(low); if(sy && d && d.byName.get(sy)) return wlTaxon(kind,d.byName.get(sy)[0],q,"syn");
+    const ex=wlCommonMatches(kind,q,false); if(ex.length) return wlCommonResult(kind,q,ex);
+  }
+  const e=wlFind(kind,q); if(e) return wlShow(kind,e.gi,q);
+  if(nm){ const px=wlCommonMatches(kind,q,true); if(px.length) return wlCommonResult(kind,q,px); }
+  wlNotFound(kind,q);
+}
+function wlCommonResult(kind,q,list){
+  const tg=wlTargets(kind,list);
+  if(tg.length===1) return wlLookup(kind,tg[0].target,"via");
+  const K=WLK[kind], out=$("#out"+K);
+  out.innerHTML=`<div class="card"><span class="chip none">Common name</span><p class="sci">${esc(q)}</p>
+    <p>“${esc(q)}” can refer to more than one CITES-listed taxon. Pick one:</p>
+    ${tg.slice(0,30).map((t,i)=>`<button class="lkbtn" data-t="${i}"><i>${esc(t.target)}</i> <small>(${esc(t.names.join(", "))})</small></button>`).join("")}</div>`;
+  out.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{const t=tg[+b.dataset.t].target; $("#q"+K).value=t; wlLookup(kind,t);});
+  out.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 // ----- page wiring
