@@ -211,5 +211,7 @@ if(window.matchMedia("(max-width:800px)").matches) document.getElementById("fbox
 fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;$("#basis").textContent=d.listing_basis;build();render();})
  .catch(()=>{$("#basis").textContent="Could not load data.json — open this page via GitHub Pages or a local web server (python -m http.server).";});
 </script>
+<!-- GoatCounter: privacy-friendly visit counter (no cookies, no personal data) -->
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
