@@ -43,6 +43,13 @@ details.lk>div,details.lk>ul,details.lk>p{margin:8px 12px}details.lk>table{margi
 #sugg{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fff;border:1px solid var(--line);border-radius:10px;max-height:360px;overflow:auto;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.12);display:none}
 #sugg div{padding:9px 14px;cursor:pointer;border-top:1px solid var(--line)}#sugg div:first-child{border-top:0}
 #sugg div.act,#sugg div:hover{background:#f6f8fb}#sugg small{color:var(--mute)}
+.wlq{width:100%;font:inherit;font-size:17px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);outline:none}
+.wlq:focus{border-color:var(--brand);box-shadow:0 0 0 3px #12355b22}
+.sugg{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fff;border:1px solid var(--line);border-radius:10px;max-height:360px;overflow:auto;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.12);display:none}
+.sugg div{padding:9px 14px;cursor:pointer;border-top:1px solid var(--line)}.sugg div:first-child{border-top:0}
+.sugg div.act,.sugg div:hover{background:#f6f8fb}.sugg small{color:var(--mute)}
+.wlbrowse td:first-child{color:var(--ink);width:34%}.wlbrowse a{font-weight:600;text-decoration:none}.wlbrowse .chip{margin-right:3px}
+.wlbrowse tr.cat td{background:#f0f3f7;font-size:11px;text-transform:uppercase;letter-spacing:.3px;color:var(--mute);font-weight:700}
 .chips{margin:8px 0 0}
 .head{display:grid;grid-template-columns:260px 1fr;gap:18px}@media(max-width:700px){.head{grid-template-columns:1fr}}
 .head img{width:100%;max-width:300px;border-radius:8px;background:#fff}
@@ -123,10 +130,10 @@ body.fromkey .backkey{display:inline-block}
 <header>
   <h1>CITES Timber ID — Species lookup</h1>
   <div class="sub">Type a scientific name (genus, species or synonym) or a trade name. Any species of a listed genus is recognised.</div>
-  <div class="sub hl"><a href="#" class="on" data-tab="name">Species lookup</a> &nbsp;|&nbsp; <a href="#key" data-tab="key">10x identification key</a> &nbsp;|&nbsp; <a href="identify/index.html">Identify from photo</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
+  <div class="sub hl"><a href="#" class="on" data-tab="name">Species lookup</a> &nbsp;|&nbsp; <a href="#key" data-tab="key">10x identification key</a> &nbsp;|&nbsp; <a href="#fauna" data-tab="fauna">Fauna</a> &nbsp;|&nbsp; <a href="#flora" data-tab="flora">Flora</a> &nbsp;|&nbsp; <a href="identify/index.html">Identify from photo</a> &nbsp;|&nbsp; <a href="species.csv">Database (CSV)</a> &nbsp;|&nbsp; <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
 </header>
 <div class="banner"><b>Screening tool.</b> Hand-lens identification usually reaches genus, not species. Confirm with a wood-ID laboratory and the live listing on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</div>
-<div class="tabs" id="mainTabs"><button class="on" data-tab="name">Search by scientific name</button><button data-tab="key">Identify by 10x features</button></div>
+<div class="tabs" id="mainTabs"><button class="on" data-tab="name">Search by scientific name</button><button data-tab="key">Identify by 10x features</button><button data-tab="fauna">Fauna (animals)</button><button data-tab="flora">Flora (plants)</button></div>
 <div id="paneName">
 <div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search by scientific name</h2>
 <div class="searchbox">
@@ -148,6 +155,34 @@ body.fromkey .backkey{display:inline-block}
     <div id="kGrid" class="kgrid"></div>
   </div>
 </div>
+</div>
+<div id="paneFauna" hidden>
+<div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search CITES fauna (animals) by name</h2>
+<p class="small" style="margin:0 0 8px">Type a scientific name (species, genus or family) or a common / trade name.</p>
+<div class="searchbox">
+  <input class="wlq" id="qFauna" type="search" placeholder="e.g. Panthera tigris, pangolin, African grey parrot, caviar, seahorse…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Fauna name">
+  <div class="sugg" id="suggFauna" role="listbox"></div>
+</div>
+<div class="chips" id="exFauna"><span class="small">Try: </span></div>
+</div>
+<div id="outFauna"></div>
+<div id="docsFauna"></div>
+<div class="card"><h2>Browse by group</h2><table class="wlbrowse" id="browseFauna"></table>
+<p class="small" style="margin-top:8px">Group-level overview of the main fauna groups in trade, <b>not the full CITES checklist</b>. For any exact species, check the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
+</div>
+<div id="paneFlora" hidden>
+<div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search CITES flora (plants) by name</h2>
+<p class="small" style="margin:0 0 8px">Type a scientific name or a common / trade name. Wood and timber species are in the timber lookup.</p>
+<div class="searchbox">
+  <input class="wlq" id="qFlora" type="search" placeholder="e.g. orchid, Cactaceae, cycad, ginseng, Cyclamen, snowdrop…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Flora name">
+  <div class="sugg" id="suggFlora" role="listbox"></div>
+</div>
+<div class="chips" id="exFlora"><span class="small">Try: </span></div>
+</div>
+<div id="outFlora"></div>
+<div id="docsFlora"></div>
+<div class="card"><h2>Browse by group</h2><table class="wlbrowse" id="browseFlora"></table>
+<p class="small" style="margin-top:8px">Group-level overview of the main flora groups in trade, <b>not the full CITES checklist</b>. For any exact species, check the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
 </div>
 <div id="out"></div>
 <div id="annotations">
@@ -561,12 +596,16 @@ function setTab(tab){
   document.querySelectorAll("#mainTabs button").forEach(b=>b.classList.toggle("on",b.dataset.tab===tab));
   document.querySelectorAll("header .hl a[data-tab]").forEach(a=>a.classList.toggle("on",a.dataset.tab===tab));
   $("#paneName").hidden = tab!=="name"; $("#paneKey").hidden = tab!=="key";
+  $("#paneFauna").hidden = tab!=="fauna"; $("#paneFlora").hidden = tab!=="flora";
+  const wlTab = tab==="fauna"||tab==="flora"; $("#out").hidden = wlTab; $("#annotations").hidden = wlTab;
+  if(wlTab){ if(MAP){MAP.remove();MAP=null;} document.body.classList.remove("fromkey"); history.replaceState(null,"","#"+tab); }
   if(tab==="key"){ $("#out").innerHTML=""; document.body.classList.remove("fromkey"); if(MAP){MAP.remove();MAP=null;} history.replaceState(null,"","#key"); }
 }
 function init(){
   buildIndex();
   buildAnnotations();
   buildKey();
+  wlLoad();
   document.querySelectorAll('#mainTabs button, header .hl a[data-tab]').forEach(b=>b.addEventListener('click',ev=>{ev.preventDefault(); setTab(b.dataset.tab); window.scrollTo({top:0,behavior:'smooth'});}));
   $("#basis").textContent=DATA.listing_basis;
   ["Dalbergia nigra","Dalbergia latifolia","Pterocarpus santalinus","Swietenia macrophylla","Khaya ivorensis","Handroanthus serratifolius","Aquilaria malaccensis","Quercus mongolica"].forEach(n=>{
@@ -580,8 +619,140 @@ function init(){
     else if(ev.key==="Escape"){ box.style.display="none"; }
   });
   document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) $("#sugg").style.display="none";});
-  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"){setTab("key");return;} if(h==="annotations"||h==="documents") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
+  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"||h==="fauna"||h==="flora"){setTab(h);return;} if(/^docs(Fauna|Flora)$/.test(h)) return; if(h==="annotations"||h==="documents") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
   window.addEventListener("hashchange",fromHash); fromHash();
+}
+
+// ---------------- fauna & flora (group-level overview)
+const WL={fauna:{list:[],idx:[]},flora:{list:[],idx:[]}}, WLK={fauna:"Fauna",flora:"Flora"};
+const WL_EXTRA={
+ fauna:`<li><b>Live animals:</b> the exporting authority must be satisfied the animal is prepared and shipped so as to minimise risk of injury, damage to health or cruel treatment (follow the CITES transport guidelines and IATA Live Animals Regulations). For an Appendix I import, the recipient must be suitably equipped to house and care for it.</li>
+ <li><b>Source codes:</b> W wild · C bred in captivity · F born in captivity · R ranched · I confiscated or seized · O pre-Convention · U unknown. Appendix I animals bred in captivity for commercial purposes in registered operations (code D) are treated as Appendix II. <b>Captive-bred claims (C) need verifying</b> — passing off wild-caught animals as captive-bred is a common fraud.</li>
+ <li><b>Hunting trophies</b> (purpose code H): an Appendix I trophy needs an import permit as well as an export permit. Some species have annual export quotas and tags (e.g. leopard, markhor).</li>
+ <li><b>Skins, caviar and products:</b> crocodilian skins carry tags and caviar carries a non-reusable label, compare them with the permit. Parts and derivatives (e.g. in traditional medicines) are covered unless the annotation excludes them.</li>
+ <li><b>Marine species</b> taken outside national waters need a certificate for introduction from the sea.</li>
+ <li><b>Health documents are separate:</b> veterinary and animal-health certificates are issued by other authorities and never replace CITES documents.</li>`,
+ flora:`<li><b>Artificially propagated plants:</b> source code A (or D for Appendix I plants propagated commercially). Appendix I plants propagated commercially in a nursery registered with the CITES Secretariat are treated as Appendix II. A certificate from the exporting Management Authority that the plants are artificially propagated can replace the usual permits for Appendix I plants.</li>
+ <li><b>The annotation decides what is covered.</b> Seeds, spores, pollen, seedlings or tissue cultures in vitro (in sterile containers), cut flowers of artificially propagated plants and some fruits are often exempt, but not always, read the annotation on Species+.</li>
+ <li><b>Live plants:</b> must be prepared and shipped to minimise risk of injury or damage to health; air shipments follow the IATA Perishable Cargo Regulations.</li>
+ <li><b>Phytosanitary certificates are separate:</b> they come from the plant health authority (IPPC / ePhyto) and are required in addition to, never instead of, CITES documents.</li>
+ <li><b>Wild or propagated?</b> Plants declared as artificially propagated but old, large, scarred, uneven in size or with wild soil on the roots point to wild collection.</li>
+ <li><b>Wood and timber species</b> are in the <a href="#" data-gotab="name">timber lookup</a>.</li>`
+};
+function wlBuild(kind){
+  const idx=[]; WL[kind].list.forEach((g,gi)=>{
+    idx.push({label:g.name,key:norm(g.name),gi,k:"group"});
+    const par=(g.name.match(/\(([^)]*)\)/)||[])[1]; if(par) par.split(/,|\band\b/).map(x=>x.trim()).filter(Boolean).forEach(x=>idx.push({label:x,key:norm(x),gi,k:/^[A-Z]/.test(x)?"name":"common"}));
+    g.names.forEach(n=>idx.push({label:n,key:norm(n),gi,k:"name"}));
+    g.common.forEach(c=>idx.push({label:c,key:norm(c),gi,k:"common"}));
+  });
+  WL[kind].idx=idx.filter(e=>e.key);
+}
+function wlSuggest(kind,q){
+  const n=norm(q); if(n.length<2) return [];
+  const scored=WL[kind].idx.map(e=>{
+    let s=0;
+    if(e.key===n) s=100; else if(e.key.startsWith(n)) s=80; else if(e.key.split(" ").some(w=>w.startsWith(n))) s=60; else if(e.key.includes(n)) s=40;
+    if(s && e.k!=="common") s+=5;
+    return {e,s};
+  }).filter(x=>x.s).sort((a,b)=>b.s-a.s||a.e.label.length-b.e.label.length);
+  const out=[],seen=new Set();
+  for(const x of scored){const k=x.e.label.toLowerCase()+x.e.gi; if(seen.has(k)) continue; seen.add(k); out.push(x); if(out.length>=10) break;}
+  return out;
+}
+function wlFind(kind,q){
+  const n=norm(q); if(!n) return null;
+  const w0=n.split(" ")[0]; let best=null,bs=0;
+  for(const e of WL[kind].idx){
+    let s=0;
+    if(e.key===n) s=100;
+    else if(e.k!=="common" && n.startsWith(e.key+" ")) s=90+Math.min(e.key.length,9)/10;
+    else if(e.k!=="common" && e.key===w0 && /^[a-z]+$/.test(w0)) s=70;
+    else if(e.k==="common" && e.key.includes(" ") && (" "+n+" ").includes(" "+e.key+" ")) s=85;
+    if(s>bs){bs=s;best=e;}
+  }
+  if(best) return best;
+  const sg=wlSuggest(kind,q); return sg.length&&sg[0].s>=60?sg[0].e:null;
+}
+const wlChips=g=>g.app.map(a=>`<span class="chip ${a}">Appendix ${a}</span>`).join(" ");
+const spLink=q=>"https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query="+encodeURIComponent(q);
+function wlShow(kind,gi,searched){
+  const K=WLK[kind], g=WL[kind].list[gi], out=$("#out"+K);
+  const same=norm(searched)===norm(g.name);
+  const docs=g.app.map(a=>`<b>Appendix ${a}:</b> ${DOCS_BY_APP[a]}`).join("<br><br>");
+  out.innerHTML=`<div class="card">
+    ${wlChips(g)} <span class="chip none">Group overview</span>
+    <p class="sci">${esc(searched)}</p>
+    <div class="cn">${esc(g.group)} · ${esc(g.rank)} ${esc(g.name)}${g.common.length?" · "+esc(g.common.slice(0,5).join(", ")):""}</div>
+    ${same?"":`<div class="note">Listed under <b>${esc(g.name)}</b> (${esc(g.rank)}). The exact Appendix for <i>${esc(searched)}</i> depends on the species and population, confirm it on Species+.</div>`}
+    <p>${esc(g.summary)}</p>
+    <a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff" href="${spLink(searched)}" target="_blank" rel="noopener">Check <i>${esc(searched)}</i> on Species+</a>
+    <button class="lkbtn" onclick="window.print()">Print / PDF</button>
+  </div>
+  <div class="card"><h2>CITES listing</h2><table>
+    <tr><td>Group</td><td><i>${esc(g.name)}</i> (${esc(g.rank)})</td></tr>
+    <tr><td>Appendices</td><td>${wlChips(g)}</td></tr>
+    <tr><td>Typically traded / seized as</td><td>${esc(g.products.join(" · "))}</td></tr>
+    <tr><td>Documents needed</td><td>${docs}<br><a href="#docs${K}" class="annlink">Rules for all three Appendices, and ${kind} specifics ↓</a></td></tr>
+    <tr><td>What to check</td><td><ul style="margin:0">${g.checks.map(c=>`<li>${esc(c)}</li>`).join("")}</ul></td></tr>
+    <tr><td>Official record</td><td><a href="${spLink(searched)}" target="_blank" rel="noopener">Species+</a></td></tr></table></div>`;
+  out.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function wlNotFound(kind,q){
+  const K=WLK[kind], other=kind==="fauna"?"flora":"fauna", out=$("#out"+K);
+  const o=WL[other].list.length?wlFind(other,q):null;
+  const tm=suggest(q)[0];
+  const btns=[];
+  if(o) btns.push(`<button class="lkbtn" data-goto="${other}|${o.gi}">Found in ${WLK[other]}: ${esc(WL[other].list[o.gi].name)} →</button>`);
+  const nq=norm(q), tmOk=!!(tm && nq.length>=3 && (norm(tm.label).startsWith(nq)||norm(tm.label).split(" ").some(w=>w.startsWith(nq))));
+  if(tmOk) btns.unshift(`<button class="lkbtn" style="background:#12355b;color:#fff" data-timber="${esc(tm.label)}">Open in the timber lookup: ${esc(tm.label)} →</button>`);
+  out.innerHTML=`<div class="card"><span class="chip none">${tmOk?"Timber taxon":"Not in this overview"}</span>
+    <p class="sci">${esc(q)}</p>
+    ${tmOk?`<p>This looks like a <b>CITES-listed timber taxon</b>. Timber species have full profiles (listing, annotation, 10x end-grain features, look-alikes) in the timber lookup.</p>`:`<p>This overview only covers the main ${kind} groups in trade. That does <b>not</b> mean the species is unlisted, check it on Species+.</p>`}
+    <a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff" href="${spLink(q)}" target="_blank" rel="noopener">Check “${esc(q)}” on Species+</a>${btns.join("")}</div>`;
+  out.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>{const [k,i]=b.dataset.goto.split("|"); setTab(k); $("#q"+WLK[k]).value=WL[k].list[+i].name; wlShow(k,+i,WL[k].list[+i].name);});
+  out.querySelectorAll("[data-timber]").forEach(b=>b.onclick=()=>{setTab("name"); $("#q").value=b.dataset.timber; lookup(b.dataset.timber);});
+  out.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function wlLookup(kind,q){
+  q=(q||"").trim(); if(!q) return;
+  const e=wlFind(kind,q); if(e) wlShow(kind,e.gi,q); else wlNotFound(kind,q);
+}
+function wlDocsCard(kind){
+  const tbl=document.querySelector("#documents table").outerHTML;
+  return `<div class="card"><h2>Documents needed — ${kind}</h2>${tbl}
+  <p style="margin:12px 0 4px"><b>Extra points for ${kind}</b></p><ul>${WL_EXTRA[kind]}</ul>
+  <p class="small" style="margin-top:8px">Every genuine document: valid 6 months (import permit up to 12 months) · one per consignment · control number, issuing authority and security stamp · cancelled and kept by the importing country · species, quantity and origin match the goods. National law (e.g. EU Wildlife Trade Regulations, Annex A–D) can be stricter. <a href="https://github.com/glretief-ux/CITES-Timber-ID/blob/main/guides/cites-documents.md" target="_blank" rel="noopener">Full guide →</a></p></div>`;
+}
+function wlInit(kind){
+  const K=WLK[kind]; wlBuild(kind);
+  $("#docs"+K).innerHTML=wlDocsCard(kind);
+  $("#docs"+K).querySelectorAll("[data-gotab]").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault(); setTab(a.dataset.gotab); window.scrollTo({top:0,behavior:"smooth"});}));
+  const cats=kind==="fauna"?WLM.fauna_groups:WLM.flora_groups; let rows="";
+  cats.forEach(c=>{rows+=`<tr class="cat"><td colspan="3">${esc(c)}</td></tr>`;
+    WL[kind].list.forEach((g,gi)=>{ if(g.group!==c) return;
+      rows+=`<tr><td><a href="#" data-gi="${gi}">${esc(g.name)}</a></td><td>${wlChips(g)}</td><td class="small">${esc(g.common.slice(0,4).join(", "))}</td></tr>`;});});
+  $("#browse"+K).innerHTML=rows;
+  $("#browse"+K).querySelectorAll("a[data-gi]").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault(); const gi=+a.dataset.gi; $("#q"+K).value=WL[kind].list[gi].name; wlShow(kind,gi,WL[kind].list[gi].name);}));
+  const ex=kind==="fauna"?["Panthera tigris","pangolin","African grey parrot","caviar","seahorse","Cheloniidae"]:["orchid","cactus","cycad","ginseng","Cyclamen","snowdrop"];
+  ex.forEach(n=>{const b=document.createElement("button"); b.className="lkchip"; b.textContent=n; b.onclick=()=>{$("#q"+K).value=n; wlLookup(kind,n);}; $("#ex"+K).appendChild(b);});
+  const q=$("#q"+K), box=$("#sugg"+K); let act=-1;
+  const show=()=>{const l=wlSuggest(kind,q.value); act=-1;
+    if(!l.length){box.style.display="none";box.innerHTML="";return;}
+    box.innerHTML=l.map(({e},i)=>{const g=WL[kind].list[e.gi]; return `<div data-i="${i}"><b>${esc(e.label)}</b> <small>— ${esc(g.name)} · App. ${esc(g.app.join("/"))}</small></div>`;}).join("");
+    box.style.display="block";
+    box.querySelectorAll("div").forEach((d,i)=>d.addEventListener("mousedown",ev=>{ev.preventDefault(); const e=l[i].e; q.value=e.label; box.style.display="none"; wlShow(kind,e.gi,e.label);}));};
+  q.addEventListener("input",show);
+  q.addEventListener("keydown",ev=>{const items=[...box.querySelectorAll("div")];
+    if(ev.key==="ArrowDown"||ev.key==="ArrowUp"){if(!items.length) return; ev.preventDefault(); act=(act+(ev.key==="ArrowDown"?1:-1)+items.length)%items.length; items.forEach((d,i)=>d.classList.toggle("act",i===act));}
+    else if(ev.key==="Enter"){ev.preventDefault(); if(act>=0&&items[act]) items[act].dispatchEvent(new MouseEvent("mousedown",{bubbles:true,cancelable:true})); else {box.style.display="none"; wlLookup(kind,q.value);}}
+    else if(ev.key==="Escape"){box.style.display="none";}});
+  document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) box.style.display="none";});
+}
+let WLM=null;
+function wlLoad(){
+  fetch("wildlife.json").then(r=>r.json()).then(w=>{WLM=w; WL.fauna.list=w.fauna; WL.flora.list=w.flora; wlInit("fauna"); wlInit("flora");})
+   .catch(()=>{["Fauna","Flora"].forEach(K=>{$("#out"+K).innerHTML='<div class="card">Could not load wildlife.json — open via GitHub Pages or a local web server.</div>';});});
 }
 const DOCS_BY_APP={
   "I":"<b>Export permit</b> <u>and</u> <b>import permit</b> (import permit issued first); re-export certificate for re-exports. Import must not be primarily commercial.",

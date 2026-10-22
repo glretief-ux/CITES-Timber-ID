@@ -6,6 +6,7 @@
 Outputs
   data/species.json, data/species.csv     machine-readable database
   docs/data.json                          copy used by the web identification key
+  data/wildlife.json, docs/wildlife.json  group-level fauna & flora overview (tools/wildlife_data.py)
   docs/schematics/<id>.svg                schematic 10x end-grain drawing per taxon
   species/<id>.md                         one field-guide page per taxon
   species/README.md                       index of all pages
@@ -24,6 +25,7 @@ from urllib.parse import quote_plus
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from species_data import SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES, PHOTO_LINKS  # noqa: E402
+from wildlife_data import FAUNA, FLORA, FAUNA_GROUPS, FLORA_GROUPS  # noqa: E402
 
 
 # ----------------------------------------------------------------- references
@@ -414,6 +416,14 @@ def main():
                         e.get("resin_canals"), sp["heartwood"], sp["density"], sp["odour"], sp["key_diagnostic"], "; ".join(sp["lookalikes"])])
 
     shutil.copy2(os.path.join(ROOT, "data", "species.csv"), os.path.join(ROOT, "docs", "species.csv"))
+
+    # fauna / flora group-level overview for the web lookup (not the full checklist)
+    wl = {"note": "Group-level overview of CITES-listed fauna and non-timber flora. Not the full checklist - confirm every species on Species+.",
+          "fauna_groups": FAUNA_GROUPS, "flora_groups": FLORA_GROUPS, "fauna": FAUNA, "flora": FLORA}
+    wjs = json.dumps(wl, indent=1, ensure_ascii=False)
+    for p in (os.path.join(ROOT, "data", "wildlife.json"), os.path.join(ROOT, "docs", "wildlife.json")):
+        with open(p, "w", encoding="utf-8") as f:
+            f.write(wjs)
 
     # species index
     L = ["# CITES-listed timber taxa — index", "",

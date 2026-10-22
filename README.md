@@ -11,6 +11,7 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 | Path | Contents |
 |---|---|
 | [`docs/search.html`](docs/search.html) | **Species lookup** — type a scientific name, synonym or trade name and get the full profile (listing, annotation, 10x features, characteristics, look-alikes, photo sources). Recognises any species of a listed genus and warns about non-listed look-alikes. Shareable link per species, printable |
+| [`docs/search.html`](docs/search.html) — **Fauna** and **Flora** tabs | Same search box for CITES-listed **animals** and **non-timber plants** (group level: cats, elephants, parrots, sturgeon/caviar, orchids, cacti, cycads, ginseng and more) with Appendix, what is traded, documents needed and a Species+ link. A group-level overview, **not the full checklist** |
 | [`docs/index.html`](docs/index.html) | **Interactive identification key** — tick what you see under the lens, get ranked candidates (works on phone; publish with GitHub Pages) |
 | [`species/`](species/README.md) | One field-guide page per listed taxon: listing, annotation, 10x features, colour, density, smell, look-alikes, species covered, photo sources |
 | [`data/species.json`](data/species.json), [`data/species.csv`](data/species.csv) | Full database (opens in Excel) |
@@ -22,6 +23,7 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 | [`guides/cites-documents.md`](guides/cites-documents.md) | **Documents required per Appendix** — export/import permits, re-export certificates, certificates of origin, validity, codes, exemptions and a document check |
 | [`guides/feature-glossary.md`](guides/feature-glossary.md) | What each end-grain feature looks like |
 | [`guides/photo-protocol.md`](guides/photo-protocol.md) | How to take and add 10x reference photos |
+| [`tools/wildlife_data.py`](tools/wildlife_data.py) | Fauna and flora groups behind the two new tabs (built into `docs/wildlife.json`) |
 | [`tools/species_data.py`](tools/species_data.py) | **The single source** — edit here, then everything is rebuilt |
 
 ## Coverage (listing basis: after CoP20, Samarkand, Nov–Dec 2025)

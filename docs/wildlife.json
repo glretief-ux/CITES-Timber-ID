@@ -1,0 +1,1441 @@
+{
+ "note": "Group-level overview of CITES-listed fauna and non-timber flora. Not the full checklist - confirm every species on Species+.",
+ "fauna_groups": [
+  "Mammals",
+  "Birds",
+  "Reptiles",
+  "Amphibians",
+  "Fish",
+  "Invertebrates"
+ ],
+ "flora_groups": [
+  "Ornamental plants",
+  "Succulents",
+  "Cycads and ferns",
+  "Medicinal and aromatic plants"
+ ],
+ "fauna": [
+  {
+   "id": "felidae",
+   "kind": "fauna",
+   "name": "Felidae",
+   "rank": "family",
+   "group": "Mammals",
+   "common": [
+    "cats",
+    "big cats",
+    "tiger",
+    "lion",
+    "leopard",
+    "snow leopard",
+    "jaguar",
+    "cheetah",
+    "lynx",
+    "cougar",
+    "puma",
+    "clouded leopard",
+    "wild cat"
+   ],
+   "names": [
+    "Panthera tigris",
+    "Panthera uncia",
+    "Panthera pardus",
+    "Panthera onca",
+    "Panthera leo",
+    "Acinonyx jubatus",
+    "Neofelis nebulosa",
+    "Puma concolor",
+    "Lynx lynx",
+    "Panthera",
+    "Neofelis",
+    "Lynx",
+    "Leopardus",
+    "Caracal caracal",
+    "Felis"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "The whole cat family is listed. The big cats and several others are in Appendix I (tiger, snow leopard, leopard, jaguar, cheetah, clouded leopard, Asian lion). Most other wild cats, including the African lion and the lynxes, are in Appendix II; a few populations are in Appendix III. The domestic cat is not covered.",
+   "products": [
+    "skins and fur products",
+    "bones, teeth and claws",
+    "bone wine / cake (tiger)",
+    "live cubs",
+    "hunting trophies"
+   ],
+   "checks": [
+    "Appendix I cats: commercial trade is prohibited, so a normal trade export permit is a red flag",
+    "Leopard, cheetah and some other cats have export quotas, check the quota and tag on the skin",
+    "Big-cat bones and derivatives are often declared as other animals or as medicine"
+   ]
+  },
+  {
+   "id": "elephantidae",
+   "kind": "fauna",
+   "name": "Elephantidae",
+   "rank": "family",
+   "group": "Mammals",
+   "common": [
+    "elephant",
+    "ivory",
+    "tusk",
+    "african elephant",
+    "asian elephant"
+   ],
+   "names": [
+    "Loxodonta africana",
+    "Elephas maximus",
+    "Loxodonta",
+    "Elephas"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Asian elephants are in Appendix I. African elephants are in Appendix I, except the populations of Botswana, Namibia, South Africa and Zimbabwe, which are in Appendix II under a special annotation with strict conditions on trade in ivory.",
+   "products": [
+    "raw and worked ivory (tusks, carvings, jewellery)",
+    "skin, hair and feet",
+    "live elephants"
+   ],
+   "checks": [
+    "Commercial international trade in ivory is not allowed",
+    "Pre-Convention (antique) ivory needs a pre-Convention certificate and proof of date, many countries also restrict domestic sale",
+    "Ivory is frequently hidden in containers under other goods, compare the declared goods with X-ray images"
+   ]
+  },
+  {
+   "id": "rhinocerotidae",
+   "kind": "fauna",
+   "name": "Rhinocerotidae",
+   "rank": "family",
+   "group": "Mammals",
+   "common": [
+    "rhino",
+    "rhinoceros",
+    "rhino horn",
+    "white rhino",
+    "black rhino"
+   ],
+   "names": [
+    "Ceratotherium simum",
+    "Diceros bicornis",
+    "Rhinoceros unicornis",
+    "Rhinoceros",
+    "Dicerorhinus",
+    "Diceros",
+    "Ceratotherium"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All rhinoceroses are in Appendix I. The only exception is the southern white rhino (Ceratotherium simum simum) of South Africa and Eswatini, in Appendix II for live animals and hunting trophies only; everything else is treated as Appendix I.",
+   "products": [
+    "horn (whole, powder, carvings)",
+    "hunting trophies",
+    "live animals"
+   ],
+   "checks": [
+    "Rhino horn trade is among the most heavily trafficked, treat any horn shipment as suspect without full documents",
+    "Trophy export needs the correct purpose code and permits for each specimen"
+   ]
+  },
+  {
+   "id": "primates",
+   "kind": "fauna",
+   "name": "Primates",
+   "rank": "order",
+   "group": "Mammals",
+   "common": [
+    "monkey",
+    "monkeys",
+    "ape",
+    "apes",
+    "gorilla",
+    "chimpanzee",
+    "orangutan",
+    "gibbon",
+    "lemur",
+    "macaque",
+    "baboon",
+    "marmoset",
+    "bushmeat"
+   ],
+   "names": [
+    "Gorilla",
+    "Pan troglodytes",
+    "Pongo",
+    "Hylobates",
+    "Macaca fascicularis",
+    "Macaca",
+    "Papio",
+    "Callithrix",
+    "Lemur",
+    "Pan paniscus"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All primates are listed. The apes (gorillas, chimpanzees, bonobos, orangutans, gibbons), many lemurs and many monkeys are in Appendix I; the rest, including most macaques, baboons and marmosets, are in Appendix II.",
+   "products": [
+    "live animals (pets, laboratory use)",
+    "bushmeat and skulls",
+    "hands, skins"
+   ],
+   "checks": [
+    "Live primates need documentation of legal origin and humane transport",
+    "Captive-bred claims (source C) on Appendix I primates need checking against the breeder's registration"
+   ]
+  },
+  {
+   "id": "pholidota",
+   "kind": "fauna",
+   "name": "Pangolins (Manidae)",
+   "rank": "family",
+   "group": "Mammals",
+   "common": [
+    "pangolin",
+    "pangolins",
+    "scaly anteater",
+    "scales"
+   ],
+   "names": [
+    "Manis",
+    "Phataginus",
+    "Smutsia",
+    "Manis javanica",
+    "Manis pentadactyla"
+   ],
+   "app": [
+    "I"
+   ],
+   "summary": "All eight pangolin species are in Appendix I (since 2017). Pangolins are among the most trafficked mammals in the world.",
+   "products": [
+    "scales (often tonnes, in containers)",
+    "meat",
+    "live animals"
+   ],
+   "checks": [
+    "Scales are often declared as other goods or hidden among legal cargo",
+    "Any pangolin consignment needs the full Appendix I document set"
+   ]
+  },
+  {
+   "id": "ursidae",
+   "kind": "fauna",
+   "name": "Ursidae",
+   "rank": "family",
+   "group": "Mammals",
+   "common": [
+    "bear",
+    "bears",
+    "giant panda",
+    "polar bear",
+    "brown bear",
+    "sun bear",
+    "sloth bear",
+    "bile",
+    "gall bladder"
+   ],
+   "names": [
+    "Ursus",
+    "Ursus arctos",
+    "Ursus maritimus",
+    "Ursus thibetanus",
+    "Helarctos malayanus",
+    "Melursus ursinus",
+    "Ailuropoda melanoleuca",
+    "Ailuropoda"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All bears are listed. The giant panda and several Asian bears (sun bear, sloth bear, Asiatic black bear) are in Appendix I, as are some brown bear populations. The polar bear, American black bear and the remaining brown bear populations are in Appendix II.",
+   "products": [
+    "skins and trophies",
+    "gall bladders and bile",
+    "paws, claws, teeth",
+    "live bears"
+   ],
+   "checks": [
+    "Bile and gall bladders show up inside traditional medicine products, check ingredients and annotations"
+   ]
+  },
+  {
+   "id": "cetacea",
+   "kind": "fauna",
+   "name": "Cetacea",
+   "rank": "order",
+   "group": "Mammals",
+   "common": [
+    "whale",
+    "whales",
+    "dolphin",
+    "dolphins",
+    "porpoise",
+    "porpoises",
+    "orca",
+    "baleen",
+    "whale meat"
+   ],
+   "names": [
+    "Orcinus orca",
+    "Tursiops truncatus",
+    "Balaenoptera",
+    "Megaptera novaeangliae",
+    "Delphinus",
+    "Phocoena"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All whales, dolphins and porpoises are listed. The great whales and several small cetaceans are in Appendix I; the remaining species, including most dolphins, are in Appendix II. Marine specimens taken outside national waters need an introduction-from-the-sea certificate.",
+   "products": [
+    "meat and oil",
+    "baleen, teeth and bones",
+    "live dolphins and orcas for aquaria"
+   ],
+   "checks": [
+    "Live cetacean transfers need permits for each animal and recipient suitability confirmed"
+   ]
+  },
+  {
+   "id": "saiga-chiru",
+   "kind": "fauna",
+   "name": "Saiga and Tibetan antelope",
+   "rank": "genus",
+   "group": "Mammals",
+   "common": [
+    "saiga",
+    "chiru",
+    "tibetan antelope",
+    "shahtoosh"
+   ],
+   "names": [
+    "Saiga tatarica",
+    "Saiga borealis",
+    "Pantholops hodgsonii",
+    "Saiga",
+    "Pantholops"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "The Tibetan antelope or chiru (Pantholops hodgsonii) is in Appendix I; its wool is sold as shahtoosh, and shahtoosh shawls are illegal to trade. Saiga antelopes (Saiga spp.) are in Appendix II, with horn used in traditional medicine.",
+   "products": [
+    "shahtoosh shawls",
+    "saiga horn and horn powder"
+   ],
+   "checks": [
+    "Shawls labelled as cashmere or pashmina can contain shahtoosh, laboratory confirmation is needed"
+   ]
+  },
+  {
+   "id": "psittaciformes",
+   "kind": "fauna",
+   "name": "Psittaciformes",
+   "rank": "order",
+   "group": "Birds",
+   "common": [
+    "parrot",
+    "parrots",
+    "macaw",
+    "macaws",
+    "cockatoo",
+    "cockatoos",
+    "african grey",
+    "african grey parrot",
+    "grey parrot",
+    "congo grey parrot",
+    "timneh parrot",
+    "blue-and-yellow macaw",
+    "hyacinth macaw",
+    "amazon parrot",
+    "lorikeet",
+    "parakeet",
+    "conure"
+   ],
+   "names": [
+    "Psittacus erithacus",
+    "Psittacus timneh",
+    "Anodorhynchus hyacinthinus",
+    "Ara ararauna",
+    "Amazona",
+    "Cacatua",
+    "Ara",
+    "Anodorhynchus",
+    "Psittacus",
+    "Agapornis"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All parrots are listed in Appendix II, except those in Appendix I (for example the African grey parrot, hyacinth macaw and many cockatoos and macaws). Not covered: budgerigar, cockatiel, rose-ringed parakeet and peach-faced lovebird.",
+   "products": [
+    "live birds (wild-caught and captive-bred)",
+    "eggs",
+    "feathers"
+   ],
+   "checks": [
+    "Wild-caught birds are often declared as captive-bred (source C), compare with ring and breeder records",
+    "Eggs are smuggled in specially prepared containers or clothing"
+   ]
+  },
+  {
+   "id": "falconiformes",
+   "kind": "fauna",
+   "name": "Falconiformes (raptors)",
+   "rank": "order",
+   "group": "Birds",
+   "common": [
+    "falcon",
+    "falcons",
+    "hawk",
+    "hawks",
+    "eagle",
+    "eagles",
+    "vulture",
+    "osprey",
+    "peregrine",
+    "gyrfalcon",
+    "saker",
+    "bird of prey",
+    "raptor"
+   ],
+   "names": [
+    "Falco peregrinus",
+    "Falco rusticolus",
+    "Falco cherrug",
+    "Aquila",
+    "Haliaeetus",
+    "Falco"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Falcons, hawks, eagles, vultures and the osprey are listed. Most are in Appendix II, with several species (for example the peregrine falcon and several eagles) in Appendix I. Falconry birds crossing borders need documents for each bird.",
+   "products": [
+    "live birds for falconry",
+    "eggs and chicks",
+    "feathers and mounted birds"
+   ],
+   "checks": [
+    "Falconry movements often involve repeated crossings, check each document applies to that bird (ring or microchip number)"
+   ]
+  },
+  {
+   "id": "strigiformes",
+   "kind": "fauna",
+   "name": "Strigiformes (owls)",
+   "rank": "order",
+   "group": "Birds",
+   "common": [
+    "owl",
+    "owls",
+    "barn owl",
+    "eagle owl",
+    "snowy owl"
+   ],
+   "names": [
+    "Tyto alba",
+    "Bubo bubo",
+    "Bubo scandiacus",
+    "Strix",
+    "Athene"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Owls are listed in Appendix II, with a few species in Appendix I.",
+   "products": [
+    "live birds",
+    "feathers, mounts and body parts"
+   ],
+   "checks": [
+    "Check species on mounted birds or feather products, many look-alikes exist"
+   ]
+  },
+  {
+   "id": "trochilidae",
+   "kind": "fauna",
+   "name": "Trochilidae (hummingbirds)",
+   "rank": "family",
+   "group": "Birds",
+   "common": [
+    "hummingbird",
+    "hummingbirds"
+   ],
+   "names": [
+    "Trochilidae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All hummingbirds are in Appendix II, with a few species in Appendix I.",
+   "products": [
+    "mounted specimens",
+    "feathers and jewellery"
+   ],
+   "checks": [
+    "Feathers and dried skins are used for craft and jewellery, check declared species"
+   ]
+  },
+  {
+   "id": "sea-turtles",
+   "kind": "fauna",
+   "name": "Sea turtles (Cheloniidae, Dermochelyidae)",
+   "rank": "family",
+   "group": "Reptiles",
+   "common": [
+    "sea turtle",
+    "sea turtles",
+    "hawksbill",
+    "green turtle",
+    "loggerhead",
+    "leatherback",
+    "olive ridley",
+    "kemp's ridley",
+    "flatback turtle",
+    "tortoiseshell",
+    "turtle shell",
+    "bekko"
+   ],
+   "names": [
+    "Cheloniidae",
+    "Dermochelyidae",
+    "Eretmochelys imbricata",
+    "Chelonia mydas",
+    "Caretta caretta",
+    "Dermochelys coriacea",
+    "Lepidochelys olivacea",
+    "Lepidochelys kempii",
+    "Natator depressus"
+   ],
+   "app": [
+    "I"
+   ],
+   "summary": "All seven sea turtle species are in Appendix I.",
+   "products": [
+    "tortoiseshell (hawksbill) and shell jewellery",
+    "meat, eggs and oil",
+    "stuffed turtles",
+    "live turtles"
+   ],
+   "checks": [
+    "Worked tortoiseshell can look like plastic or horn, use specialist identification"
+   ]
+  },
+  {
+   "id": "testudines",
+   "kind": "fauna",
+   "name": "Testudines (tortoises and freshwater turtles)",
+   "rank": "order",
+   "group": "Reptiles",
+   "common": [
+    "tortoise",
+    "tortoises",
+    "turtle",
+    "turtles",
+    "freshwater turtle",
+    "terrapin",
+    "star tortoise",
+    "radiated tortoise",
+    "box turtle",
+    "softshell"
+   ],
+   "names": [
+    "Testudinidae",
+    "Geochelone elegans",
+    "Astrochelys radiata",
+    "Testudo",
+    "Cuora",
+    "Batagur baska",
+    "Geochelone",
+    "Malayemys"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All tortoises (Testudinidae) are listed, mostly in Appendix II, with several species (for example the radiated tortoise, ploughshare tortoise and Indian star tortoise) in Appendix I. Many Asian freshwater turtles are listed in Appendix II, some in Appendix I. Many species are heavily collected for the pet trade.",
+   "products": [
+    "live animals (pet trade)",
+    "meat and shell",
+    "eggs"
+   ],
+   "checks": [
+    "Live turtles are often shipped in suitcases or parcels, check species with an expert"
+   ]
+  },
+  {
+   "id": "crocodylia",
+   "kind": "fauna",
+   "name": "Crocodylia",
+   "rank": "order",
+   "group": "Reptiles",
+   "common": [
+    "crocodile",
+    "crocodiles",
+    "alligator",
+    "alligators",
+    "caiman",
+    "caimans",
+    "gharial",
+    "crocodile skin",
+    "crocodile leather"
+   ],
+   "names": [
+    "Crocodylus niloticus",
+    "Crocodylus porosus",
+    "Alligator mississippiensis",
+    "Caiman crocodilus",
+    "Crocodylus",
+    "Caiman",
+    "Alligator"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All crocodilians are listed. Most are in Appendix II, with many species and populations (for example the Chinese alligator and gharial) in Appendix I. Skins and leather goods are traded under a universal tagging system for skins.",
+   "products": [
+    "raw, tanned and worked skins",
+    "leather goods (bags, belts, watches)",
+    "meat",
+    "live animals"
+   ],
+   "checks": [
+    "Skins must carry the tags required by the tagging system, compare the tag to the permit"
+   ]
+  },
+  {
+   "id": "pythonidae",
+   "kind": "fauna",
+   "name": "Pythonidae",
+   "rank": "family",
+   "group": "Reptiles",
+   "common": [
+    "python",
+    "pythons",
+    "snake skin",
+    "python skin",
+    "reticulated python",
+    "burmese python",
+    "ball python"
+   ],
+   "names": [
+    "Python reticulatus",
+    "Python bivittatus",
+    "Python molurus",
+    "Python regius",
+    "Python",
+    "Malayopython"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All pythons are in Appendix II, except the Indian python (Python molurus molurus), which is in Appendix I.",
+   "products": [
+    "skins and leather goods",
+    "live pets",
+    "meat"
+   ],
+   "checks": [
+    "Snake leather can be difficult to identify, laboratory identification is often needed"
+   ]
+  },
+  {
+   "id": "boidae",
+   "kind": "fauna",
+   "name": "Boidae (boas)",
+   "rank": "family",
+   "group": "Reptiles",
+   "common": [
+    "boa",
+    "boas",
+    "boa constrictor",
+    "anaconda",
+    "rosy boa"
+   ],
+   "names": [
+    "Boa constrictor",
+    "Eunectes",
+    "Epicrates",
+    "Boa"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Boas are listed, mostly in Appendix II, with some species and populations in Appendix I.",
+   "products": [
+    "live pets",
+    "skins"
+   ],
+   "checks": [
+    "Check species on live shipments, many boas look alike"
+   ]
+  },
+  {
+   "id": "varanus",
+   "kind": "fauna",
+   "name": "Varanus (monitor lizards)",
+   "rank": "genus",
+   "group": "Reptiles",
+   "common": [
+    "monitor lizard",
+    "monitor lizards",
+    "komodo dragon",
+    "goanna",
+    "water monitor"
+   ],
+   "names": [
+    "Varanus komodoensis",
+    "Varanus salvator",
+    "Varanus niloticus",
+    "Varanus"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Monitor lizards are listed, mostly in Appendix II, with a few species (for example the Komodo dragon) in Appendix I.",
+   "products": [
+    "skins and leather goods",
+    "live pets"
+   ],
+   "checks": [
+    "Monitor skins are widely used for leather, check species and tags"
+   ]
+  },
+  {
+   "id": "dendrobatidae",
+   "kind": "fauna",
+   "name": "Poison frogs and mantellas",
+   "rank": "family",
+   "group": "Amphibians",
+   "common": [
+    "poison frog",
+    "poison dart frog",
+    "dart frog",
+    "mantella",
+    "mantellas"
+   ],
+   "names": [
+    "Dendrobatidae",
+    "Dendrobates",
+    "Mantella"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Poison dart frogs (Dendrobatidae) and mantella frogs (Mantella spp.) are listed in Appendix II, with a few species in Appendix I.",
+   "products": [
+    "live frogs (pet trade)"
+   ],
+   "checks": [
+    "Frogs are shipped in small containers, check species and documents carefully"
+   ]
+  },
+  {
+   "id": "acipenseriformes",
+   "kind": "fauna",
+   "name": "Acipenseriformes (sturgeons)",
+   "rank": "order",
+   "group": "Fish",
+   "common": [
+    "sturgeon",
+    "sturgeons",
+    "caviar",
+    "paddlefish",
+    "beluga",
+    "sevruga",
+    "osetra",
+    "beluga caviar"
+   ],
+   "names": [
+    "Acipenser",
+    "Huso huso",
+    "Polyodon spathula",
+    "Acipenser sturio",
+    "Acipenser baerii",
+    "Huso",
+    "Polyodon"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All sturgeons and paddlefish are in Appendix II, except a few in Appendix I (for example the European sturgeon, Acipenser sturio). Caviar and other products are covered. Caviar is traded under a universal labelling system.",
+   "products": [
+    "caviar",
+    "meat",
+    "live fish (aquaculture)"
+   ],
+   "checks": [
+    "Caviar tins and jars must carry the non-reusable CITES label with species, source and permit information",
+    "A small quantity for personal use (commonly 125 g per person) may be exempt, check national rules"
+   ]
+  },
+  {
+   "id": "hippocampus",
+   "kind": "fauna",
+   "name": "Hippocampus (seahorses)",
+   "rank": "genus",
+   "group": "Fish",
+   "common": [
+    "seahorse",
+    "seahorses",
+    "sea horse",
+    "dried seahorse"
+   ],
+   "names": [
+    "Hippocampus"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "All seahorses (Hippocampus) are in Appendix II. Seahorses are mostly traded dried for traditional medicine, and live for aquaria.",
+   "products": [
+    "dried seahorses (traditional medicine)",
+    "live seahorses (aquaria)"
+   ],
+   "checks": [
+    "Dried seahorses are often shipped in large volumes under generic descriptions"
+   ]
+  },
+  {
+   "id": "sharks-rays",
+   "kind": "fauna",
+   "name": "Sharks and rays (selected families)",
+   "rank": "class",
+   "group": "Fish",
+   "common": [
+    "shark",
+    "sharks",
+    "ray",
+    "rays",
+    "shark fin",
+    "great white",
+    "whale shark",
+    "hammerhead",
+    "manta",
+    "mobula",
+    "sawfish",
+    "thresher",
+    "porbeagle",
+    "basking shark",
+    "wedgefish",
+    "guitarfish"
+   ],
+   "names": [
+    "Rhincodon typus",
+    "Carcharodon carcharias",
+    "Sphyrna",
+    "Carcharhinus longimanus",
+    "Manta",
+    "Mobula",
+    "Pristidae",
+    "Alopias",
+    "Lamna nasus",
+    "Cetorhinus maximus",
+    "Carcharhinidae",
+    "Sphyrnidae",
+    "Rhinidae",
+    "Rhinobatidae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Many sharks and rays are listed in Appendix II (including whale shark, great white, basking shark, hammerheads, thresher, porbeagle, oceanic whitetip, manta and devil rays, and further families listed at recent meetings). Sawfishes are in Appendix I. Fins, meat and gill plates are covered. Specimens taken from the sea outside national waters need an introduction-from-the-sea certificate.",
+   "products": [
+    "fins (dried)",
+    "meat and oil",
+    "gill plates (mobulids)",
+    "jaws and teeth"
+   ],
+   "checks": [
+    "Processed fins are hard to identify, species-level testing (DNA) is usually required",
+    "Check which species and families are listed on Species+, recent meetings added many"
+   ]
+  },
+  {
+   "id": "anguilla",
+   "kind": "fauna",
+   "name": "Anguilla anguilla (European eel)",
+   "rank": "species",
+   "group": "Fish",
+   "common": [
+    "eel",
+    "european eel",
+    "glass eel",
+    "glass eels",
+    "elver",
+    "elvers"
+   ],
+   "names": [
+    "Anguilla anguilla",
+    "Anguilla"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "The European eel (Anguilla anguilla) is in Appendix II. Glass eels (juveniles) are smuggled in very large numbers, usually in water-filled bags in air cargo. The EU applies strict controls and bans exports.",
+   "products": [
+    "live glass eels",
+    "adult eels",
+    "eel meat and products"
+   ],
+   "checks": [
+    "Glass eels from other eel species can look identical, species identification is important",
+    "Declared as other fish or aquarium animals in many cases"
+   ]
+  },
+  {
+   "id": "totoaba",
+   "kind": "fauna",
+   "name": "Totoaba macdonaldi",
+   "rank": "species",
+   "group": "Fish",
+   "common": [
+    "totoaba",
+    "swim bladder",
+    "fish maw",
+    "vaquita"
+   ],
+   "names": [
+    "Totoaba macdonaldi"
+   ],
+   "app": [
+    "I"
+   ],
+   "summary": "The totoaba (Totoaba macdonaldi), a fish of the Gulf of California, is in Appendix I. Its dried swim bladders are trafficked to Asia, and the illegal fishing kills the critically endangered vaquita porpoise.",
+   "products": [
+    "dried swim bladders (fish maw)"
+   ],
+   "checks": [
+    "Swim bladders are often declared as other fish maw, species testing is needed"
+   ]
+  },
+  {
+   "id": "corals-clams",
+   "kind": "fauna",
+   "name": "Corals, giant clams and queen conch",
+   "rank": "order",
+   "group": "Invertebrates",
+   "common": [
+    "coral",
+    "corals",
+    "hard coral",
+    "stony coral",
+    "black coral",
+    "giant clam",
+    "giant clams",
+    "tridacna",
+    "conch",
+    "queen conch",
+    "reef",
+    "live rock",
+    "coral rock"
+   ],
+   "names": [
+    "Scleractinia",
+    "Tridacna",
+    "Hippopus",
+    "Strombus gigas",
+    "Aliger gigas",
+    "Antipatharia",
+    "Tubipora",
+    "Heliopora",
+    "Millepora"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "All stony (hard) corals (Scleractinia), black corals, blue coral, organ pipe coral, fire corals, giant clams (Tridacnidae) and the queen conch (Strombus gigas) are in Appendix II. Fossil corals are not covered.",
+   "products": [
+    "live corals and live rock (aquaria)",
+    "dead coral skeletons and jewellery",
+    "giant clam shells and meat",
+    "conch shells and meat"
+   ],
+   "checks": [
+    "Live coral and coral rock are traded in large volumes, check species, quantity and origin on each document"
+   ]
+  },
+  {
+   "id": "birdwings",
+   "kind": "fauna",
+   "name": "Birdwing and other protected butterflies",
+   "rank": "genus",
+   "group": "Invertebrates",
+   "common": [
+    "butterfly",
+    "butterflies",
+    "birdwing",
+    "birdwings",
+    "swallowtail",
+    "apollo butterfly",
+    "mounted butterfly"
+   ],
+   "names": [
+    "Ornithoptera",
+    "Troides",
+    "Trogonoptera",
+    "Parnassius apollo",
+    "Papilio homerus",
+    "Ornithoptera alexandrae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Birdwing butterflies (Ornithoptera, Troides, Trogonoptera) are in Appendix II, a few species (for example Queen Alexandra's birdwing) in Appendix I. The Apollo butterfly (Parnassius apollo) is in Appendix II. Mounted and framed specimens are covered.",
+   "products": [
+    "mounted and framed butterflies",
+    "live pupae",
+    "jewellery and decorative items"
+   ],
+   "checks": [
+    "Framed specimens are sold as souvenirs, check species and origin"
+   ]
+  },
+  {
+   "id": "brachypelma",
+   "kind": "fauna",
+   "name": "Brachypelma (red-knee tarantulas)",
+   "rank": "genus",
+   "group": "Invertebrates",
+   "common": [
+    "tarantula",
+    "tarantulas",
+    "red-knee tarantula",
+    "mexican redknee",
+    "spider"
+   ],
+   "names": [
+    "Brachypelma",
+    "Brachypelma smithi",
+    "Brachypelma hamorii"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "All Brachypelma tarantulas (for example Mexican red-knee tarantulas) are in Appendix II.",
+   "products": [
+    "live spiders (pet trade)"
+   ],
+   "checks": [
+    "Spiders are shipped in small containers, often in parcels or postal mail"
+   ]
+  }
+ ],
+ "flora": [
+  {
+   "id": "orchidaceae",
+   "kind": "flora",
+   "name": "Orchidaceae",
+   "rank": "family",
+   "group": "Ornamental plants",
+   "common": [
+    "orchid",
+    "orchids",
+    "phalaenopsis",
+    "cymbidium",
+    "dendrobium",
+    "vanda",
+    "cattleya",
+    "slipper orchid",
+    "lady slipper",
+    "paphiopedilum",
+    "phragmipedium",
+    "salep"
+   ],
+   "names": [
+    "Paphiopedilum",
+    "Phragmipedium",
+    "Phalaenopsis",
+    "Cymbidium",
+    "Dendrobium",
+    "Vanda",
+    "Cattleya",
+    "Cypripedium",
+    "Orchidaceae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All orchids are listed in Appendix II. Slipper orchids (Paphiopedilum, Phragmipedium) and a few other species are in Appendix I. Seedlings or tissue cultures in vitro (in flasks) and certain artificially propagated hybrids are exempt under the annotation, check the exact text on Species+.",
+   "products": [
+    "live plants",
+    "flasks of seedlings (often exempt)",
+    "dried tubers (salep)",
+    "cut flowers of wild plants"
+   ],
+   "checks": [
+    "Plants declared as artificially propagated (source A) but showing signs of wild collection (old, large, damaged, uneven sizes) are a red flag",
+    "A phytosanitary certificate is a separate document, it does not replace CITES"
+   ]
+  },
+  {
+   "id": "cactaceae",
+   "kind": "flora",
+   "name": "Cactaceae",
+   "rank": "family",
+   "group": "Succulents",
+   "common": [
+    "cactus",
+    "cacti",
+    "peyote",
+    "living stone",
+    "ariocarpus",
+    "obregonia",
+    "turbinicarpus",
+    "pelecyphora",
+    "uebelmannia"
+   ],
+   "names": [
+    "Ariocarpus",
+    "Obregonia denegrii",
+    "Turbinicarpus",
+    "Pelecyphora",
+    "Uebelmannia",
+    "Mammillaria",
+    "Echinocactus",
+    "Melocactus",
+    "Astrophytum",
+    "Opuntia",
+    "Cactaceae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All cacti are listed in Appendix II (except Pereskia and a few others, check the annotation), and a number of genera or species (for example Ariocarpus, Obregonia, Pelecyphora, Turbinicarpus, Uebelmannia) are in Appendix I. Seeds, fruits, and cut stems or segments are not covered under certain conditions, see the annotation.",
+   "products": [
+    "live plants (wild-collected and nursery)",
+    "seeds (often exempt)",
+    "stems and decorative items"
+   ],
+   "checks": [
+    "Large wild-collected cacti are sometimes declared as nursery-grown, check size, age and root condition",
+    "Many rare cacti are sold online and shipped by post"
+   ]
+  },
+  {
+   "id": "cycadales",
+   "kind": "flora",
+   "name": "Cycadales (cycads)",
+   "rank": "order",
+   "group": "Cycads and ferns",
+   "common": [
+    "cycad",
+    "cycads",
+    "encephalartos",
+    "cycas",
+    "zamia",
+    "sago palm",
+    "king sago"
+   ],
+   "names": [
+    "Encephalartos",
+    "Cycas",
+    "Zamia",
+    "Microcycas calocoma",
+    "Cycas revoluta",
+    "Ceratozamia",
+    "Dioon",
+    "Cycadales"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "All cycads are listed. Most are in Appendix II, and Encephalartos (all species), Cycas beddomei and a few others are in Appendix I. Cycads are slow-growing and heavily collected from the wild.",
+   "products": [
+    "live plants (large wild-collected trunks)",
+    "seeds and cones"
+   ],
+   "checks": [
+    "Large wild-collected cycads are sometimes declared as nursery-grown (source A), check the roots and age of the plant"
+   ]
+  },
+  {
+   "id": "cyclamen",
+   "kind": "flora",
+   "name": "Cyclamen",
+   "rank": "genus",
+   "group": "Ornamental plants",
+   "common": [
+    "cyclamen",
+    "cyclamens"
+   ],
+   "names": [
+    "Cyclamen",
+    "Cyclamen persicum",
+    "Cyclamen hederifolium"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "All cyclamens (Cyclamen) are in Appendix II. Artificially propagated pot cyclamen (Cyclamen persicum) are exempt under the annotation (check the text on Species+); wild-collected tubers are commonly traded.",
+   "products": [
+    "live tubers and plants"
+   ],
+   "checks": [
+    "Wild-collected tubers from Turkey and neighbouring countries have been traded in large numbers"
+   ]
+  },
+  {
+   "id": "galanthus",
+   "kind": "flora",
+   "name": "Galanthus (snowdrops)",
+   "rank": "genus",
+   "group": "Ornamental plants",
+   "common": [
+    "snowdrop",
+    "snowdrops",
+    "galanthus",
+    "bulbs"
+   ],
+   "names": [
+    "Galanthus",
+    "Galanthus nivalis",
+    "Galanthus elwesii",
+    "Galanthus woronowii"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "All snowdrops (Galanthus) are in Appendix II. Wild-collected bulbs are traded in large numbers from Turkey and Georgia.",
+   "products": [
+    "live bulbs"
+   ],
+   "checks": [
+    "Bulbs are often sold in bulk by weight, check the origin and any quota on the export permit"
+   ]
+  },
+  {
+   "id": "tree-ferns",
+   "kind": "flora",
+   "name": "Cyatheaceae and Dicksoniaceae (tree ferns)",
+   "rank": "family",
+   "group": "Cycads and ferns",
+   "common": [
+    "tree fern",
+    "tree ferns",
+    "cyathea",
+    "dicksonia",
+    "cibotium",
+    "fern trunk"
+   ],
+   "names": [
+    "Cyathea",
+    "Dicksonia",
+    "Cibotium barometz",
+    "Dicksonia sellowiana",
+    "Cyatheaceae",
+    "Dicksoniaceae"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Tree ferns (Cyatheaceae) are listed in Appendix II, and Dicksonia sellowiana is in Appendix I. Trunks and fibre are traded for horticulture.",
+   "products": [
+    "trunks and logs",
+    "fibre and growing media",
+    "live plants"
+   ],
+   "checks": [
+    "Trunks may be declared as wood or fibre, check the species and any annotation"
+   ]
+  },
+  {
+   "id": "aloe",
+   "kind": "flora",
+   "name": "Aloe",
+   "rank": "genus",
+   "group": "Succulents",
+   "common": [
+    "aloe",
+    "aloes",
+    "bitter aloe",
+    "cape aloe"
+   ],
+   "names": [
+    "Aloe",
+    "Aloe ferox",
+    "Aloe vera",
+    "Aloe polyphylla",
+    "Aloe pillansii"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Aloes (Aloe) are listed in Appendix II, except Aloe vera (not listed), and a few species (for example Aloe pillansii and Aloe polyphylla) are in Appendix I. Aloe extracts and products are covered under the annotation.",
+   "products": [
+    "live plants",
+    "extracts and bitter aloe",
+    "dried leaves"
+   ],
+   "checks": [
+    "Aloe ferox (Cape aloe) extracts are traded with export permits, check quantities"
+   ]
+  },
+  {
+   "id": "euphorbia",
+   "kind": "flora",
+   "name": "Euphorbia (succulent species)",
+   "rank": "genus",
+   "group": "Succulents",
+   "common": [
+    "euphorbia",
+    "spurge",
+    "succulent spurge",
+    "poinsettia"
+   ],
+   "names": [
+    "Euphorbia",
+    "Euphorbia pulcherrima",
+    "Euphorbia milii"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Succulent Euphorbia species are listed in Appendix II, and a few (mostly from Madagascar) are in Appendix I. Poinsettia (Euphorbia pulcherrima) and certain widely grown cultivars are not covered. Check the annotation for the exact exemptions.",
+   "products": [
+    "live plants (wild-collected and nursery)"
+   ],
+   "checks": [
+    "Many species look alike, ask for species-level identification of live plants"
+   ]
+  },
+  {
+   "id": "pachypodium",
+   "kind": "flora",
+   "name": "Pachypodium",
+   "rank": "genus",
+   "group": "Succulents",
+   "common": [
+    "pachypodium",
+    "elephant foot",
+    "madagascar palm"
+   ],
+   "names": [
+    "Pachypodium",
+    "Pachypodium lamerei",
+    "Pachypodium baronii"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Pachypodium plants are listed in Appendix II, with a few species (for example Pachypodium ambongense, P. baronii and P. decaryi) in Appendix I.",
+   "products": [
+    "live plants"
+   ],
+   "checks": [
+    "Wild-collected caudex plants can be sold as nursery plants, check size and condition"
+   ]
+  },
+  {
+   "id": "carnivorous",
+   "kind": "flora",
+   "name": "Carnivorous plants (Nepenthes, Sarracenia)",
+   "rank": "genus",
+   "group": "Ornamental plants",
+   "common": [
+    "carnivorous plant",
+    "carnivorous plants",
+    "pitcher plant",
+    "pitcher plants",
+    "nepenthes",
+    "sarracenia",
+    "venus flytrap"
+   ],
+   "names": [
+    "Nepenthes",
+    "Sarracenia",
+    "Nepenthes rajah",
+    "Nepenthes khasiana",
+    "Sarracenia purpurea"
+   ],
+   "app": [
+    "I",
+    "II"
+   ],
+   "summary": "Tropical pitcher plants (Nepenthes) and North American pitcher plants (Sarracenia) are listed in Appendix II, with a few species in Appendix I (for example Nepenthes rajah and N. khasiana).",
+   "products": [
+    "live plants (including hybrids)"
+   ],
+   "checks": [
+    "Check whether hybrids are covered under the annotation of the parent species"
+   ]
+  },
+  {
+   "id": "medicinal",
+   "kind": "flora",
+   "name": "Medicinal and aromatic plants (ginseng and others)",
+   "rank": "genus",
+   "group": "Medicinal and aromatic plants",
+   "common": [
+    "ginseng",
+    "american ginseng",
+    "goldenseal",
+    "devil's claw",
+    "devils claw",
+    "hoodia",
+    "rauvolfia",
+    "snakeroot",
+    "spikenard",
+    "jatamansi",
+    "himalayan may apple",
+    "herbal medicine",
+    "traditional medicine"
+   ],
+   "names": [
+    "Panax ginseng",
+    "Panax quinquefolius",
+    "Hydrastis canadensis",
+    "Harpagophytum",
+    "Hoodia",
+    "Rauvolfia serpentina",
+    "Nardostachys grandiflora",
+    "Podophyllum hexandrum",
+    "Podophyllum",
+    "Panax"
+   ],
+   "app": [
+    "II"
+   ],
+   "summary": "A number of medicinal and aromatic plants are in Appendix II, for example American ginseng (Panax quinquefolius), goldenseal (Hydrastis canadensis), devil's claw (Harpagophytum), Hoodia, snakeroot (Rauvolfia serpentina), spikenard (Nardostachys grandiflora) and Himalayan may apple (Podophyllum hexandrum). The annotation decides which parts and products (roots, powder, extracts, finished products) are covered.",
+   "products": [
+    "dried roots and whole plants",
+    "powder, extracts and capsules",
+    "traditional medicine products"
+   ],
+   "checks": [
+    "Herbal products are often declared by their trade name, check the ingredients against the annotation",
+    "Wild-harvested roots are traded with quotas set by the exporting country"
+   ]
+  }
+ ]
+}
