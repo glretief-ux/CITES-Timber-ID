@@ -164,11 +164,12 @@ body.fromkey .backkey{display:inline-block}
   <div class="sugg" id="suggFauna" role="listbox"></div>
 </div>
 <div class="chips" id="exFauna"><span class="small">Try: </span></div>
+<p class="small" id="statFauna" style="margin:8px 0 0"></p>
 </div>
 <div id="outFauna"></div>
 <div id="docsFauna"></div>
 <div class="card"><h2>Browse by group</h2><table class="wlbrowse" id="browseFauna"></table>
-<p class="small" style="margin-top:8px">Group-level overview of the main fauna groups in trade, <b>not the full CITES checklist</b>. For any exact species, check the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
+<p class="small" style="margin-top:8px">Main fauna groups with guidance on what is traded and what to check. The search above covers <b>every taxon in the CITES checklist</b>; always confirm the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
 </div>
 <div id="paneFlora" hidden>
 <div class="card" style="overflow:visible"><h2 style="border-radius:var(--r) var(--r) 0 0">Search CITES flora (plants) by name</h2>
@@ -178,11 +179,12 @@ body.fromkey .backkey{display:inline-block}
   <div class="sugg" id="suggFlora" role="listbox"></div>
 </div>
 <div class="chips" id="exFlora"><span class="small">Try: </span></div>
+<p class="small" id="statFlora" style="margin:8px 0 0"></p>
 </div>
 <div id="outFlora"></div>
 <div id="docsFlora"></div>
 <div class="card"><h2>Browse by group</h2><table class="wlbrowse" id="browseFlora"></table>
-<p class="small" style="margin-top:8px">Group-level overview of the main flora groups in trade, <b>not the full CITES checklist</b>. For any exact species, check the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
+<p class="small" style="margin-top:8px">Main flora groups with guidance on what is traded and what to check. The search above covers <b>every taxon in the CITES checklist</b>; always confirm the live listing and annotation on <a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a>.</p></div>
 </div>
 <div id="out"></div>
 <div id="annotations">
@@ -598,7 +600,7 @@ function setTab(tab){
   $("#paneName").hidden = tab!=="name"; $("#paneKey").hidden = tab!=="key";
   $("#paneFauna").hidden = tab!=="fauna"; $("#paneFlora").hidden = tab!=="flora";
   const wlTab = tab==="fauna"||tab==="flora"; $("#out").hidden = wlTab; $("#annotations").hidden = wlTab;
-  if(wlTab){ if(MAP){MAP.remove();MAP=null;} document.body.classList.remove("fromkey"); history.replaceState(null,"","#"+tab); }
+  if(wlTab){ if(MAP){MAP.remove();MAP=null;} document.body.classList.remove("fromkey"); history.replaceState(null,"","#"+tab); wlEnsureAll(tab); }
   if(tab==="key"){ $("#out").innerHTML=""; document.body.classList.remove("fromkey"); if(MAP){MAP.remove();MAP=null;} history.replaceState(null,"","#key"); }
 }
 function init(){
@@ -623,8 +625,11 @@ function init(){
   window.addEventListener("hashchange",fromHash); fromHash();
 }
 
-// ---------------- fauna & flora (group-level overview)
+// ---------------- fauna & flora (full CITES checklist + curated group guidance)
 const WL={fauna:{list:[],idx:[]},flora:{list:[],idx:[]}}, WLK={fauna:"Fauna",flora:"Flora"};
+const WLC={fauna:null,flora:null}, WLP={fauna:null,flora:null};
+let WLM=null, TG=null;
+const timberGenera=()=>TG||(TG=new Set(INDEX.filter(e=>e.kind!=="trade").map(e=>e.key.split(" ")[0])));
 const WL_EXTRA={
  fauna:`<li><b>Live animals:</b> the exporting authority must be satisfied the animal is prepared and shipped so as to minimise risk of injury, damage to health or cruel treatment (follow the CITES transport guidelines and IATA Live Animals Regulations). For an Appendix I import, the recipient must be suitably equipped to house and care for it.</li>
  <li><b>Source codes:</b> W wild · C bred in captivity · F born in captivity · R ranched · I confiscated or seized · O pre-Convention · U unknown. Appendix I animals bred in captivity for commercial purposes in registered operations (code D) are treated as Appendix II. <b>Captive-bred claims (C) need verifying</b> — passing off wild-caught animals as captive-bred is a common fraud.</li>
@@ -633,12 +638,21 @@ const WL_EXTRA={
  <li><b>Marine species</b> taken outside national waters need a certificate for introduction from the sea.</li>
  <li><b>Health documents are separate:</b> veterinary and animal-health certificates are issued by other authorities and never replace CITES documents.</li>`,
  flora:`<li><b>Artificially propagated plants:</b> source code A (or D for Appendix I plants propagated commercially). Appendix I plants propagated commercially in a nursery registered with the CITES Secretariat are treated as Appendix II. A certificate from the exporting Management Authority that the plants are artificially propagated can replace the usual permits for Appendix I plants.</li>
- <li><b>The annotation decides what is covered.</b> Seeds, spores, pollen, seedlings or tissue cultures in vitro (in sterile containers), cut flowers of artificially propagated plants and some fruits are often exempt, but not always, read the annotation on Species+.</li>
+ <li><b>The annotation decides what is covered.</b> Seeds, spores, pollen, seedlings or tissue cultures in vitro (in sterile containers), cut flowers of artificially propagated plants and some fruits are often exempt, but not always, read the annotation and listing note on each profile.</li>
  <li><b>Live plants:</b> must be prepared and shipped to minimise risk of injury or damage to health; air shipments follow the IATA Perishable Cargo Regulations.</li>
  <li><b>Phytosanitary certificates are separate:</b> they come from the plant health authority (IPPC / ePhyto) and are required in addition to, never instead of, CITES documents.</li>
  <li><b>Wild or propagated?</b> Plants declared as artificially propagated but old, large, scarred, uneven in size or with wild soil on the roots point to wild collection.</li>
- <li><b>Wood and timber species</b> are in the <a href="#" data-gotab="name">timber lookup</a>.</li>`
+ <li><b>Wood and timber species</b> have full profiles in the <a href="#" data-gotab="name">timber lookup</a>.</li>`
 };
+const docFor=a=>String(DOCS_BY_APP[a]||"").replace(" (see population covered)","");
+const wlChips=g=>g.app.map(a=>`<span class="chip ${a}">Appendix ${a}</span>`).join(" ");
+const appChips=L=>L.split("/").map(a=>`<span class="chip ${a}">Appendix ${a}</span>`).join(" ");
+const spLink=q=>"https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query="+encodeURIComponent(q);
+const fmtNote=s=>esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
+const noteBlock=(s,label)=>s.length>320?`<details class="lk"><summary>${label}</summary><div>${fmtNote(s)}</div></details>`:`<div class="small" style="color:var(--ink);margin:4px 0">${fmtNote(s)}</div>`;
+const spBtn=(q,txt)=>`<a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff" href="${spLink(q)}" target="_blank" rel="noopener">${txt}</a>`;
+
+// ----- curated groups
 function wlBuild(kind){
   const idx=[]; WL[kind].list.forEach((g,gi)=>{
     idx.push({label:g.name,key:norm(g.name),gi,k:"group"});
@@ -648,7 +662,7 @@ function wlBuild(kind){
   });
   WL[kind].idx=idx.filter(e=>e.key);
 }
-function wlSuggest(kind,q){
+function wlSuggestCurated(kind,q){
   const n=norm(q); if(n.length<2) return [];
   const scored=WL[kind].idx.map(e=>{
     let s=0;
@@ -672,21 +686,133 @@ function wlFind(kind,q){
     if(s>bs){bs=s;best=e;}
   }
   if(best) return best;
-  const sg=wlSuggest(kind,q); return sg.length&&sg[0].s>=60?sg[0].e:null;
+  const sg=wlSuggestCurated(kind,q); return sg.length&&sg[0].s>=60?sg[0].e:null;
 }
-const wlChips=g=>g.app.map(a=>`<span class="chip ${a}">Appendix ${a}</span>`).join(" ");
-const spLink=q=>"https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query="+encodeURIComponent(q);
-function wlShow(kind,gi,searched){
-  const K=WLK[kind], g=WL[kind].list[gi], out=$("#out"+K);
-  const same=norm(searched)===norm(g.name);
-  const docs=g.app.map(a=>`<b>Appendix ${a}:</b> ${DOCS_BY_APP[a]}`).join("<br><br>");
+
+// ----- full checklist (loaded on demand)
+function wlPrep(d){
+  const S=d.S, byName=new Map(), byGenus=new Map(), byFam=new Map(), byOrd=new Map(), byGrp=new Map();
+  const add=(m,k,i)=>{k=(k||"").toLowerCase(); if(!k) return; let a=m.get(k); if(!a){a=[]; m.set(k,a);} a.push(i);};
+  d.low=d.T.map((t,i)=>{const nm=t[0].toLowerCase(); add(byName,nm,i); add(byGenus,nm.split(" ")[0],i); add(byFam,S[t[2]],i); add(byOrd,S[t[3]],i); add(byGrp,S[t[11]],i); return nm;});
+  Object.assign(d,{byName,byGenus,byFam,byOrd,byGrp});
+  return d;
+}
+function wlStat(kind,err){
+  const K=WLK[kind], d=WLC[kind], el=$("#stat"+K); if(!el) return;
+  if(err) el.textContent="Could not load the full checklist — showing the main groups only.";
+  else if(!d) el.textContent="Loading the full CITES checklist…";
+  else el.innerHTML=`Full CITES checklist loaded: <b>${d.count.toLocaleString("en")}</b> listed ${kind==="fauna"?"animal":"plant"} taxa${d.meta&&d.meta.date?` (Species+ export of ${esc(d.meta.date)})`:""}. Search a species, genus or family; common names work for the main groups.`;
+}
+function wlEnsure(kind){
+  if(WLP[kind]) return WLP[kind];
+  wlStat(kind);
+  return WLP[kind]=fetch("checklist-"+kind+".json").then(r=>r.json()).then(d=>{WLC[kind]=wlPrep(d); wlStat(kind); wlBrowse(kind); return d;}).catch(()=>{WLP[kind]=null; wlStat(kind,true);});
+}
+function wlEnsureAll(first){ wlEnsure(first).then(()=>wlEnsure(first==="fauna"?"flora":"fauna")); }
+
+function wlSuggest(kind,q){
+  const out=wlSuggestCurated(kind,q).slice(0,6).map(x=>({label:x.e.label,sub:`${WL[kind].list[x.e.gi].name} · App. ${WL[kind].list[x.e.gi].app.join("/")}`}));
+  const d=WLC[kind], n=(q||"").trim().toLowerCase().replace(/\s+/g," ");
+  if(d && n.length>=3){
+    const seen=new Set(out.map(o=>o.label.toLowerCase())), starts=[], epi=[];
+    for(let i=0;i<d.low.length && starts.length<12;i++){ if(d.low[i].startsWith(n)) starts.push(i); }
+    if(starts.length<8){ for(let i=0;i<d.low.length && epi.length<8;i++){ const w=d.low[i].split(" ")[1]; if(w && !d.low[i].startsWith(n) && w.startsWith(n)) epi.push(i); } }
+    for(const i of starts.concat(epi)){ if(out.length>=10) break; const t=d.T[i]; if(seen.has(d.low[i])) continue; seen.add(d.low[i]); out.push({label:t[0],sub:`App. ${t[5]} · ${d.S[t[2]]}`}); }
+  }
+  return out;
+}
+
+// ----- profiles
+function wlTable(kind,idxs,host,showFam){
+  const d=WLC[kind]; let shown=0; const STEP=200;
+  host.innerHTML=`<table class="wlbrowse"><tbody></tbody></table><div class="small" data-more style="margin:8px 0"></div>`;
+  const tb=host.querySelector("tbody"), more=host.querySelector("[data-more]");
+  const render=()=>{
+    const end=Math.min(idxs.length,shown+STEP);
+    tb.insertAdjacentHTML("beforeend",idxs.slice(shown,end).map(i=>{const t=d.T[i]; return `<tr><td><a href="#" data-ti="${i}"><i>${esc(t[0])}</i></a></td><td>${appChips(t[5])}</td><td class="small">${esc(showFam?d.S[t[2]]:d.D[t[10]].split(",").slice(0,3).join(", "))}</td></tr>`;}).join(""));
+    shown=end;
+    more.innerHTML=shown<idxs.length?`<button class="lkbtn" style="margin:0">Show ${Math.min(STEP,idxs.length-shown)} more</button> <span>${shown.toLocaleString("en")} of ${idxs.length.toLocaleString("en")} shown</span>`:`${idxs.length.toLocaleString("en")} taxa`;
+    const b=more.querySelector("button"); if(b) b.onclick=render;
+  };
+  render();
+  host.addEventListener("click",ev=>{const a=ev.target.closest("a[data-ti]"); if(!a) return; ev.preventDefault(); wlTaxon(kind,+a.dataset.ti,d.T[+a.dataset.ti][0]);});
+}
+const wlGroup=(kind,id)=>id?WL[kind].list.find(g=>g.id===id):null;
+function wlGuidance(g){
+  return `<p><b>About this group:</b> ${esc(g.summary)}</p>
+   <table><tr><td>Typically traded / seized as</td><td>${esc(g.products.join(" · "))}</td></tr>
+   <tr><td>What to check</td><td><ul style="margin:0">${g.checks.map(c=>`<li>${esc(c)}</li>`).join("")}</ul></td></tr></table>`;
+}
+function wlTaxon(kind,i,searched,flag){
+  const K=WLK[kind], d=WLC[kind], S=d.S, t=d.T[i], out=$("#out"+K);
+  const apps=t[5].split("/"), g=wlGroup(kind,S[t[11]]);
+  const parties=S[t[6]].split(",").filter(Boolean).map(c=>d.ISO[c]||c);
+  const lu=t[7].map(j=>S[j]), notes=t[8].map(j=>d.N[j]), anns=t[9].map(j=>d.A[j]);
+  const docs=apps.map(a=>`<b>Appendix ${a}:</b> ${docFor(a)}`).join("<br><br>")+(parties.length?`<br><br><b>Appendix III listing country:</b> ${esc(parties.join(", "))}. Exports from there need an export permit; from any other country a certificate of origin.`:"");
+  const tb=kind==="flora" && timberGenera().has(t[0].split(" ")[0].toLowerCase());
+  const dist=d.D[t[10]];
   out.innerHTML=`<div class="card">
-    ${wlChips(g)} <span class="chip none">Group overview</span>
+    ${appChips(t[5])}${t[1]?` <span class="chip none">${t[1]===1?"subspecies":"variety"}</span>`:""}${g?` <span class="chip none">${esc(g.name)}</span>`:""}
+    <p class="sci">${esc(t[0])}</p>
+    <div class="cn">${esc(S[t[2]])}${S[t[3]]?" · "+esc(S[t[3]]):""}${S[t[4]]?" · "+esc(S[t[4]]):""}</div>
+    ${flag==="sub"&&norm(searched)!==norm(t[0])?`<div class="note">“${esc(searched)}” is not listed separately; the listing for <i>${esc(t[0])}</i> applies. Check subspecies and population details on Species+.</div>`:""}
+    ${apps.length>1?`<div class="note warn"><b>Listed in more than one Appendix.</b> Which one applies depends on the population or the annotation, read the listing notes below.</div>`:""}
+    ${spBtn(t[0],`Check <i>${esc(t[0])}</i> on Species+`)}
+    ${tb?`<button class="lkbtn" data-timber="${esc(t[0])}">Open in the timber lookup →</button>`:""}
+    <button class="lkbtn" onclick="window.print()">Print / PDF</button>
+  </div>
+  <div class="card"><h2>CITES listing</h2><table>
+    <tr><td>Appendix</td><td>${appChips(t[5])}</td></tr>
+    <tr><td>Listed under</td><td>${lu.length?esc(lu.join("; ")):"—"}</td></tr>
+    <tr><td>Listing note</td><td>${notes.length?notes.map(n=>noteBlock(n,"Show the full listing note")).join(""):"No listing note — the whole taxon is covered."}</td></tr>
+    <tr><td>Annotation</td><td>${anns.length?anns.map(a=>noteBlock(a,"Show the full annotation")).join(""):"No annotation recorded — all parts and derivatives are covered unless the listing note says otherwise."}</td></tr>
+    <tr><td>Native distribution</td><td>${dist?esc(dist.replace(/,/g,", ")):"—"}</td></tr>
+    <tr><td>Documents needed</td><td>${docs}<br><a href="#docs${K}" class="annlink">Rules for all three Appendices, and ${kind} specifics ↓</a></td></tr>
+    <tr><td>Official record</td><td><a href="${spLink(t[0])}" target="_blank" rel="noopener">Species+</a></td></tr></table></div>
+  ${g?`<div class="card"><h2>Group guidance — ${esc(g.name)}</h2>${wlGuidance(g)}</div>`:""}`;
+  out.querySelectorAll("[data-timber]").forEach(b=>b.onclick=()=>{setTab("name"); $("#q").value=b.dataset.timber; lookup(b.dataset.timber);});
+  out.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function wlSummary(kind,level,key,idxs){
+  const K=WLK[kind], d=WLC[kind], S=d.S, out=$("#out"+K), first=d.T[idxs[0]];
+  const label=level==="genus"?first[0].split(" ")[0]:level==="family"?S[first[2]]:S[first[3]];
+  const cnt={}, gc={}; idxs.forEach(i=>{const t=d.T[i]; t[5].split("/").forEach(a=>cnt[a]=(cnt[a]||0)+1); const gid=S[t[11]]; if(gid) gc[gid]=(gc[gid]||0)+1;});
+  const best=Object.entries(gc).sort((a,b)=>b[1]-a[1])[0], g=best&&best[1]>=idxs.length*0.6?wlGroup(kind,best[0]):null;
+  const chips=Object.keys(cnt).sort().map(a=>`<span class="chip ${a}">Appendix ${a}: ${cnt[a].toLocaleString("en")}</span>`).join(" ");
+  const lu=[...new Set(idxs.flatMap(i=>d.T[i][7].map(j=>S[j])))].filter(x=>/spp\.?$/.test(x)).slice(0,4);
+  const notes=[...new Set(idxs.flatMap(i=>d.T[i][8]))].slice(0,1).map(j=>d.N[j]);
+  const apps=Object.keys(cnt).sort(), tb=kind==="flora"&&level==="genus"&&timberGenera().has(label.toLowerCase());
+  out.innerHTML=`<div class="card">
+    ${chips}
+    <p class="sci">${esc(label)}</p>
+    <div class="cn">${level} · ${idxs.length.toLocaleString("en")} listed taxa${level==="genus"?` · ${esc(S[first[2]])}`:""}${level!=="order"&&S[first[3]]?` · ${esc(S[first[3]])}`:""}</div>
+    ${lu.length?`<div class="note">Listed under: <b>${esc(lu.join(", "))}</b> — all species of the group are covered, even if not named one by one.</div>`:""}
+    ${spBtn(label,`Check ${esc(label)} on Species+`)}
+    ${tb?`<button class="lkbtn" data-timber="${esc(label)}">Open in the timber lookup →</button>`:""}
+    <button class="lkbtn" onclick="window.print()">Print / PDF</button>
+  </div>
+  <div class="card"><h2>CITES listing</h2><table>
+    <tr><td>Taxa listed</td><td>${idxs.length.toLocaleString("en")} — ${Object.keys(cnt).sort().map(a=>`Appendix ${a}: ${cnt[a].toLocaleString("en")}`).join(" · ")}</td></tr>
+    ${notes.length?`<tr><td>Listing note (example)</td><td>${noteBlock(notes[0],"Show the full listing note")}</td></tr>`:""}
+    <tr><td>Documents needed</td><td>${apps.map(a=>`<b>Appendix ${a}:</b> ${docFor(a)}`).join("<br><br>")}<br><a href="#docs${K}" class="annlink">Rules for all three Appendices, and ${kind} specifics ↓</a></td></tr></table></div>
+  ${g?`<div class="card"><h2>Group guidance — ${esc(g.name)}</h2>${wlGuidance(g)}</div>`:""}
+  <div class="card"><h2>Listed taxa <span class="small">${idxs.length.toLocaleString("en")}</span></h2><div id="wlList${K}"></div></div>`;
+  wlTable(kind,idxs,$("#wlList"+K),level!=="genus");
+  out.querySelectorAll("[data-timber]").forEach(b=>b.onclick=()=>{setTab("name"); $("#q").value=b.dataset.timber; lookup(b.dataset.timber);});
+  out.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function wlShow(kind,gi,searched){
+  const K=WLK[kind], g=WL[kind].list[gi], out=$("#out"+K), d=WLC[kind];
+  const same=norm(searched)===norm(g.name);
+  const docs=g.app.map(a=>`<b>Appendix ${a}:</b> ${docFor(a)}`).join("<br><br>");
+  const members=d&&d.byGrp.get(g.id);
+  out.innerHTML=`<div class="card">
+    ${wlChips(g)} <span class="chip none">Group guidance</span>
     <p class="sci">${esc(searched)}</p>
     <div class="cn">${esc(g.group)} · ${esc(g.rank)} ${esc(g.name)}${g.common.length?" · "+esc(g.common.slice(0,5).join(", ")):""}</div>
     ${same?"":`<div class="note">Listed under <b>${esc(g.name)}</b> (${esc(g.rank)}). The exact Appendix for <i>${esc(searched)}</i> depends on the species and population, confirm it on Species+.</div>`}
     <p>${esc(g.summary)}</p>
-    <a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff" href="${spLink(searched)}" target="_blank" rel="noopener">Check <i>${esc(searched)}</i> on Species+</a>
+    ${spBtn(searched,`Check <i>${esc(searched)}</i> on Species+`)}
     <button class="lkbtn" onclick="window.print()">Print / PDF</button>
   </div>
   <div class="card"><h2>CITES listing</h2><table>
@@ -695,63 +821,88 @@ function wlShow(kind,gi,searched){
     <tr><td>Typically traded / seized as</td><td>${esc(g.products.join(" · "))}</td></tr>
     <tr><td>Documents needed</td><td>${docs}<br><a href="#docs${K}" class="annlink">Rules for all three Appendices, and ${kind} specifics ↓</a></td></tr>
     <tr><td>What to check</td><td><ul style="margin:0">${g.checks.map(c=>`<li>${esc(c)}</li>`).join("")}</ul></td></tr>
-    <tr><td>Official record</td><td><a href="${spLink(searched)}" target="_blank" rel="noopener">Species+</a></td></tr></table></div>`;
+    <tr><td>Official record</td><td><a href="${spLink(searched)}" target="_blank" rel="noopener">Species+</a></td></tr></table></div>
+  ${members?`<div class="card"><h2>Listed taxa in this group <span class="small">${members.length.toLocaleString("en")}</span></h2><div id="wlList${K}"></div></div>`:""}`;
+  if(members) wlTable(kind,members,$("#wlList"+K),true);
   out.scrollIntoView({behavior:"smooth",block:"start"});
 }
 function wlNotFound(kind,q){
-  const K=WLK[kind], other=kind==="fauna"?"flora":"fauna", out=$("#out"+K);
-  const o=WL[other].list.length?wlFind(other,q):null;
-  const tm=suggest(q)[0];
-  const btns=[];
-  if(o) btns.push(`<button class="lkbtn" data-goto="${other}|${o.gi}">Found in ${WLK[other]}: ${esc(WL[other].list[o.gi].name)} →</button>`);
-  const nq=norm(q), tmOk=!!(tm && nq.length>=3 && (norm(tm.label).startsWith(nq)||norm(tm.label).split(" ").some(w=>w.startsWith(nq))));
+  const K=WLK[kind], other=kind==="fauna"?"flora":"fauna", out=$("#out"+K), d=WLC[kind], od=WLC[other];
+  const low=q.toLowerCase(), btns=[];
+  const inOther=od&&(od.byName.get(low)||od.byGenus.get(low)||od.byFam.get(low)||od.byOrd.get(low));
+  const o=!inOther&&WL[other].list.length?wlFind(other,q):null;
+  if(inOther) btns.push(`<button class="lkbtn" data-other="${other}">Found in ${WLK[other]}: open →</button>`);
+  else if(o) btns.push(`<button class="lkbtn" data-goto="${other}|${o.gi}">Found in ${WLK[other]}: ${esc(WL[other].list[o.gi].name)} →</button>`);
+  const tm=suggest(q)[0], nq=norm(q);
+  const tmOk=!!(tm && nq.length>=3 && (norm(tm.label).startsWith(nq)||norm(tm.label).split(" ").some(w=>w.startsWith(nq))));
   if(tmOk) btns.unshift(`<button class="lkbtn" style="background:#12355b;color:#fff" data-timber="${esc(tm.label)}">Open in the timber lookup: ${esc(tm.label)} →</button>`);
-  out.innerHTML=`<div class="card"><span class="chip none">${tmOk?"Timber taxon":"Not in this overview"}</span>
+  out.innerHTML=`<div class="card"><span class="chip none">${tmOk?"Timber taxon":"Not found"}</span>
     <p class="sci">${esc(q)}</p>
-    ${tmOk?`<p>This looks like a <b>CITES-listed timber taxon</b>. Timber species have full profiles (listing, annotation, 10x end-grain features, look-alikes) in the timber lookup.</p>`:`<p>This overview only covers the main ${kind} groups in trade. That does <b>not</b> mean the species is unlisted, check it on Species+.</p>`}
-    <a class="lkbtn" style="display:inline-block;text-decoration:none;background:#12355b;color:#fff" href="${spLink(q)}" target="_blank" rel="noopener">Check “${esc(q)}” on Species+</a>${btns.join("")}</div>`;
+    ${tmOk?`<p>This looks like a <b>CITES-listed timber taxon</b>. Timber species have full profiles (listing, annotation, 10x end-grain features, look-alikes) in the timber lookup.</p>`
+      :d?`<p>No ${kind} taxon with this name in the CITES checklist export. It may be a synonym or an older name, a misspelling, or not CITES-listed. Check the name on Species+.</p>`
+      :`<p>Not found in the main ${kind} groups. That does <b>not</b> mean the species is unlisted, check it on Species+.</p>`}
+    ${spBtn(q,`Check “${esc(q)}” on Species+`)}${btns.join("")}</div>`;
+  out.querySelectorAll("[data-other]").forEach(b=>b.onclick=()=>{setTab(b.dataset.other); $("#q"+WLK[b.dataset.other]).value=q; wlLookup(b.dataset.other,q);});
   out.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>{const [k,i]=b.dataset.goto.split("|"); setTab(k); $("#q"+WLK[k]).value=WL[k].list[+i].name; wlShow(k,+i,WL[k].list[+i].name);});
   out.querySelectorAll("[data-timber]").forEach(b=>b.onclick=()=>{setTab("name"); $("#q").value=b.dataset.timber; lookup(b.dataset.timber);});
   out.scrollIntoView({behavior:"smooth",block:"start"});
 }
 function wlLookup(kind,q){
-  q=(q||"").trim(); if(!q) return;
+  q=(q||"").trim().replace(/\s+/g," "); if(!q) return;
+  const d=WLC[kind], low=q.toLowerCase().replace(/\s+(spp|sp)\.?$/,"");
+  if(d){
+    let a=d.byName.get(low); if(a) return wlTaxon(kind,a[0],q);
+    const w=low.split(" ");
+    if(w.length>=3){ a=d.byName.get(w.slice(0,2).join(" ")); if(a) return wlTaxon(kind,a[0],q,"sub"); }
+    if(w.length===1){
+      if(d.byGenus.has(low)) return wlSummary(kind,"genus",low,d.byGenus.get(low));
+      if(d.byFam.has(low)) return wlSummary(kind,"family",low,d.byFam.get(low));
+      if(d.byOrd.has(low)) return wlSummary(kind,"order",low,d.byOrd.get(low));
+    }
+  }
   const e=wlFind(kind,q); if(e) wlShow(kind,e.gi,q); else wlNotFound(kind,q);
 }
+
+// ----- page wiring
 function wlDocsCard(kind){
   const tbl=document.querySelector("#documents table").outerHTML;
   return `<div class="card"><h2>Documents needed — ${kind}</h2>${tbl}
   <p style="margin:12px 0 4px"><b>Extra points for ${kind}</b></p><ul>${WL_EXTRA[kind]}</ul>
   <p class="small" style="margin-top:8px">Every genuine document: valid 6 months (import permit up to 12 months) · one per consignment · control number, issuing authority and security stamp · cancelled and kept by the importing country · species, quantity and origin match the goods. National law (e.g. EU Wildlife Trade Regulations, Annex A–D) can be stricter. <a href="https://github.com/glretief-ux/CITES-Timber-ID/blob/main/guides/cites-documents.md" target="_blank" rel="noopener">Full guide →</a></p></div>`;
 }
+function wlBrowse(kind){
+  if(!WLM) return;
+  const K=WLK[kind], d=WLC[kind], cats=kind==="fauna"?WLM.fauna_groups:WLM.flora_groups; let rows=`<tr><th>Group</th><th>Appendices</th><th>Also known as</th><th>Taxa</th></tr>`;
+  cats.forEach(c=>{rows+=`<tr class="cat"><td colspan="4">${esc(c)}</td></tr>`;
+    WL[kind].list.forEach((g,gi)=>{ if(g.group!==c) return;
+      const n=d&&d.byGrp.get(g.id);
+      rows+=`<tr><td><a href="#" data-gi="${gi}">${esc(g.name)}</a></td><td>${wlChips(g)}</td><td class="small">${esc(g.common.slice(0,4).join(", "))}</td><td class="small">${n?n.length.toLocaleString("en"):""}</td></tr>`;});});
+  const tb=$("#browse"+K); tb.innerHTML=rows;
+  tb.querySelectorAll("a[data-gi]").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault(); const gi=+a.dataset.gi; $("#q"+K).value=WL[kind].list[gi].name; wlShow(kind,gi,WL[kind].list[gi].name);}));
+}
 function wlInit(kind){
   const K=WLK[kind]; wlBuild(kind);
   $("#docs"+K).innerHTML=wlDocsCard(kind);
   $("#docs"+K).querySelectorAll("[data-gotab]").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault(); setTab(a.dataset.gotab); window.scrollTo({top:0,behavior:"smooth"});}));
-  const cats=kind==="fauna"?WLM.fauna_groups:WLM.flora_groups; let rows="";
-  cats.forEach(c=>{rows+=`<tr class="cat"><td colspan="3">${esc(c)}</td></tr>`;
-    WL[kind].list.forEach((g,gi)=>{ if(g.group!==c) return;
-      rows+=`<tr><td><a href="#" data-gi="${gi}">${esc(g.name)}</a></td><td>${wlChips(g)}</td><td class="small">${esc(g.common.slice(0,4).join(", "))}</td></tr>`;});});
-  $("#browse"+K).innerHTML=rows;
-  $("#browse"+K).querySelectorAll("a[data-gi]").forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault(); const gi=+a.dataset.gi; $("#q"+K).value=WL[kind].list[gi].name; wlShow(kind,gi,WL[kind].list[gi].name);}));
-  const ex=kind==="fauna"?["Panthera tigris","pangolin","African grey parrot","caviar","seahorse","Cheloniidae"]:["orchid","cactus","cycad","ginseng","Cyclamen","snowdrop"];
+  wlBrowse(kind);
+  const ex=kind==="fauna"?["Panthera tigris","pangolin","African grey parrot","caviar","seahorse","Felidae"]:["Paphiopedilum rothschildianum","cactus","cycad","ginseng","Cyclamen","Orchidaceae"];
   ex.forEach(n=>{const b=document.createElement("button"); b.className="lkchip"; b.textContent=n; b.onclick=()=>{$("#q"+K).value=n; wlLookup(kind,n);}; $("#ex"+K).appendChild(b);});
-  const q=$("#q"+K), box=$("#sugg"+K); let act=-1;
-  const show=()=>{const l=wlSuggest(kind,q.value); act=-1;
-    if(!l.length){box.style.display="none";box.innerHTML="";return;}
-    box.innerHTML=l.map(({e},i)=>{const g=WL[kind].list[e.gi]; return `<div data-i="${i}"><b>${esc(e.label)}</b> <small>— ${esc(g.name)} · App. ${esc(g.app.join("/"))}</small></div>`;}).join("");
+  const q=$("#q"+K), box=$("#sugg"+K); let act=-1, cur=[];
+  const show=()=>{cur=wlSuggest(kind,q.value); act=-1;
+    if(!cur.length){box.style.display="none";box.innerHTML="";return;}
+    box.innerHTML=cur.map((s,i)=>`<div data-i="${i}"><b>${esc(s.label)}</b> <small>— ${esc(s.sub)}</small></div>`).join("");
     box.style.display="block";
-    box.querySelectorAll("div").forEach((d,i)=>d.addEventListener("mousedown",ev=>{ev.preventDefault(); const e=l[i].e; q.value=e.label; box.style.display="none"; wlShow(kind,e.gi,e.label);}));};
+    box.querySelectorAll("div").forEach((dv,i)=>dv.addEventListener("mousedown",ev=>{ev.preventDefault(); q.value=cur[i].label; box.style.display="none"; wlLookup(kind,cur[i].label);}));};
   q.addEventListener("input",show);
   q.addEventListener("keydown",ev=>{const items=[...box.querySelectorAll("div")];
-    if(ev.key==="ArrowDown"||ev.key==="ArrowUp"){if(!items.length) return; ev.preventDefault(); act=(act+(ev.key==="ArrowDown"?1:-1)+items.length)%items.length; items.forEach((d,i)=>d.classList.toggle("act",i===act));}
+    if(ev.key==="ArrowDown"||ev.key==="ArrowUp"){if(!items.length) return; ev.preventDefault(); act=(act+(ev.key==="ArrowDown"?1:-1)+items.length)%items.length; items.forEach((dv,i)=>dv.classList.toggle("act",i===act));}
     else if(ev.key==="Enter"){ev.preventDefault(); if(act>=0&&items[act]) items[act].dispatchEvent(new MouseEvent("mousedown",{bubbles:true,cancelable:true})); else {box.style.display="none"; wlLookup(kind,q.value);}}
     else if(ev.key==="Escape"){box.style.display="none";}});
   document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) box.style.display="none";});
 }
-let WLM=null;
 function wlLoad(){
-  fetch("wildlife.json").then(r=>r.json()).then(w=>{WLM=w; WL.fauna.list=w.fauna; WL.flora.list=w.flora; wlInit("fauna"); wlInit("flora");})
+  fetch("wildlife.json").then(r=>r.json()).then(w=>{WLM=w; WL.fauna.list=w.fauna; WL.flora.list=w.flora; wlInit("fauna"); wlInit("flora");
+    if(location.hash==="#fauna"||location.hash==="#flora") wlEnsureAll(location.hash.slice(1));})
    .catch(()=>{["Fauna","Flora"].forEach(K=>{$("#out"+K).innerHTML='<div class="card">Could not load wildlife.json — open via GitHub Pages or a local web server.</div>';});});
 }
 const DOCS_BY_APP={
