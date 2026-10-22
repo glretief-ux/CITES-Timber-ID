@@ -10,6 +10,12 @@
 
 > Always confirm the live listing on [Species+](https://speciesplus.net) before seizure decisions.
 
+## Documents needed for trade
+
+**Appendix II:** **Export permit** from the exporting country (or a **re-export certificate** for re-exports). CITES itself requires no import permit, but many countries (e.g. the EU) do.
+
+The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
+
 ## 10x end-grain view
 
 | Real photographs (reference specimens) | Schematic |
@@ -86,4 +92,4 @@ Transverse section at about 10x, from verified reference specimens. Images (c) T
 - [GBIF (distribution)](https://www.gbif.org/species/search?q=Aquilaria++and+Gyrinops)
 
 ---
-[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [Feature glossary](../guides/feature-glossary.md)
+[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [CITES documents](../guides/cites-documents.md) · [Feature glossary](../guides/feature-glossary.md)

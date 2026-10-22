@@ -161,6 +161,17 @@ body.fromkey .backkey{display:inline-block}
 <p><b>The Appendix decides what documents are needed:</b> Appendix I — export permit <u>and</u> import permit, commercial trade essentially prohibited · Appendix II — export permit (or re-export certificate) from the exporting country · Appendix III — export permit from the listing country, certificate of origin from other countries.</p>
 </div>
 
+<div class="card" id="documents"><h2>Documents needed — by Appendix</h2>
+<table class="ex">
+<tr><th></th><th>Appendix I</th><th>Appendix II</th><th>Appendix III</th></tr>
+<tr><td><b>Export</b></td><td>Export permit <u>and</u> an import permit already issued</td><td>Export permit</td><td>Export permit from the <b>listing country</b>; <b>certificate of origin</b> from any other country</td></tr>
+<tr><td><b>Import</b></td><td>Import permit <u>plus</u> export permit or re-export certificate</td><td>Export permit or re-export certificate (no CITES import permit; some countries, e.g. the EU, require one)</td><td>Export permit (listing country) or certificate of origin (other countries)</td></tr>
+<tr><td><b>Re-export</b></td><td>Re-export certificate</td><td>Re-export certificate</td><td>Re-export certificate</td></tr>
+<tr><td><b>Commercial trade</b></td><td>Essentially prohibited (import must not be primarily commercial)</td><td>Allowed with permit</td><td>Allowed with permit</td></tr>
+</table>
+<p class="small" style="margin-top:8px"><b>Every genuine document:</b> valid 6 months (export / re-export; import permit up to 12 months) · one document per consignment · unique control number, issuing authority stamp and security stamp · cancelled and kept by the importing country after use · copies not valid as originals · species, quantity and origin must match the goods. Transit and transhipment under customs control are exempt. <a href="https://github.com/glretief-ux/CITES-Timber-ID/blob/main/guides/cites-documents.md" target="_blank" rel="noopener">Full guide: conditions, codes, exemptions and a document check →</a></p>
+</div>
+
 <div class="card"><h2>Is this consignment covered? — 5 checks</h2>
 <ol class="steps">
 <li><b>Species:</b> does the wood match a CITES-listed taxon? (use this lookup and the 10x key; confirm with a laboratory if needed)</li>
@@ -324,6 +335,7 @@ function show(e){
      <tr><td>Appendix</td><td>${t.appendix}</td></tr>
      <tr><td>Annotation</td><td><b>${esc(t.annotation)}</b><br>${esc(DATA.annotations[ann]||"")}<br><a href="#annotations" class="annlink">What does this annotation cover? See the matrix ↓</a></td></tr>
      <tr><td>Population covered</td><td>${esc(t.population_scope)}</td></tr>
+     <tr><td>Documents needed</td><td>${DOCS_BY_APP[t.appendix]||""}<br><a href="#documents" class="annlink">Compare all three Appendices ↓</a></td></tr>
      <tr><td>Listed since</td><td>${t.listed_since}</td></tr>
      <tr><td>Native range</td><td>${esc(t.range)}</td></tr>
      <tr><td>Official record</td><td><a href="${t.references[0].url}" target="_blank" rel="noopener">Species+</a></td></tr></table>
@@ -568,9 +580,14 @@ function init(){
     else if(ev.key==="Escape"){ box.style.display="none"; }
   });
   document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) $("#sugg").style.display="none";});
-  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"){setTab("key");return;} if(h==="annotations") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
+  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"){setTab("key");return;} if(h==="annotations"||h==="documents") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
   window.addEventListener("hashchange",fromHash); fromHash();
 }
+const DOCS_BY_APP={
+  "I":"<b>Export permit</b> <u>and</u> <b>import permit</b> (import permit issued first); re-export certificate for re-exports. Import must not be primarily commercial.",
+  "II":"<b>Export permit</b> (or <b>re-export certificate</b>). No CITES import permit, but many countries (e.g. the EU) require one.",
+  "III":"<b>Export permit</b> if exported from the listing country (see population covered); <b>certificate of origin</b> from any other country; re-export certificate for re-exports."
+};
 fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;init();}).catch(()=>{$("#out").innerHTML='<div class="card">Could not load data.json — open via GitHub Pages or a local web server.</div>';});
 </script>
 </body>

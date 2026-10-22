@@ -19,6 +19,7 @@ Covers every tree taxon listed in CITES Appendices I, II and III that is traded 
 | [`docs/identify/`](docs/identify/index.html) | **Identify from photo (in development)** — upload a 10x end-grain photo and get a CITES-listed vs unlisted African timber lead, computed in the browser. Needs a trained model; none is installed yet |
 | [`wood-id/`](wood-id/README.md) | Training pipeline, imaging protocol and CITES African scope table for that model |
 | [`guides/field-procedure.md`](guides/field-procedure.md) | How to cut, observe, test, document and sample suspect timber |
+| [`guides/cites-documents.md`](guides/cites-documents.md) | **Documents required per Appendix** — export/import permits, re-export certificates, certificates of origin, validity, codes, exemptions and a document check |
 | [`guides/feature-glossary.md`](guides/feature-glossary.md) | What each end-grain feature looks like |
 | [`guides/photo-protocol.md`](guides/photo-protocol.md) | How to take and add 10x reference photos |
 | [`tools/species_data.py`](tools/species_data.py) | **The single source** — edit here, then everything is rebuilt |

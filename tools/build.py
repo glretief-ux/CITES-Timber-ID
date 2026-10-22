@@ -242,6 +242,17 @@ def finish(out, sp, W, H):
     return "\n".join(out)
 
 
+APPENDIX_DOCS = {
+    "I": ("**Export permit** from the exporting country **and** an **import permit** from the importing country "
+          "(the import permit must be issued first); re-exports need a **re-export certificate**. Import must not be "
+          "primarily commercial. Pre-Convention stock needs a pre-Convention certificate."),
+    "II": ("**Export permit** from the exporting country (or a **re-export certificate** for re-exports). "
+           "CITES itself requires no import permit, but many countries (e.g. the EU) do."),
+    "III": ("**Export permit** if exported from the country that listed the species (see *Population covered* / range); "
+            "**certificate of origin** if exported from any other country; **re-export certificate** for re-exports."),
+}
+
+
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
@@ -258,6 +269,10 @@ def md_page(sp):
          f"**First listed (approx. year in force):** {sp['listed_since']}  ",
          f"**Native range:** {sp['range']}", "",
          "> Always confirm the live listing on [Species+](https://speciesplus.net) before seizure decisions.", "",
+         "## Documents needed for trade", "",
+         f"**Appendix {sp['appendix']}:** {APPENDIX_DOCS[sp['appendix']]}", "",
+         "The annotation above decides which products need a document at all. Details, validity, codes and a document check: "
+         "[CITES documents guide](../guides/cites-documents.md).", "",
          "## 10x end-grain view", "",
          "| Real photographs (reference specimens) | Schematic |", "|---|---|",
          f"| See [`photos/{sp['id']}/`](../photos/{sp['id']}/) and the image links below | ![schematic](../docs/schematics/{sp['id']}.svg) |", "",
@@ -296,7 +311,7 @@ def md_page(sp):
         L += [""]
     L += ["## Other image sources for 10x end-grain photographs", ""]
     L += [f"- [{t}]({u})" for t, u in reference_links(sp)]
-    L += ["", "---", "[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [Feature glossary](../guides/feature-glossary.md)"]
+    L += ["", "---", "[← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [CITES documents](../guides/cites-documents.md) · [Feature glossary](../guides/feature-glossary.md)"]
     return "\n".join(L) + "\n"
 
 
