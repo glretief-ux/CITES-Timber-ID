@@ -621,7 +621,7 @@ function init(){
     else if(ev.key==="Escape"){ box.style.display="none"; }
   });
   document.addEventListener("click",ev=>{if(!ev.target.closest(".searchbox")) $("#sugg").style.display="none";});
-  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(h==="key"||h==="fauna"||h==="flora"){setTab(h);return;} if(/^docs(Fauna|Flora)$/.test(h)) return; if(h==="annotations"||h==="documents") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
+  const fromHash=()=>{const h=decodeURIComponent(location.hash.slice(1)); if(!h && !fromHash.done){fromHash.done=true; setTab("flora"); return;} fromHash.done=true; if(h==="key"||h==="fauna"||h==="flora"){setTab(h);return;} if(/^docs(Fauna|Flora)$/.test(h)) return; if(h==="annotations"||h==="documents") return; if(h && norm(h)!==norm(q.value)){setTab("name"); q.value=h; lookup(h);}};
   window.addEventListener("hashchange",fromHash); fromHash();
 }
 
