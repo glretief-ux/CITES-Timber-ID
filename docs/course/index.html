@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}html{color-scheme:light dark}</style>
+<title>CITES Timber ID: African Wood Course</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+
+/* Layout: continuous-scroll lessons (Rise style). Navy band + sticky progress bar on top, white canvas, contents rail on wide screens, drawer on phones. */
+:root{
+  --bg:#FFFFFF; --ink:#12263F; --muted:#4A5F78; --blue:#0B5CAD; --navy:#0A2A52; --onnavy:#FFFFFF;
+  --tint:#EEF5FC; --line:#D0DFEF; --btn:#0B5CAD; --onbtn:#FFFFFF;
+  --ok:#17693F; --okbg:#E6F5EC; --warn:#85500A; --warnbg:#FFF3DC; --bad:#A8231B; --badbg:#FDEBEA;
+  --font:Verdana,Geneva,"DejaVu Sans",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1828; --ink:#E7EFF9; --muted:#A3B6CC; --blue:#6DB1F5; --navy:#0A2A52; --onnavy:#FFFFFF;
+  --tint:#13263E; --line:#27425F; --btn:#6DB1F5; --onbtn:#07203F;
+  --ok:#6AD09B; --okbg:#10301F; --warn:#F0B14F; --warnbg:#35280F; --bad:#F59A93; --badbg:#3A1815; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1828; --ink:#E7EFF9; --muted:#A3B6CC; --blue:#6DB1F5; --navy:#0A2A52; --onnavy:#FFFFFF;
+  --tint:#13263E; --line:#27425F; --btn:#6DB1F5; --onbtn:#07203F;
+  --ok:#6AD09B; --okbg:#10301F; --warn:#F0B14F; --warnbg:#35280F; --bad:#F59A93; --badbg:#3A1815; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:10}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.25;text-wrap:balance;margin:0}
+p{margin:0 0 14px}
+a{color:var(--blue)}
+button{font-family:var(--font);font-size:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+/* banner + progress bar */
+.banner{background:var(--navy);color:var(--onnavy);border-bottom:4px solid #2B86D1}
+.banner .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-block:18px;flex-wrap:wrap}
+.mark{font-weight:700;letter-spacing:.02em;font-size:15px;line-height:1.3}
+.mark small{display:block;font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:10px;opacity:.8;margin-bottom:3px}
+.banner .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--navy);color:var(--onnavy)}
+.bar .wrap{display:flex;align-items:center;gap:14px;padding-block:9px}
+.bar button.menu{background:transparent;border:1px solid rgba(255,255,255,.45);color:var(--onnavy);border-radius:5px;padding:6px 10px;cursor:pointer;font-size:12px}
+.track{flex:1;height:8px;background:rgba(255,255,255,.22);border-radius:99px;overflow:hidden;min-width:60px}
+.track i{display:block;height:100%;width:0;background:#7CC0F7;transition:width .4s}
+.pct{font-size:12px;white-space:nowrap}
+
+/* layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-block:8px 60px}
+.toc{display:none}
+.toc.open{display:block;position:fixed;z-index:25;top:calc(env(safe-area-inset-top,0px) + 50px);left:0;right:0;bottom:0;overflow:auto;background:var(--bg);padding:16px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+.toc h2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.toc button.t{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:none;border:0;border-radius:6px;padding:9px 10px;cursor:pointer;line-height:1.35;font-size:13px}
+.toc button.t:hover{background:var(--tint)}
+.toc button.t.cur{background:var(--tint);font-weight:700;color:var(--blue)}
+.toc .n{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--muted)}
+.toc .done .n{background:var(--ok);border-color:var(--ok);color:#fff}
+.toc .done .n::before{content:"\2713"}
+.toc .done .n span{display:none}
+@media (min-width:960px){
+  .layout{grid-template-columns:250px minmax(0,1fr)}
+  .toc{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);align-self:start;max-height:calc(100vh - 80px);overflow:auto;padding-top:36px}
+  .bar button.menu{display:none}
+}
+
+/* lessons */
+main{min-width:0}
+.hero{padding-block:40px 28px}
+.hero h1{font-size:clamp(1.55rem,4.6vw,2.2rem);color:var(--navy);margin-bottom:14px}
+:root[data-theme="dark"] .hero h1{color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero h1{color:var(--ink)}}
+.lede{font-size:16px;max-width:60ch;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.meta li{background:var(--tint);border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:12px}
+section.lesson{padding-block:40px;border-top:1px solid var(--line);scroll-margin-top:60px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:8px}
+section.lesson>h2{font-size:clamp(1.3rem,3.6vw,1.65rem);margin-bottom:16px}
+h3{font-size:16px;margin:26px 0 10px}
+.prose{max-width:62ch}
+ul.plain{padding-left:20px;margin:0 0 14px}
+ul.plain li{margin-bottom:6px}
+.callout{background:var(--tint);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:20px 0;max-width:68ch}
+.callout.warn{background:var(--warnbg);border-color:var(--warn)}
+.callout .lab{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;color:var(--blue)}
+.callout.warn .lab{color:var(--warn)}
+.callout p:last-child{margin-bottom:0}
+.btn{background:var(--btn);color:var(--onbtn);border:0;border-radius:6px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:13px}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn:disabled{opacity:.5;cursor:default}
+.foot{margin-top:34px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.foot .ok{color:var(--ok);font-weight:700;font-size:13px}
+
+/* flip cards */
+.flipgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:20px 0}
+.flip{background:none;border:0;padding:0;text-align:left;cursor:pointer;perspective:900px;min-width:0}
+.flip-in{display:grid;transition:transform .5s;transform-style:preserve-3d}
+.flip[aria-pressed="true"] .flip-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:8px;padding:18px;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-height:170px}
+.front{background:var(--navy);color:var(--onnavy)}
+.front strong{font-size:16px}
+.front em{margin-top:auto;font-size:11px;font-style:normal;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.back{background:var(--tint);transform:rotateY(180deg);font-size:13px;line-height:1.55}
+@media (prefers-reduced-motion:reduce){.flip-in{transition:none}.track i{transition:none}}
+
+/* tabs */
+.tabs{margin:20px 0;max-width:760px}
+.tablist{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line)}
+.tablist button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 14px;cursor:pointer;font-weight:700;font-size:13px;color:var(--muted)}
+.tablist button[aria-selected="true"]{color:var(--blue);border-bottom-color:var(--blue)}
+.tabs .panel{padding:18px 2px 4px}
+.tabs .panel[hidden]{display:none}
+
+/* accordion */
+details.acc{border:1px solid var(--line);border-radius:6px;margin-bottom:8px;max-width:760px;background:var(--bg)}
+details.acc summary{cursor:pointer;padding:13px 16px;font-weight:700;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"+";color:var(--blue);font-size:18px;line-height:1}
+details.acc[open] summary::after{content:"\2212"}
+details.acc[open]{background:var(--tint)}
+details.acc .in{padding:0 16px 14px}
+
+/* timeline */
+.tl{list-style:none;margin:20px 0;padding:0;max-width:700px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 18px 22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:2px solid var(--bg)}
+.tl time{display:block;font-weight:700;font-size:13px;color:var(--blue)}
+
+/* chain steps */
+.chain{margin:20px 0;max-width:820px}
+.steps{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 14px;list-style:none}
+.steps button{display:flex;gap:8px;align-items:center;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:8px 12px;cursor:pointer;font-size:12.5px;font-weight:700;text-align:left}
+.steps button b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--tint);color:var(--blue);font-size:11px;flex:none}
+.steps button[aria-current="true"]{background:var(--btn);color:var(--onbtn);border-color:var(--btn)}
+.steps button[aria-current="true"] b{background:var(--onbtn);color:var(--btn)}
+.stepdetail{background:var(--tint);border:1px solid var(--line);border-radius:6px;padding:18px}
+.stepdetail h4{font-size:15px;margin-bottom:8px}
+.stepdetail ul{margin:8px 0 0;padding-left:20px}
+
+/* explorer */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0 8px;max-width:820px}
+.tools label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tools input,.tools select{width:100%;font-family:var(--font);font-size:14px;padding:9px 10px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.count{font-size:12px;color:var(--muted);margin:6px 0 12px}
+.chems{display:grid;gap:10px;max-width:820px}
+.chem{border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:6px;min-width:0}
+.chem .top{display:flex;gap:8px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.chem h4{font-size:14px;overflow-wrap:anywhere}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:2px 9px;background:var(--tint);border:1px solid var(--line);color:var(--blue);white-space:nowrap}
+.pill.d{background:var(--warnbg);border-color:var(--warn);color:var(--warn)}
+.chem .row{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.chem .row b{color:var(--ink)}
+.chem .ids{font-variant-numeric:tabular-nums}
+
+/* quiz */
+.quiz{margin:26px 0;max-width:720px}
+.quiz .qh{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--blue);margin-bottom:8px}
+fieldset.q{border:1px solid var(--line);border-radius:6px;padding:16px 18px 14px;margin:0 0 12px;min-width:0}
+fieldset.q legend{font-weight:700;padding:0 6px;max-width:100%}
+.opts{display:grid;gap:8px;margin-top:8px}
+.opt{text-align:left;background:var(--bg);border:1.5px solid var(--line);border-radius:6px;padding:10px 12px;cursor:pointer;line-height:1.45}
+.opt:hover:not(:disabled){border-color:var(--blue);background:var(--tint)}
+.opt.right{background:var(--okbg);border-color:var(--ok)}
+.opt.wrong{background:var(--badbg);border-color:var(--bad)}
+.opt:disabled{cursor:default}
+.fb{margin-top:10px;font-size:13px;padding:10px 12px;border-radius:6px;background:var(--tint)}
+.fb.good{background:var(--okbg);color:var(--ok)}
+.fb.bad{background:var(--badbg);color:var(--bad)}
+.fb b{display:block;margin-bottom:2px}
+.fb span{color:var(--ink)}
+
+/* scenarios */
+.scn{border:1px solid var(--line);border-radius:8px;margin:22px 0;max-width:760px;overflow:hidden}
+.scn header{background:var(--navy);color:var(--onnavy);padding:12px 18px}
+.scn header small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.scn header strong{font-size:15px}
+.scn .body{padding:18px}
+.scn .sit{background:var(--tint);border-radius:6px;padding:12px 14px;margin-bottom:14px;font-size:13.5px}
+.scn .q{font-weight:700;margin-bottom:8px}
+
+/* flag cards */
+.flags{display:grid;gap:10px;margin:18px 0;max-width:760px}
+.fc{border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.fc p{margin:0 0 10px;font-size:13.5px}
+.fc .btns{display:flex;gap:8px;flex-wrap:wrap}
+.fc .btns button{border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 14px;cursor:pointer;font-weight:700;font-size:12.5px}
+.fc .btns button:disabled{cursor:default}
+.fc .btns button.right{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.fc .btns button.wrong{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+.score{font-weight:700;margin-top:6px}
+
+/* certificate */
+.cert{border:2px solid var(--navy);border-radius:8px;padding:28px 22px;margin:22px 0;max-width:620px;text-align:center;background:var(--tint)}
+.cert small{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;color:var(--muted)}
+.cert h3{font-size:20px;margin:10px 0}
+.cert .nm{font-size:22px;font-weight:700;color:var(--blue);margin:10px 0;min-height:30px;overflow-wrap:anywhere}
+.namefield{max-width:360px;margin:14px 0}
+.namefield label{display:block;font-size:12px;margin-bottom:4px;color:var(--muted)}
+.namefield input{width:100%;font-family:var(--font);font-size:14px;padding:9px 10px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.src{font-size:12px;color:var(--muted);max-width:68ch}
+.src li{margin-bottom:6px}
+
+/* registration + results */
+body.gated .layout{grid-template-columns:minmax(0,1fr)}
+body.gated .toc{display:none!important}
+body.gated .bar button.menu{display:none}
+.reg{border:1px solid var(--line);border-radius:8px;padding:20px;margin:6px 0 8px;max-width:760px;background:var(--tint)}
+.reg h2{font-size:17px;margin-bottom:8px}
+.reg .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0 8px}
+.reg label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+.reg input{width:100%;font-family:var(--font);font-size:14px;padding:10px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.reg .sub,.adm .sub{font-size:12.5px;color:var(--muted);margin:0 0 12px}
+.reg .acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.err{color:var(--bad);font-size:12.5px;margin:6px 0}
+.adm{margin:22px 0;max-width:900px;border:1px solid var(--line);border-radius:8px;padding:18px}
+.adm h2{font-size:17px;margin-bottom:4px}
+.mets{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.met{background:var(--tint);border-radius:6px;padding:12px}
+.met b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.met span{font-size:12px;color:var(--muted)}
+.scroll{overflow-x:auto;margin-top:12px}
+table.res{border-collapse:collapse;width:100%;min-width:640px;font-size:12.5px}
+table.res th,table.res td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.res th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+table.res td.num{font-variant-numeric:tabular-nums}
+.pill.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+
+:root{--logoband:#FFFFFF}
+.banner{background:var(--logoband);color:#12263F;border-bottom:4px solid #2B86D1}
+.banner .wrap{padding-block:14px;justify-content:center}
+.logo{display:block;margin:0 auto;width:min(420px,100%);height:auto}
+
+
+.langsw{display:flex;gap:0;border:1px solid rgba(255,255,255,.45);border-radius:5px;overflow:hidden}
+.langsw button{background:transparent;border:0;color:var(--onnavy);padding:6px 12px;cursor:pointer;font-size:12px;font-weight:700}
+.langsw button[aria-pressed="true"]{background:#fff;color:#0A2A52}
+.bar .wrap .spacer{flex:0}
+.vid video{width:100%;max-width:860px;display:block;border-radius:8px;background:#000;aspect-ratio:16/9}
+.vid .sub{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.chaps{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;max-width:860px}
+.chap{display:flex;gap:10px;align-items:baseline;text-align:left;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:8px 12px;cursor:pointer;font-size:12.5px;min-width:0}
+.chap:hover{border-color:var(--blue);background:var(--tint)}
+.chap b{color:var(--blue);font-variant-numeric:tabular-nums;flex:none}
+.cert .clogo{display:block;margin:0 auto 12px;max-width:200px;height:auto;border-radius:4px;background:#fff;padding:4px}
+.finres{margin-top:14px;max-width:720px}
+.tabs .panel .scroll{margin-top:8px}
+.tabs{max-width:900px}
+.tablist button{font-size:12.5px;padding:9px 11px}
+
+</style>
+<header class="banner"><div class="wrap"><strong style="font-size:19px;letter-spacing:.02em">CITES Timber ID · Training</strong></div></header>
+<div class="bar"><div class="wrap">
+<button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="toc">Contents</button>
+<div class="track" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="prog"><i id="progFill"></i></div>
+<div class="pct" id="pct"></div>
+<div id="langSw" hidden></div>
+</div></div>
+<div class="wrap layout">
+<nav class="toc" id="toc" aria-label="Course contents"><h2>Contents</h2><div id="tocList"></div></nav>
+<main>
+<div class="hero"><div class="kicker" id="kick"></div><h1 id="title"></h1><p class="lede" id="lede"></p><ul class="meta" id="meta"></ul></div>
+<section class="reg" id="reg" aria-labelledby="regh"></section>
+<section class="adm" id="admin" hidden aria-live="polite"></section>
+<div id="lessons"></div>
+</main></div>
+<script src="config.js"></script>
+<script>
+var CHAPTERS={"en": [["Protected wood?", 0], ["What CITES does", 13], ["Groups to know", 33], ["New in 2022", 60], ["What is covered", 78], ["Why whole genera", 92], ["Field method", 104], ["Limits", 123], ["Kosso warning", 143]]};
+
+/* ---------- language + UI strings ---------- */
+var LANGS=["en"];
+var LI=0;
+var UI={
+ contents:["Contents","Sommaire"],lessons:["lessons","leçons"],of:["of","sur"],
+ flip:["Tap to flip","Touchez pour retourner"],flipHint:["Tap each card to turn it over.","Touchez chaque carte pour la retourner."],
+ check:["Knowledge check","Test de connaissances"],assess:["Assessment","Évaluation"],
+ right:["Correct","Correct"],notq:["Not quite","Pas tout à fait"],notbest:["Not the best choice","Ce n'est pas le meilleur choix"],
+ scn:["Scenario","Scénario"],next:["Next decision","Décision suivante"],finish:["Finish","Terminer"],replay:["Replay","Rejouer"],scnDone:["Scenario complete","Scénario terminé"],
+ showing:["Showing","Affichage de"],entriesOf:["of","sur"],rows:["rows","lignes"],nomatch:["No match. Try a shorter name or clear a filter.","Aucun résultat. Essayez un nom plus court ou retirez un filtre."],
+ search:["Search","Recherche"],searchPh:["Name, CAS or UN number","Nom, numéro CAS ou ONU"],table:["Table","Tableau"],both:["Both tables","Les deux tableaux"],linked:["Linked to","Lié à"],anyDrug:["Any drug","Toutes les drogues"],
+ legit:["Legitimate use","Usage légitime"],inDrug:["Role in drug making","Rôle dans la fabrication"],designer:["Designer precursor","Précurseur de synthèse"],
+ flagB:["Red flag","Signal d'alerte"],routineB:["Routine","Normal"],youGot:["You got","Vous avez"],rightOf:["right.","bonne(s) réponse(s) sur"],
+ mark:["Mark complete and continue","Terminer la leçon et continuer"],cont:["Continue","Continuer"],lessonDone:["Lesson complete","Leçon terminée"],
+ watch:["Watch the video","Regarder la vidéo"],chapters:["Chapters","Chapitres"],vidFail:["The video could not be loaded. Reload the page or try another connection.","La vidéo n'a pas pu être chargée. Rechargez la page ou essayez une autre connexion."],
+ before:["Before you start","Avant de commencer"],welcome:["Welcome,","Bienvenue,"],regAs:["Registered as","Inscrit(e) sous le nom"],dateDone:["Date completed:","Date de fin :"],notYet:["not completed yet","pas encore terminé"],best:["Best score:","Meilleur score :"],
+ changeName:["Change name","Changer de nom"],enterName:["Enter your name as it should appear on your certificate.","Saisissez votre nom tel qu'il doit apparaître sur votre certificat."],
+ first:["First name","Prénom"],last:["Surname","Nom de famille"],dateAuto:["Date completed is filled in automatically when you pass the assessment.","La date de fin est ajoutée automatiquement lorsque vous réussissez l'évaluation."],
+ start:["Start course","Commencer le cours"],saveName:["Save name","Enregistrer le nom"],cancel:["Cancel","Annuler"],checking:["Checking for saved progress","Recherche de la progression enregistrée"],
+ preview:["Preview the course without registering","Aperçu du cours sans inscription"],bothNames:["Enter both your first name and your surname.","Saisissez votre prénom et votre nom de famille."],
+ scoresRec:["Your result is sent to your trainer when you finish.","Votre résultat est transmis à votre formateur à la fin."],scoresLocal:["Your progress is saved on this device. At the end you can send your result to your trainer.","Votre progression est enregistrée sur cet appareil. À la fin, vous pourrez envoyer votre résultat à votre formateur."],
+ recOk:["Your result has been sent to your trainer.","Votre résultat a été envoyé à votre formateur."],recFail:["Your result could not be sent automatically. Use the button below to send it to your trainer.","Votre résultat n'a pas pu être envoyé automatiquement. Utilisez le bouton ci-dessous pour l'envoyer à votre formateur."],recLocal:["Use the button below to send your result to your trainer.","Utilisez le bouton ci-dessous pour envoyer votre résultat à votre formateur."],
+ passed:["Passed","Réussi"],notPassed:["Not passed yet","Pas encore réussi"],answered:["You answered","Vous avez répondu correctement à"],correctOf:["correctly","question(s) sur"],reviewTry:[" Review the lessons and try again."," Revoyez les leçons et réessayez."],
+ certOrg:["CITES Timber ID · Mr Minfin course",""],certTitle:["Certificate of completion","Certificat de réussite"],certThat:["This certifies that","Ceci certifie que"],
+ certBody:["completed the course CITES-Protected African Wood: Identification for Officers with a score of",""],certOut:["out of","sur"],certShot:["Take a screenshot to keep your certificate.","Faites une capture d'écran pour conserver votre certificat."],
+ retake:["Retake assessment","Repasser l'évaluation"],
+ admTitle:["Course results","Résultats du cours"],admSub:["Only you and other editors see this. Each learner appears once, with their best score.","Vous seul et les autres éditeurs voyez ceci. Chaque participant apparaît une fois, avec son meilleur score."],
+ admNone:["Results are not available in this view.","Les résultats ne sont pas disponibles dans cette vue."],csv:["Download results (CSV)","Télécharger les résultats (CSV)"],
+ mReg:["Registered","Inscrits"],mPass:["Passed","Réussis"],mAvg:["Average best score","Score moyen (meilleur essai)"],noRes:["No results yet. They appear here as people register and finish.","Aucun résultat pour l'instant. Ils apparaissent ici à mesure que les personnes s'inscrivent et terminent."],
+ thName:["Name","Nom"],thLessons:["Lessons","Leçons"],thAtt:["Attempts","Essais"],thBest:["Best","Meilleur"],thLast:["Last","Dernier"],thDate:["Date completed","Date de fin"],thStatus:["Status","Statut"],inProg:["In progress","En cours"],noName:["(no name)","(sans nom)"],loadFail:["Could not load results.","Impossible de charger les résultats."],
+ srcTitle:["Sources and currency","Sources et mise à jour"],
+ trainerL:["Trainer or group (optional)","Formateur ou groupe (facultatif)"],sendRes:["Send my result to my trainer","Envoyer mon résultat à mon formateur"],copyRes:["Copy my result","Copier mon résultat"],copied:["Result copied. Paste it in an email to your trainer.","Résultat copié. Collez-le dans un e-mail à votre formateur."],
+ byEnd:["By the end you can","À la fin, vous saurez"]
+};
+function u(k){return UI[k][LI]}
+function x(p){return p[LI]}
+
+/* ---------- lessons ---------- */
+var TERMS=[[["CITES"], ["The Convention on International Trade in Endangered Species of Wild Fauna and Flora. Over 180 countries use it to control trade in listed species, trees included."]], [["Appendix II"], ["Trade is allowed but only with an export permit, issued after the exporting country finds the trade legal and not harmful to wild populations."]], [["Annotation"], ["A note on a listing that says which parts and products are covered. Annotation #17 covers logs, sawn wood, veneer sheets, plywood and transformed wood."]], [["Look-alike species"], ["A species listed because it is hard to tell apart from a protected one. Officers can then control both."]]];
+var QUIZ={"q1": {"items": [{"q": ["Why does a customs officer need to know about CITES when inspecting timber?"], "o": [["Because some tree species are listed and their trade needs CITES permits"], ["Because all wood trade is banned"], ["Because CITES only covers animals"], ["Because only finished furniture is controlled"]], "a": 0, "w": ["Many tree species are listed in the CITES Appendices. Trade in them needs the right permit, and timber is one of the most traded listed products."]}, {"q": ["What is a look-alike species?"], "o": [["A species that can be told apart in seconds"], ["A species listed because it is hard to distinguish from a protected one"], ["A species that only grows in one country"], ["A plastic imitation of wood"]], "a": 1, "w": ["Look-alike listings let officers control species that are easily confused with a protected one."]}]}, "q2": {"items": [{"q": ["What does an Appendix II listing require for export?"], "o": [["No paperwork at all"], ["An export permit issued after the exporting country makes its legal and sustainability findings"], ["Only a plant health certificate"], ["A ban on all exports"]], "a": 1, "w": ["Appendix II allows trade under control. The export permit is the proof that the checks were made."]}, {"q": ["Which body meets every few years and decides changes to the Appendices?"], "o": [["The Conference of the Parties (CoP)"], ["The WCO Council"], ["Interpol"], ["The national customs office"]], "a": 0, "w": ["The Parties meet at the CoP and vote on proposals to add, move or delete species."]}]}, "qv": {"items": [{"q": ["What is the sensible first question about a shipment of African wood?"], "o": [["Is it painted?"], ["Is the species or genus listed, and is there a permit that matches?"], ["What colour is the truck?"], ["Is it heavier than 10 tonnes?"]], "a": 1, "w": ["A good first question is whether the wood may be a listed species, and whether a matching permit is present."]}, {"q": ["What does the video say about the kosso (Pterocarpus erinaceus) trade?"], "o": [["It is completely free of controls"], ["It is listed, and it has been under trade suspension recommendations since 2022"], ["It was removed from the list in 2017"], ["It is only covered if painted"]], "a": 1, "w": ["Kosso went to Appendix III in 2016 and Appendix II in 2017, and trade suspension recommendations have applied since 2022. Always check the current status."]}]}, "q3": {"items": [{"q": ["Which African timber genus is listed as a whole genus in Appendix II since 2017?"], "o": [["Dalbergia"], ["Teak (Tectona)"], ["Oak (Quercus)"], ["Pine (Pinus)"]], "a": 0, "w": ["All Dalbergia species have been in Appendix II since 2 January 2017. That includes African rosewoods and African blackwood."]}, {"q": ["Which African timber, sold as afrormosia, has been in Appendix II since 1992?"], "o": [["Pericopsis elata"], ["Khaya ivorensis"], ["Milicia excelsa"], ["Entandrophragma cylindricum"]], "a": 0, "w": ["Pericopsis elata (afrormosia) has been in Appendix II since 1992. Annotation #17 has applied to it since 2019."]}]}, "q4": {"items": [{"q": ["Annotation #17 covers which products?"], "o": [["Only live trees"], ["Logs, sawn wood, veneer sheets, plywood and transformed wood"], ["Only leaves and seeds"], ["Only finished musical instruments"]], "a": 1, "w": ["Annotation #17 names these product types. Always read the annotation for the exact species, since annotations differ."]}, {"q": ["At CoP19 in 2022, which African timber groups were added to Appendix II with annotation #17, applying from February 2023?"], "o": [["Afzelia, Khaya and African Pterocarpus"], ["Teak and oak"], ["Pine and spruce"], ["Bamboo only"]], "a": 0, "w": ["CoP19 listed Afzelia, Khaya and African Pterocarpus species. The listings apply from February 2023."]}]}, "q8": {"items": [{"q": ["A hand lens gives you strong clues about a piece of wood. What can it NOT always do?"], "o": [["Show the pores and rings"], ["Name the exact species with certainty"], ["Show the end grain"], ["Help you narrow down the group"]], "a": 1, "w": ["Macroscopic checks usually get you to a group or genus. Species-level certainty can need a trained wood anatomist, a lab or DNA analysis."]}]}};
+var FINAL=[{"q": ["Which statement about Appendix II is correct?"], "o": [["Exports need a permit that shows legal and sustainable findings"], ["Trade is banned completely"], ["No paperwork is needed"], ["It applies only to live plants"]], "a": 0, "w": ["Appendix II controls trade through permits, it does not ban it."]}, {"q": ["From which date has the whole genus Dalbergia been in Appendix II?"], "o": [["2 January 2017"], ["1 January 1992"], ["9 May 2016 only"], ["February 2023"]], "a": 0, "w": ["Annotation #15 applies. Check the annotation for the exact products covered."]}, {"q": ["What did CoP19 (Panama, November 2022) do for African timber?"], "o": [["Listed Afzelia, Khaya and African Pterocarpus in Appendix II with annotation #17"], ["Removed all African timber from the list"], ["Banned every wood export"], ["Listed only teak"]], "a": 0, "w": ["These listings started to apply in February 2023."]}, {"q": ["Which products does annotation #17 cover?"], "o": [["Logs, sawn wood, veneer sheets, plywood and transformed wood"], ["Only living trees"], ["Only seeds"], ["Only paper"]], "a": 0, "w": ["Always read the annotation for the species in front of you."]}, {"q": ["What is the main purpose of the look-alike rule?"], "o": [["To control species that are hard to tell apart from protected ones"], ["To ban cheap wood"], ["To help sellers rename wood"], ["To end inspections"]], "a": 0, "w": ["A look-alike listing helps officers where exact species is hard to prove."]}, {"q": ["What is the first step when a timber shipment arrives?"], "o": [["Compare declaration, invoice and permit against the goods"], ["Cut the logs open"], ["Accept the shipment without checks"], ["Ask the driver which species it is"]], "a": 0, "w": ["Start with the paperwork and the goods in front of you."]}, {"q": ["What does a 10x hand lens help you look at?"], "o": [["End grain features such as pores, rings and rays"], ["Fuel levels"], ["Truck tyres"], ["Permit stamps only"]], "a": 0, "w": ["A lens on a clean cut end grain shows the features used in wood identification."]}, {"q": ["Which statement about CITESwoodID is correct?"], "o": [["It is an identification tool covering 53 CITES species, to support macroscopic identification"], ["It replaces the CITES permit"], ["It works only for animals"], ["It can identify any wood from a photo with 100% accuracy"]], "a": 0, "w": ["It supports identification but is not a replacement for expert confirmation."]}, {"q": ["What is the right action when the species stays doubtful after your checks?"], "o": [["Hold the goods and send a sample to a wood expert or lab, following your procedure"], ["Release the goods quickly"], ["Guess the species"], ["Return the goods to the exporter without recording anything"]], "a": 0, "w": ["Keep the goods, record what you saw and ask for expert help."]}, {"q": ["Kosso (Pterocarpus erinaceus) is a good example because:"], "o": [["It is listed, and trade suspension recommendations have applied since 2022, so you should check the current status"], ["It was never listed"], ["It is only a decorative plant"], ["It is covered only in 1992"]], "a": 0, "w": ["Listings and recommendations change, so always check the current CITES information."]}];
+var TOTAL=FINAL.length,PASS=7;
+var CHAIN=[[["Check the paperwork"], ["Compare the declaration, invoice, CITES permit and phytosanitary papers. The species name, quantity and product type should match."], [["Does the species name match everywhere?"], ["Is there a CITES export permit where one is required?"]]], [["Look at the product"], ["Identify what is in front of you: logs, sawn wood, veneer, plywood or a finished product. The type decides which annotation applies."], [["Is the product type covered by the annotation?"], ["Are there marks, stamps or labels, and do they match the papers?"]]], [["Prepare a clean end grain"], ["Use a sharp blade to make a clean cut on the end grain. A dirty or sanded surface hides the features."], [["Is the cut surface clean and flat?"], ["Is the lighting good enough to see detail?"]]], [["Read the features with a 10x lens"], ["Look at pores (vessels), axial parenchyma, rays, growth rings and colour. Record what you see with a photo and notes."], [["Pore size, distribution and contents?"], ["Ray width and parenchyma pattern?"]]], [["Compare with a reference"], ["Use a tool such as CITESwoodID or an official reference collection and compare the features. Note which listed species it could match."], [["Which candidate species or genera fit the features?"], ["Do any of them appear in the CITES Appendices?"]]], [["Decide, escalate and record"], ["If the match is clear, act under your procedure. If doubtful, hold the goods, take a sample and ask an expert or lab. Keep photos, notes and sample numbers."], [["Who is your expert contact or lab?"], ["Is the chain of custody recorded?"]]]];
+var FLAGS=[[["A permit lists Pterocarpus erinaceus sawn wood, quantity and exporter match the invoice, and the permit is verified with the issuing authority."], "routine", ["Everything agrees and the permit is verified. Routine."]], [["The papers say 'hardwood, mixed' for 40 cubic metres of dark red sawn boards. No species name and no permit."], "flag", ["A vague description with no species and no permit is a strong indicator."]], [["The invoice names a common unlisted species, but the end grain and colour look like a protected rosewood."], "flag", ["A mismatch between the declaration and the wood itself is a core red flag."]], [["A shipment of teak flooring has a normal invoice and shows teak features under the lens."], "routine", ["Teak is not in the CITES Appendices. Routine, subject to other national rules."]], [["The wood is described as 'padouk', but the permit names a different country from the origin on the packing list."], "flag", ["Conflicting origins between documents need to be explained before release."]], [["Veneer sheets are declared under a commercial name that is not on the permit, and the exporter asks to skip inspection."], "flag", ["Name mismatch plus pressure to skip inspection is a classic warning pattern."]], [["A container of logs has a permit, the markings on the logs match the permit numbers, and the quantity matches."], "routine", ["Documents, marks and quantity agree. Routine."]], [["Wood is declared as 'plywood', but the face veneer looks like an Appendix II species and the permit is missing."], "flag", ["Transformed products can be covered by the annotation. Check the species and the annotation."]]];
+var SCN={"s1": {"title": ["The container of red boards"], "intro": ["A container arrives declared as 'African hardwood boards', 25 cubic metres. The invoice does not give a species. There is no CITES permit. The wood is dark red and the end grain shows large pores."], "steps": [{"q": ["What is your first action?"], "o": [[["Release it because the invoice looks normal"], 0, ["The invoice gives no species, so it cannot be cleared on paper alone."]], [["Hold the consignment, ask for the species name and any CITES permit, and start the end-grain check"], 1, ["Correct. Hold, ask for the papers and check the goods."]], [["Tell the importer it is fine and move on"], 0, ["Never clear goods you have not checked."]]]}, {"q": ["Your lens check points to a group that includes listed species, but you cannot be certain. What next?"], "o": [[["Guess the most likely species and write it down as fact"], 0, ["A guess is not a finding. Record what you saw and ask for confirmation."]], [["Take photos and a sample, record everything and send it to the expert or lab under your procedure"], 1, ["Correct. Evidence and expert confirmation protect the case."]], [["Return the container to the exporter at once"], 0, ["Sending it back moves the problem elsewhere and may destroy evidence."]]]}], "end": ["You held the goods, checked them and sent the doubt to an expert without guessing."]}, "s2": {"title": ["The permit that does not match"], "intro": ["A shipment of sawn kosso (Pterocarpus erinaceus) arrives with a CITES permit. The permit shows a smaller quantity than what is in the container, and the country of origin on the permit differs from the packing list."], "steps": [{"q": ["What does this suggest?"], "o": [[["A harmless typing error, so release the goods"], 0, ["A quantity and origin mismatch must be explained, not assumed away."]], [["The permit may not cover this shipment, so verify it with the issuing authority before release"], 1, ["Correct. Verify the permit with the authority that issued it."]], [["A problem only for the exporter, not for customs"], 0, ["Customs checks that the permit matches the goods."]]]}, {"q": ["The issuing authority cannot confirm the permit. What is the best next step?"], "o": [[["Detain the goods under your national CITES law, preserve the evidence and inform the CITES authority and investigators"], 1, ["Correct. Use your legal powers, document everything and involve the right authorities."]], [["Release the goods and ask the importer to sort it out later"], 0, ["Once released, the control is lost."]], [["Ask the exporter to send a new permit and keep the goods unrecorded"], 0, ["Record everything. A replacement permit must also be verified."]]]}], "end": ["You verified the permit, detained the goods and passed the case to the right authorities."]}};
+var LESSONS=[{"id": "l1", "min": 4, "title": ["Why protected wood matters"], "blocks": [{"k": "p", "t": [["Timber is one of the most traded natural products. Some tree species are heavily harvested and at risk in the wild. CITES lets countries control the trade in these species so that it stays legal and does not threaten wild populations."], ["Customs and border officers are the last check. A shipment declared as 'hardwood' can hide a protected species, and many protected woods look alike. This course shows what is covered, how to check a shipment and when to ask an expert."]]}, {"k": "h", "t": ["Four terms you will hear"]}, {"k": "flips"}, {"k": "co", "warn": 1, "lab": ["Keep in mind"], "ps": [["A name on an invoice is not proof. Commercial timber names are often used for several species. Check the papers and the wood together."]]}, {"k": "quiz", "id": "q1"}]}, {"id": "l2", "min": 5, "title": ["How CITES works"], "blocks": [{"k": "p", "t": [["The Convention sorts species into three Appendices. The level of control depends on the Appendix. The Parties meet at the Conference of the Parties (CoP) and decide changes to the lists."]]}, {"k": "tabs", "items": [{"t": ["Appendix I"], "p": [["Species threatened with extinction. Commercial trade is generally not allowed. Import and export permits are needed for the rare exceptions."]]}, {"t": ["Appendix II"], "p": [["Species that may become threatened if trade is not controlled. Trade needs an export permit. The exporting country must find the trade legal and not harmful to wild populations. Most listed African timbers are in Appendix II."]]}, {"t": ["Appendix III"], "p": [["Species that one country asks others to help control. An export permit or certificate of origin is needed, depending on the country. Kosso (Pterocarpus erinaceus) was listed here in 2016 before it moved to Appendix II."]]}]}, {"k": "h", "t": ["Key dates for African timber"]}, {"k": "tl", "items": [[["1992"], ["Pericopsis elata (afrormosia) in Appendix II"]], [["9 May 2016"], ["Pterocarpus erinaceus (kosso) listed in Appendix III"]], [["2 January 2017"], ["Whole genus Dalbergia in Appendix II; Pterocarpus erinaceus in Appendix II; Guibourtia demeusei, pellegriniana and tessmannii in Appendix II"]], [["November 2022"], ["CoP19 in Panama lists Afzelia, Khaya and African Pterocarpus in Appendix II with annotation #17"]], [["February 2023"], ["The CoP19 listings begin to apply"]], [["November to December 2025"], ["CoP20 in Samarkand. Proposals to delete Afzelia bipindensis and Pterocarpus soyauxii were rejected in committee. Check the final decisions on the CITES website."]]]}, {"k": "quiz", "id": "q2"}]}, {"id": "l3", "min": 5, "title": ["Video: protected African wood in 3 minutes"], "blocks": [{"k": "p", "t": [["Mr Minfin walks through the idea in about three minutes: what CITES does, which African groups to know, what is covered and how to check wood in the field. Captions are in the picture. Use the chapter buttons to jump to a topic."]]}, {"k": "video"}, {"k": "co", "lab": ["Level of detail"], "ps": [["The video is a recognition-level overview for officers. It does not replace the current CITES lists or an expert identification."]]}, {"k": "quiz", "id": "qv"}]}, {"id": "l4", "min": 6, "title": ["African timbers on the list"], "blocks": [{"k": "p", "t": [["The groups below are the ones from the video. They are examples, not a complete list. Many more species are listed, so always check the current Appendices."]]}, {"k": "table", "head": [["Group"], ["Trade names (examples)"], ["Listing"]], "rows": [[["Dalbergia (whole genus)"], ["African blackwood, rosewoods"], ["Appendix II since 2 January 2017, annotation #15"]], [["Guibourtia demeusei, pellegriniana, tessmannii"], ["Bubinga, kevazingo"], ["Appendix II since 2 January 2017"]], [["Pterocarpus erinaceus"], ["Kosso, African rosewood"], ["Appendix III 2016, Appendix II since 2 January 2017; trade suspension recommendations since 2022"]], [["Afzelia, Khaya, African Pterocarpus"], ["Doussié, African mahogany, padouk"], ["Appendix II since CoP19, annotation #17, applying from February 2023"]], [["Pericopsis elata"], ["Afrormosia"], ["Appendix II since 1992; annotation #17 since 2019"]]]}, {"k": "co", "warn": 1, "lab": ["Check the live list"], "ps": [["Trade names vary by country and listings change at each CoP. Use the official CITES Species+ database to confirm the current status of a species."]]}, {"k": "quiz", "id": "q3"}]}, {"id": "l5", "min": 5, "title": ["What is covered"], "blocks": [{"k": "p", "t": [["Listings come with annotations that say which parts and products are covered. For many African timbers the relevant one is annotation #17."]]}, {"k": "acc", "items": [{"open": 1, "t": ["Annotation #17"], "p": ["Covers logs, sawn wood, veneer sheets, plywood and transformed wood. Applies to the African timbers listed at CoP19 and to afrormosia since 2019."]}, {"t": ["Why whole genera?"], "p": ["Species inside a genus are hard to tell apart, especially once the wood is cut. Listing a whole genus, such as Dalbergia, makes control practical."]}, {"t": ["Look-alike rule"], "p": ["A species may be listed because it looks like a protected one. This helps officers control both without proving the exact species in every case."]}, {"t": ["Finished and transformed products"], "p": ["Check the annotation for the species. Some annotations cover transformed wood and others exclude certain finished products."]}]}, {"k": "quiz", "id": "q4"}]}, {"id": "l6", "min": 7, "title": ["Identification step by step"], "blocks": [{"k": "p", "t": [["Macroscopic identification means looking at the wood with the eye and a 10x hand lens. Select each step to see what to do."]]}, {"k": "chain"}, {"k": "co", "lab": ["Tools"], "ps": [["CITESwoodID is a reference tool that covers 53 CITES species. A 2024 study in Frontiers reported 82.3% accuracy for an AI identification model. Both support your work. Neither replaces expert confirmation."]]}]}, {"id": "l7", "min": 6, "title": ["Spotting red flags"], "blocks": [{"k": "p", "t": [["No single indicator proves illegal trade. A cluster of indicators, or one that cannot be explained, turns a routine shipment into a targeted check."]]}, {"k": "tabs", "items": [{"t": ["Documents"], "ul": [["No species name, or only 'hardwood'."], ["CITES permit missing, expired or not verifiable."], ["Quantity, origin or product type differ between documents."], ["Altered or re-issued papers."]]}, {"t": ["The wood"], "ul": [["End grain does not fit the declared species."], ["Products that look like transformed protected wood: plywood faces, veneer."], ["Marks that do not match the permit."]]}, {"t": ["Behaviour"], "ul": [["Pressure to clear quickly or skip inspection."], ["Odd routing through several countries."], ["Parties linked to earlier cases."]]}]}, {"k": "h", "t": ["Flag or routine?"]}, {"k": "p", "t": [["Decide for each situation. Feedback appears after you choose."]]}, {"k": "flags"}]}, {"id": "l8", "min": 6, "title": ["Scenarios"], "blocks": [{"k": "p", "t": [["Two situations, one decision at a time. Wrong choices explain themselves and you can try again."]]}, {"k": "scn", "id": "s1"}, {"k": "scn", "id": "s2"}]}, {"id": "l9", "min": 4, "title": ["Limits and next steps"], "blocks": [{"k": "co", "warn": 1, "lab": ["Know the limits"], "ps": [["A hand lens usually gets you to a group or genus. Confirming the exact species can need a trained wood anatomist, a laboratory or DNA analysis. When the result is doubtful, say so."]]}, {"k": "acc", "items": [{"open": 1, "t": ["If in doubt"], "p": ["Hold the goods under your procedure. Take photos of the whole load, the marks and the end grain. Take a sample and label it. Ask your CITES authority or reference laboratory."]}, {"t": ["Record everything"], "p": ["Note container and seal numbers, parties, times and who handled what. This keeps the chain of custody intact."]}, {"t": ["Kosso warning"], "p": ["Pterocarpus erinaceus has had trade suspension recommendations since 2022. Check which countries are affected before clearing a shipment."]}, {"t": ["Keep current"], "p": ["Listings change at each CoP. Check the CITES Species+ database and your national CITES authority for the current position."]}]}, {"k": "quiz", "id": "q8"}]}, {"id": "l11", "min": 6, "title": ["Final assessment"], "blocks": [{"k": "p", "t": [["Ten questions. You need 7 correct to pass."]]}, {"k": "final"}, {"k": "sources"}]}];
+
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+var KEY="cites-timber-course-v1";
+document.body.classList.add("gated");
+var st={done:[],first:"",last:"",trainer:"",name:"",attempts:0,best:null,lastScore:null,completedAt:null,startedAt:null,lang:null};
+var db=null,uid=null,ref=null,userNs=null,dl=null,ready=false,recState="",isAdmin=false,editing=false,unlocked=false;
+var NL=LESSONS.length;
+
+/* ---------- persistence ---------- */
+function applyRecord(r){
+  if(!r||typeof r!=="object")return;
+  st.first=typeof r.first==="string"?r.first:"";st.last=typeof r.last==="string"?r.last:"";
+  st.trainer=typeof r.trainer==="string"?r.trainer:"";st.name=typeof r.name==="string"?r.name:(st.first+" "+st.last).trim();
+  st.done=Array.isArray(r.lessonsDone)?r.lessonsDone.filter(function(x){return typeof x==="string"}):[];
+  st.attempts=typeof r.attempts==="number"?r.attempts:0;
+  st.best=typeof r.best==="number"?r.best:null;
+  st.lastScore=typeof r.lastScore==="number"?r.lastScore:null;
+  st.completedAt=typeof r.completedAt==="string"?r.completedAt:null;
+  st.startedAt=typeof r.startedAt==="string"?r.startedAt:null;
+  if(r.lang==="en"||r.lang==="fr")st.lang=r.lang;
+}
+function loadLocal(){try{var raw=localStorage.getItem(KEY);if(raw)applyRecord(JSON.parse(raw))}catch(e){}}
+function docBody(){return {first:st.first,last:st.last,trainer:st.trainer,name:st.name,lang:LANGS[LI],lessonsDone:st.done.slice(),lessonsCount:NL,attempts:st.attempts,best:st.best,lastScore:st.lastScore,total:TOTAL,passMark:PASS,passed:!!st.completedAt,startedAt:st.startedAt,completedAt:st.completedAt,updatedAt:new Date().toISOString()}}
+function recText(){
+  if(recState==="ok")return u("recOk");
+  if(recState==="fail")return u("recFail");
+  if(recState==="local")return u("recLocal");
+  return "";
+}
+function setRec(v){recState=v;$$(".recnote").forEach(function(n){n.textContent=recText()})}
+var wBusy=false,wDirty=false;
+function pushRemote(){
+  if(!st.name){return}
+  if(!(db&&uid&&ref)){setRec("local");return}
+  wDirty=true;if(wBusy)return;wBusy=true;
+  (function run(){
+    wDirty=false;
+    ref.set(docBody()).then(function(){if(wDirty){run()}else{wBusy=false;setRec("ok")}},function(){wBusy=false;setRec("fail")});
+  })();
+}
+function save(){
+  if(!(db&&uid)){try{localStorage.setItem(KEY,JSON.stringify(docBody()))}catch(e){}}
+  pushRemote();
+}
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function fmtDate(iso){try{return new Date(iso).toLocaleDateString(LI?"fr-BE":"en-GB",{day:"numeric",month:"long",year:"numeric"})}catch(e){return String(iso).slice(0,10)}}
+function shuf(n){var a=[],i,j,t;for(i=0;i<n;i++)a.push(i);for(i=n-1;i>0;i--){j=Math.floor(Math.random()*(i+1));t=a[i];a[i]=a[j];a[j]=t}return a}
+
+/* ---------- content builders ---------- */
+function paras(parent,list){list.forEach(function(p){parent.appendChild(el("p","",x(p)))})}
+function ulist(parent,list,cls){var ul=el("ul",cls||"plain");list.forEach(function(p){ul.appendChild(el("li","",x(p)))});parent.appendChild(ul);return ul}
+function callout(b){
+  var c=el("div","callout"+(b.warn?" warn":""));c.appendChild(el("span","lab",x(b.lab)));
+  if(b.ps)paras(c,b.ps);if(b.ul)ulist(c,b.ul);return c;
+}
+function flips(){
+  var g=el("div","flipgrid");
+  TERMS.forEach(function(t){
+    var b=el("button","flip");b.type="button";b.setAttribute("aria-pressed","false");
+    var inn=el("div","flip-in"),f=el("div","face front"),k=el("div","face back");
+    f.appendChild(el("strong","",x(t[0])));f.appendChild(el("em","",u("flip")));
+    k.appendChild(el("span","",x(t[1])));
+    inn.appendChild(f);inn.appendChild(k);b.appendChild(inn);
+    b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true")});
+    g.appendChild(b);
+  });
+  return g;
+}
+function tabs(items){
+  var wrap=el("div","tabs"),list=el("div","tablist");list.setAttribute("role","tablist");wrap.appendChild(list);
+  var btns=[],panels=[];
+  items.forEach(function(it,i){
+    var b=el("button","",x(it.t));b.type="button";b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0?"true":"false");
+    var p=el("div","panel");p.setAttribute("role","tabpanel");p.hidden=i!==0;
+    if(it.p)paras(p,it.p);if(it.ul)ulist(p,it.ul);
+    b.addEventListener("click",function(){btns.forEach(function(o,j){o.setAttribute("aria-selected",j===i?"true":"false");panels[j].hidden=j!==i})});
+    btns.push(b);panels.push(p);list.appendChild(b);wrap.appendChild(p);
+  });
+  return wrap;
+}
+function acc(items){
+  var w=el("div");
+  items.forEach(function(it){
+    var d=el("details","acc");if(it.open)d.open=true;
+    d.appendChild(el("summary","",x(it.t)));var i=el("div","in");i.appendChild(el("p","",x(it.p)));d.appendChild(i);w.appendChild(d);
+  });
+  return w;
+}
+function timeline(items){
+  var ul=el("ul","tl");
+  items.forEach(function(it){var li=el("li");li.appendChild(el("time","",x(it[0])));li.appendChild(el("span","",x(it[1])));ul.appendChild(li)});
+  return ul;
+}
+function chain(){
+  var w=el("div","chain"),steps=el("ol","steps"),detail=el("div","stepdetail");detail.setAttribute("aria-live","polite");
+  var btns=[];
+  function show(i){
+    btns.forEach(function(b,j){if(j===i)b.setAttribute("aria-current","true");else b.removeAttribute("aria-current")});
+    var s=CHAIN[i];detail.textContent="";
+    detail.appendChild(el("h4","",x(s[0])));detail.appendChild(el("p","",x(s[1])));
+    detail.appendChild(el("strong","",u("check")==="x"?"":"What to do:"));
+    var ul=el("ul");s[2].forEach(function(q){ul.appendChild(el("li","",x(q)))});detail.appendChild(ul);
+  }
+  CHAIN.forEach(function(s,i){
+    var li=el("li"),b=el("button");b.type="button";b.appendChild(el("b","",String(i+1)));b.appendChild(el("span","",x(s[0])));
+    b.addEventListener("click",function(){show(i)});btns.push(b);li.appendChild(b);steps.appendChild(li);
+  });
+  w.appendChild(steps);w.appendChild(detail);show(0);return w;
+}
+function quiz(id,heading){
+  var data=QUIZ[id],box=el("div","quiz");
+  box.appendChild(el("div","qh",heading||u("check")));
+  data.items.forEach(function(it){
+    var fs=el("fieldset","q");fs.appendChild(el("legend","",x(it.q)));
+    var opts=el("div","opts"),fb=el("div","fb");fb.hidden=true;fb.setAttribute("aria-live","polite");
+    var order=shuf(it.o.length),btns=[];
+    order.forEach(function(oi){
+      var b=el("button","opt",x(it.o[oi]));b.type="button";btns.push([b,oi]);
+      b.addEventListener("click",function(){
+        var ok=oi===it.a;
+        btns.forEach(function(p){p[0].disabled=true;if(p[1]===it.a)p[0].classList.add("right")});
+        if(!ok)b.classList.add("wrong");
+        fb.hidden=false;fb.className="fb "+(ok?"good":"bad");fb.textContent="";
+        fb.appendChild(el("b","",ok?u("right"):u("notq")));fb.appendChild(el("span","",x(it.w)));
+      });
+      opts.appendChild(b);
+    });
+    fs.appendChild(opts);fs.appendChild(fb);box.appendChild(fs);
+  });
+  return box;
+}
+function flags(){
+  var g=el("div","flags"),sc=el("div","score"),n=0,right=0;
+  FLAGS.forEach(function(f){
+    var c=el("div","fc");c.appendChild(el("p","",x(f[0])));
+    var bt=el("div","btns"),fb=el("div","fb");fb.hidden=true;
+    var bf=el("button","",u("flagB")),br=el("button","",u("routineB"));bf.type=br.type="button";
+    function pick(val,btn){
+      var ok=val===f[1];bf.disabled=br.disabled=true;
+      (f[1]==="flag"?bf:br).classList.add("right");if(!ok)btn.classList.add("wrong");
+      fb.hidden=false;fb.className="fb "+(ok?"good":"bad");fb.textContent="";
+      fb.appendChild(el("b","",ok?u("right"):u("notq")));fb.appendChild(el("span","",x(f[2])));
+      n++;if(ok)right++;
+      if(n===FLAGS.length)sc.textContent=u("youGot")+" "+right+" "+(LI?"sur":"of")+" "+FLAGS.length+".";
+    }
+    bf.addEventListener("click",function(){pick("flag",bf)});br.addEventListener("click",function(){pick("routine",br)});
+    bt.appendChild(bf);bt.appendChild(br);c.appendChild(bt);c.appendChild(fb);g.appendChild(c);
+  });
+  g.appendChild(sc);return g;
+}
+function scenario(id,idx){
+  var s=SCN[id],box=el("div","scn"),hd=el("header");
+  hd.appendChild(el("small","",u("scn")+" "+idx));hd.appendChild(el("strong","",x(s.title)));box.appendChild(hd);
+  var body=el("div","body");box.appendChild(body);
+  var step=0;
+  function render(){
+    body.textContent="";
+    var sit=el("div","sit",x(s.intro));body.appendChild(sit);
+    if(step>=s.steps.length){
+      var d=el("div","fb good");d.appendChild(el("b","",u("scnDone")));d.appendChild(el("span","",x(s.end)));body.appendChild(d);
+      var r=el("button","btn ghost",u("replay"));r.type="button";r.style.marginTop="12px";r.addEventListener("click",function(){step=0;render()});body.appendChild(r);return;
+    }
+    var q=s.steps[step];body.appendChild(el("div","q",(step+1)+"/"+s.steps.length+"  "+x(q.q)));
+    var opts=el("div","opts"),fb=el("div","fb");fb.hidden=true;fb.setAttribute("aria-live","polite");
+    shuf(q.o.length).forEach(function(oi){
+      var o=q.o[oi],b=el("button","opt",x(o[0]));b.type="button";
+      b.addEventListener("click",function(){
+        fb.hidden=false;fb.textContent="";
+        if(o[1]){
+          $$(".opt",opts).forEach(function(p){p.disabled=true});b.classList.add("right");
+          fb.className="fb good";fb.appendChild(el("b","",u("right")));fb.appendChild(el("span","",x(o[2])));
+          var nx=el("button","btn",step+1<s.steps.length?u("next"):u("finish"));nx.type="button";nx.style.marginTop="10px";
+          nx.addEventListener("click",function(){step++;render()});fb.appendChild(el("div")).appendChild(nx);
+        }else{
+          b.classList.add("wrong");b.disabled=true;
+          fb.className="fb bad";fb.appendChild(el("b","",u("notbest")));fb.appendChild(el("span","",x(o[2])));
+        }
+      });
+      opts.appendChild(b);
+    });
+    body.appendChild(opts);body.appendChild(fb);
+  }
+  render();return box;
+}
+function explorer(){
+  var w=el("div"),tools=el("div","tools");
+  function fld(label,ctl){var d=el("div"),l=el("label","",label);l.appendChild(document.createElement("span"));d.appendChild(l);d.appendChild(ctl);tools.appendChild(d);return ctl}
+  var inp=el("input");inp.type="search";inp.placeholder=u("searchPh");inp.setAttribute("aria-label",u("search"));
+  var sel=el("select"),sel2=el("select");
+  [["",u("both")],["I",u("table")+" I"],["II",u("table")+" II"]].forEach(function(o){var op=el("option","",o[1]);op.value=o[0];sel.appendChild(op)});
+  var o0=el("option","",u("anyDrug"));o0.value="";sel2.appendChild(o0);
+  Object.keys(LINKNAMES).forEach(function(k){var op=el("option","",x(LINKNAMES[k]));op.value=k;sel2.appendChild(op)});
+  fld(u("search"),inp);fld(u("table"),sel);fld(u("linked"),sel2);
+  var cnt=el("div","count");cnt.setAttribute("aria-live","polite");var list=el("div","chems");
+  w.appendChild(tools);w.appendChild(cnt);w.appendChild(list);
+  function norm(s){return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
+  function draw(){
+    var q=norm(inp.value.trim()),t=sel.value,d=sel2.value,n=0;
+    list.textContent="";
+    CHEMS.forEach(function(c){
+      if(t&&c[2]!==t)return;
+      var keys=c[5].split(/,\s*/);
+      if(d&&keys.indexOf(d)<0)return;
+      var name=c[LI];
+      if(q&&norm(c[0]+" "+c[1]+" "+c[3]+" "+c[4]).indexOf(q)<0)return;
+      n++;
+      var card=el("div","chem"),top=el("div","top");
+      top.appendChild(el("h4","",name));
+      var pills=el("span");pills.appendChild(el("span","pill",u("table")+" "+c[2]));
+      if(c[8]){var p2=el("span","pill d",u("designer"));p2.style.marginLeft="6px";pills.appendChild(p2)}
+      top.appendChild(pills);card.appendChild(top);
+      var r1=el("div","row ids");r1.appendChild(el("b","","CAS "));r1.appendChild(document.createTextNode(c[3]+"   "));r1.appendChild(el("b","",(LI?"ONU ":"UN ")));r1.appendChild(document.createTextNode(c[4]));card.appendChild(r1);
+      var r2=el("div","row");r2.appendChild(el("b","",u("inDrug")+": "));r2.appendChild(document.createTextNode(keys.map(function(k){return LINKNAMES[k]?x(LINKNAMES[k]):k}).join(", ")));card.appendChild(r2);
+      var r3=el("div","row");r3.appendChild(el("b","",u("legit")+": "));r3.appendChild(document.createTextNode(c[LI+6]));card.appendChild(r3);
+      list.appendChild(card);
+    });
+    cnt.textContent=n?(u("showing")+" "+n+" "+u("entriesOf")+" "+CHEMS.length+" "+u("rows")):u("nomatch");
+  }
+  [inp,sel,sel2].forEach(function(c){c.addEventListener("input",draw);c.addEventListener("change",draw)});
+  draw();return w;
+}
+function drugs(){
+  var w=el("div","tabs"),list=el("div","tablist");list.setAttribute("role","tablist");w.appendChild(list);
+  var btns=[],panels=[];
+  DRUGS.forEach(function(d,i){
+    var b=el("button","",x(d.t));b.type="button";b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0?"true":"false");
+    var p=el("div","panel");p.hidden=i!==0;p.setAttribute("role","tabpanel");
+    p.appendChild(el("p","",x(d.intro)));
+    var sc=el("div","scroll"),t=el("table","res"),th=el("thead"),hr=el("tr");
+    [LI?"Produit":"Chemical",u("table"),u("legit"),LI?"Rôle":"Role"].forEach(function(h){hr.appendChild(el("th","",h))});
+    th.appendChild(hr);t.appendChild(th);var tb=el("tbody");
+    d.rows.forEach(function(r){
+      var tr=el("tr");tr.appendChild(el("td","",x(r[0])));tr.appendChild(el("td","",r[1]));tr.appendChild(el("td","",x(r[2])));tr.appendChild(el("td","",x(r[3])));tb.appendChild(tr);
+    });
+    t.appendChild(tb);sc.appendChild(t);p.appendChild(sc);
+    b.addEventListener("click",function(){btns.forEach(function(o,j){o.setAttribute("aria-selected",j===i?"true":"false");panels[j].hidden=j!==i})});
+    btns.push(b);panels.push(p);list.appendChild(b);w.appendChild(p);
+  });
+  return w;
+}
+function video(){
+  var w=el("div","vid"),lang=LANGS[LI],v=document.createElement("video");
+  v.controls=true;v.preload="metadata";v.setAttribute("playsinline","");v.poster="video/poster_en.jpg";v.src="video/Minfin_CITES_Timber_Africa_EN.mp4";
+  v.setAttribute("aria-label","CITES-protected African wood, presented by Mr Minfin");
+  var err=el("p","err",u("vidFail"));err.hidden=true;v.addEventListener("error",function(){err.hidden=false});
+  w.appendChild(v);w.appendChild(err);
+  w.appendChild(el("p","sub","Presenter: Mr Minfin · English · about 3 minutes"));
+  w.appendChild(el("h3","",u("chapters")));
+  var cl=el("div","chaps");
+  CHAPTERS[lang].forEach(function(c){
+    var b=el("button","chap");b.type="button";
+    b.appendChild(el("b","",fmtT(c[1])));b.appendChild(el("span","",c[0]));
+    b.addEventListener("click",function(){try{v.currentTime=c[1];var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}catch(e){}});
+    cl.appendChild(b);
+  });
+  w.appendChild(cl);return w;
+}
+function fmtT(s){s=Math.round(s);var m=Math.floor(s/60),r=s%60;return m+":"+(r<10?"0":"")+r}
+
+
+var CFG=window.COURSE_CONFIG||{};
+function resultText(){return ["CITES African Wood course","Name: "+st.name,"Trainer/group: "+(st.trainer||"-"),"Language: "+LANGS[LI].toUpperCase(),"Score: "+st.lastScore+" / "+TOTAL+" (best "+st.best+")","Passed: "+(st.completedAt?"yes":"no"),"Date: "+(st.completedAt?st.completedAt.slice(0,10):new Date().toISOString().slice(0,10))].join("\n")}
+function postForm(){
+  if(!CFG.formUrl||!CFG.fields)return Promise.reject(new Error("no form"));
+  var f=CFG.fields,p=new URLSearchParams();
+  var v={name:st.name,first:st.first,last:st.last,trainer:st.trainer,lang:LANGS[LI].toUpperCase(),score:String(st.lastScore),best:String(st.best),total:String(TOTAL),passed:st.completedAt?"yes":"no",date:(st.completedAt?st.completedAt:new Date().toISOString()).slice(0,10)};
+  Object.keys(f).forEach(function(k){if(f[k]&&v[k]!=null)p.append(f[k],v[k])});
+  return fetch(CFG.formUrl,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:p.toString()});
+}
+function sendFallback(box){
+  var b=el("button","btn ghost",u(CFG.mailto?"sendRes":"copyRes"));b.type="button";
+  b.addEventListener("click",function(){
+    var t=resultText();
+    if(CFG.mailto){window.location.href="mailto:"+CFG.mailto+"?subject="+encodeURIComponent("CITES wood course result: "+st.name)+"&body="+encodeURIComponent(t);return}
+    function ok(){note.textContent=u("copied")}
+    try{navigator.clipboard.writeText(t).then(ok,function(){window.prompt&&0;note.textContent=t})}catch(e){note.textContent=t}
+  });
+  var note=el("p","sub");box.appendChild(b);box.appendChild(note);
+}
+
+/* ---------- final assessment ---------- */
+function finalBlock(box){
+  var order=shuf(FINAL.length),answered=0,correct=0,res=el("div","finres");res.setAttribute("aria-live","polite");
+  var qs=el("div","quiz");
+  order.forEach(function(qi,k){
+    var it=FINAL[qi],fs=el("fieldset","q");fs.appendChild(el("legend","",(k+1)+". "+x(it.q)));
+    var opts=el("div","opts"),fb=el("div","fb");fb.hidden=true;var btns=[];
+    shuf(it.o.length).forEach(function(oi){
+      var b=el("button","opt",x(it.o[oi]));b.type="button";btns.push([b,oi]);
+      b.addEventListener("click",function(){
+        var ok=oi===it.a;btns.forEach(function(p){p[0].disabled=true;if(p[1]===it.a)p[0].classList.add("right")});
+        if(!ok)b.classList.add("wrong");
+        fb.hidden=false;fb.className="fb "+(ok?"good":"bad");fb.textContent="";
+        fb.appendChild(el("b","",ok?u("right"):u("notq")));fb.appendChild(el("span","",x(it.w)));
+        answered++;if(ok)correct++;
+        if(answered===FINAL.length)finish();
+      });
+      opts.appendChild(b);
+    });
+    fs.appendChild(opts);fs.appendChild(fb);qs.appendChild(fs);
+  });
+  box.appendChild(qs);box.appendChild(res);
+  function finish(){
+    var pass=correct>=PASS;
+    st.attempts++;st.lastScore=correct;if(st.best==null||correct>st.best)st.best=correct;
+    if(pass){if(!st.completedAt)st.completedAt=new Date().toISOString();if(st.done.indexOf("l11")<0)st.done.push("l11")}
+    save();updateProgress();
+    if(CFG.formUrl)postForm().then(function(){setRec("ok")},function(){setRec("fail")});
+    res.textContent="";
+    var s=el("p","score",u("answered")+" "+(LI?(correct+" "+u("correctOf")+" "+TOTAL):(correct+" of "+TOTAL+" "+u("correctOf")))+"."+(pass?"":u("reviewTry")));
+    res.appendChild(s);
+    res.appendChild(el("span","pill"+(pass?" ok":""),pass?u("passed"):u("notPassed")));
+    var note=el("p","sub recnote","");res.appendChild(note);if(!CFG.formUrl)setRec("local");
+    sendFallback(res);
+    if(pass){
+      var c=el("div","cert");
+      var lg=$(".logo");if(lg){var im=el("img","clogo");im.src=lg.src;im.alt="";im.width=200;c.appendChild(im)}
+      c.appendChild(el("small","",u("certOrg")));c.appendChild(el("h3","",u("certTitle")));
+      c.appendChild(el("small","",u("certThat")));c.appendChild(el("div","nm",st.name||"…"));
+      c.appendChild(el("p","",u("certBody")+" "+correct+" "+u("certOut")+" "+TOTAL+"."));
+      c.appendChild(el("small","",fmtDate(st.completedAt)));
+      res.appendChild(c);res.appendChild(el("p","sub",u("certShot")));
+    }
+    var rt=el("button","btn ghost",u("retake"));rt.type="button";rt.addEventListener("click",function(){var h=box.parentNode;var i=box.nextSibling;box.remove();var nb=el("div");h.insertBefore(nb,i);finalBlock(nb)});
+    res.appendChild(rt);
+  }
+}
+function sources(){
+  var d=el("div","src");d.appendChild(el("h3","",u("srcTitle")));
+  var ul=el("ul");
+  [
+   ["CITES: The Appendices and annotations. Check the current text on cites.org.","https://cites.org/eng/app/index.php"],
+   ["CITES Species+ database: current listing status of each species.","https://speciesplus.net"],
+   ["CITES Timber: Conference of the Parties CoP19 (Panama, 2022) and CoP20 (Samarkand, 2025) documents.","https://cites.org/eng/cop"],
+   ["CITESwoodID: identification tool for CITES-listed timber.","https://citeswoodid.myspecies.info"]
+  ].forEach(function(s){var li=el("li");var a=el("a","",s[0]);a.href=s[1];a.target="_blank";a.rel="noopener";li.appendChild(a);ul.appendChild(li)});
+  d.appendChild(ul);
+  d.appendChild(el("p","","The Appendices are amended at each Conference of the Parties, so always check the current lists and annotations before acting. Species-level identification from end grain can need expert or laboratory confirmation."));
+  return d;
+}
+
+/* ---------- lessons ---------- */
+function buildBlock(b,lesson){
+  switch(b.k){
+    case "p":{var d=el("div","prose");paras(d,b.t);return d}
+    case "h":return el("h3","",x(b.t));
+    case "flips":return flips();
+    case "co":return callout(b);
+    case "quiz":return quiz(b.id);
+    case "tabs":return tabs(b.items);
+    case "tl":return timeline(b.items);
+    case "acc":return acc(b.items);
+    case "video":return video();
+    case "drugs":return drugs();
+    case "explorer":return explorer();
+    case "chain":return chain();
+    case "flags":return flags();
+    case "scn":return scenario(b.id,b.id==="s1"?1:2);
+    case "final":{var f=el("div");finalBlock(f);return f}
+    case "sources":return sources();
+    case "table":return tableBlock(b);
+  }
+  return el("div");
+}
+function tableBlock(b){
+  var sc=el("div","scroll"),t=el("table","res"),th=el("thead"),hr=el("tr");
+  b.head.forEach(function(h){hr.appendChild(el("th","",x(h)))});th.appendChild(hr);t.appendChild(th);
+  var tb=el("tbody");b.rows.forEach(function(r){var tr=el("tr");r.forEach(function(c){tr.appendChild(el("td","",x(c)))});tb.appendChild(tr)});
+  t.appendChild(tb);sc.appendChild(t);return sc;
+}
+function renderLessons(){
+  var host=$("#lessons");host.textContent="";
+  LESSONS.forEach(function(l,i){
+    var sec=el("section","lesson");sec.id=l.id;sec.setAttribute("aria-labelledby",l.id+"h");
+    sec.appendChild(el("div","kicker",(LI?"Leçon ":"Lesson ")+(i+1)+" · "+l.min+" min"));
+    var h=el("h2","",x(l.title));h.id=l.id+"h";sec.appendChild(h);
+    l.blocks.forEach(function(b){sec.appendChild(buildBlock(b,l))});
+    if(l.id!=="l11"){
+      var foot=el("div","foot"),btn=el("button","btn",u("mark"));btn.type="button";
+      var okmsg=el("span","ok");
+      function mark(){if(st.done.indexOf(l.id)>=0){btn.hidden=true;okmsg.textContent="✓ "+u("lessonDone")}}
+      btn.addEventListener("click",function(){
+        if(st.done.indexOf(l.id)<0)st.done.push(l.id);save();mark();updateProgress();
+        var nx=LESSONS[i+1];if(nx){var t=document.getElementById(nx.id);if(t)t.scrollIntoView({behavior:reduce?"auto":"smooth"})}
+      });
+      foot.appendChild(btn);foot.appendChild(okmsg);sec.appendChild(foot);mark();
+    }
+    host.appendChild(sec);
+  });
+}
+function renderToc(){
+  var list=$("#tocList");list.textContent="";
+  LESSONS.forEach(function(l,i){
+    var b=el("button","t");b.type="button";b.dataset.id=l.id;
+    var n=el("span","n");n.appendChild(el("span","",String(i+1)));b.appendChild(n);b.appendChild(el("span","",x(l.title)));
+    b.addEventListener("click",function(){
+      var t=document.getElementById(l.id);if(t)t.scrollIntoView({behavior:reduce?"auto":"smooth"});
+      $("#toc").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+    });
+    list.appendChild(b);
+  });
+  updateProgress();
+}
+function updateProgress(){
+  var n=st.done.length;
+  $("#progFill").style.width=Math.round(n/NL*100)+"%";
+  $("#prog").setAttribute("aria-valuenow",String(Math.round(n/NL*100)));
+  $("#pct").textContent=n+" "+u("of")+" "+NL+" "+u("lessons");
+  $$("#tocList button").forEach(function(b){b.classList.toggle("done",st.done.indexOf(b.dataset.id)>=0)});
+}
+function renderChrome(){
+  $("#menuBtn").textContent=u("contents");$("#toc h2").textContent=u("contents");
+  $("#kick").textContent="Interactive course";
+  $("#title").textContent="CITES-Protected African Wood: Identification for Officers";
+  $("#lede").textContent="What CITES controls, which African timbers to know, and how to check a shipment with a 10x hand lens. Built for customs, border and law enforcement officers. Includes a video by Mr Minfin.";
+  var m=$("#meta");m.textContent="";
+  [NL+" lessons","About 50 minutes","Video, knowledge checks and 2 scenarios","Your result is recorded when you finish"].forEach(function(t){m.appendChild(el("li","",t))});
+  $$("#langSw button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===LANGS[LI]?"true":"false")});
+  document.documentElement.lang=LANGS[LI];
+  renderToc();renderReg();
+}
+function setLang(l){
+  var i=LANGS.indexOf(l);if(i<0||i===LI)return;
+  LI=i;st.lang=l;try{history.replaceState(null,"","#"+l)}catch(e){}
+  var vids=$$("video");vids.forEach(function(v){try{v.pause()}catch(e){}});
+  renderChrome();if(unlocked)renderLessons();
+  if(st.name)save();
+  if(isAdmin)showAdmin();
+}
+
+/* ---------- registration + admin ---------- */
+function showCourse(scrollTop){
+  unlocked=true;document.body.classList.remove("gated");
+  $("#lessons").hidden=false;renderLessons();updateProgress();
+  if(scrollTop){var t=$("#l1");if(t)t.scrollIntoView({behavior:"auto"})}
+}
+function renderReg(){
+  var box=$("#reg");box.textContent="";
+  var registered=st.name&&!editing;
+  var h=el("h2","",registered?u("welcome")+" "+st.first:u("before"));h.id="regh";box.appendChild(h);
+  if(registered){
+    box.appendChild(el("p","",u("regAs")+" "+st.name+"."+(st.trainer?"  ("+st.trainer+")":"")));
+    box.appendChild(el("p","sub",u("dateDone")+" "+(st.completedAt?fmtDate(st.completedAt):u("notYet"))+(st.best!=null?"  ·  "+u("best")+" "+st.best+" / "+TOTAL:"")));
+    var cb=el("button","btn ghost",u("changeName"));cb.type="button";
+    cb.addEventListener("click",function(){editing=true;renderReg()});box.appendChild(cb);
+  }else{
+    box.appendChild(el("p","",u("enterName")));
+    var form=el("form");form.noValidate=true;var grid=el("div","grid");
+    function fld(id,label,val,ac){
+      var d=el("div"),l=el("label","",label),i=el("input");
+      l.setAttribute("for",id);i.id=id;i.type="text";i.maxLength=40;i.value=val||"";i.setAttribute("autocomplete",ac);
+      d.appendChild(l);d.appendChild(i);grid.appendChild(d);return i;
+    }
+    var fi=fld("regfirst",u("first"),st.first,"given-name"),la=fld("reglast",u("last"),st.last,"family-name"),tr=fld("regtrainer",u("trainerL"),st.trainer,"off");
+    form.appendChild(grid);form.appendChild(el("p","sub",u("dateAuto")));
+    var err=el("div","err");err.hidden=true;err.setAttribute("role","alert");form.appendChild(err);
+    [fi,la].forEach(function(i){i.addEventListener("input",function(){err.hidden=true})});
+    var acts=el("div","acts");
+    var sb=el("button","btn",editing?u("saveName"):u("start"));sb.type="submit";sb.disabled=!ready;acts.appendChild(sb);
+    if(!ready)acts.appendChild(el("span","sub",u("checking")));
+    if(editing){var ca=el("button","btn ghost",u("cancel"));ca.type="button";ca.addEventListener("click",function(){editing=false;renderReg()});acts.appendChild(ca)}
+    if(isAdmin&&!editing){var pv=el("button","btn ghost",u("preview"));pv.type="button";pv.addEventListener("click",function(){showCourse(true)});acts.appendChild(pv)}
+    form.appendChild(acts);
+    form.addEventListener("submit",function(ev){
+      ev.preventDefault();
+      var f=fi.value.trim().replace(/\s+/g," "),l=la.value.trim().replace(/\s+/g," ");
+      if(!f||!l){err.hidden=false;err.textContent=u("bothNames");return}
+      var wasEditing=editing;
+      st.first=f;st.last=l;st.trainer=tr.value.trim().replace(/\s+/g," ");st.name=f+" "+l;if(!st.startedAt)st.startedAt=new Date().toISOString();
+      editing=false;save();renderReg();showCourse(!wasEditing);
+    });
+    box.appendChild(form);
+  }
+  if(ready)box.appendChild(el("p","sub",db&&uid?u("scoresRec"):u("scoresLocal")));
+}
+function csvCell(v){
+  var t=v==null?"":String(v);
+  if(/^[=+\-@\t\r]/.test(t))t="'"+t;
+  return /[",\n\r]/.test(t)?'"'+t.replace(/"/g,'""')+'"':t;
+}
+function csvOf(rows){
+  var out=[["Name","First name","Surname","Language","Lessons completed","Attempts","Best score","Last score","Out of","Passed","Date completed","Last activity"].join(",")];
+  rows.forEach(function(r){
+    out.push([r.name,r.first,r.last,r.lang||"",(r.lessonsDone||[]).length,r.attempts,r.best,r.lastScore,r.total||TOTAL,r.passed?"yes":"no",r.completedAt?r.completedAt.slice(0,10):"",r.updatedAt||""].map(csvCell).join(","));
+  });
+  return out.join("\r\n");
+}
+var admUnsub=null;
+function showAdmin(){
+  isAdmin=true;renderReg();
+  var box=$("#admin");box.hidden=false;box.textContent="";
+  box.appendChild(el("h2","",u("admTitle")));box.appendChild(el("p","sub",u("admSub")));
+  if(!db){box.appendChild(el("p","err",u("admNone")));return}
+  var mets=el("div","mets");box.appendChild(mets);
+  var ex=el("button","btn ghost",u("csv"));ex.type="button";ex.hidden=!dl;box.appendChild(ex);
+  var wrap=el("div","scroll");box.appendChild(wrap);
+  var rows=[];
+  ex.addEventListener("click",function(){if(dl)dl.save({filename:"cites-wood-course-results.csv",data:csvOf(rows)}).catch(function(){})});
+  if(!dl&&window.claude&&window.claude.use){window.claude.use("downloads").then(function(d){dl=d;ex.hidden=!d},function(){})}
+  function metric(v,l){var d=el("div","met");d.appendChild(el("b","",String(v)));d.appendChild(el("span","",l));mets.appendChild(d)}
+  function render(){
+    mets.textContent="";wrap.textContent="";
+    var done=rows.filter(function(r){return r.passed}).length;
+    var sc=rows.filter(function(r){return typeof r.best==="number"});
+    var avg=sc.length?(sc.reduce(function(a,r){return a+r.best},0)/sc.length).toFixed(1):"-";
+    metric(rows.length,u("mReg"));metric(done,u("mPass"));metric(avg,u("mAvg")+" / "+TOTAL);
+    if(!rows.length){wrap.appendChild(el("p","sub",u("noRes")));return}
+    rows.sort(function(a,b){return String(b.updatedAt||"").localeCompare(String(a.updatedAt||""))});
+    var t=el("table","res"),thead=el("thead"),hr=el("tr");
+    [u("thName"),"EN/FR",u("thLessons"),u("thAtt"),u("thBest"),u("thLast"),u("thDate"),u("thStatus")].forEach(function(h){hr.appendChild(el("th","",h))});
+    thead.appendChild(hr);t.appendChild(thead);var tb=el("tbody");
+    rows.forEach(function(r){
+      var tr=el("tr");
+      tr.appendChild(el("td","",r.name||u("noName")));
+      tr.appendChild(el("td","",(r.lang||"").toUpperCase()));
+      tr.appendChild(el("td","num",(r.lessonsDone||[]).length+" / "+NL));
+      tr.appendChild(el("td","num",r.attempts||0));
+      tr.appendChild(el("td","num",typeof r.best==="number"?r.best+" / "+(r.total||TOTAL):"-"));
+      tr.appendChild(el("td","num",typeof r.lastScore==="number"?r.lastScore+" / "+(r.total||TOTAL):"-"));
+      tr.appendChild(el("td","",r.completedAt?fmtDate(r.completedAt):"-"));
+      var td=el("td");td.appendChild(el("span","pill"+(r.passed?" ok":""),r.passed?u("passed"):(r.attempts?u("notPassed"):u("inProg"))));tr.appendChild(td);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);wrap.appendChild(t);
+  }
+  render();
+  if(admUnsub){try{admUnsub()}catch(e){}admUnsub=null}
+  admUnsub=db.collection("results").onSnapshot(function(snap){rows=snap.docs.map(function(d){return d.data()||{}});render()},function(){wrap.textContent=u("loadFail")});
+}
+
+/* ---------- init ---------- */
+function afterInit(){
+  var hh2=(location.hash||"").replace("#","");if(false){}else if(false){var i=LANGS.indexOf(st.lang);if(i>=0)LI=i}
+  ready=true;renderChrome();
+  if(st.name)showCourse(false);
+  if(userNs){userNs.canEdit().then(function(ok){if(ok)showAdmin()},function(){})}
+}
+function init(){
+  var hasClaude=window.claude&&typeof window.claude.use==="function";
+  var loading=hasClaude?Promise.all([
+    window.claude.use("db").then(function(d){db=d},function(){}),
+    window.claude.use("user").then(function(n){userNs=n},function(){}),
+    window.claude.use("downloads").then(function(d){dl=d},function(){})
+  ]):Promise.resolve();
+  var timeout=new Promise(function(r){setTimeout(r,6000)});
+  Promise.race([loading,timeout]).then(function(){
+    return userNs?userNs.id().then(function(i){return i},function(){return null}):null;
+  }).then(function(id){
+    uid=id;
+    if(db&&uid){
+      ref=db.doc("results/"+uid);
+      return ref.get().then(function(sn){if(sn.exists)applyRecord(sn.data())},function(){db=null;ref=null;loadLocal()});
+    }
+    loadLocal();
+  }).then(afterInit,afterInit);
+}
+$$("#langSw button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
+$("#menuBtn").addEventListener("click",function(){
+  var t=$("#toc"),o=t.classList.toggle("open");this.setAttribute("aria-expanded",o?"true":"false");
+});
+// highlight current lesson in contents
+window.addEventListener("scroll",function(){
+  if(!unlocked)return;var cur=null;
+  LESSONS.forEach(function(l){var e=document.getElementById(l.id);if(e&&e.getBoundingClientRect().top<140)cur=l.id});
+  $$("#tocList button").forEach(function(b){b.classList.toggle("cur",b.dataset.id===cur)});
+},{passive:true});
+$("#lessons").hidden=true;
+
+var hh=(location.hash||"").replace("#","");var hl=null;if(hl){LI=LANGS.indexOf(hl)}
+renderChrome();
+init();
+})();
+
+</script>
+
+</html>
