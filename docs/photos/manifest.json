@@ -2655,5 +2655,22 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "source_url": "https://commons.wikimedia.org/wiki/File:A._bipindensis_Mikroskopisch_Querschnitt.jpg"
+ },
+ {
+  "taxon": "pterocarpus-erinaceus",
+  "species": "Pterocarpus erinaceus",
+  "listed": true,
+  "file": "pterocarpus-erinaceus/pterocarpus-erinaceus-commons-1.jpg",
+  "thumb": "pterocarpus-erinaceus/pterocarpus-erinaceus-commons-1-thumb.jpg",
+  "w": 2000,
+  "h": 1506,
+  "orig": "File:Erinaceus q500.jpg",
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section, scale bar 500 micrometres (more magnified than a hand lens)",
+  "source": "Wikimedia Commons",
+  "credit": "Kalle.holt, Wikimedia Commons",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Erinaceus_q500.jpg"
  }
 ]
