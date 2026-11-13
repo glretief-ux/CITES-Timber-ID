@@ -1912,5 +1912,49 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "paubrasilia-echinata",
+  "species": "Paubrasilia echinata",
+  "listed": true,
+  "file": "paubrasilia-echinata/paubrasilia-echinata-goimai-1.jpg",
+  "thumb": "paubrasilia-echinata/paubrasilia-echinata-goimai-1-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Paubrasilia echinata 2.zip:Paubrasilia echinata 2/20190821_101635.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 4179.1,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "paubrasilia-echinata",
+  "species": "Paubrasilia echinata",
+  "listed": true,
+  "file": "paubrasilia-echinata/paubrasilia-echinata-goimai-2.jpg",
+  "thumb": "paubrasilia-echinata/paubrasilia-echinata-goimai-2-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Paubrasilia echinata 2.zip:Paubrasilia echinata 2/20190821_101749.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3153.5,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]
