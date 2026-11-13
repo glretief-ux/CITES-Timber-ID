@@ -164,7 +164,7 @@ fieldset{border:0;padding:0;margin:0 0 16px} legend{font:600 16px var(--head);pa
 
 @media(max-width:640px){
   .top .wrap{gap:4px}.nav{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px}
-  .scope button span{display:none}.searchbox{flex-wrap:wrap}.searchbox .btn{flex:1;justify-content:center}
+  .scope button span{display:none}.searchbox{flex-wrap:wrap}.searchbox input{flex:1 1 100%;font-size:16px}.searchbox .btn{flex:1;justify-content:center}
   .cards{grid-template-columns:1fr}.phead .lens{width:92px;height:92px}
   th,td{padding:6px 7px}
 }
