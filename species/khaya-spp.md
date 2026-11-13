@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/khaya-spp/`](../photos/khaya-spp/) and the image links below | ![schematic](../docs/schematics/khaya-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/khaya-spp.svg)
 
 ## Key diagnostic summary
 
@@ -65,18 +63,20 @@ Mahogany-type wood without ripple marks and usually with indistinct ring boundar
 
 Microscopy/DNA for species; mass spec.
 
-## Species included in this listing
+## Listed species covered by this entry (8)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Khaya ivorensis* | Lagos / Ivory Coast mahogany | West & Central Africa |  |
-| *Khaya grandifoliola* | Large-leaf African mahogany | West to East Africa | Denser. |
-| *Khaya anthotheca* | White mahogany, mangona | West to East Africa |  |
-| *Khaya senegalensis* | Dry-zone mahogany, caïlcédrat | Sahel / Sudanian savanna | Densest (~800). |
-| *Khaya madagascariensis* | Madagascar mahogany | Madagascar |  |
-| *Khaya nyasica* | Red mahogany (East Africa) | East & southern Africa | Sometimes merged with K. anthotheca. |
-| *Khaya agboensis* | African mahogany | West Africa |  |
-| *Khaya euryphylla* | African mahogany | Central Africa |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Khaya agboensis* | II | #17 | African mahogany | Côte d'Ivoire, Ghana, Guinea Bissau, Liberia, Nigeria, Sierra Leone |
+| *Khaya anthotheca* | II | #17 | White mahogany, mangona | Angola, Burundi, Cameroon, Central African Republic, Congo, Democratic Republic of the Congo, South Sudan, Sudan, Uganda |
+| *Khaya euryphylla* | II | #17 | African mahogany | Cameroon, Congo, Democratic Republic of the Congo |
+| *Khaya grandifoliola* | II | #17 | Large-leaf African mahogany | Benin, Burkina Faso, Central African Republic, Chad, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Ghana, Guinea, Liberia, Nigeria, South Sudan, Sudan, Togo, Uganda |
+| *Khaya ivorensis* | II | #17 | Lagos / Ivory Coast mahogany | Angola, Cameroon, Congo, Côte d'Ivoire, Equatorial Guinea, Gabon, Ghana, Guinea, Liberia, Nigeria, Togo |
+| *Khaya madagascariensis* | II | #17 | Madagascar mahogany | Comoros, Madagascar |
+| *Khaya nyasica* | II | #17 | Red mahogany (East Africa) | Kenya, Malawi, Mozambique, United Republic of Tanzania, Zambia, Zimbabwe |
+| *Khaya senegalensis* | II | #17 | Dry-zone mahogany, caïlcédrat | Benin, Burkina Faso, Cameroon, Central African Republic, Chad, Côte d'Ivoire, Gabon, Gambia, Ghana, Guinea, Guinea Bissau, Mali, Mauritania, Niger, Nigeria, Senegal, Sierra Leone, South Sudan, Sudan, Togo, Uganda |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

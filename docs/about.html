@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a322e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<title>Sources and credits | CITES Timber ID</title>
+</head>
+<body data-page="about">
+<section class="hero small"><div class="wrap">
+  <h1>Sources, limits and credits</h1>
+  <p>Where the listing data and photographs come from, how current they are, and what this reference cannot do.</p>
+</div></section>
+<main id="main" class="wrap">
+  <section class="card block"><h2>What this is</h2>
+    <p>An independent, open reference that helps customs, police, forestry and border officers screen timber against the CITES Appendices. It is not an official publication of the CITES Secretariat or of any government, and it carries no agency's endorsement.</p>
+    <div class="alert red" style="margin-bottom:0"><b>Limits.</b> End-grain features seen with a hand lens usually identify wood to genus or species group. They do not prove species. Listings, annotations, quotas and trade suspensions change. Before any enforcement action, confirm the listing on Species+ and have the wood identified by a qualified laboratory.</div>
+  </section>
+  <section class="card block"><h2>Listing data</h2><p id="basis"></p><h3 style="margin-top:14px">Changes since CoP20 reflected here</h3><ul class="tight" id="changes"></ul>
+    <h3 style="margin-top:14px">Other listed trees without a timber profile</h3><ul class="tight" id="nontimber"></ul>
+    <p class="small"><a href="species.csv">Identification entries (CSV)</a> &nbsp;|&nbsp; <a href="data/listed_species.csv">Every listed tree species with annotation and distribution (CSV)</a> &nbsp;|&nbsp; <a href="data/timber.json">Full data (JSON)</a></p>
+  </section>
+  <section class="card block" id="credits"><h2>Photograph credits</h2>
+    <p id="phsum"></p>
+    <div class="scroll"><table id="phtab"></table></div>
+    <p class="small muted">Photographs were resized and compressed from the originals. Adapted images are shared under the same licence as their source.</p>
+    <h3 style="margin-top:14px">Timbers still without an open photograph</h3><p id="nophoto" class="small"></p>
+    <p class="small">Most published end-grain atlases (CITESwoodID, The Wood Database, InsideWood, Pl@ntWood) are copyright. This reference links to them from each profile and does not copy them.</p>
+  </section>
+  <section class="card block"><h2>References</h2><ul class="tight">
+    <li><a href="https://speciesplus.net" target="_blank" rel="noopener">Species+</a> (UNEP-WCMC and CITES Secretariat): listings, annotations, distributions</li>
+    <li><a href="https://cites.org/eng/app/appendices.php" target="_blank" rel="noopener">CITES Appendices I, II and III</a> and <a href="https://cites.org/eng/disc/text.php" target="_blank" rel="noopener">text of the Convention</a></li>
+    <li><a href="https://cites.org/eng/timber/timber-ID-repository" target="_blank" rel="noopener">CITES timber identification repository</a></li>
+    <li>Montes R. et al. (2024) GOIMAI DataSet Phase I. Zenodo. <a href="https://doi.org/10.5281/zenodo.11092208" target="_blank" rel="noopener">doi:10.5281/zenodo.11092208</a></li>
+    <li>Richter H.G., Gembruch K., Koch G. <i>CITESwoodID</i>. Th&uuml;nen Institute</li>
+    <li>Ruffinatto F., Crivellaro A. (2019) <i>Atlas of Macroscopic Wood Identification</i>. Springer</li>
+    <li>Wiedenhoeft A.C. (2011) <i>Identification of Central American Woods</i>. USDA Forest Products Laboratory</li>
+    <li>UNODC (2016) <i>Best Practice Guide for Forensic Timber Identification</i></li>
+    <li>CITES and Royal Botanic Gardens, Kew. <i>CITES and Timber: a guide to CITES-listed tree species</i></li>
+  </ul></section>
+  <section class="card block"><h2>Licence and use</h2>
+    <p>Code: MIT. Text and data compiled for this reference: CC BY 4.0. Photographs keep the licence shown beside each one. Typeface: IBM Plex Sans, SIL Open Font Licence. The site stores nothing about you; a cookie-free counter records page visits.</p>
+    <p>Corrections and photographs of verified specimens are welcome through the <a href="https://github.com/glretief-ux/CITES-Timber-ID">repository</a>.</p>
+  </section>
+</main>
+<script src="assets/common.js"></script>
+<script>
+TID.loadTimber().then(function(D){
+  var e=TID.esc,$=TID.$;
+  $("#basis").textContent=D.listing_basis+" Checked "+D.checked+". "+D.counts.species+" listed tree taxa are grouped into "+D.counts.entries+" identification entries, because species within a genus usually cannot be told apart with a hand lens.";
+  $("#changes").innerHTML=D.changes.map(function(c){return "<li>"+e(c)+"</li>"}).join("");
+  $("#nontimber").innerHTML=D.non_timber_listed_trees.map(function(c){return "<li>"+e(c)+"</li>"}).join("");
+  var rows=[],src={};
+  D.taxa.forEach(function(t){t.photos.forEach(function(p){rows.push([t,p]);src[p.source]=(src[p.source]||0)+1;});});
+  $("#phsum").innerHTML="<b>"+rows.length+"</b> end-grain photographs covering <b>"+D.counts.entries_with_photos+"</b> of "+D.counts.entries+" entries. "+Object.keys(src).map(function(k){return e(k)+": "+src[k]}).join("; ")+".";
+  $("#phtab").innerHTML="<thead><tr><th>Photograph</th><th>Species shown</th><th>Profile</th><th>Credit</th><th>Licence</th></tr></thead><tbody>"+rows.map(function(r){var t=r[0],p=r[1];return '<tr><td><a href="photos/'+p.file+'"><img loading="lazy" src="photos/'+p.thumb+'" alt="" style="width:64px;height:48px;object-fit:cover;border-radius:3px"></a></td><td class="sci">'+e(p.species)+(p.listed===false?' <span class="chip nl" style="font-style:normal">look-alike</span>':"")+'</td><td><a href="index.html#t/'+t.id+'">'+e(t.scientific_name.split(/[,(]/)[0])+'</a></td><td class="small">'+e(p.credit||p.source)+(p.source_url?' <a target="_blank" rel="noopener" href="'+p.source_url+'">source</a>':"")+'</td><td class="small">'+(p.licence_url?'<a target="_blank" rel="noopener" href="'+p.licence_url+'">'+e(p.licence)+"</a>":e(p.licence||""))+"</td></tr>"}).join("")+"</tbody>";
+  $("#nophoto").innerHTML=D.taxa.filter(function(t){return !t.photos.length}).map(function(t){return '<a class="sci" href="index.html#t/'+t.id+'">'+e(t.scientific_name.split("(")[0].trim())+"</a>"}).join("; ")||"None.";
+});
+</script>
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="byte-config.js"></script>
+<script src="byte.js"></script>
+</body>
+</html>

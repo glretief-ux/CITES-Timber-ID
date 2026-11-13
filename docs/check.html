@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a322e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<title>Consignment check | CITES Timber ID</title>
+</head>
+<body data-page="check">
+<section class="hero small"><div class="wrap">
+  <h1>Does this consignment need CITES documents?</h1>
+  <p>Pick the timber and the form it is shipped in. The answer follows the annotation in force and tells you which document to ask for.</p>
+</div></section>
+<main id="main" class="wrap">
+  <nav class="toc noprint" aria-label="On this page"><a href="#tool">Check a consignment</a><a href="#five">Five checks</a><a href="#documents">Documents by Appendix</a><a href="#permit">Check the permit</a><a href="#codes">Source and purpose codes</a><a href="#matrix">Annotation matrix</a><a href="#examples">Worked examples</a><a href="#exempt">Exemptions</a></nav>
+
+  <section class="card block" id="tool">
+    <fieldset><legend>1. Which timber?</legend>
+      <input id="tx" list="txl" placeholder="Start typing a scientific or trade name" autocomplete="off" style="font:inherit;font-size:17px;padding:11px 12px;border:2px solid var(--line);border-radius:6px;width:100%;max-width:560px">
+      <datalist id="txl"></datalist>
+      <p class="small muted" id="txinfo">Use the name on the documents first, then repeat with the name you suspect.</p>
+    </fieldset>
+    <fieldset><legend>2. In what form?</legend><div class="opts" id="prods"></div></fieldset>
+    <div id="verdict" aria-live="polite"><div class="verdict"><div class="big">Pick a timber and a product form</div>The result appears here.</div></div>
+  </section>
+
+  <section class="card block" id="five"><h2>Five checks, in this order</h2>
+    <ol class="steps" style="margin-top:14px">
+      <li><h3>Species</h3>Is the wood a listed taxon? Compare the declared name with what the end grain shows. A declared look-alike is the commonest disguise.</li>
+      <li><h3>Population</h3>Does the listing cover wood from this origin? <i>Khaya</i>, <i>Afzelia</i> and <i>Pterocarpus</i>: Africa only. <i>Cedrela</i> and <i>Swietenia macrophylla</i>: Neotropics only. <i>Diospyros</i>: Madagascar only. Appendix III: every origin needs a document, but which one depends on the country.</li>
+      <li><h3>Product form</h3>What is physically in the container, by HS heading? Logs, sawn wood, veneer, plywood, transformed wood, chips, extracts or finished goods.</li>
+      <li><h3>Annotation</h3>Does the annotation cover that form? No annotation means everything is covered.</li>
+      <li><h3>Documents</h3>Is the right permit or certificate present, genuine, in date, and does it match species, quantity, origin and consignee?</li>
+    </ol>
+  </section>
+
+  <section class="card block" id="documents"><h2>Documents by Appendix</h2>
+    <div class="scroll" style="margin-top:10px"><table>
+      <thead><tr><th>Situation</th><th><span class="chip I">Appendix I</span></th><th><span class="chip II">Appendix II</span></th><th><span class="chip III">Appendix III</span></th></tr></thead>
+      <tbody>
+      <tr><th>Export</th><td>Export permit. An import permit must already have been issued.</td><td>Export permit</td><td>Export permit if exported from the country that listed the species. Otherwise a certificate of origin.</td></tr>
+      <tr><th>Import</th><td>Import permit plus the export permit or re-export certificate</td><td>Export permit or re-export certificate. CITES itself asks for no import permit.</td><td>Export permit (listing country) or certificate of origin (any other country)</td></tr>
+      <tr><th>Re-export</th><td>Re-export certificate</td><td>Re-export certificate</td><td>Re-export certificate</td></tr>
+      <tr><th>Commercial trade</th><td>Not allowed: the import must not be primarily commercial</td><td>Allowed with documents</td><td>Allowed with documents</td></tr>
+      <tr><th>Who certifies</th><td>Scientific and Management Authority of the exporting country, and the Scientific Authority of the importing country</td><td>Scientific Authority (non-detriment) and Management Authority (legal origin) of the exporting country</td><td>Management Authority only (legal acquisition)</td></tr>
+      </tbody></table></div>
+    <div class="alert" style="margin-bottom:0"><b>National law can be stricter.</b> The EU, for example, requires an import permit for Appendix II (Annex B) timber and an import notification for Appendix III (Annex C). Timber-legality laws apply on top of CITES.</div>
+  </section>
+
+  <section class="card block" id="permit"><h2>Check the permit in front of you</h2>
+    <ul class="checkl" style="margin-top:10px">
+      <li>Original document, or a copy clearly marked as a copy where a copy is allowed</li>
+      <li>Issuing Management Authority is real: name, stamp and layout match known specimens; security stamp and unique control number present</li>
+      <li>Issued within the last six months and not expired (import permits: up to twelve months)</li>
+      <li>Scientific name and Appendix match the goods and the customs declaration. A permit for a look-alike species is a red flag.</li>
+      <li>Quantity and units (m&sup3;, kg, pieces) match the load; nothing above the permitted amount; part-shipments endorsed</li>
+      <li>Country of origin, exporter and consignee match the transport documents. A re-export certificate must refer to the original export permit.</li>
+      <li>Source and purpose codes are plausible for the goods</li>
+      <li>The product description matches a form the annotation covers</li>
+      <li>Not already used: a cancelled permit cannot cover a second consignment</li>
+      <li>No alterations or erasures unless stamped and signed by the issuing authority</li>
+      <li>Electronic permit verified in the issuing country's system or with its Management Authority, not from a printout alone</li>
+      <li>Any export quota for the species and year has not been exceeded (quota number on the permit)</li>
+    </ul>
+    <p style="margin-top:12px"><b>If something does not match:</b> hold the goods, photograph the permit and markings, take wood samples (<a href="field.html#sampling">how</a>) and ask your national CITES Management Authority to verify with the issuing country. Contacts for every Party: <a href="https://cites.org/eng/parties/country-profiles" target="_blank" rel="noopener">CITES national authorities directory</a>.</p>
+  </section>
+
+  <section class="card block" id="codes"><h2>Source and purpose codes on timber permits</h2>
+    <div class="scroll" style="margin-top:10px"><table><thead><tr><th>Code</th><th>Meaning</th><th>What to look for</th></tr></thead><tbody>
+      <tr><td><b>W</b></td><td>Taken from the wild</td><td>Normal for natural-forest timber. Zero quotas apply to wild <i>Paubrasilia echinata</i> and <i>Podocarpus parlatorei</i> in commercial trade.</td></tr>
+      <tr><td><b>A</b></td><td>Artificially propagated</td><td>A plantation claim. Ask where the plantation is and whether the species grows there.</td></tr>
+      <tr><td><b>D</b></td><td>Appendix I plant propagated commercially in a registered nursery</td><td>Rare for timber. Verify with the authority.</td></tr>
+      <tr><td><b>O</b></td><td>Pre-Convention</td><td>Needs a pre-Convention certificate and evidence of the acquisition date.</td></tr>
+      <tr><td><b>I</b></td><td>Confiscated or seized</td><td>Legal disposal of seized goods.</td></tr>
+      <tr><td><b>U</b></td><td>Source unknown</td><td>Unusual. Must be justified.</td></tr>
+      <tr><td><b>T</b></td><td>Purpose: commercial</td><td>Expected for ordinary trade. Not acceptable for an Appendix I import.</td></tr>
+      <tr><td><b>S, E, P, L</b></td><td>Scientific, educational, personal, law enforcement</td><td>Quantity must fit the purpose.</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section class="card block" id="matrix"><h2>Annotation matrix</h2>
+    <p class="small muted">Which product forms each annotation controls, and the timbers that carry it. Built from the listing data in this reference.</p>
+    <div class="scroll"><table class="mx" id="mx"></table></div>
+    <p class="small"><span class="chip I">Yes</span> controlled &nbsp; <span class="chip II">Dep.</span> depends on conditions &nbsp; <span class="chip nl">No</span> not controlled by CITES</p>
+  </section>
+
+  <section class="card block" id="examples"><h2>Worked examples</h2>
+    <div class="scroll" style="margin-top:10px"><table><thead><tr><th>Consignment</th><th>Listing</th><th>CITES documents?</th></tr></thead><tbody>
+      <tr><td>Container of ipê decking boards (HS 44.09) from Brazil</td><td><i>Handroanthus</i>, App. II, #17</td><td><b style="color:var(--a1)">Yes.</b> Transformed wood is covered.</td></tr>
+      <tr><td>Bubinga dining table, 60 kg of wood, one shipment</td><td><i>Guibourtia</i>, App. II, #15</td><td><b style="color:var(--a1)">Yes.</b> Finished product above 10 kg.</td></tr>
+      <tr><td>One bubinga bowl, 2 kg, sent alone</td><td><i>Guibourtia</i>, App. II, #15</td><td><b style="color:var(--no)">No.</b> Finished product of 10 kg or less per shipment.</td></tr>
+      <tr><td>Kosso logs or squared logs from West Africa</td><td><i>Pterocarpus erinaceus</i>, App. II, #17</td><td><b style="color:var(--a1)">Yes,</b> and a CITES recommendation to suspend commercial trade has applied to range States since 2022. Check the current suspensions and verify any permit with the issuing authority.</td></tr>
+      <tr><td>Finished mahogany chairs from Peru</td><td><i>Swietenia macrophylla</i>, App. II, #6</td><td><b style="color:var(--no)">No.</b> #6 covers logs, sawn wood, veneer and plywood only.</td></tr>
+      <tr><td>Red sanders chips or powder declared as "dye wood"</td><td><i>Pterocarpus santalinus</i>, App. II, #7</td><td><b style="color:var(--a1)">Yes.</b> Chips, powder and extracts are covered.</td></tr>
+      <tr><td>Sawn African mahogany from a plantation in Brazil</td><td><i>Khaya</i>, App. II, #17, Africa only</td><td><b style="color:var(--no)">No,</b> if the origin is proven. The listing covers African populations only, so the origin claim is the thing to test.</td></tr>
+      <tr><td>Sawn Mongolian oak from Russia</td><td><i>Quercus mongolica</i>, App. III (Russia), #5</td><td><b style="color:var(--a1)">Yes.</b> Russian export permit.</td></tr>
+      <tr><td>Violin bows in a dealer's commercial shipment</td><td><i>Paubrasilia echinata</i>, App. II, #10</td><td><b style="color:var(--a1)">Yes.</b> Only non-commercial movement of finished instruments is exempt.</td></tr>
+      <tr><td>Agarwood chips and oil in bulk</td><td><i>Aquilaria</i>, App. II, #14</td><td><b style="color:var(--a1)">Yes.</b> Chips and bulk oil are covered.</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section class="card block" id="exempt"><h2>Exemptions: verify, never assume</h2>
+    <ul class="tight">
+      <li><b>Transit and transhipment</b> under customs control need no CITES documents. Check that the goods really stay under control.</li>
+      <li><b>Pre-Convention specimens</b> need a pre-Convention certificate from the exporting or re-exporting Management Authority.</li>
+      <li><b>Personal and household effects</b> are often exempt, with exceptions for Appendix I and for items acquired abroad. Countries set their own thresholds.</li>
+      <li><b>Scientific exchange</b> between registered institutions travels under the authority's label.</li>
+      <li><b>Annotation exemptions</b> (10 kg under #15, finished musical instruments, retail-packaged products) take the product out of control altogether. Read the full text on Species+.</li>
+    </ul>
+    <p class="small muted">Based on Articles III to VII of the Convention and Resolution Conf. 12.3 (Rev.) on permits and certificates. Screening guidance, not legal advice.</p>
+  </section>
+</main>
+<script src="assets/common.js"></script>
+<script src="assets/check.js"></script>
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="byte-config.js"></script>
+<script src="byte.js"></script>
+</body>
+</html>

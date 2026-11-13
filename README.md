@@ -1,63 +1,82 @@
 # CITES Timber ID
 
-**A field reference for law enforcement to screen CITES-listed wood species at the macroscopic (10x hand-lens) level.**
+**A field reference that helps customs, police, forestry and border officers screen timber against the CITES Appendices.**
 
-Covers every tree taxon listed in CITES Appendices I, II and III that is traded as timber or wood products — genera, species, subspecies/varieties and population-limited listings — with their listing status, annotations, physical characteristics, 10x end-grain features, look-alikes and links to 10x photo collections.
+Open it: **https://glretief-ux.github.io/CITES-Timber-ID/docs/** (works on a phone, and offline after the first visit)
 
-> ⚠️ **Screening tool, not a final identification.** Hand-lens anatomy usually identifies wood to genus or species group. Confirm species with an accredited laboratory (wood anatomy, DNA, DART-TOF mass spectrometry, NIR) and always check the live listing on [Species+](https://speciesplus.net) before enforcement action.
+> **Screening aid, not evidence of species.** End-grain features seen with a 10x hand lens usually identify wood to genus or species group. Confirm with a qualified laboratory and the live listing on [Species+](https://speciesplus.net) before enforcement action. This is an independent open reference, not an official publication of the CITES Secretariat or of any government.
 
-## What's inside
+## What an officer can do with it
+
+| Page | Use it to |
+|---|---|
+| [Lookup](docs/index.html) | Type any scientific, trade or common name (English, Spanish, French) or an old synonym. Every one of the 696 CITES-listed tree taxa resolves to a profile with end-grain photographs, what the listing controls, required documents, 10x features, look-alikes and the complete list of listed species with native distribution. Non-listed look-alikes are flagged. Two more tabs search every CITES-listed plant (34,363 taxa) and animal (6,678 taxa). |
+| [10x key](docs/key.html) | Tick what you see on the end grain; the listed timbers that fit are ranked. |
+| [Consignment check](docs/check.html) | Pick the timber and the product form (by HS heading) to see whether CITES documents are required and which ones. Includes the five checks, a permit checklist, source and purpose codes, the annotation matrix and worked examples. |
+| [Field procedure](docs/field.html) | Red flags, kit, how to cut and read end grain, quick tests, sampling and chain of custody, what each laboratory method can answer, feature glossary. |
+| [Photo ID trial](docs/identify/index.html) | Experimental photo recognition for African timbers. Demonstration model only; not for casework. |
+| [Sources](docs/about.html) | Listing basis, changes since CoP20, photo credits and licences, limits. |
+
+Each profile prints as a one-page sheet and has its own link to share.
+
+## Listing basis
+
+CITES Appendices in force from **5 March 2026** (amendments adopted at CoP20, Samarkand, 24 Nov to 5 Dec 2025), checked on 13 November 2026 against the Species+ export of 22 October 2026.
+
+Changes reflected:
+
+- *Podocarpus parlatorei* transferred from Appendix I to Appendix II with a zero export quota for wild-taken specimens for commercial purposes.
+- *Paubrasilia echinata* (pernambuco) stays in Appendix II with a revised annotation #10 and a zero quota for wild-harvested specimens in commercial trade.
+- Proposals to remove Central African populations of *Afzelia bipindensis* and *Pterocarpus soyauxii* were rejected.
+- *Pterocarpus erinaceus* and *P. tinctorius* are covered by the *Pterocarpus* spp. (African populations) listing with annotation #17.
+- *Platymiscium pleiostachyum* is listed under the name *Platymiscium parviflorum*.
+
+**Appendix I:** *Dalbergia nigra*, *Abies guatemalensis*, *Araucaria araucana*, *Fitzroya cupressoides*, *Pilgerodendron uviferum*
+
+**Appendix II:** *Dalbergia* spp., *Guibourtia demeusei / pellegriniana / tessmannii*, *Pterocarpus* spp. (Africa) including *P. erinaceus* and *P. tinctorius*, *P. santalinus*, *Swietenia* (3 spp.), *Cedrela* spp. (Neotropics), *Khaya* spp. (Africa), *Afzelia* spp. (Africa), *Handroanthus*, *Tabebuia*, *Roseodendron*, *Dipteryx* spp., *Paubrasilia echinata*, *Gonystylus* spp., *Aquilaria* and *Gyrinops*, *Pericopsis elata*, *Platymiscium parviflorum*, *Caryocar costaricense*, *Diospyros* spp. (Madagascar), *Bulnesia sarmientoi*, *Guaiacum* spp., *Osyris lanceolata* (six East African populations), *Prunus africana*, *Aniba rosaeodora*, *Oreomunnea pterocarpa*, Asian *Taxus* (5 spp.), *Widdringtonia whytei*, *Podocarpus parlatorei*
+
+**Appendix III:** *Pinus koraiensis*, *Quercus mongolica*, *Fraxinus mandshurica* (Russian Federation); *Podocarpus neriifolius*, *Tetracentron sinense*, *Magnolia liliifera* var. *obovata* (Nepal)
+
+Species within a genus usually cannot be separated with a hand lens, so the 696 listed taxa are grouped into 39 identification entries.
+
+## End-grain photographs
+
+Photographs are stored in `docs/photos/` and come only from sources whose licence allows reuse:
+
+- **GOIMAI DataSet Phase I** (Montes et al. 2024, [doi:10.5281/zenodo.11092208](https://doi.org/10.5281/zenodo.11092208), CC BY-SA 4.0): end-grain images of 37 CITES timber species taken with a phone and 24x macro lens. `tools/fetch_photos.py` downloads the archives, keeps the sharpest images per species and writes web-sized copies with credits to `docs/photos/manifest.json`.
+- **Your own reference specimens:** put the file in `photos/<taxon-id>/` and add a row to `photos/manifest.csv`. These appear first on the profile.
+
+Copyright atlases (CITESwoodID, The Wood Database, InsideWood, Pl@ntWood) are linked from each profile, not copied. Timbers that still lack an open photograph show a schematic drawing and are listed on the [Sources](docs/about.html#credits) page.
+
+## Repository layout
 
 | Path | Contents |
 |---|---|
-| [`docs/search.html`](docs/search.html) | **Species lookup** — type a scientific name, synonym or trade name and get the full profile (listing, annotation, 10x features, characteristics, look-alikes, photo sources). Recognises any species of a listed genus and warns about non-listed look-alikes. Shareable link per species, printable |
-| [`docs/search.html`](docs/search.html) — **Fauna** and **Flora** tabs | Search **every CITES-listed animal and plant** (c. 41,000 taxa, from the Species+ checklist export of 22 Oct 2026) by scientific name, genus, family or order, with Appendix, listing note, annotation, native distribution and documents needed. Common names (cats, parrots, orchids, cacti, ginseng…) open group guidance on what is traded and what to check |
-| [`docs/index.html`](docs/index.html) | **Interactive identification key** — tick what you see under the lens, get ranked candidates (works on phone; publish with GitHub Pages) |
-| [`species/`](species/README.md) | One field-guide page per listed taxon: listing, annotation, 10x features, colour, density, smell, look-alikes, species covered, photo sources |
-| [`data/species.json`](data/species.json), [`data/species.csv`](data/species.csv) | Full database (opens in Excel) |
-| [`docs/schematics/`](docs/schematics) | Schematic 10x end-grain drawing for every taxon (clearly labelled *not a photograph*) |
-| [`photos/`](photos) | 10x photo library — one folder per taxon, with what to photograph; `manifest.csv` lists added photos |
-| [`docs/identify/`](docs/identify/index.html) | **Identify from photo (in development)** — upload a 10x end-grain photo and get a CITES-listed vs unlisted African timber lead, computed in the browser. Needs a trained model; none is installed yet |
-| [`wood-id/`](wood-id/README.md) | Training pipeline, imaging protocol and CITES African scope table for that model |
-| [`guides/field-procedure.md`](guides/field-procedure.md) | How to cut, observe, test, document and sample suspect timber |
-| [`guides/cites-documents.md`](guides/cites-documents.md) | **Documents required per Appendix** — export/import permits, re-export certificates, certificates of origin, validity, codes, exemptions and a document check |
-| [`guides/feature-glossary.md`](guides/feature-glossary.md) | What each end-grain feature looks like |
-| [`guides/photo-protocol.md`](guides/photo-protocol.md) | How to take and add 10x reference photos |
-| [`tools/wildlife_data.py`](tools/wildlife_data.py) | Curated fauna and flora groups (common names, what is traded, what to check) behind the two tabs, built into `docs/wildlife.json` |
-| [`tools/build_checklist.py`](tools/build_checklist.py), `docs/checklist-fauna.json`, `docs/checklist-flora.json` | Full checklist data for the Fauna and Flora tabs. To refresh: download the *CITES listed species* CSV from [Species+](https://speciesplus.net) (Downloads) and run `python tools/build_checklist.py <file.csv>` (the raw CSV is not stored in the repo) |
-| [`tools/build_names.py`](tools/build_names.py), `docs/names-fauna.json`, `docs/names-flora.json` | Common names (English, Spanish, French) and old-name synonyms for the Fauna and Flora search, from the *Index of CITES Species* PDF (Checklist of CITES species, UNEP-WCMC / CITES Secretariat). Run `build_checklist.py` first, then `pip install pymupdf` and `python tools/build_names.py <Index_of_CITES_Species.pdf>` |
-| [`tools/species_data.py`](tools/species_data.py) | **The single source** — edit here, then everything is rebuilt |
+| `tools/species_data.py` | **Single source** for the 39 entries: listing, annotation, features, look-alikes, annotation coverage table |
+| `tools/build.py` | Builds `docs/data/timber.json`, CSVs, `species/*.md`, schematic drawings. Attaches the full species lists, synonyms and common names from the Species+ export |
+| `tools/build_checklist.py`, `tools/build_names.py` | Rebuild the plant and animal checklist from a new Species+ export |
+| `tools/fetch_photos.py`, `.github/workflows/photos.yml` | Fetch open-licence photographs (run from the Actions tab) |
+| `docs/` | The website (GitHub Pages) |
+| `species/`, `data/` | Field-guide pages in Markdown and the database as CSV and JSON |
+| `guides/` | Field procedure, CITES documents, glossary, photo protocol in Markdown |
+| `wood-id/` | Training pipeline and imaging protocol for the photo ID trial |
 
-## Coverage (listing basis: after CoP20, Samarkand, Nov–Dec 2025)
+## Keeping it current
 
-CoP20 adopted **no new timber listings**. Proposals to remove Central African *Afzelia bipindensis* and *Pterocarpus soyauxii* from Appendix II were **rejected**; the annotation for pernambuco (*Paubrasilia echinata*, #10) was **amended**, with new decisions on bow traceability.
-
-**Appendix I:** *Dalbergia nigra*, *Abies guatemalensis*, *Araucaria araucana*, *Fitzroya cupressoides*, *Pilgerodendron uviferum*, *Podocarpus parlatorei*
-
-**Appendix II:** *Dalbergia* spp. (all), *Guibourtia demeusei / pellegriniana / tessmannii* (bubinga), *Pterocarpus erinaceus*, *P. santalinus*, *P. tinctorius*, *Pterocarpus* spp. (Africa), *Swietenia* (3 spp.), *Cedrela* spp. (Neotropics), *Khaya* spp. (Africa), *Afzelia* spp. (Africa), *Handroanthus*, *Tabebuia*, *Roseodendron* (ipê), *Dipteryx* spp. (cumaru), *Paubrasilia echinata*, *Gonystylus* spp. (ramin), *Aquilaria* & *Gyrinops* (agarwood), *Pericopsis elata*, *Platymiscium pleiostachyum*, *Caryocar costaricense*, *Diospyros* spp. (Madagascar), *Bulnesia sarmientoi*, *Guaiacum* spp., *Osyris lanceolata* (East Africa), *Prunus africana*, *Aniba rosaeodora*, *Oreomunnea pterocarpa*, Asian *Taxus* (5 spp.), *Widdringtonia whytei*
-
-**Appendix III:** *Pinus koraiensis*, *Quercus mongolica*, *Fraxinus mandshurica* (Russia); *Podocarpus neriifolius*, *Tetracentron sinense*, *Magnolia liliifera* var. *obovata* (Nepal)
-
-38 listing entries · ~90 named taxa. Large genera (*Dalbergia* ~250–300 spp., Malagasy *Diospyros*, *Tabebuia*, *Aquilaria*) are covered at genus level with the commercially important species named — the full species lists are on Species+ and in the CITES/Kew *Dalbergia* checklist.
-
-## About the 10x photos
-
-Each taxon has (1) a **schematic drawing** generated from its anatomical features, (2) **links** to published 10x end-grain photographs (The Wood Database, CITESwoodID, Pl@ntWood, InsideWood, CITES Timber ID repository, Wikimedia Commons), and (3) a **photo folder** for real photographs of verified reference specimens. Most published photo collections are copyrighted, so they are linked rather than copied. See [photo protocol](guides/photo-protocol.md) to add your own.
-
-## Use it
-
-- **Online:** Settings → Pages → *Deploy from branch* → `main` / `/docs`. The key is then at `https://<user>.github.io/CITES-Timber-ID/`.
-- **Offline (laptop):** download the repo, then in the folder run `python -m http.server` and open `http://localhost:8000/docs/`.
-- **Edit data:** change `tools/species_data.py` (on GitHub: pencil icon). The GitHub Action rebuilds the pages, JSON, CSV and drawings automatically. Locally: `python tools/build.py`.
-
-## Key references
-- CITES Appendices & Species+: https://cites.org/eng/app/appendices.php · https://speciesplus.net
-- CITES Timber ID repository: https://cites.org/eng/timber/timber-ID-repository
-- *CITES and Timber — A guide to CITES-listed tree species* (Kew/CITES, 2023 ed.)
-- UNODC (2016) *Best Practice Guide for Forensic Timber Identification*
-- Wiedenhoeft, A.C. (2011) *Identification of Central American Woods*, USDA FPL
-- Ruffinatto, F. & Crivellaro, A. (2019) *Atlas of Macroscopic Wood Identification*, Springer
-- Ravindran et al. (2020) *The XyloTron: open-source image-based macroscopic field identification of wood products*, Frontiers in Plant Science
+1. Edit `tools/species_data.py` (on GitHub: pencil icon). The Action rebuilds everything.
+2. After a CoP or an Appendix III change, download the *CITES listed species* CSV from Species+ and run `python tools/build_checklist.py <file.csv>`, then `python tools/build.py`. The build prints a warning wherever an entry disagrees with the export.
+3. Offline on a laptop: download the repository, run `python -m http.server` in the folder and open `http://localhost:8000/docs/`.
 
 ## Licence
-Code: MIT. Text and data: CC BY 4.0. Photos: licence as stated per image in `photos/manifest.csv`.
+
+Code: MIT. Text and compiled data: CC BY 4.0. Photographs: the licence shown beside each one (GOIMAI: CC BY-SA 4.0). See [LICENSE](LICENSE).
+
+## Key references
+
+- CITES Appendices and Species+: https://cites.org/eng/app/appendices.php, https://speciesplus.net
+- CITES timber identification repository: https://cites.org/eng/timber/timber-ID-repository
+- *CITES and Timber: a guide to CITES-listed tree species* (Kew and CITES)
+- UNODC (2016) *Best Practice Guide for Forensic Timber Identification*
+- Richter, Gembruch and Koch, *CITESwoodID* (Thünen Institute)
+- Ruffinatto and Crivellaro (2019) *Atlas of Macroscopic Wood Identification*, Springer
+- Wiedenhoeft (2011) *Identification of Central American Woods*, USDA Forest Products Laboratory

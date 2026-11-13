@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a322e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<title>10x identification key | CITES Timber ID</title>
+</head>
+<body data-page="key">
+<section class="hero small"><div class="wrap">
+  <h1>What do you see under the lens?</h1>
+  <p>Cut the end grain clean, wet it, look through a 10x lens and tick only what you are sure of. The list narrows to the listed timbers that fit.</p>
+</div></section>
+<main id="main" class="wrap">
+  <div class="grid2" style="grid-template-columns:minmax(280px,380px) 1fr;align-items:start">
+    <form class="card" id="kf" aria-label="Features seen"></form>
+    <section>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><h2 id="kcount" style="flex:1">Candidates</h2><button class="btn ghost sm" id="kreset" type="button">Clear all</button></div>
+      <div id="kout" class="cards" style="grid-template-columns:1fr"></div>
+      <p class="small muted" style="margin-top:12px">A match means "consistent with", never "identified as". Unlisted look-alikes share these features: open each profile and read the look-alikes before you decide. <a href="field.html#glossary">What each feature looks like</a></p>
+    </section>
+  </div>
+</main>
+<script src="assets/common.js"></script>
+<script src="assets/key.js"></script>
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="byte-config.js"></script>
+<script src="byte.js"></script>
+</body>
+</html>

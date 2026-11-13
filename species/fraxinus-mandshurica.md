@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/fraxinus-mandshurica/`](../photos/fraxinus-mandshurica/) and the image links below | ![schematic](../docs/schematics/fraxinus-mandshurica.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/fraxinus-mandshurica.svg)
 
 ## Key diagnostic summary
 
@@ -64,6 +62,14 @@ Ring-porous ash: large earlywood pores, latewood pores with vasicentric/confluen
 ## Confirming beyond the hand lens
 
 DNA, isotopes.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Fraxinus mandshurica* | III | #5 |  | China, Japan, Russian Federation |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/guaiacum-spp/`](../photos/guaiacum-spp/) and the image links below | ![schematic](../docs/schematics/guaiacum-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/guaiacum-spp.svg)
 
 ## Key diagnostic summary
 
@@ -64,13 +62,17 @@ Extremely heavy, oily, green-brown wood with tiny solitary pores and very fine r
 
 Microscopy/DNA.
 
-## Species included in this listing
+## Listed species covered by this entry (5)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Guaiacum officinale* | Lignum vitae | Caribbean, N South America |  |
-| *Guaiacum sanctum* | Holywood lignum vitae | Florida keys, Caribbean, Mexico, Central America |  |
-| *Guaiacum coulteri, G. unijugum and others* |  | Mexico |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Guaiacum angustifolium* | II | #2 |  | Mexico, United States of America |
+| *Guaiacum coulteri* | II | #2 |  | Mexico |
+| *Guaiacum officinale* | II | #2 | Lignum vitae | Anguilla (United Kingdom), Bahamas, Barbados, British Virgin Islands (United Kingdom), Colombia, Cuba, Dominica, Dominican Republic, Grenada, Guadeloupe, Haiti, Honduras, Jamaica, Martinique, Montserrat (United Kingdom), Netherlands Antilles, Panama, Puerto Rico, Saint Vincent and the Grenadines, Turks and Caicos Islands (United Kingdom), Venezuela (Bolivarian Republic of), Virgin Islands of the USA |
+| *Guaiacum sanctum* | II | #2 | Holywood lignum vitae | Bahamas, Belize, Costa Rica, Cuba, Dominican Republic, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Puerto Rico, United States of America |
+| *Guaiacum unijugum* | II | #2 |  | Mexico |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

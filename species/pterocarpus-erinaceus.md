@@ -3,8 +3,8 @@
 **Family:** Fabaceae  
 **Trade / common names:** Kosso, African rosewood, vène, barwood, hongmu (part)  
 **CITES Appendix:** **II**  
-**Annotation:** none — No annotation - ALL parts and derivatives are covered (including finished products).  
-**Population covered:** All populations (also covered by the 2023 African Pterocarpus listing)  
+**Annotation:** #17 — Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09, e.g. decking, flooring strips).  
+**Population covered:** All populations. Since 2023 covered by the Pterocarpus spp. (African populations) listing with annotation #17. A CITES recommendation to suspend commercial trade has applied to range States since 2022 - check current CITES Notifications  
 **First listed (approx. year in force):** 2016  
 **Native range:** West African savanna: Senegal to Cameroon / Central African Republic.
 
@@ -16,15 +16,13 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pterocarpus-erinaceus/`](../photos/pterocarpus-erinaceus/) and the image links below | ![schematic](../docs/schematics/pterocarpus-erinaceus.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-erinaceus.svg)
 
 ## Key diagnostic summary
 
-Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). No annotation - all parts covered.
+Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). Annotation #17 since 2023: logs, sawn wood, veneer, plywood and transformed wood.
 
 ## Macroscopic features (hand lens, 10x, freshly cut transverse surface)
 
@@ -64,6 +62,14 @@ Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands
 ## Confirming beyond the hand lens
 
 DART-TOF MS and NIR separate P. erinaceus from P. tinctorius/santalinus; DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pterocarpus erinaceus* | II | #17 |  | Benin, Burkina Faso, Cameroon, Central African Republic, Chad, Côte d'Ivoire, Gambia, Ghana, Guinea, Guinea Bissau, Liberia, Mali, Niger, Nigeria, Senegal, Sierra Leone, Togo |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

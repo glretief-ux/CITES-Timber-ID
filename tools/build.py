@@ -4,14 +4,18 @@
     python tools/build.py
 
 Outputs
-  data/species.json, data/species.csv     machine-readable database
-  docs/data.json                          copy used by the web identification key
+  docs/data/timber.json                   everything the website needs (listing, features, full species lists, photos)
+  data/species.json, data/species.csv     machine-readable database (docs/species.csv is a copy)
   data/wildlife.json, docs/wildlife.json  group-level fauna & flora overview (tools/wildlife_data.py)
   docs/schematics/<id>.svg                schematic 10x end-grain drawing per taxon
   species/<id>.md                         one field-guide page per taxon
   species/README.md                       index of all pages
-  photos/<id>/README.md                   photo folder + what to photograph
-  photos/manifest.csv                     list of real 10x photos (add rows when you add photos)
+  photos/<id>/README.md                   folder for your own reference photos + what to photograph
+  photos/manifest.csv                     your own reference photos (add a row per photo)
+
+Inputs besides tools/species_data.py
+  docs/checklist-flora.json, docs/names-flora.json   Species+ export (tools/build_checklist.py, build_names.py)
+  docs/photos/manifest.json                          open-licence photos (tools/fetch_photos.py)
 """
 import csv
 import json
@@ -24,7 +28,8 @@ from urllib.parse import quote_plus
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
-from species_data import SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES, PHOTO_LINKS  # noqa: E402
+from species_data import (SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES, PHOTO_LINKS,  # noqa: E402
+                          CHECKLIST, PRODUCTS, COVERAGE, REGIONS)
 from wildlife_data import FAUNA, FLORA, FAUNA_GROUPS, FLORA_GROUPS  # noqa: E402
 
 
@@ -260,7 +265,8 @@ def esc(s):
 
 
 # ----------------------------------------------------------------- markdown
-def md_page(sp):
+def md_page(sp, rec=None):
+    rec = rec or {}
     eg = sp["endgrain"]
     L = [f"# {sp['scientific_name']}", "",
          f"**Family:** {sp['family']}  ",
@@ -275,9 +281,11 @@ def md_page(sp):
          f"**Appendix {sp['appendix']}:** {APPENDIX_DOCS[sp['appendix']]}", "",
          "The annotation above decides which products need a document at all. Details, validity, codes and a document check: "
          "[CITES documents guide](../guides/cites-documents.md).", "",
-         "## 10x end-grain view", "",
-         "| Real photographs (reference specimens) | Schematic |", "|---|---|",
-         f"| See [`photos/{sp['id']}/`](../photos/{sp['id']}/) and the image links below | ![schematic](../docs/schematics/{sp['id']}.svg) |", "",
+         "## End-grain view", ""]
+    for ph in rec.get("photos", [])[:4]:
+        L += [f"![{ph['species']} end grain](../docs/photos/{ph['file']})  ",
+              f"*{ph['species']}* - {ph['surface']}, {ph['optics']}. {ph['source']}, {ph['licence']}.", ""]
+    L += [f"Schematic drawing (not a photograph): ![schematic](../docs/schematics/{sp['id']}.svg)", "",
          "## Key diagnostic summary", "", sp["key_diagnostic"], "",
          "## Macroscopic features (hand lens, 10x, freshly cut transverse surface)", "",
          "| Feature | Observation |", "|---|---|"]
@@ -302,9 +310,11 @@ def md_page(sp):
           f"- **Odour:** {sp['odour']}", "",
           "## Look-alikes (check these before concluding)", ""] + [f"- {x}" for x in sp["lookalikes"]]
     L += ["", "## Confirming beyond the hand lens", "", sp["lab_methods"], ""]
-    if sp["species_included"]:
-        L += ["## Species included in this listing", "", "| Taxon | Trade name | Range | Notes |", "|---|---|---|---|"]
-        L += [f"| *{s['name']}* | {s['trade']} | {s['range']} | {s['notes']} |" for s in sp["species_included"]]
+    if rec.get("species"):
+        L += [f"## Listed species covered by this entry ({len(rec['species'])})", "",
+              "From the Species+ checklist. | Taxon | Appendix | Annotation | Trade name | Native distribution |".split(" | ")[0], "",
+              "| Taxon | Appendix | Annotation | Trade name | Native distribution |", "|---|---|---|---|---|"]
+        L += [f"| *{r['name']}* | {r['app']} | {r['ann']} | {r['trade']} | {r['dist'].replace(',', ', ')} |" for r in rec["species"]]
         L += [""]
     if PHOTO_LINKS.get(sp["id"]):
         L += ["## View 10x end-grain photographs (CITESwoodID)", "",
@@ -348,76 +358,165 @@ Only add images you own or that carry an open licence (public domain, CC-BY, CC-
 
 
 # ----------------------------------------------------------------- main
+import re  # noqa: E402
+
+VERSION = "2026-11"
+CHECKED = "13 November 2026"
+
+
+def ann_codes(a):
+    c = re.findall(r"#\d+", a)
+    return sorted(set(c), key=lambda x: int(x[1:])) or ["none"]
+
+
+def load_checklist():
+    """Complete list of listed names per entry, from the Species+ export."""
+    d = json.load(open(os.path.join(ROOT, "docs", "checklist-flora.json"), encoding="utf-8"))
+    n = json.load(open(os.path.join(ROOT, "docs", "names-flora.json"), encoding="utf-8"))
+    S, N, A, D, T = d["S"], d["N"], d["A"], d["D"], d["T"]
+    official = {}
+    for a in A:
+        m = re.match(r"\*\*(I+)\*\* (#\d+) (.*)", a, re.S)
+        if m and m.group(2) not in official:
+            official[m.group(2)] = re.sub(r"\s+", " ", m.group(3)).strip()
+    out = {}
+    for tid, rule in CHECKLIST.items():
+        rows = []
+        for t in T:
+            g = t[0].split()[0]
+            if t[0] in rule.get("exclude", []):
+                continue
+            if g in rule.get("genera", []) or t[0] in rule.get("species", []):
+                codes = [re.match(r"\*\*I+\*\* (#\d+)", A[i]).group(1) for i in t[9]]
+                notes = [re.sub(r"\*\*I+\*\*\s*", "", N[i]) for i in t[8]]
+                notes = [re.sub(r"\[GENUS listing [^\]]+\]\s*", "", x).strip() for x in notes]
+                rows.append({"name": t[0], "app": t[5], "ann": codes[0] if codes else "none",
+                             "note": " ".join(x for x in notes if x), "dist": D[t[10]] if isinstance(t[10], int) else ""})
+        names = {r["name"].lower() for r in rows}
+        syn = sorted([k, v] for k, v in n["s"].items() if v in names)
+        com = sorted({(c[0], c[1], c[2]) for c in n["c"] if c[2].split(" / ")[0].lower() in names
+                      or c[2].replace(" spp.", "").lower() in {g.lower() for g in rule.get("genera", [])}})
+        out[tid] = {"species": rows, "synonyms": syn, "common": [list(c) for c in com]}
+    return out, official, d["meta"], d["count"]
+
+
 def main():
+    chk, official, meta, flora_n = load_checklist()
+    for d in ("docs/schematics", "docs/data", "species", "data"):
+        os.makedirs(os.path.join(ROOT, d), exist_ok=True)
+
+    # photos: open-licence set (fetch_photos.py) + the user's own reference photos (photos/manifest.csv)
+    photos = {}
+    mj = os.path.join(ROOT, "docs", "photos", "manifest.json")
+    if os.path.exists(mj):
+        for r in json.load(open(mj, encoding="utf-8")):
+            if os.path.exists(os.path.join(ROOT, "docs", "photos", r["file"])):
+                photos.setdefault(r["taxon"], []).append({k: r[k] for k in (
+                    "species", "listed", "file", "thumb", "w", "h", "surface", "optics", "source", "credit",
+                    "licence", "licence_url", "source_url") if k in r})
+    manifest = os.path.join(ROOT, "photos", "manifest.csv")
+    with open(manifest, encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            src = os.path.join(ROOT, "photos", row["taxon_id"], row["file"])
+            if not os.path.exists(src):
+                print(f"WARNING: manifest lists missing file photos/{row['taxon_id']}/{row['file']}")
+                continue
+            dst = os.path.join(ROOT, "docs", "photos", row["taxon_id"])
+            os.makedirs(dst, exist_ok=True)
+            shutil.copy2(src, os.path.join(dst, row["file"]))
+            photos.setdefault(row["taxon_id"], []).insert(0, {
+                "species": row.get("notes") or "", "listed": True, "file": f"{row['taxon_id']}/{row['file']}",
+                "thumb": f"{row['taxon_id']}/{row['file']}", "surface": row.get("surface") or "transverse (end grain)",
+                "optics": (row.get("magnification") or "10x") + (", " + row["wet_or_dry"] if row.get("wet_or_dry") else ""),
+                "source": "Reference specimen " + " ".join(x for x in (row.get("specimen_source"), row.get("specimen_id")) if x),
+                "credit": row.get("photographer") or "", "licence": row.get("licence") or ""})
+
     data = {
-        "version": "2026-10",
-        "listing_basis": "CITES Appendices in force after CoP20 (Samarkand, 24 Nov - 5 Dec 2025). Amendments adopted at CoP20 entered into force on 5 March 2026 (including a revised annotation #10 for Paubrasilia echinata). Proposals to remove Central African Afzelia bipindensis and Pterocarpus soyauxii were rejected. Cross-checked against the BfN list of protected timber species (Aug 2026); the genus-wide listings cover all species of the genus, including ones not named here.",
-        "disclaimer": "Macroscopic identification is a screening tool, usually reliable only to genus or group. Confirm species with an accredited wood-anatomy, DNA or mass-spectrometry laboratory and the live Species+ listing.",
-        "annotations": ANNOTATIONS,
+        "version": VERSION, "checked": CHECKED,
+        "checklist": {"source": meta.get("source"), "date": meta.get("date"), "flora_taxa": flora_n},
+        "listing_basis": ("CITES Appendices in force from 5 March 2026 (amendments adopted at CoP20, Samarkand, "
+                          "24 Nov - 5 Dec 2025), checked against the Species+ export of %s." % meta.get("date")),
+        "changes": [
+            "Podocarpus parlatorei transferred from Appendix I to Appendix II with a zero export quota for wild-taken specimens for commercial purposes (in force 5 March 2026).",
+            "Paubrasilia echinata (pernambuco) stays in Appendix II with a revised annotation #10 and a zero quota for wild-harvested specimens in commercial trade.",
+            "Proposals to remove Central African populations of Afzelia bipindensis and Pterocarpus soyauxii from Appendix II were rejected: both stay listed.",
+            "Commiphora wightii (guggul, a resin tree, not timber) added to Appendix II with annotation #19.",
+            "Platymiscium pleiostachyum is now listed under the name Platymiscium parviflorum.",
+        ],
+        "disclaimer": "Macroscopic identification is a screening tool, usually reliable only to genus or group. Confirm with an accredited wood-anatomy, DNA or mass-spectrometry laboratory and the live Species+ listing before enforcement action.",
+        "annotations": {k: {"plain": v, "official": official.get(k, "")} for k, v in ANNOTATIONS.items()},
+        "products": [{"id": a, "label": b, "hs": c} for a, b, c in PRODUCTS],
+        "coverage": {k: {"cells": v[0], "note": v[1]} for k, v in COVERAGE.items()},
         "non_timber_listed_trees": NON_TIMBER_LISTED_TREES,
         "taxa": [],
     }
-    os.makedirs(os.path.join(ROOT, "docs", "schematics"), exist_ok=True)
-    os.makedirs(os.path.join(ROOT, "species"), exist_ok=True)
-    os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
+    n_sp = 0
     for sp in SPECIES:
         rec = dict(sp)
+        c = chk[sp["id"]]
+        if not c["species"]:
+            print("WARNING: no checklist names for", sp["id"])
+        apps = {r["app"] for r in c["species"]}
+        if apps and sp["appendix"] not in apps:
+            print(f"WARNING: {sp['id']} appendix {sp['appendix']} but checklist says {apps}")
+        got = {r["ann"] for r in c["species"]}
+        if got - set(ann_codes(sp["annotation"])):
+            print(f"NOTE: {sp['id']} annotation '{sp['annotation']}' vs checklist {sorted(got)}")
+        rec["ann_codes"] = ann_codes(sp["annotation"])
+        rec["regions"] = [r for r, ids in REGIONS.items() if sp["id"] in ids]
+        cur = {}
+        for x in sp["species_included"]:
+            for nm in re.split(r",| and ", re.sub(r"\(.*?\)", "", x["name"])):
+                cur[nm.strip().lower()] = x
+        rec["species"] = [dict(r, trade=cur.get(r["name"].lower(), {}).get("trade", ""),
+                               remark=cur.get(r["name"].lower(), {}).get("notes", "")) for r in c["species"]]
+        rec["synonyms"], rec["common"] = c["synonyms"], c["common"]
+        n_sp += len(rec["species"])
         rec["schematic"] = f"schematics/{sp['id']}.svg"
         rec["references"] = [{"title": t, "url": u} for t, u in reference_links(sp)]
         rec["photo_links"] = PHOTO_LINKS.get(sp["id"], [])
+        rec["photos"] = photos.get(sp["id"], [])
         data["taxa"].append(rec)
         with open(os.path.join(ROOT, "docs", "schematics", f"{sp['id']}.svg"), "w", encoding="utf-8") as f:
             f.write(schematic_svg(sp))
         with open(os.path.join(ROOT, "species", f"{sp['id']}.md"), "w", encoding="utf-8") as f:
-            f.write(md_page(sp))
+            f.write(md_page(sp, rec))
         pdir = os.path.join(ROOT, "photos", sp["id"])
         os.makedirs(pdir, exist_ok=True)
         with open(os.path.join(pdir, "README.md"), "w", encoding="utf-8") as f:
             f.write(photo_readme(sp))
+    data["counts"] = {"entries": len(SPECIES), "species": n_sp,
+                      "photos": sum(len(t["photos"]) for t in data["taxa"]),
+                      "entries_with_photos": sum(1 for t in data["taxa"] if t["photos"])}
 
-    # photos: merge manifest so the web key can show real photos once added
-    manifest = os.path.join(ROOT, "photos", "manifest.csv")
-    if not os.path.exists(manifest):
-        with open(manifest, "w", newline="", encoding="utf-8") as f:
-            csv.writer(f).writerow(["taxon_id", "file", "magnification", "surface", "wet_or_dry", "specimen_source", "specimen_id", "photographer", "licence", "notes"])
-    photos = {}
-    with open(manifest, encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            photos.setdefault(row["taxon_id"], []).append(row)
-    import shutil
-    for rec in data["taxa"]:
-        rec["photos"] = []
-        for row in photos.get(rec["id"], []):
-            src = os.path.join(ROOT, "photos", rec["id"], row["file"])
-            if os.path.exists(src):  # copy into docs/ so GitHub Pages can serve it
-                dst = os.path.join(ROOT, "docs", "photos", rec["id"])
-                os.makedirs(dst, exist_ok=True)
-                shutil.copy2(src, os.path.join(dst, row["file"]))
-                rec["photos"].append(row)
-            else:
-                print(f"WARNING: manifest lists missing file photos/{rec['id']}/{row['file']}")
-
-    js = json.dumps(data, indent=2, ensure_ascii=False)
-    for p in (os.path.join(ROOT, "data", "species.json"), os.path.join(ROOT, "docs", "data.json")):
-        with open(p, "w", encoding="utf-8") as f:
-            f.write(js)
+    with open(os.path.join(ROOT, "docs", "data", "timber.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+    with open(os.path.join(ROOT, "data", "species.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
 
     with open(os.path.join(ROOT, "data", "species.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["id", "scientific_name", "rank", "family", "appendix", "annotation", "population_scope", "listed_since",
                     "common_names", "wood_type", "porosity", "pore_size", "pore_density", "grouping", "deposits",
-                    "parenchyma", "rays", "ripple_marks", "resin_canals", "heartwood", "density", "odour", "key_diagnostic", "lookalikes"])
-        for sp in SPECIES:
+                    "parenchyma", "rays", "ripple_marks", "resin_canals", "heartwood", "density", "odour", "key_diagnostic",
+                    "lookalikes", "listed_species_count", "open_photos"])
+        for sp, rec in zip(SPECIES, data["taxa"]):
             e = sp["endgrain"]
             w.writerow([sp["id"], sp["scientific_name"], sp["rank"], sp["family"], sp["appendix"], sp["annotation"],
                         sp["population_scope"], sp["listed_since"], "; ".join(sp["common_names"]), sp["wood_type"],
                         e["porosity"], e.get("pore_size") or "", e.get("pore_density") or "", e.get("grouping") or "",
                         e.get("deposits") or "", "; ".join(e.get("parenchyma") or []), e.get("rays"), e.get("ripple_marks"),
-                        e.get("resin_canals"), sp["heartwood"], sp["density"], sp["odour"], sp["key_diagnostic"], "; ".join(sp["lookalikes"])])
-
+                        e.get("resin_canals"), sp["heartwood"], sp["density"], sp["odour"], sp["key_diagnostic"],
+                        "; ".join(sp["lookalikes"]), len(rec["species"]), len(rec["photos"])])
     shutil.copy2(os.path.join(ROOT, "data", "species.csv"), os.path.join(ROOT, "docs", "species.csv"))
+    with open(os.path.join(ROOT, "data", "listed_species.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["scientific_name", "appendix", "annotation", "listing_note", "native_distribution", "profile_id"])
+        for rec in data["taxa"]:
+            for r in rec["species"]:
+                w.writerow([r["name"], r["app"], r["ann"], r["note"], r["dist"], rec["id"]])
+    shutil.copy2(os.path.join(ROOT, "data", "listed_species.csv"), os.path.join(ROOT, "docs", "data", "listed_species.csv"))
 
-    # fauna / flora group-level overview for the web lookup (not the full checklist)
     wl = {"note": "Group-level overview of CITES-listed fauna and non-timber flora. Not the full checklist - confirm every species on Species+.",
           "fauna_groups": FAUNA_GROUPS, "flora_groups": FLORA_GROUPS, "fauna": FAUNA, "flora": FLORA}
     wjs = json.dumps(wl, indent=1, ensure_ascii=False)
@@ -425,18 +524,16 @@ def main():
         with open(p, "w", encoding="utf-8") as f:
             f.write(wjs)
 
-    # species index
     L = ["# CITES-listed timber taxa — index", "",
-         "Generated from `tools/species_data.py`. Listing basis: CITES Appendices after CoP20 (2025).", "",
-         "| Appendix | Taxon | Family | Trade names | Annotation | Wood type |", "|---|---|---|---|---|---|"]
-    for sp in sorted(SPECIES, key=lambda s: (s["appendix"], s["scientific_name"])):
-        L.append(f"| {sp['appendix']} | [*{sp['scientific_name']}*]({sp['id']}.md) | {sp['family']} | {', '.join(sp['common_names'][:3])} | {sp['annotation']} | {sp['wood_type']} |")
+         f"Generated from `tools/species_data.py`. {data['listing_basis']}", "",
+         "| Appendix | Taxon | Family | Trade names | Annotation | Listed species | Open photos |", "|---|---|---|---|---|---|---|"]
+    for rec in sorted(data["taxa"], key=lambda s: (s["appendix"], s["scientific_name"])):
+        L.append(f"| {rec['appendix']} | [*{rec['scientific_name']}*]({rec['id']}.md) | {rec['family']} | {', '.join(rec['common_names'][:3])} | {rec['annotation']} | {len(rec['species'])} | {len(rec['photos'])} |")
     L += ["", "**Other CITES-listed trees not normally traded as timber:**", ""] + [f"- {x}" for x in NON_TIMBER_LISTED_TREES]
     with open(os.path.join(ROOT, "species", "README.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
-
-    n_sp = sum(len(s["species_included"]) or 1 for s in SPECIES)
-    print(f"Built {len(SPECIES)} listing entries ({n_sp} named taxa), {sum(len(v) for v in photos.values())} photos in manifest.")
+    print(f"Built {len(SPECIES)} entries, {n_sp} listed species names, {data['counts']['photos']} photos "
+          f"for {data['counts']['entries_with_photos']} entries.")
 
 
 if __name__ == "__main__":

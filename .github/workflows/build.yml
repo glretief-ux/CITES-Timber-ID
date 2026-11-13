@@ -1,4 +1,4 @@
-name: Rebuild database and web key
+name: Rebuild database and site data
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
     paths:
       - "tools/**"
       - "photos/**"
+      - "docs/photos/manifest.json"
   workflow_dispatch:
 
 permissions:

@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/aniba-rosaeodora/`](../photos/aniba-rosaeodora/) and the image links below | ![schematic](../docs/schematics/aniba-rosaeodora.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/aniba-rosaeodora.svg)
 
 ## Key diagnostic summary
 
@@ -60,6 +58,14 @@ NOT a 'rosewood' timber in the Dalbergia sense; traded mostly as oil. Wood: frag
 ## Confirming beyond the hand lens
 
 Oil GC-MS, DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Aniba rosaeodora* | II | #12 |  | Brazil, Colombia, Ecuador, French Guiana [FR], Guyana, Peru, Suriname, Venezuela (Bolivarian Republic of) |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

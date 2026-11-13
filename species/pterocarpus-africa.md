@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pterocarpus-africa/`](../photos/pterocarpus-africa/) and the image links below | ![schematic](../docs/schematics/pterocarpus-africa.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-africa.svg)
 
 ## Key diagnostic summary
 
@@ -63,20 +61,34 @@ Same genus pattern as above. Proposal at CoP20 to remove Central African P. soya
 
 DNA / mass spec for species.
 
-## Species included in this listing
+## Listed species covered by this entry (22)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Pterocarpus soyauxii* | African padauk | Central Africa | Bright orange-red; large pores visible unaided. |
-| *Pterocarpus angolensis* | Muninga, mukwa, kiaat | Southern & East Africa | Golden-brown, lighter. |
-| *Pterocarpus osun* | Camwood/ African padauk | West Africa |  |
-| *Pterocarpus mildbraedii* |  | West & Central Africa |  |
-| *Pterocarpus erinaceus, P. tinctorius* |  |  | See separate entries. |
-| *Pterocarpus brenanii* |  | Africa |  |
-| *Pterocarpus lucens* |  | Africa |  |
-| *Pterocarpus rotundifolius* |  | Africa |  |
-| *Pterocarpus santalinoides* |  | Africa / Neotropics |  |
-| *Pterocarpus tessmannii* |  | Central Africa |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pterocarpus albopubescens* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus angolensis* | II | #17 | Muninga, mukwa, kiaat | Angola, Botswana, Congo, Democratic Republic of the Congo, Eswatini, Malawi, Mozambique, Namibia, South Africa, United Republic of Tanzania, Zambia, Zimbabwe |
+| *Pterocarpus brenanii* | II | #17 |  | Malawi, Mozambique, Zambia, Zimbabwe |
+| *Pterocarpus casteelsii* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus claessensii* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus dalbergioides* | II | #17 |  | India |
+| *Pterocarpus gilletii* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus hockii* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus homblei* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus indicus* | II | #17 |  | Cambodia, China, Indonesia, Malaysia, Myanmar, Papua New Guinea, Philippines, Solomon Islands, Taiwan,  Province of China, Thailand, United States of America, Vanuatu, Viet Nam |
+| *Pterocarpus lucens* | II | #17 |  | Angola, Botswana, Burkina Faso, Cameroon, Central African Republic, Chad, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Eritrea, Ethiopia, Gambia, Ghana, Guinea, Guinea Bissau, Malawi, Mali, Mauritania, Mozambique, Namibia, Niger, Nigeria, Senegal, South Africa, Sudan, Togo, Uganda, Zambia, Zimbabwe |
+| *Pterocarpus marsupium* | II | #17 |  | Bangladesh, India, Nepal, Sri Lanka |
+| *Pterocarpus megalocarpus* | II | #17 |  | Mozambique |
+| *Pterocarpus mildbraedii* | II | #17 |  | Benin, Cameroon, Central African Republic, Congo, Côte d'Ivoire, Equatorial Guinea, Gabon, Ghana, Liberia, Nigeria, Sierra Leone, United Republic of Tanzania |
+| *Pterocarpus mutondo* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus osun* | II | #17 | Camwood/ African padauk | Cameroon, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Nigeria |
+| *Pterocarpus rotundifolius* | II | #17 |  | Angola, Botswana, Democratic Republic of the Congo, Eswatini, Malawi, Mozambique, Namibia, South Africa, United Republic of Tanzania, Zambia, Zimbabwe |
+| *Pterocarpus santalinoides* | II | #17 |  | Benin, Burkina Faso, Cameroon, Central African Republic, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Ghana, Guinea, Guinea Bissau, Liberia, Mali, Nigeria, Senegal, Sierra Leone, Togo |
+| *Pterocarpus soyauxii* | II | #17 | African padauk | Angola, Cameroon, Central African Republic, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Nigeria |
+| *Pterocarpus tessmannii* | II | #17 |  | Democratic Republic of the Congo, Equatorial Guinea, Gabon |
+| *Pterocarpus velutinus* | II | #17 |  | Democratic Republic of the Congo |
+| *Pterocarpus zenkeri* | II | #17 |  | Cameroon |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

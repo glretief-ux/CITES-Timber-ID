@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/bulnesia-sarmientoi/`](../photos/bulnesia-sarmientoi/) and the image links below | ![schematic](../docs/schematics/bulnesia-sarmientoi.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/bulnesia-sarmientoi.svg)
 
 ## Key diagnostic summary
 
@@ -63,6 +61,14 @@ Green-olive, oily, fragrant, very heavy wood with small solitary pores and very 
 ## Confirming beyond the hand lens
 
 DNA/MS.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Bulnesia sarmientoi* | II | #11 |  | Argentina, Bolivia (Plurinational State of), Brazil, Paraguay |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

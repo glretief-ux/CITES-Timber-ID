@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/guibourtia-bubinga/`](../photos/guibourtia-bubinga/) and the image links below | ![schematic](../docs/schematics/guibourtia-bubinga.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/guibourtia-bubinga.svg)
 
 ## Key diagnostic summary
 
@@ -64,13 +62,15 @@ Pinkish-red, purple-veined heartwood; medium pores often gum-filled; aliform-con
 
 DNA/mass spec for species.
 
-## Species included in this listing
+## Listed species covered by this entry (3)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Guibourtia demeusei* | Bubinga | Cameroon to DR Congo |  |
-| *Guibourtia pellegriniana* | Bubinga | Gabon, Equatorial Guinea, Cameroon |  |
-| *Guibourtia tessmannii* | Bubinga, kevazingo | Cameroon, Gabon, Equatorial Guinea | Main source of kevazingo veneer and 'bubinga' slabs. |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Guibourtia demeusei* | II | #15 | Bubinga | Cameroon, Central African Republic, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon |
+| *Guibourtia pellegriniana* | II | #15 | Bubinga | Congo, Gabon, Nigeria |
+| *Guibourtia tessmannii* | II | #15 | Bubinga, kevazingo | Cameroon, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

@@ -1,4 +1,4 @@
-# Platymiscium pleiostachyum
+# Platymiscium parviflorum (syn. Platymiscium pleiostachyum)
 
 **Family:** Fabaceae  
 **Trade / common names:** Cristobal, Macacauba, Trebol, Panama redwood (genus)  
@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/platymiscium-pleiostachyum/`](../photos/platymiscium-pleiostachyum/) and the image links below | ![schematic](../docs/schematics/platymiscium-pleiostachyum.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/platymiscium-pleiostachyum.svg)
 
 ## Key diagnostic summary
 
@@ -63,6 +61,14 @@ Red striped rosewood-like wood with storied structure. Only P. pleiostachyum lis
 
 DNA/MS.
 
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Platymiscium parviflorum* | II | #4 |  | Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua |
+
 ## View 10x end-grain photographs (CITESwoodID)
 
 Transverse section at about 10x, from verified reference specimens. Images (c) Thünen Institute - linked, not copied.
@@ -71,14 +77,14 @@ Transverse section at about 10x, from verified reference specimens. Images (c) T
 
 ## Other image sources for 10x end-grain photographs
 
-- [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Platymiscium+pleiostachyum)
-- [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Platymiscium+pleiostachyum)
+- [Species+ (official CITES listing & annotation)](https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=Platymiscium+parviflorum)
+- [The Wood Database (has a 10x end-grain photo per species)](https://www.wood-database.com/?s=Platymiscium+parviflorum)
 - [InsideWood (anatomy database, NC State)](https://insidewood.lib.ncsu.edu/search)
 - [CITES Timber ID repository (manuals, keys, photo atlases)](https://cites.org/eng/timber/timber-ID-repository)
 - [CITESwoodID (Thünen Institute, macroscopic key with images)](https://www.thuenen.de/en/institutes/wood-research/fields-of-activity/wood-identification-and-wood-anatomy)
 - [Pl@ntWood (CIRAD, macroscopic photos of tropical timbers)](https://plantwood.cirad.fr)
-- [Wikimedia Commons (free-licence images)](https://commons.wikimedia.org/w/index.php?search=Platymiscium+pleiostachyum+wood&title=Special:MediaSearch&type=image)
-- [GBIF (distribution)](https://www.gbif.org/species/search?q=Platymiscium+pleiostachyum)
+- [Wikimedia Commons (free-licence images)](https://commons.wikimedia.org/w/index.php?search=Platymiscium+parviflorum+wood&title=Special:MediaSearch&type=image)
+- [GBIF (distribution)](https://www.gbif.org/species/search?q=Platymiscium+parviflorum)
 
 ---
 [← All species](README.md) · [Field procedure](../guides/field-procedure.md) · [CITES documents](../guides/cites-documents.md) · [Feature glossary](../guides/feature-glossary.md)

@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/afzelia-spp/`](../photos/afzelia-spp/) and the image links below | ![schematic](../docs/schematics/afzelia-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/afzelia-spp.svg)
 
 ## Key diagnostic summary
 
@@ -64,16 +62,19 @@ Large, few pores with YELLOWISH-WHITE deposits + lozenge/confluent parenchyma + 
 
 Separation from Intsia needs microscopy/DNA - check stated origin.
 
-## Species included in this listing
+## Listed species covered by this entry (7)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Afzelia africana* | Doussié, lingue | West Africa savanna/forest |  |
-| *Afzelia bipindensis* | Doussié (Cameroon) | Central Africa |  |
-| *Afzelia pachyloba* | Doussié | Central Africa |  |
-| *Afzelia quanzensis* | Pod mahogany, chanfuta, mkora | East & southern Africa |  |
-| *Afzelia bella, A. parviflora and other African spp.* |  |  |  |
-| *Afzelia peturei* |  | Central Africa |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Afzelia africana* | II | #17 | Doussié, lingue | Benin, Burkina Faso, Cameroon, Central African Republic, Chad, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Ghana, Guinea, Guinea Bissau, Mali, Niger, Nigeria, Senegal, Sierra Leone, South Sudan, Sudan, Togo, Uganda |
+| *Afzelia bella* | II | #17 |  | Angola, Cameroon, Central African Republic, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Ghana, Guinea, Liberia, Nigeria, Togo |
+| *Afzelia bipindensis* | II | #17 | Doussié (Cameroon) | Angola, Cameroon, Central African Republic, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Nigeria, Uganda |
+| *Afzelia pachyloba* | II | #17 | Doussié | Angola, Cameroon, Central African Republic, Congo, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Nigeria |
+| *Afzelia parviflora* | II | #17 |  | Angola, Côte d'Ivoire, Guinea, Liberia, Sierra Leone |
+| *Afzelia peturei* | II | #17 |  | Democratic Republic of the Congo, Zambia |
+| *Afzelia quanzensis* | II | #17 | Pod mahogany, chanfuta, mkora | Angola, Botswana, Burundi, Democratic Republic of the Congo, Eswatini, Kenya, Malawi, Mozambique, Namibia, Somalia, South Africa, Uganda, United Republic of Tanzania, Zambia, Zimbabwe |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

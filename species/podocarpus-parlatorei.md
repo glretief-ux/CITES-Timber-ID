@@ -2,9 +2,9 @@
 
 **Family:** Podocarpaceae  
 **Trade / common names:** Parlatore's podocarp, pino del cerro  
-**CITES Appendix:** **I**  
+**CITES Appendix:** **II**  
 **Annotation:** none — No annotation - ALL parts and derivatives are covered (including finished products).  
-**Population covered:** All populations (App. I per BfN list Aug 2026; some older sources give a later transfer - confirm on Species+)  
+**Population covered:** All populations. Transferred from Appendix I to Appendix II at CoP20 (in force 5 March 2026) with a ZERO export quota for wild-taken specimens traded for commercial purposes  
 **First listed (approx. year in force):** 1975  
 **Native range:** Andean Yungas of Argentina and Bolivia.
 
@@ -12,15 +12,13 @@
 
 ## Documents needed for trade
 
-**Appendix I:** **Export permit** from the exporting country **and** an **import permit** from the importing country (the import permit must be issued first); re-exports need a **re-export certificate**. Import must not be primarily commercial. Pre-Convention stock needs a pre-Convention certificate.
+**Appendix II:** **Export permit** from the exporting country (or a **re-export certificate** for re-exports). CITES itself requires no import permit, but many countries (e.g. the EU) do.
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/podocarpus-parlatorei/`](../photos/podocarpus-parlatorei/) and the image links below | ![schematic](../docs/schematics/podocarpus-parlatorei.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/podocarpus-parlatorei.svg)
 
 ## Key diagnostic summary
 
@@ -61,6 +59,14 @@ Featureless, uniform yellowish softwood without resin canals and with indistinct
 ## Confirming beyond the hand lens
 
 DNA for species.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Podocarpus parlatorei* | II | none |  | Argentina, Bolivia (Plurinational State of), Peru |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

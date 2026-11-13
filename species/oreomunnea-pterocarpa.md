@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/oreomunnea-pterocarpa/`](../photos/oreomunnea-pterocarpa/) and the image links below | ![schematic](../docs/schematics/oreomunnea-pterocarpa.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/oreomunnea-pterocarpa.svg)
 
 ## Key diagnostic summary
 
@@ -60,6 +58,14 @@ Rarely encountered in trade; walnut-like Juglandaceae wood.
 ## Confirming beyond the hand lens
 
 Microscopy/DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Oreomunnea pterocarpa* | II | #4 |  | Costa Rica |
 
 ## Other image sources for 10x end-grain photographs
 

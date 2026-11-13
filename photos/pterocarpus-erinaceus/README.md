@@ -14,6 +14,6 @@ For every photo add one row to [`../manifest.csv`](../manifest.csv).
 4. Optional: UV (365 nm) fluorescence of the end grain.
 
 ## Features the photo must show
-Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). No annotation - all parts covered.
+Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). Annotation #17 since 2023: logs, sawn wood, veneer, plywood and transformed wood.
 
 Only add images you own or that carry an open licence (public domain, CC-BY, CC-BY-SA). Record the licence and author in the manifest.

@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/fitzroya-cupressoides/`](../photos/fitzroya-cupressoides/) and the image links below | ![schematic](../docs/schematics/fitzroya-cupressoides.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/fitzroya-cupressoides.svg)
 
 ## Key diagnostic summary
 
@@ -63,6 +61,14 @@ Reddish non-resin-canal softwood with very narrow regular growth rings and cedar
 ## Confirming beyond the hand lens
 
 Microscopy of cross-field pitting; DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Fitzroya cupressoides* | I | none |  | Argentina, Chile |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

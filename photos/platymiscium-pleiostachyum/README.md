@@ -1,4 +1,4 @@
-# 10x photos — Platymiscium pleiostachyum
+# 10x photos — Platymiscium parviflorum (syn. Platymiscium pleiostachyum)
 
 Put **real** 10x end-grain photographs of verified reference specimens here.
 

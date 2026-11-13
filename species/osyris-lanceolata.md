@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/osyris-lanceolata/`](../photos/osyris-lanceolata/) and the image links below | ![schematic](../docs/schematics/osyris-lanceolata.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/osyris-lanceolata.svg)
 
 ## Key diagnostic summary
 
@@ -61,6 +59,14 @@ Small fragrant yellowish logs/roots from East Africa with very fine texture. Sme
 ## Confirming beyond the hand lens
 
 Oil chemistry, DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Osyris lanceolata* | II | #2 |  | Algeria, Angola, Bhutan, Botswana, Burundi, China, Democratic Republic of the Congo, Ethiopia, India, Kenya, Lao People's Democratic Republic, Lesotho, Malawi, Morocco, Mozambique, Namibia, Nepal, Portugal, Rwanda, Saudi Arabia, Somalia, South Africa, South Sudan, Spain, Thailand, Uganda, United Republic of Tanzania, Yemen, Zambia |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

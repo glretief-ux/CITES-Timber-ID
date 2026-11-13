@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/quercus-mongolica/`](../photos/quercus-mongolica/) and the image links below | ![schematic](../docs/schematics/quercus-mongolica.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/quercus-mongolica.svg)
 
 ## Key diagnostic summary
 
@@ -63,6 +61,14 @@ Typical white oak: ring porous, broad rays, tyloses in pores, flame-like latewoo
 ## Confirming beyond the hand lens
 
 DNA, stable isotopes for origin (Russia vs China/Japan/EU).
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Quercus mongolica* | III | #5 |  | China, Japan, Mongolia, Russian Federation |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

@@ -3,8 +3,8 @@
 **Family:** Fabaceae  
 **Trade / common names:** Mukula, African padauk (east/south), mulombe  
 **CITES Appendix:** **II**  
-**Annotation:** #6 (2019); African populations now also #17 — Logs, sawn wood, veneer sheets and plywood.  
-**Population covered:** All populations  
+**Annotation:** #17 — Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09, e.g. decking, flooring strips).  
+**Population covered:** All populations. Listed in 2019 with #6; since 2023 covered by the Pterocarpus spp. (African populations) listing with annotation #17  
 **First listed (approx. year in force):** 2019  
 **Native range:** DR Congo (Katanga), Zambia, Tanzania, Malawi, Angola, Mozambique.
 
@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pterocarpus-tinctorius/`](../photos/pterocarpus-tinctorius/) and the image links below | ![schematic](../docs/schematics/pterocarpus-tinctorius.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-tinctorius.svg)
 
 ## Key diagnostic summary
 
@@ -61,6 +59,14 @@ Red Pterocarpus pattern (banded parenchyma, ripple marks). Shipments of red logs
 ## Confirming beyond the hand lens
 
 DART-TOF MS / NIR.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pterocarpus tinctorius* | II | #17 |  | Angola, Congo, Democratic Republic of the Congo, Malawi, Mozambique, United Republic of Tanzania, Zambia |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

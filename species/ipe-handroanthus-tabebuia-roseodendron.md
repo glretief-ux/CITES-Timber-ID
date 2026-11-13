@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/ipe-handroanthus-tabebuia-roseodendron/`](../photos/ipe-handroanthus-tabebuia-roseodendron/) and the image links below | ![schematic](../docs/schematics/ipe-handroanthus-tabebuia-roseodendron.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/ipe-handroanthus-tabebuia-roseodendron.svg)
 
 ## Key diagnostic summary
 
@@ -67,15 +65,125 @@ Very heavy olive-brown wood, small numerous pores with YELLOW deposits that turn
 
 Lapachol spot test (field); DNA/MS for species.
 
-## Species included in this listing
+## Listed species covered by this entry (113)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Handroanthus serratifolius* | Ipê amarelo, yellow ipê | Amazon, Cerrado | Major decking species. |
-| *Handroanthus impetiginosus* | Ipê roxo, lapacho, pink ipê | Mexico to Argentina | Also bark (pau d'arco) - bark not covered by #17. |
-| *Handroanthus chrysotrichus, H. capitatus, H. guayacan, H. heptaphyllus, H. ochraceus and others (c. 30 spp.)* | Ipê, guayacán | Neotropics |  |
-| *Tabebuia spp. (c. 70 spp., e.g. T. rosea, T. cassinoides)* | Roble, caixeta | Neotropics | Usually lighter, paler, few or no yellow deposits. |
-| *Roseodendron donnell-smithii, R. chryseum* | Primavera, white mahogany | Mexico-Central America, Colombia/Venezuela | Pale yellowish-white light wood. |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Handroanthus albus* | II | #17 |  | Argentina, Brazil, Paraguay |
+| *Handroanthus arianeae* | II | #17 |  | Brazil |
+| *Handroanthus barbatus* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Colombia, Venezuela (Bolivarian Republic of) |
+| *Handroanthus billbergii* | II | #17 |  | Aruba, Bonaire,  Saint Eustatius and Saba, Brazil, Colombia, Cuba, Curaçao, Dominican Republic, Ecuador, Haiti, Peru, Venezuela (Bolivarian Republic of) |
+| *Handroanthus botelhensis* | II | #17 |  | Brazil |
+| *Handroanthus bureavii* | II | #17 |  | Brazil |
+| *Handroanthus capitatus* | II | #17 |  | Belize, Bolivia (Plurinational State of), Brazil, Colombia, French Guiana [FR], Grenada, Guyana, Peru, Suriname, Trinidad and Tobago, Venezuela (Bolivarian Republic of) |
+| *Handroanthus catarinensis* | II | #17 |  | Brazil |
+| *Handroanthus chrysanthus* | II | #17 |  | Anguilla (United Kingdom), Argentina, Belize, Bolivia (Plurinational State of), Brazil, Colombia, Costa Rica, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Trinidad and Tobago, Venezuela (Bolivarian Republic of) |
+| *Handroanthus chrysotrichus* | II | #17 | Ipê, guayacán | Argentina, Brazil |
+| *Handroanthus coralibe* | II | #17 |  | Colombia |
+| *Handroanthus coronatus* | II | #17 |  | Brazil |
+| *Handroanthus cristatus* | II | #17 |  | Brazil |
+| *Handroanthus diamantinensis* | II | #17 |  | Brazil |
+| *Handroanthus floccosus* | II | #17 |  | Guyana |
+| *Handroanthus grandiflorus* | II | #17 |  | Brazil |
+| *Handroanthus guayacan* | II | #17 |  | Belize, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama, Peru, Venezuela (Bolivarian Republic of) |
+| *Handroanthus heptaphyllus* | II | #17 |  | Argentina, Bolivia (Plurinational State of), Brazil, Paraguay, Uruguay, Venezuela (Bolivarian Republic of) |
+| *Handroanthus impetiginosus* | II | #17 | Ipê roxo, lapacho, pink ipê | Argentina, Belize, Bolivia (Plurinational State of), Brazil, Chile, Colombia, Costa Rica, Ecuador, El Salvador, French Guiana [FR], Guatemala, Guyana, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Suriname, Uruguay, Venezuela (Bolivarian Republic of) |
+| *Handroanthus incanus* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Colombia, Ecuador, Peru, Venezuela (Bolivarian Republic of) |
+| *Handroanthus lapacho* | II | #17 |  | Argentina, Bolivia (Plurinational State of) |
+| *Handroanthus obscurus* | II | #17 |  | Brazil, Colombia, Guyana, Peru, Venezuela (Bolivarian Republic of) |
+| *Handroanthus ochraceus* | II | #17 |  | Argentina, Belize, Bolivia (Plurinational State of), Brazil, British Virgin Islands (United Kingdom), Chile, Colombia, Costa Rica, Ecuador, El Salvador, French Guiana [FR], Guatemala, Guyana, Honduras, Jamaica, Mexico, Montserrat (United Kingdom), Nicaragua, Panama, Paraguay, Peru, Suriname, Trinidad and Tobago, Uruguay, Venezuela (Bolivarian Republic of), Virgin Islands of the USA |
+| *Handroanthus parviflorus* | II | #17 |  | Brazil |
+| *Handroanthus pedicellatus* | II | #17 |  | Brazil, Peru |
+| *Handroanthus pulcherrimus* | II | #17 |  | Argentina, Brazil, Paraguay |
+| *Handroanthus pumilus* | II | #17 |  | Brazil |
+| *Handroanthus riodocensis* | II | #17 |  | Brazil |
+| *Handroanthus selachidentatus* | II | #17 |  | Bolivia (Plurinational State of), Brazil |
+| *Handroanthus serratifolius* | II | #17 | Ipê amarelo, yellow ipê | Bolivia (Plurinational State of), Brazil, Colombia, Ecuador, French Guiana [FR], Guyana, Jamaica, Peru, Suriname, Trinidad and Tobago, Venezuela (Bolivarian Republic of) |
+| *Handroanthus speciosus* | II | #17 |  | Brazil |
+| *Handroanthus spongiosus* | II | #17 |  | Brazil |
+| *Handroanthus subtilis* | II | #17 |  | French Guiana [FR], Guyana, Venezuela (Bolivarian Republic of) |
+| *Handroanthus uleanus* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Colombia, Guyana, Venezuela (Bolivarian Republic of) |
+| *Handroanthus umbellatus* | II | #17 |  | Brazil, Venezuela (Bolivarian Republic of) |
+| *Roseodendron chryseum* | II | #17 |  | Colombia, Venezuela (Bolivarian Republic of) |
+| *Roseodendron donnell-smithii* | II | #17 | Primavera, white mahogany | Colombia, Ecuador, El Salvador, Guatemala, Honduras, Mexico, Puerto Rico, Venezuela (Bolivarian Republic of) |
+| *Tabebuia acrophylla* | II | #17 |  | Dominican Republic, Haiti |
+| *Tabebuia angustata* | II | #17 |  | Cuba, Jamaica |
+| *Tabebuia arimaoensis* | II | #17 |  | Cuba |
+| *Tabebuia aurea* | II | #17 |  | Argentina, Bolivia (Plurinational State of), Brazil, Paraguay, Peru, Suriname, Venezuela (Bolivarian Republic of) |
+| *Tabebuia bahamensis* | II | #17 |  | Bahamas, Cuba, Turks and Caicos Islands (United Kingdom) |
+| *Tabebuia berteroi* | II | #17 |  | Cuba, Dominican Republic, Haiti |
+| *Tabebuia bibracteolata* | II | #17 |  | Cuba |
+| *Tabebuia brooksiana* | II | #17 |  | Cuba |
+| *Tabebuia buchii* | II | #17 |  | Haiti |
+| *Tabebuia bullata* | II | #17 |  | Dominican Republic |
+| *Tabebuia calcicola* | II | #17 |  | Cuba, Haiti, Jamaica |
+| *Tabebuia caleticana* | II | #17 |  | Cuba |
+| *Tabebuia cassinoides* | II | #17 |  | Brazil |
+| *Tabebuia clementis* | II | #17 |  | Cuba |
+| *Tabebuia conferta* | II | #17 |  | Haiti |
+| *Tabebuia crispiflora* | II | #17 |  | Cuba, Dominican Republic |
+| *Tabebuia del-riscoi* | II | #17 |  | Cuba |
+| *Tabebuia densifolia* | II | #17 |  | Cuba, Dominican Republic, Haiti |
+| *Tabebuia domingensis* | II | #17 |  | Dominican Republic |
+| *Tabebuia dubia* | II | #17 |  | Cuba |
+| *Tabebuia elegans* | II | #17 |  | Cuba |
+| *Tabebuia elliptica* | II | #17 |  | Bolivia (Plurinational State of), Brazil |
+| *Tabebuia elongata* | II | #17 |  | Cuba |
+| *Tabebuia fluviatilis* | II | #17 |  | Brazil, French Guiana [FR], Guyana, Suriname, Venezuela (Bolivarian Republic of) |
+| *Tabebuia gemmiflora* | II | #17 |  | Brazil |
+| *Tabebuia glaucescens* | II | #17 |  | Cuba |
+| *Tabebuia gracilipes* | II | #17 |  | Cuba |
+| *Tabebuia haemantha* | II | #17 |  | Puerto Rico |
+| *Tabebuia heterophylla* | II | #17 |  | Anguilla (United Kingdom), Antigua and Barbuda, Bahamas, Barbados, British Virgin Islands (United Kingdom), Cayman Islands (United Kingdom), Cuba, Dominica, Dominican Republic, Grenada, Guadeloupe, Haiti, Jamaica, Martinique, Montserrat (United Kingdom), Puerto Rico, Saint Kitts and Nevis, Saint Lucia, Saint-Martin, Saint Vincent and the Grenadines, Trinidad and Tobago, United States of America, Virgin Islands of the USA |
+| *Tabebuia hypoleuca* | II | #17 |  | Cuba |
+| *Tabebuia inaequipes* | II | #17 |  | Cuba |
+| *Tabebuia insignis* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Colombia, French Guiana [FR], Guyana, Peru, Suriname, Venezuela (Bolivarian Republic of) |
+| *Tabebuia jackiana* | II | #17 |  | Cuba |
+| *Tabebuia jaucoensis* | II | #17 |  | Cuba |
+| *Tabebuia karsoana* | II | #17 |  | Puerto Rico |
+| *Tabebuia lepidophylla* | II | #17 |  | Cuba |
+| *Tabebuia lepidota* | II | #17 |  | Anguilla (United Kingdom), Antigua and Barbuda, Bahamas, British Virgin Islands (United Kingdom), Cuba, Guyana, Haiti, Saint-Martin |
+| *Tabebuia leptoneura* | II | #17 |  | Cuba |
+| *Tabebuia linearis* | II | #17 |  | Cuba |
+| *Tabebuia maxonii* | II | #17 |  | Dominican Republic |
+| *Tabebuia microphylla* | II | #17 |  | Cuba, Dominican Republic, Haiti |
+| *Tabebuia moaensis* | II | #17 |  | Cuba |
+| *Tabebuia multinervis* | II | #17 |  | Haiti |
+| *Tabebuia myrtifolia* | II | #17 |  | Cuba, Dominican Republic, Haiti |
+| *Tabebuia nodosa* | II | #17 |  | Argentina, Bolivia (Plurinational State of), Brazil, Paraguay |
+| *Tabebuia obovata* | II | #17 |  | Cuba, Dominican Republic, Haiti |
+| *Tabebuia obtusifolia* | II | #17 |  | Brazil |
+| *Tabebuia ophiolithica* | II | #17 |  | Dominican Republic |
+| *Tabebuia orinocensis* | II | #17 |  | Colombia, Venezuela (Bolivarian Republic of) |
+| *Tabebuia ovatifolia* | II | #17 |  | Brazil |
+| *Tabebuia pallida* | II | #17 |  | Anguilla (United Kingdom), Barbados, Dominica, Grenada, Guadeloupe, Martinique, Montserrat (United Kingdom), Puerto Rico, Saint Lucia, Saint Vincent and the Grenadines |
+| *Tabebuia palustris* | II | #17 |  | Colombia, Costa Rica, Ecuador, Panama |
+| *Tabebuia paniculata* | II | #17 |  |  |
+| *Tabebuia perelegans* | II | #17 |  | Cuba |
+| *Tabebuia pilosa* | II | #17 |  | Brazil, Colombia, Venezuela (Bolivarian Republic of) |
+| *Tabebuia pinetorum* | II | #17 |  | Cuba |
+| *Tabebuia platyantha* | II | #17 |  | Jamaica |
+| *Tabebuia polyantha* | II | #17 |  | Dominican Republic, Haiti |
+| *Tabebuia polymorpha* | II | #17 |  | Cuba |
+| *Tabebuia pulverulenta* | II | #17 |  | Cuba |
+| *Tabebuia reticulata* | II | #17 |  | Brazil |
+| *Tabebuia revoluta* | II | #17 |  | Dominican Republic |
+| *Tabebuia ricardii* | II | #17 |  | Dominican Republic |
+| *Tabebuia rigida* | II | #17 |  | Cuba, Puerto Rico |
+| *Tabebuia rosea* | II | #17 |  | Belize, Brazil, Cayman Islands (United Kingdom), Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, French Guiana [FR], Gambia, Guatemala, Guyana, Honduras, India, Jamaica, Mexico, Myanmar, Nicaragua, Panama, Puerto Rico, Sri Lanka, Trinidad and Tobago, United Republic of Tanzania, Venezuela (Bolivarian Republic of), Zimbabwe |
+| *Tabebuia roseoalba* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Paraguay, Peru |
+| *Tabebuia sagrae* | II | #17 |  | Cuba |
+| *Tabebuia sauvallei* | II | #17 |  | Cuba |
+| *Tabebuia schumanniana* | II | #17 |  | Puerto Rico |
+| *Tabebuia shaferi* | II | #17 |  | Cuba |
+| *Tabebuia simplicifolia* | II | #17 |  | Cuba |
+| *Tabebuia stenocalyx* | II | #17 |  | Brazil, French Guiana [FR], Guyana, Trinidad and Tobago, Venezuela (Bolivarian Republic of) |
+| *Tabebuia striata* | II | #17 |  | Colombia, Panama |
+| *Tabebuia trachycarpa* | II | #17 |  | Cuba |
+| *Tabebuia vinosa* | II | #17 |  | Dominican Republic |
+| *Tabebuia zanonii* | II | #17 |  | Dominican Republic |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

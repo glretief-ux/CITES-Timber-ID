@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/widdringtonia-whytei/`](../photos/widdringtonia-whytei/) and the image links below | ![schematic](../docs/schematics/widdringtonia-whytei.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/widdringtonia-whytei.svg)
 
 ## Key diagnostic summary
 
@@ -60,6 +58,14 @@ Aromatic reddish cypress-family softwood from Malawi; curios, planks. Origin key
 ## Confirming beyond the hand lens
 
 DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Widdringtonia whytei* | II | none |  | Malawi |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

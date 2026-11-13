@@ -4,7 +4,7 @@
 **Trade / common names:** Spur-leaf tree, shui qing shu  
 **CITES Appendix:** **III**  
 **Annotation:** #1 — All parts and derivatives, except seeds/spores/pollen, seedlings or tissue cultures in vitro, cut flowers of artificially propagated plants (timber, finished goods covered).  
-**Population covered:** Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)  
+**Population covered:** Population of Nepal (listed by Nepal)  
 **First listed (approx. year in force):** 1975  
 **Native range:** Himalaya (Nepal, NE India, Myanmar) to China.
 
@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/tetracentron-sinense/`](../photos/tetracentron-sinense/) and the image links below | ![schematic](../docs/schematics/tetracentron-sinense.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/tetracentron-sinense.svg)
 
 ## Key diagnostic summary
 
@@ -61,6 +59,14 @@ Vesselless angiosperm: no pores, but rays wider than any softwood. Very rare in 
 ## Confirming beyond the hand lens
 
 Microscopy.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Tetracentron sinense* | III | #1 |  | Bhutan, China, India, Myanmar, Nepal |
 
 ## Other image sources for 10x end-grain photographs
 

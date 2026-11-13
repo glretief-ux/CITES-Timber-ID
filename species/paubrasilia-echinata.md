@@ -3,8 +3,8 @@
 **Family:** Fabaceae  
 **Trade / common names:** Pernambuco, pau-brasil, Brazilwood, bois de Pernambouc  
 **CITES Appendix:** **II**  
-**Annotation:** #10 (amended at CoP20, 2025) — Amended at CoP20 (2025): in principle ALL parts and derivatives (incl. bows, bow blanks, logs, sawn wood), except finished musical instruments, parts and accessories moved NON-commercially (performance, personal use, exhibition, repair etc.) without change of ownership. Check Species+ for the exact text.  
-**Population covered:** All populations  
+**Annotation:** #10 — All parts and derivatives, except finished musical instruments, accessories and parts moved NON-commercially (performance, personal use, display, loan, competition, teaching, appraisal, repair) without change of ownership. Zero quota for wild-harvested specimens (source W) traded commercially. Bows, bow blanks, logs and sawn wood in commercial trade ARE covered.  
+**Population covered:** All populations. Zero quota for wild-harvested specimens (source code W) traded for commercial purposes (CoP20, in force 5 March 2026)  
 **First listed (approx. year in force):** 2007  
 **Native range:** Atlantic coastal forest of eastern Brazil.
 
@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/paubrasilia-echinata/`](../photos/paubrasilia-echinata/) and the image links below | ![schematic](../docs/schematics/paubrasilia-echinata.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/paubrasilia-echinata.svg)
 
 ## Key diagnostic summary
 
@@ -65,6 +63,14 @@ Very heavy, fine-textured orange-red wood (bow blanks!). CoP20 adopted new decis
 ## Confirming beyond the hand lens
 
 DART-TOF MS, NIR and DNA used for bow sticks; fluorescence of extracts.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Paubrasilia echinata* | II | #10 |  | Brazil |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

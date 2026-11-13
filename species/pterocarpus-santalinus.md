@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pterocarpus-santalinus/`](../photos/pterocarpus-santalinus/) and the image links below | ![schematic](../docs/schematics/pterocarpus-santalinus.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-santalinus.svg)
 
 ## Key diagnostic summary
 
@@ -65,6 +63,14 @@ Extremely dense, very dark red, non-fragrant wood; parenchyma in fine wavy bands
 ## Confirming beyond the hand lens
 
 Mass spectrometry and NIR distinguish from P. tinctorius; DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pterocarpus santalinus* | II | #7 |  | India |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

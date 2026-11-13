@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/dipteryx-spp/`](../photos/dipteryx-spp/) and the image links below | ![schematic](../docs/schematics/dipteryx-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/dipteryx-spp.svg)
 
 ## Key diagnostic summary
 
@@ -65,21 +63,24 @@ Very heavy brown wood with storied structure and winged-aliform parenchyma; coum
 
 DNA/MS.
 
-## Species included in this listing
+## Listed species covered by this entry (12)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Dipteryx odorata* | Cumaru, tonka | Amazon |  |
-| *Dipteryx micrantha* | Shihuahuaco | Peru, Bolivia, W Brazil | Major Peruvian export. |
-| *Dipteryx oleifera (= D. panamensis)* | Almendro | Central America, Colombia | Formerly App III (CR, NI). |
-| *Dipteryx alata, D. polyphylla, D. rosea, D. ferrea and others* | Baru, cumaru |  |  |
-| *Dipteryx casiquiarensis* |  | Neotropics |  |
-| *Dipteryx charapilla* |  | Neotropics |  |
-| *Dipteryx lacunifera* |  | Neotropics |  |
-| *Dipteryx magnifica* |  | Neotropics |  |
-| *Dipteryx punctata* |  | Neotropics |  |
-| *Dipteryx tetraphylla* |  | Neotropics |  |
-| *Dipteryx trifoliolata* |  | Neotropics |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Dipteryx alata* | II | #17 | Baru, cumaru | Bolivia (Plurinational State of), Brazil, Paraguay |
+| *Dipteryx charapilla* | II | #17 |  | Brazil, Peru |
+| *Dipteryx ferrea* | II | #17 |  | Bolivia (Plurinational State of), Brazil, Peru |
+| *Dipteryx hermetopascoaliana* | II | #17 |  | Brazil |
+| *Dipteryx lacunifera* | II | #17 |  | Brazil |
+| *Dipteryx magnifica* | II | #17 |  | Brazil, Colombia, Venezuela (Bolivarian Republic of) |
+| *Dipteryx micrantha* | II | #17 | Shihuahuaco | Bolivia (Plurinational State of), Brazil, Colombia, Ecuador, Peru |
+| *Dipteryx odorata* | II | #17 | Cumaru, tonka | Bolivia (Plurinational State of), Brazil, French Guiana [FR], Guyana, Suriname, Venezuela (Bolivarian Republic of) |
+| *Dipteryx oleifera* | II | #17 | Almendro | Colombia, Costa Rica, Nicaragua, Panama |
+| *Dipteryx polyphylla* | II | #17 |  | Brazil, Colombia |
+| *Dipteryx punctata* | II | #17 |  | Brazil, Colombia, French Guiana [FR], Guyana, Suriname, Venezuela (Bolivarian Republic of) |
+| *Dipteryx rosea* | II | #17 |  | Brazil, Colombia, Peru, Venezuela (Bolivarian Republic of) |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

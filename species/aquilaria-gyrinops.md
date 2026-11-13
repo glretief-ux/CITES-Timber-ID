@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/aquilaria-gyrinops/`](../photos/aquilaria-gyrinops/) and the image links below | ![schematic](../docs/schematics/aquilaria-gyrinops.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/aquilaria-gyrinops.svg)
 
 ## Key diagnostic summary
 
@@ -64,15 +62,42 @@ Light pale wood with scattered islands of INCLUDED PHLOEM, or dark resinous chip
 
 Microscopy (included phloem) for genus; chemistry (chromones) to confirm genuine agarwood.
 
-## Species included in this listing
+## Listed species covered by this entry (30)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Aquilaria malaccensis* | Gaharu | India to Indonesia | Main traded species. |
-| *Aquilaria crassna* | Kalamet | Indochina |  |
-| *Aquilaria sinensis* | Chen xiang | S China |  |
-| *Aquilaria filaria, A. microcarpa, A. beccariana, A. subintegra and others (c. 20 spp.)* |  |  |  |
-| *Gyrinops versteegii, G. walla and others (c. 10 spp.)* | Gaharu | Sri Lanka, E Indonesia, New Guinea |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Aquilaria apiculata* | II | #14 |  | Philippines |
+| *Aquilaria baillonii* | II | #14 |  | Cambodia |
+| *Aquilaria banaense* | II | #14 |  | Viet Nam |
+| *Aquilaria beccariana* | II | #14 |  | Indonesia, Malaysia |
+| *Aquilaria brachyantha* | II | #14 |  | Philippines |
+| *Aquilaria citrinicarpa* | II | #14 |  | Philippines |
+| *Aquilaria crassna* | II | #14 | Kalamet | Cambodia, Lao People's Democratic Republic, Thailand, Viet Nam |
+| *Aquilaria cumingiana* | II | #14 |  | Indonesia, Philippines |
+| *Aquilaria decemcostata* | II | #14 |  | Philippines |
+| *Aquilaria filaria* | II | #14 |  | Indonesia, Papua New Guinea, Philippines |
+| *Aquilaria hirta* | II | #14 |  | Indonesia, Malaysia, Singapore, Thailand |
+| *Aquilaria khasiana* | II | #14 |  | India |
+| *Aquilaria malaccensis* | II | #14 | Gaharu | Bangladesh, Bhutan, India, Indonesia, Iran (Islamic Republic of), Malaysia, Myanmar, Philippines, Singapore, Thailand, Viet Nam |
+| *Aquilaria microcarpa* | II | #14 |  | Indonesia, Malaysia |
+| *Aquilaria parvifolia* | II | #14 |  | Philippines |
+| *Aquilaria rostrata* | II | #14 |  | Malaysia |
+| *Aquilaria rugosa* | II | #14 |  | Viet Nam |
+| *Aquilaria sinensis* | II | #14 | Chen xiang | China |
+| *Aquilaria subintegra* | II | #14 |  | Thailand |
+| *Aquilaria urdanetensis* | II | #14 |  | Philippines |
+| *Aquilaria yunnanensis* | II | #14 |  | China |
+| *Gyrinops caudata* | II | #14 |  | Indonesia, Papua New Guinea |
+| *Gyrinops decipiens* | II | #14 |  | Indonesia |
+| *Gyrinops ledermannii* | II | #14 |  | Indonesia |
+| *Gyrinops moluccana* | II | #14 |  | Indonesia |
+| *Gyrinops podocarpa* | II | #14 |  | Indonesia |
+| *Gyrinops salicifolia* | II | #14 |  | Indonesia |
+| *Gyrinops versteegii* | II | #14 | Gaharu | Indonesia |
+| *Gyrinops vidalii* | II | #14 |  | Lao People's Democratic Republic, Thailand |
+| *Gyrinops walla* | II | #14 |  | India, Sri Lanka |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

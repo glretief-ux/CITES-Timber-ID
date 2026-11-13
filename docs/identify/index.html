@@ -3,94 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>African Timber ID - CITES Timber ID</title>
+<meta name="theme-color" content="#0a322e">
+<title>Photo ID trial | CITES Timber ID</title>
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/app.css">
 <style>
-:root{--ink:#1c2733;--mute:#66758a;--line:#e3e8ef;--bg:#f5f7fa;--card:#fff;--brand:#12355b;
---hi:#c0392b;--med:#e08a00;--lo:#2e8b57;--r:10px}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:12px}
-.toplogo{text-align:center;margin:2px 0 10px}.toplogo img{height:84px;max-width:92%;width:auto;display:inline-block}
-header{background:var(--brand);color:#fff;border-radius:var(--r);padding:16px 18px;margin-bottom:12px}
-header h1{margin:0 0 2px;font-size:19px}
-header .sub{opacity:.8;font-size:12px}
-header .hl{margin-top:8px;font-size:13px}
-header .hl a{color:#cfe0f5;text-decoration:underline}header .hl a.on{color:#fff;font-weight:700;text-decoration:none}
-.banner{border-radius:var(--r);padding:10px 14px;margin-bottom:12px;font-size:13px;background:#fff4d6;border:1px solid #f0d58a}
-.card{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:0 1px 2px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
-.card h2{font-size:14px;margin:-14px -16px 12px;padding:10px 16px;background:var(--brand);color:#fff;letter-spacing:.2px}
-.card p{margin:6px 0}
-.status{padding:10px 14px;border-radius:var(--r);margin-bottom:12px;font-size:13px;background:var(--card);border:1px solid var(--line)}
-.status.ok{background:#e7f5ed;border-color:#a9d9bd}
-.status.warn,.card.warn{background:#fff4d6;border:1px solid #f0d58a;box-shadow:none}
-label.pick{display:block;border:2px dashed #b9c6d6;border-radius:var(--r);padding:22px 14px;text-align:center;cursor:pointer;background:var(--card);margin-bottom:10px}
-label.pick strong{color:var(--brand);font-size:16px}
-input[type=file]{display:none}
+#idw{max-width:760px}
+#idw .status{padding:10px 14px;border-radius:6px;margin-bottom:12px;font-size:14px;background:#fff;border:1px solid var(--line);color:var(--ink)}
+#idw .status.ok{background:#e9f3ee;border-color:#a9d9bd}
+#idw .status.warn,#idw .card.warn{background:var(--a2b);border:1px solid #ecc88f}
+#idw label.pick{display:block;border:2px dashed #9fb3ac;border-radius:6px;padding:22px 14px;text-align:center;cursor:pointer;background:#fff;margin-bottom:10px}
+#idw label.pick strong{color:var(--brand);font:600 18px var(--head)}
+#idw input[type=file]{display:none}
 #thumbs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}
-#thumbs img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
-button{font:inherit;border:0;border-radius:8px;padding:13px 18px;background:var(--brand);color:#fff;width:100%;font-weight:700;cursor:pointer}
-button:disabled{opacity:.4;cursor:default}
-button.secondary{background:#fff;color:var(--brand);border:1px solid var(--brand);margin-top:4px}
-details{margin:10px 0;color:var(--mute);font-size:13px}
-details summary{cursor:pointer;color:var(--brand);font-weight:600}
-details input{font:inherit;width:110px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
-.verdict{border:2px solid var(--line)}
-.verdict .vlabel{font-size:20px;font-weight:800}
-.verdict .vnums{color:var(--mute);font-size:13px;margin-top:4px}
-.verdict.listed{background:#fdecea;border-color:var(--hi)}.verdict.listed .vlabel{color:var(--hi)}
-.verdict.notlisted{background:#e7f5ed;border-color:var(--lo)}.verdict.notlisted .vlabel{color:var(--lo)}
-.verdict.inconclusive{background:#fff4d6;border-color:var(--med)}.verdict.inconclusive .vlabel{color:#8a5a00}
-.row{margin:11px 0}
-.rowhead{display:flex;justify-content:space-between;gap:8px}
-.name{font-style:italic;font-weight:600}
-.track{height:8px;background:#e8edf3;border-radius:99px;overflow:hidden;margin-top:4px}
-.fill{height:100%;background:var(--brand)}
-.sub,.fine{color:var(--mute);font-size:12px;margin-top:3px}
-#progress{color:var(--mute);font-size:13px;min-height:1.2em;margin:8px 0}
-a{color:#1656a3}
-footer{color:var(--mute);font-size:11.5px;padding:8px 2px 24px}
+#thumbs img{width:72px;height:72px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+#idw button{font:600 16px var(--head);border:0;border-radius:6px;padding:13px 18px;background:var(--brand);color:#fff;width:100%;cursor:pointer}
+#idw button:disabled{opacity:.4;cursor:default}
+#idw button.secondary{background:#fff;color:var(--brand);border:1px solid var(--brand);margin-top:4px}
+#idw details{margin:10px 0;color:var(--mute);font-size:14px}
+#idw details summary{cursor:pointer;color:var(--brand);font-weight:600}
+#idw details input{font:inherit;width:110px;padding:6px 8px;border:1px solid var(--line);border-radius:6px}
+#idw .card{margin-bottom:12px}
+#idw .card h2{font-size:18px;margin-bottom:10px}
+#idw .verdict .vlabel{font:600 22px var(--head)}
+#idw .verdict .vnums{color:var(--mute);font-size:14px;margin-top:4px}
+#idw .verdict.listed{background:var(--a1b);border-color:var(--a1)}#idw .verdict.listed .vlabel{color:var(--a1)}
+#idw .verdict.notlisted{background:#e9f3ee;border-color:var(--no)}#idw .verdict.notlisted .vlabel{color:var(--no)}
+#idw .verdict.inconclusive{background:var(--a2b);border-color:var(--a2)}#idw .verdict.inconclusive .vlabel{color:var(--a2)}
+#idw .row{margin:11px 0}#idw .rowhead{display:flex;justify-content:space-between;gap:8px}
+#idw .name{font-style:italic;font-weight:600}
+#idw .track{height:8px;background:#e3e8e5;border-radius:99px;overflow:hidden;margin-top:4px}#idw .fill{height:100%;background:var(--brand)}
+#idw .sub,#idw .fine{color:var(--mute);font-size:13px;margin-top:3px}
+#progress{color:var(--mute);font-size:14px;min-height:1.2em;margin:8px 0}
 </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="toplogo"><img src="../assets/aircop-ccp-logo.png" alt="AIRCOP - Container Control Programme" onerror="this.parentNode.style.display='none'"></div>
-  <header>
-    <h1>African Timber ID</h1>
-    <div class="sub">Upload a 10x end-grain photo to check for CITES-listed African timbers</div>
-    <div class="hl"><a href="../search.html">Species lookup</a> · <a href="../index.html">10x identification key</a> · <a href="../search.html#fauna">Fauna</a> · <a href="../search.html#flora">Flora</a> · <a class="on">Identify from photo</a> · <a href="../species.csv">Database (CSV)</a> · <a href="https://github.com/glretief-ux/CITES-Timber-ID" target="_blank" rel="noopener">Repository</a></div>
-  </header>
-
-  <div class="banner">
-    <strong>Investigative lead only, not forensic proof.</strong> Confirm by wood anatomy or laboratory analysis before any enforcement action.
-    Photos are analysed in your browser and are not uploaded.
-  </div>
-
+<body data-page="identify">
+<section class="hero small"><div class="wrap">
+  <h1>Photo identification trial</h1>
+  <p>An experiment in recognising African timbers from a digital-microscope photo of the end grain. The model installed is a demonstration trained on four specimens. Its answers are not results.</p>
+</div></section>
+<main id="main" class="wrap"><div id="idw">
+  <div class="alert red"><b>Do not use for casework.</b> This page shows how photo identification will work once a model has been trained and tested on verified specimens. For a real consignment use the <a href="../key.html">10x key</a> and the <a href="../index.html">species profiles</a>. Photos are analysed in your browser and are not uploaded.</div>
   <div id="status" class="status">Loading model...</div>
-
-  <label class="pick" for="file"><strong>Choose photos</strong><br><span class="fine">One or several clean snapshots of the same sample, taken with the Dino-Lite app (not screenshots).</span></label>
+  <label class="pick" for="file"><strong>Choose photos</strong><br><span class="fine">One or several clean snapshots of the same sample from a digital microscope, not screenshots.</span></label>
   <input id="file" type="file" accept="image/*" multiple>
   <div id="thumbs"></div>
-
   <details>
     <summary>Settings</summary>
     <p>Patch size in source pixels: <input id="patchPx" type="number" min="128" step="64" value="1024"><br>
     <span class="fine">Keep this the same as the value used when the model was trained.</span></p>
   </details>
-
   <button id="go" disabled>Identify</button>
   <div id="progress"></div>
   <div id="result"></div>
-
-  <footer>
-    <div id="modelinfo"></div>
-    <div>Scope: CITES-listed African timbers per the CITES Secretariat overview of African tree species, plus common unlisted look-alikes.
-    Listings change at every CoP: check the live listing on <a href="https://speciesplus.net/" target="_blank" rel="noopener">Species+</a> before enforcement action.</div>
-  </footer>
-</div>
+  <p class="small muted" id="modelinfo"></p>
+  <p class="small muted">Scope: CITES-listed African timbers and common unlisted look-alikes. Training pipeline and imaging protocol: <a href="https://github.com/glretief-ux/CITES-Timber-ID/tree/main/wood-id">wood-id folder in the repository</a>.</p>
+</div></main>
+<script src="../assets/common.js" data-base="../"></script>
 <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.min.js"></script>
 <script src="core.js"></script>
 <script src="app.js"></script>
-<!-- GoatCounter: privacy-friendly visit counter (no cookies, no personal data) -->
 <script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

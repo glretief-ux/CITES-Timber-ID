@@ -1,4 +1,4 @@
-Code (tools/, docs/index.html, .github/): MIT License
+Code (tools/, docs/, .github/): MIT License
 
 Copyright (c) 2026 CITES Timber ID contributors
 
@@ -24,4 +24,5 @@ Text, data and schematic drawings (data/, species/, guides/, docs/schematics/):
 Creative Commons Attribution 4.0 International (CC BY 4.0)
 https://creativecommons.org/licenses/by/4.0/
 
-Photographs (photos/): licence as stated per image in photos/manifest.csv.
+Photographs: docs/photos/ - licence and credit per image in docs/photos/manifest.json (GOIMAI images: CC BY-SA 4.0);
+photos/ - licence as stated per image in photos/manifest.csv.

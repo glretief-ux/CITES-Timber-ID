@@ -32,7 +32,7 @@ Purpose: decide quickly whether a consignment **may** contain CITES-listed wood,
 8. Softwoods: **resin canals**? earlywood–latewood transition abrupt or gradual?
 9. Physical: colour of heartwood/sapwood, weight in hand (does a chip sink?), smell on a fresh cut, oily feel.
 
-Then use `docs/index.html` (the web key) or `species/README.md` to compare with listed taxa **and their look-alikes**.
+Then use `docs/key.html` (the web key) or `species/README.md` to compare with listed taxa **and their look-alikes**.
 
 ## 5. Quick chemical/physical tests
 | Test | How | Positive result suggests |

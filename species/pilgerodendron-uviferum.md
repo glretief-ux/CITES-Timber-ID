@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pilgerodendron-uviferum/`](../photos/pilgerodendron-uviferum/) and the image links below | ![schematic](../docs/schematics/pilgerodendron-uviferum.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pilgerodendron-uviferum.svg)
 
 ## Key diagnostic summary
 
@@ -62,6 +60,14 @@ Aromatic, fine-textured cypress-type softwood without resin canals; from Patagon
 ## Confirming beyond the hand lens
 
 Microscopy/DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pilgerodendron uviferum* | I | none |  | Argentina, Chile |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/swietenia-spp/`](../photos/swietenia-spp/) and the image links below | ![schematic](../docs/schematics/swietenia-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/swietenia-spp.svg)
 
 ## Key diagnostic summary
 
@@ -66,13 +64,15 @@ Diffuse-porous reddish wood with medium pores (solitary + short radial multiples
 
 Microscopy separates Swietenia from Khaya (ray structure, crystals); DNA/MS for species.
 
-## Species included in this listing
+## Listed species covered by this entry (3)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Swietenia macrophylla* | Big-leaf / Brazilian / Honduras mahogany | Mexico to Bolivia & Brazil | Annotation #6; plantations outside Neotropics excluded. |
-| *Swietenia humilis* | Pacific coast mahogany | Pacific Mexico to Costa Rica | Annotation #4. |
-| *Swietenia mahagoni* | Cuban / West Indian mahogany | Caribbean, S Florida | Annotation #5; denser, finer. |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Swietenia humilis* | II | #4 | Pacific coast mahogany | Belize, Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama |
+| *Swietenia macrophylla* | II | #6 | Big-leaf / Brazilian / Honduras mahogany | Belize, Bolivia (Plurinational State of), Brazil, Colombia, Costa Rica, Dominica, Ecuador, El Salvador, French Guiana [FR], Guadeloupe, Guatemala, Guyana, Honduras, Jamaica, Mexico, Nicaragua, Panama, Peru, Trinidad and Tobago, Venezuela (Bolivarian Republic of) |
+| *Swietenia mahagoni* | II | #5 | Cuban / West Indian mahogany | Anguilla (United Kingdom), Antigua and Barbuda, Bahamas, Barbados, Cayman Islands (United Kingdom), Colombia, Cuba, Dominica, Dominican Republic, Grenada, Guadeloupe, Jamaica, Martinique, Montserrat (United Kingdom), Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Trinidad and Tobago, Turks and Caicos Islands (United Kingdom), United States of America, Venezuela (Bolivarian Republic of) |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

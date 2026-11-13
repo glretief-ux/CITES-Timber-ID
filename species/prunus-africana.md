@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/prunus-africana/`](../photos/prunus-africana/) and the image links below | ![schematic](../docs/schematics/prunus-africana.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/prunus-africana.svg)
 
 ## Key diagnostic summary
 
@@ -59,6 +57,14 @@ Usually encountered as dried bark chips/powder (prostate medicine) - bitter almo
 ## Confirming beyond the hand lens
 
 Chemistry of bark; DNA.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Prunus africana* | II | #4 |  | Angola, Burundi, Cameroon, Comoros, Democratic Republic of the Congo, Equatorial Guinea, Eswatini, Ethiopia, Kenya, Lesotho, Madagascar, Malawi, Mozambique, Nigeria, Rwanda, Sao Tome and Principe, South Africa, South Sudan, Uganda, United Republic of Tanzania, Zambia, Zimbabwe |
 
 ## Other image sources for 10x end-grain photographs
 

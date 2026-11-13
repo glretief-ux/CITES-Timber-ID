@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/dalbergia-nigra/`](../photos/dalbergia-nigra/) and the image links below | ![schematic](../docs/schematics/dalbergia-nigra.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/dalbergia-nigra.svg)
 
 ## Key diagnostic summary
 
@@ -62,6 +60,14 @@ Dark heartwood with black streaks + rose scent + medium pores (few, solitary/sho
 ## Confirming beyond the hand lens
 
 Fluorescence of ethanol extract, DART-TOF mass spectrometry and DNA have been used to separate D. nigra from look-alikes; macroscopic ID = genus level only.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Dalbergia nigra* | I | none |  | Brazil |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

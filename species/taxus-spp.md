@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/taxus-spp/`](../photos/taxus-spp/) and the image links below | ![schematic](../docs/schematics/taxus-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/taxus-spp.svg)
 
 ## Key diagnostic summary
 
@@ -65,15 +63,17 @@ Dense orange-red softwood without resin canals, very narrow rings and thin white
 
 Microscopy (spiral thickenings), DNA.
 
-## Species included in this listing
+## Listed species covered by this entry (5)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Taxus chinensis* | Chinese yew | China |  |
-| *Taxus cuspidata* | Japanese yew | Japan, Korea, Russian Far East, NE China |  |
-| *Taxus fuana* | Himalayan yew | W Himalaya |  |
-| *Taxus sumatrana* | Sumatran yew | SE Asia |  |
-| *Taxus wallichiana* | Himalayan yew | Himalaya to SE Asia |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Taxus chinensis* | II | #2 | Chinese yew | China, India, Malaysia, Viet Nam |
+| *Taxus cuspidata* | II | #2 | Japanese yew | China, Japan, Republic of Korea, Russian Federation, Ukraine |
+| *Taxus fuana* | II | #2 | Himalayan yew | China, India, Nepal, Pakistan |
+| *Taxus sumatrana* | II | #2 | Sumatran yew | Taiwan,  Province of China |
+| *Taxus wallichiana* | II | #2 | Himalayan yew | Afghanistan, Bhutan, Bulgaria, China, India, Indonesia, Malaysia, Myanmar, Nepal, Pakistan, Philippines, Viet Nam |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

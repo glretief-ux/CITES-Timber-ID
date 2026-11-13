@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/caryocar-costaricense/`](../photos/caryocar-costaricense/) and the image links below | ![schematic](../docs/schematics/caryocar-costaricense.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/caryocar-costaricense.svg)
 
 ## Key diagnostic summary
 
@@ -62,6 +60,14 @@ Heavy yellow-brown hardwood, few medium pores in radial multiples, fine banded p
 ## Confirming beyond the hand lens
 
 Wood anatomy and DNA at genus level.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Caryocar costaricense* | II | #4 |  | Colombia, Costa Rica, Panama, Venezuela (Bolivarian Republic of) |
 
 ## Other image sources for 10x end-grain photographs
 

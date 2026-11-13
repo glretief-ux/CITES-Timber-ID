@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/podocarpus-neriifolius/`](../photos/podocarpus-neriifolius/) and the image links below | ![schematic](../docs/schematics/podocarpus-neriifolius.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/podocarpus-neriifolius.svg)
 
 ## Key diagnostic summary
 
@@ -60,6 +58,14 @@ Featureless Podocarpus wood; only Nepal-origin material is listed.
 ## Confirming beyond the hand lens
 
 DNA/origin.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Podocarpus neriifolius* | III | #1 |  | China, Fiji, India, Nepal, Solomon Islands, Thailand |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

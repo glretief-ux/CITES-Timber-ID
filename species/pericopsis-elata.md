@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/pericopsis-elata/`](../photos/pericopsis-elata/) and the image links below | ![schematic](../docs/schematics/pericopsis-elata.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/pericopsis-elata.svg)
 
 ## Key diagnostic summary
 
@@ -64,6 +62,14 @@ Teak-coloured wood that is diffuse porous with storied structure and aliform-con
 ## Confirming beyond the hand lens
 
 DNA/MS.
+
+## Listed species covered by this entry (1)
+
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Pericopsis elata* | II | #17 |  | Cameroon, Central African Republic, Congo, Côte d'Ivoire, Democratic Republic of the Congo, Ghana, Nigeria |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

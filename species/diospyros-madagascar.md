@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/diospyros-madagascar/`](../photos/diospyros-madagascar/) and the image links below | ![schematic](../docs/schematics/diospyros-madagascar.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/diospyros-madagascar.svg)
 
 ## Key diagnostic summary
 
@@ -65,11 +63,132 @@ Jet black, very heavy fine-textured wood; small pores in short radial multiples;
 
 DNA/provenance; macroscopic ID = Diospyros genus only.
 
-## Species included in this listing
+## Listed species covered by this entry (120)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Diospyros perrieri, D. aculeata, D. gracilipes and c. 80+ other Malagasy spp.* | Ebony | Madagascar | Madagascar export ban + CITES zero export quota. |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Diospyros aculeata* | II | #5 |  | Madagascar |
+| *Diospyros ambanjensis* | II | #5 |  | Madagascar |
+| *Diospyros amborelloides* | II | #5 |  | Madagascar |
+| *Diospyros analamerensis* | II | #5 |  | Madagascar |
+| *Diospyros andohahelensis* | II | #5 |  | Madagascar |
+| *Diospyros anosivolensis* | II | #5 |  | Madagascar |
+| *Diospyros antakaranae* | II | #5 |  | Madagascar |
+| *Diospyros antongilensis* | II | #5 |  | Madagascar |
+| *Diospyros antsirananae* | II | #5 |  | Madagascar |
+| *Diospyros arenicola* | II | #5 |  | Madagascar |
+| *Diospyros bardotiae* | II | #5 |  | Madagascar |
+| *Diospyros baroniana* | II | #5 |  | Madagascar |
+| *Diospyros baronii* | II | #5 |  | Madagascar |
+| *Diospyros beberonnii* | II | #5 |  | Madagascar |
+| *Diospyros bemarivensis* | II | #5 |  | Madagascar |
+| *Diospyros bernieriana* | II | #5 |  | Madagascar |
+| *Diospyros bezofensis* | II | #5 |  | Madagascar |
+| *Diospyros boinensis* | II | #5 |  | Madagascar |
+| *Diospyros boivinii* | II | #5 |  | Madagascar |
+| *Diospyros calophylla* | II | #5 |  | Madagascar |
+| *Diospyros chitoniophora* | II | #5 |  | Madagascar |
+| *Diospyros cinnamomoides* | II | #5 |  | Madagascar |
+| *Diospyros clusiifolia* | II | #5 |  | Madagascar |
+| *Diospyros comorensis* | II | #5 |  | Madagascar |
+| *Diospyros coursiana* | II | #5 |  | Madagascar |
+| *Diospyros crassifolia* | II | #5 |  | Madagascar |
+| *Diospyros crassipedicellata* | II | #5 |  | Madagascar |
+| *Diospyros cupulifera* | II | #5 |  | Madagascar |
+| *Diospyros danguyana* | II | #5 |  | Madagascar |
+| *Diospyros decaryana* | II | #5 |  | Madagascar |
+| *Diospyros decaryoides* | II | #5 |  | Madagascar |
+| *Diospyros dicorypheoides* | II | #5 |  | Madagascar |
+| *Diospyros ebenifera* | II | #5 |  | Madagascar |
+| *Diospyros erinacea* | II | #5 |  | Madagascar |
+| *Diospyros erythrosperma* | II | #5 |  | Madagascar |
+| *Diospyros falyi* | II | #5 |  | Madagascar |
+| *Diospyros filipes* | II | #5 |  | Madagascar |
+| *Diospyros fuscovelutina* | II | #5 |  | Madagascar |
+| *Diospyros geayana* | II | #5 |  | Madagascar |
+| *Diospyros gracilipes* | II | #5 |  | Madagascar |
+| *Diospyros grandiflora* | II | #5 |  | Madagascar |
+| *Diospyros greveana* | II | #5 |  | Madagascar |
+| *Diospyros haplostylis* | II | #5 |  | Madagascar |
+| *Diospyros hazomainty* | II | #5 |  | Madagascar |
+| *Diospyros heterosepala* | II | #5 |  | Madagascar |
+| *Diospyros humbertiana* | II | #5 |  | Madagascar |
+| *Diospyros implexicalyx* | II | #5 |  | Madagascar |
+| *Diospyros ketsensis* | II | #5 |  | Madagascar |
+| *Diospyros laevis* | II | #5 |  | Madagascar |
+| *Diospyros lanceolata* | II | #5 |  | Madagascar |
+| *Diospyros latispathulata* | II | #5 |  | Madagascar |
+| *Diospyros leucocalyx* | II | #5 |  | Madagascar |
+| *Diospyros littoralis* | II | #5 |  | Madagascar |
+| *Diospyros lokohensis* | II | #5 |  | Madagascar |
+| *Diospyros louvelii* | II | #5 |  | Madagascar |
+| *Diospyros lowryi* | II | #5 |  | Madagascar |
+| *Diospyros maculata* | II | #5 |  | Madagascar |
+| *Diospyros madagascariensis* | II | #5 |  | Madagascar |
+| *Diospyros madecassa* | II | #5 |  | Madagascar |
+| *Diospyros malandy* | II | #5 |  | Madagascar |
+| *Diospyros manampetsae* | II | #5 |  | Madagascar |
+| *Diospyros mandenensis* | II | #5 |  | Madagascar |
+| *Diospyros mangorensis* | II | #5 |  | Madagascar |
+| *Diospyros mapingo* | II | #5 |  | Madagascar |
+| *Diospyros masoalensis* | II | #5 |  | Madagascar |
+| *Diospyros mcphersonii* | II | #5 |  | Madagascar |
+| *Diospyros meeusiana* | II | #5 |  | Madagascar |
+| *Diospyros melanocarpa* | II | #5 |  | Madagascar |
+| *Diospyros microrhombus* | II | #5 |  | Madagascar |
+| *Diospyros mimusops* | II | #5 |  | Madagascar |
+| *Diospyros myriophylla* | II | #5 |  | Madagascar |
+| *Diospyros myrtifolia* | II | #5 |  | Madagascar |
+| *Diospyros nidiformis* | II | #5 |  | Madagascar |
+| *Diospyros obducta* | II | #5 |  | Madagascar |
+| *Diospyros occlusa* | II | #5 |  | Madagascar |
+| *Diospyros olacinoides* | II | #5 |  | Madagascar |
+| *Diospyros olivieri* | II | #5 |  | Madagascar |
+| *Diospyros orbicularis* | II | #5 |  | Madagascar |
+| *Diospyros parifolia* | II | #5 |  | Madagascar |
+| *Diospyros parvifolia* | II | #5 |  | Madagascar |
+| *Diospyros perglauca* | II | #5 |  | Madagascar |
+| *Diospyros perreticulata* | II | #5 |  | Madagascar |
+| *Diospyros perrieri* | II | #5 | Ebony | Madagascar |
+| *Diospyros pervilleana* | II | #5 |  | Madagascar |
+| *Diospyros pervillei* | II | #5 |  | Madagascar |
+| *Diospyros platycalyx* | II | #5 |  | Madagascar |
+| *Diospyros plicaticalyx* | II | #5 |  | Madagascar |
+| *Diospyros pruinosa* | II | #5 |  | Madagascar |
+| *Diospyros pubiramulis* | II | #5 |  | Madagascar |
+| *Diospyros quadrangularis* | II | #5 |  | Madagascar |
+| *Diospyros quercina* | II | #5 |  | Madagascar |
+| *Diospyros rakotovaoi* | II | #5 |  | Madagascar |
+| *Diospyros ramisonii* | II | #5 |  | Madagascar |
+| *Diospyros ranirisonii* | II | #5 |  | Madagascar |
+| *Diospyros retusa* | II | #5 |  | Madagascar |
+| *Diospyros rubripetiolata* | II | #5 |  | Madagascar |
+| *Diospyros sakalavarum* | II | #5 |  | Madagascar |
+| *Diospyros sclerophylla* | II | #5 |  | Madagascar |
+| *Diospyros sennenii* | II | #5 |  | Madagascar |
+| *Diospyros sphaerosepala* | II | #5 |  | Madagascar |
+| *Diospyros squamosa* | II | #5 |  | Madagascar |
+| *Diospyros stenocarpa* | II | #5 |  | Madagascar |
+| *Diospyros subacuta* | II | #5 |  | Madagascar |
+| *Diospyros subenervis* | II | #5 |  | Madagascar |
+| *Diospyros subfalciformis* | II | #5 |  | Madagascar |
+| *Diospyros subsessilifolia* | II | #5 |  | Madagascar |
+| *Diospyros subtrinervis* | II | #5 |  | Madagascar |
+| *Diospyros taikintana* | II | #5 |  | Madagascar |
+| *Diospyros tampinensis* | II | #5 |  | Madagascar |
+| *Diospyros tampolensis* | II | #5 |  | Madagascar |
+| *Diospyros tetraceros* | II | #5 |  | Madagascar |
+| *Diospyros tetrapoda* | II | #5 |  | Madagascar |
+| *Diospyros thouarsii* | II | #5 |  | Madagascar |
+| *Diospyros torquata* | II | #5 |  | Madagascar |
+| *Diospyros toxicaria* | II | #5 |  | Madagascar |
+| *Diospyros tropophylla* | II | #5 |  | Madagascar |
+| *Diospyros ultima* | II | #5 |  | Madagascar |
+| *Diospyros urschii* | II | #5 |  | Madagascar |
+| *Diospyros velutipes* | II | #5 |  | Madagascar |
+| *Diospyros vescoi* | II | #5 |  | Madagascar |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

@@ -5,7 +5,7 @@ SINGLE SOURCE OF TRUTH. Edit this file, then run:  python tools/build.py
 That regenerates data/species.json, data/species.csv, species/*.md, docs/data.json
 and the schematic end-grain drawings in docs/schematics/.
 
-Listing status checked October 2026 (CITES Appendices in force after CoP20,
+Listing status checked 13 November 2026 against the Species+ CITES export of 22 October 2026 (CITES Appendices in force after CoP20,
 Samarkand, Nov-Dec 2025). ALWAYS confirm the live listing and annotation on
 Species+ (https://speciesplus.net) before enforcement action - Appendix III
 listings in particular can change at any time.
@@ -33,13 +33,13 @@ ANNOTATIONS = {
     "#5": "Logs, sawn wood and veneer sheets.",
     "#6": "Logs, sawn wood, veneer sheets and plywood.",
     "#7": "Logs, wood chips, powder and extracts.",
-    "#10": "Amended at CoP20 (2025): in principle ALL parts and derivatives (incl. bows, bow blanks, logs, sawn wood), except finished musical instruments, parts and accessories moved NON-commercially (performance, personal use, exhibition, repair etc.) without change of ownership. Check Species+ for the exact text.",
+    "#10": "All parts and derivatives, except finished musical instruments, accessories and parts moved NON-commercially (performance, personal use, display, loan, competition, teaching, appraisal, repair) without change of ownership. Zero quota for wild-harvested specimens (source W) traded commercially. Bows, bow blanks, logs and sawn wood in commercial trade ARE covered.",
     "#11": "Logs, sawn wood, veneer sheets, plywood, powder and extracts (finished products containing extracts as ingredients are exempt).",
     "#12": "Logs, sawn wood, veneer sheets, plywood and extracts.",
     "#14": "All parts and derivatives except seeds/pollen, seedling cultures, fruits, leaves, exhausted agarwood powder and finished retail products (agarwood chips, oil, powder ARE covered).",
     "#15": "All parts and derivatives except (a) leaves, flowers, pollen, fruits, seeds; (b) finished products up to 10 kg wood of listed species per shipment; (c) finished musical instruments, parts and accessories; (d) D. cochinchinensis (covered by #4); (e) Dalbergia spp. from Mexico (covered by #6).",
     "#16": "Seeds, fruits and oils (Adansonia grandidieri) - not timber.",
-    "#19": "All parts and derivatives except seeds and pollen, seedling/tissue cultures, cut flowers, and finished products packaged for retail trade (Commiphora wightii) - not timber.",
+    "#19": "Extracts (resins, gums, essential oils) and powder, except finished products packaged and ready for retail trade (Commiphora wightii, listed at CoP20) - not timber.",
     "#17": "Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09, e.g. decking, flooring strips).",
 }
 
@@ -143,7 +143,7 @@ SPECIES = [
     {
         "id": "podocarpus-parlatorei", "scientific_name": "Podocarpus parlatorei", "rank": "species",
         "family": "Podocarpaceae", "common_names": ["Parlatore's podocarp", "pino del cerro"],
-        "appendix": "I", "annotation": "none", "population_scope": "All populations (App. I per BfN list Aug 2026; some older sources give a later transfer - confirm on Species+)", "listed_since": 1975,
+        "appendix": "II", "annotation": "none", "population_scope": "All populations. Transferred from Appendix I to Appendix II at CoP20 (in force 5 March 2026) with a ZERO export quota for wild-taken specimens traded for commercial purposes", "listed_since": 1975,
         "range": "Andean Yungas of Argentina and Bolivia.",
         "wood_type": "softwood",
         "heartwood": "Uniform pale yellowish-brown.",
@@ -224,7 +224,7 @@ SPECIES = [
     {
         "id": "pterocarpus-erinaceus", "scientific_name": "Pterocarpus erinaceus", "rank": "species",
         "family": "Fabaceae", "common_names": ["Kosso", "African rosewood", "vène", "barwood", "hongmu (part)"],
-        "appendix": "II", "annotation": "none", "population_scope": "All populations (also covered by the 2023 African Pterocarpus listing)", "listed_since": 2016,
+        "appendix": "II", "annotation": "#17", "population_scope": "All populations. Since 2023 covered by the Pterocarpus spp. (African populations) listing with annotation #17. A CITES recommendation to suspend commercial trade has applied to range States since 2022 - check current CITES Notifications", "listed_since": 2016,
         "range": "West African savanna: Senegal to Cameroon / Central African Republic.",
         "wood_type": "hardwood",
         "heartwood": "Golden-red to purplish red-brown with darker streaks.",
@@ -235,7 +235,7 @@ SPECIES = [
                      "parenchyma": ["banded", "aliform", "confluent"], "ripple_marks": "yes", "rays": "fine",
                      "deposits": "dark red gum in some pores", "resin_canals": "no",
                      "special": ["Distinct fine wavy parenchyma bands (Pterocarpus pattern)", "Pores tend to be larger in earlywood (semi-ring porous tendency)", "Ripple marks clear on tangential face"]},
-        "key_diagnostic": "Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). No annotation - all parts covered.",
+        "key_diagnostic": "Red-purple 'rosewood' with semi-ring-porous tendency, fine wavy parenchyma bands and clear ripple marks. Top species in illegal West African hongmu log trade (round logs, squared beams). Annotation #17 since 2023: logs, sawn wood, veneer, plywood and transformed wood.",
         "lookalikes": ["Pterocarpus tinctorius", "Pterocarpus santalinus", "Dalbergia spp.", "Pterocarpus soyauxii (padauk)"],
         "lab_methods": "DART-TOF MS and NIR separate P. erinaceus from P. tinctorius/santalinus; DNA.",
         "species_included": [],
@@ -262,7 +262,7 @@ SPECIES = [
     {
         "id": "pterocarpus-tinctorius", "scientific_name": "Pterocarpus tinctorius", "rank": "species",
         "family": "Fabaceae", "common_names": ["Mukula", "African padauk (east/south)", "mulombe"],
-        "appendix": "II", "annotation": "#6 (2019); African populations now also #17", "population_scope": "All populations", "listed_since": 2019,
+        "appendix": "II", "annotation": "#17", "population_scope": "All populations. Listed in 2019 with #6; since 2023 covered by the Pterocarpus spp. (African populations) listing with annotation #17", "listed_since": 2019,
         "range": "DR Congo (Katanga), Zambia, Tanzania, Malawi, Angola, Mozambique.",
         "wood_type": "hardwood",
         "heartwood": "Bright red to deep red-brown, darkening with exposure.",
@@ -453,7 +453,7 @@ SPECIES = [
     {
         "id": "paubrasilia-echinata", "scientific_name": "Paubrasilia echinata (syn. Caesalpinia echinata)", "rank": "species",
         "family": "Fabaceae", "common_names": ["Pernambuco", "pau-brasil", "Brazilwood", "bois de Pernambouc"],
-        "appendix": "II", "annotation": "#10 (amended at CoP20, 2025)", "population_scope": "All populations", "listed_since": 2007,
+        "appendix": "II", "annotation": "#10", "population_scope": "All populations. Zero quota for wild-harvested specimens (source code W) traded for commercial purposes (CoP20, in force 5 March 2026)", "listed_since": 2007,
         "range": "Atlantic coastal forest of eastern Brazil.",
         "wood_type": "hardwood",
         "heartwood": "Bright orange to orange-red when fresh, darkening to deep red-brown; lustrous.",
@@ -536,7 +536,7 @@ SPECIES = [
         "species_included": [],
     },
     {
-        "id": "platymiscium-pleiostachyum", "scientific_name": "Platymiscium pleiostachyum", "rank": "species",
+        "id": "platymiscium-pleiostachyum", "scientific_name": "Platymiscium parviflorum (syn. Platymiscium pleiostachyum)", "rank": "species",
         "family": "Fabaceae", "common_names": ["Cristobal", "Macacauba", "Trebol", "Panama redwood (genus)"],
         "appendix": "II", "annotation": "#4", "population_scope": "All populations", "listed_since": 2017,
         "range": "Central America (Mexico to Panama).",
@@ -818,7 +818,7 @@ SPECIES = [
     {
         "id": "tetracentron-sinense", "scientific_name": "Tetracentron sinense", "rank": "species",
         "family": "Trochodendraceae", "common_names": ["Spur-leaf tree", "shui qing shu"],
-        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)", "listed_since": 1975,
+        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal)", "listed_since": 1975,
         "range": "Himalaya (Nepal, NE India, Myanmar) to China.",
         "wood_type": "hardwood",
         "heartwood": "Light brown.",
@@ -837,7 +837,7 @@ SPECIES = [
     {
         "id": "magnolia-liliifera-obovata", "scientific_name": "Magnolia liliifera var. obovata", "rank": "variety",
         "family": "Magnoliaceae", "common_names": ["Champ (Nepal)"],
-        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal; App. III #1 per BfN list, Aug 2026)", "listed_since": 1975,
+        "appendix": "III", "annotation": "#1", "population_scope": "Population of Nepal (listed by Nepal)", "listed_since": 1975,
         "range": "Nepal / Eastern Himalaya.",
         "wood_type": "hardwood",
         "heartwood": "Olive-greenish to yellowish-brown.",
@@ -901,7 +901,7 @@ NON_TIMBER_LISTED_TREES = [
     "Balmea stormiae (App. I, Mexico/Central America - shrubby tree, not a timber)",
     "Tree ferns Cyatheaceae/Dicksoniaceae (App. II - trunks traded as fibre/horticultural)",
     "Palms such as Dypsis decipiens (App. I), and other horticultural trees",
-    "Commiphora wightii (guggul resin; App. II #19)",
+    "Commiphora wightii (guggul resin; App. II #19, listed at CoP20, in force 5 March 2026)",
     "Adansonia grandidieri (Grandidier's baobab; App. II #16 - seeds, fruits, oils)",
     "Senna meridionalis (App. II, Madagascar)",
     "Jubaea chilensis (Chilean wine palm; App. I)",
@@ -964,3 +964,94 @@ PHOTO_LINKS = {
 }
 PHOTO_LINKS = {k: [{"taxon": t, "url": _CW + f + ".htm", "source": "CITESwoodID (Thünen Institute)"} for t, f in v]
                for k, v in PHOTO_LINKS.items()}
+
+
+# ---------------------------------------------------------------------------
+# Which names of the Species+ checklist (docs/checklist-flora.json) belong to
+# each entry. "genera": every listed name of the genus; "species": exact names;
+# "exclude": names handled by another entry. Used by tools/build.py to attach
+# the COMPLETE list of listed species, synonyms and common names to each entry.
+# ---------------------------------------------------------------------------
+CHECKLIST = {
+    "dalbergia-nigra": {"species": ["Dalbergia nigra"]},
+    "dalbergia-spp": {"genera": ["Dalbergia"], "exclude": ["Dalbergia nigra"]},
+    "guibourtia-bubinga": {"genera": ["Guibourtia"]},
+    "pterocarpus-erinaceus": {"species": ["Pterocarpus erinaceus"]},
+    "pterocarpus-santalinus": {"species": ["Pterocarpus santalinus"]},
+    "pterocarpus-tinctorius": {"species": ["Pterocarpus tinctorius"]},
+    "pterocarpus-africa": {"genera": ["Pterocarpus"], "exclude": ["Pterocarpus erinaceus", "Pterocarpus santalinus", "Pterocarpus tinctorius"]},
+    "swietenia-spp": {"genera": ["Swietenia"]},
+    "cedrela-spp": {"genera": ["Cedrela"]},
+    "khaya-spp": {"genera": ["Khaya"]},
+    "afzelia-spp": {"genera": ["Afzelia"]},
+    "ipe-handroanthus-tabebuia-roseodendron": {"genera": ["Handroanthus", "Tabebuia", "Roseodendron"]},
+    "dipteryx-spp": {"genera": ["Dipteryx"]},
+    "paubrasilia-echinata": {"species": ["Paubrasilia echinata"]},
+    "gonystylus-spp": {"genera": ["Gonystylus"]},
+    "aquilaria-gyrinops": {"genera": ["Aquilaria", "Gyrinops"]},
+    "pericopsis-elata": {"species": ["Pericopsis elata"]},
+    "platymiscium-pleiostachyum": {"genera": ["Platymiscium"]},
+    "diospyros-madagascar": {"genera": ["Diospyros"]},
+    "bulnesia-sarmientoi": {"genera": ["Bulnesia"]},
+    "guaiacum-spp": {"genera": ["Guaiacum"]},
+    "osyris-lanceolata": {"species": ["Osyris lanceolata"]},
+    "prunus-africana": {"species": ["Prunus africana"]},
+    "aniba-rosaeodora": {"species": ["Aniba rosaeodora"]},
+    "oreomunnea-pterocarpa": {"species": ["Oreomunnea pterocarpa"]},
+    "taxus-spp": {"genera": ["Taxus"]},
+    "widdringtonia-whytei": {"species": ["Widdringtonia whytei"]},
+    "pinus-koraiensis": {"species": ["Pinus koraiensis"]},
+    "quercus-mongolica": {"species": ["Quercus mongolica"]},
+    "fraxinus-mandshurica": {"species": ["Fraxinus mandshurica"]},
+    "podocarpus-neriifolius": {"species": ["Podocarpus neriifolius"]},
+    "podocarpus-parlatorei": {"species": ["Podocarpus parlatorei"]},
+    "tetracentron-sinense": {"species": ["Tetracentron sinense"]},
+    "magnolia-liliifera-obovata": {"species": ["Magnolia liliifera var. obovata"]},
+    "caryocar-costaricense": {"species": ["Caryocar costaricense"]},
+    "abies-guatemalensis": {"species": ["Abies guatemalensis"]},
+    "araucaria-araucana": {"species": ["Araucaria araucana"]},
+    "fitzroya-cupressoides": {"species": ["Fitzroya cupressoides"]},
+    "pilgerodendron-uviferum": {"species": ["Pilgerodendron uviferum"]},
+}
+
+# Which product forms each annotation controls. Y = controlled, N = not controlled, P = depends (see note).
+# Columns: logs, sawn, veneer, plywood, transformed (HS 44.09), chips, powder_extracts, finished, instruments, seeds
+PRODUCTS = [
+    ("logs", "Logs / roundwood", "HS 44.03"),
+    ("sawn", "Sawn wood, sleepers", "HS 44.06, 44.07"),
+    ("veneer", "Veneer sheets", "HS 44.08"),
+    ("plywood", "Plywood", "HS 44.12"),
+    ("transformed", "Transformed wood: flooring strips, decking, mouldings", "HS 44.09"),
+    ("chips", "Wood chips, particles, sawdust", "HS 44.01"),
+    ("extracts", "Powder, extracts, essential oil, resin", "HS 12.11, 13.02, 33.01"),
+    ("finished", "Finished products: furniture, carvings, turned items, handicrafts", "HS 44.20, 94.03 and others"),
+    ("instruments", "Finished musical instruments, parts and accessories", "HS 92"),
+    ("seeds", "Seeds, pollen, leaves, fruits", "HS 06, 12"),
+]
+COVERAGE = {
+    "none": ("YYYYYYYYYY", "No annotation: every part and derivative is controlled, including finished products."),
+    "#1":   ("YYYYYYYYYN", "All parts and derivatives; seeds, spores and pollen are exempt."),
+    "#2":   ("YYYYYYYPPN", "Finished products are exempt ONLY when packaged and ready for retail trade. Seeds and pollen are exempt."),
+    "#4":   ("YYYYYYYYYN", "All parts and derivatives including finished products; seeds are exempt."),
+    "#5":   ("YYYNNNNNNN", "Only logs, sawn wood and veneer sheets."),
+    "#6":   ("YYYYNNNNNN", "Only logs, sawn wood, veneer sheets and plywood."),
+    "#7":   ("YNNNNYYNNN", "Only logs, wood chips, powder and extracts. Sawn wood and finished products are not covered by CITES (national law may still apply)."),
+    "#10":  ("YYYYYYYYPN", "All parts and derivatives. Finished musical instruments, parts and accessories are exempt ONLY in non-commercial movement without change of ownership. Zero quota for wild-harvested specimens in commercial trade."),
+    "#11":  ("YYYYNNYNNN", "Logs, sawn wood, veneer, plywood, powder and extracts. Finished products containing extracts as ingredients (e.g. fragrances) are not covered."),
+    "#12":  ("YYYYNNYNNN", "Logs, sawn wood, veneer, plywood and extracts (essential oil). Finished products containing the extract as an ingredient are not covered. Powder alone is not named."),
+    "#14":  ("YYYYYYPPPN", "All parts and derivatives of agarwood. Exempt: seeds, pollen, fruits, leaves, EXHAUSTED agarwood powder, and finished products packaged for retail trade - but wood chips, beads, prayer beads and carvings stay controlled."),
+    "#15":  ("YYYYYYYPNN", "All parts and derivatives. Exempt: finished products up to 10 kg of listed wood per shipment; finished musical instruments, parts and accessories; leaves, flowers, fruits, seeds. Dalbergia cochinchinensis follows #4 and Dalbergia from Mexico follows #6."),
+    "#17":  ("YYYYYNNNNN", "Logs, sawn wood, veneer sheets, plywood and transformed wood (HS 44.09)."),
+}
+
+# Broad region of origin, for the browse filter on the website.
+REGIONS = {
+    "Africa": ["afzelia-spp", "khaya-spp", "pterocarpus-africa", "pterocarpus-erinaceus", "pterocarpus-tinctorius", "guibourtia-bubinga",
+               "pericopsis-elata", "prunus-africana", "osyris-lanceolata", "widdringtonia-whytei", "diospyros-madagascar", "dalbergia-spp"],
+    "Americas": ["dalbergia-nigra", "dalbergia-spp", "abies-guatemalensis", "araucaria-araucana", "fitzroya-cupressoides",
+                 "pilgerodendron-uviferum", "podocarpus-parlatorei", "swietenia-spp", "cedrela-spp", "ipe-handroanthus-tabebuia-roseodendron",
+                 "dipteryx-spp", "paubrasilia-echinata", "platymiscium-pleiostachyum", "caryocar-costaricense", "bulnesia-sarmientoi",
+                 "guaiacum-spp", "aniba-rosaeodora", "oreomunnea-pterocarpa"],
+    "Asia": ["dalbergia-spp", "pterocarpus-santalinus", "gonystylus-spp", "aquilaria-gyrinops", "taxus-spp", "pinus-koraiensis",
+             "quercus-mongolica", "fraxinus-mandshurica", "podocarpus-neriifolius", "tetracentron-sinense", "magnolia-liliifera-obovata"],
+}

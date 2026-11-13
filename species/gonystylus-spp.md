@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/gonystylus-spp/`](../photos/gonystylus-spp/) and the image links below | ![schematic](../docs/schematics/gonystylus-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/gonystylus-spp.svg)
 
 ## Key diagnostic summary
 
@@ -66,12 +64,51 @@ Featureless pale wood used for dowels/mouldings with distinct winged-aliform to 
 
 Microscopy; DNA.
 
-## Species included in this listing
+## Listed species covered by this entry (39)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Gonystylus bancanus* | Ramin telur | Sumatra, Borneo, Peninsular Malaysia | Main commercial species. |
-| *All other Gonystylus spp. (c. 30)* | Ramin | Malesia to Pacific |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Gonystylus acuminatus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus affinis* | II | #4 |  | Brunei Darussalam |
+| *Gonystylus areolatus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus augescens* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus bancanus* | II | #4 | Ramin telur | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus beccarianus* | II | #4 |  | Indonesia |
+| *Gonystylus borneensis* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus brunnescens* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus calophylloides* | II | #4 |  | Malaysia |
+| *Gonystylus calophyllus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus confusus* | II | #4 |  | Indonesia, Malaysia, Singapore |
+| *Gonystylus consanguineus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus costalis* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus decipiens* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus eximius* | II | #4 |  | Malaysia |
+| *Gonystylus forbesii* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus glaucescens* | II | #4 |  | Indonesia |
+| *Gonystylus hackenbergii* | II | #4 |  | Indonesia |
+| *Gonystylus keithii* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus lucidulus* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus macrocarpus* | II | #4 |  | Solomon Islands |
+| *Gonystylus macrophyllus* | II | #4 |  | Brunei Darussalam, India, Indonesia, Malaysia, Papua New Guinea, Solomon Islands |
+| *Gonystylus maingayi* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia, Singapore |
+| *Gonystylus micranthus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus miquelianus* | II | #4 |  | Malaysia |
+| *Gonystylus nervosus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus nobilis* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus obovatus* | II | #4 |  | Philippines |
+| *Gonystylus othmanii* | II | #4 |  | Malaysia |
+| *Gonystylus pendulus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus philippinensis* | II | #4 |  | Philippines |
+| *Gonystylus pluricornis* | II | #4 |  | Indonesia |
+| *Gonystylus punctatus* | II | #4 |  | Fiji |
+| *Gonystylus reticulatus* | II | #4 |  | Philippines |
+| *Gonystylus spectabilis* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
+| *Gonystylus stenosepalus* | II | #4 |  | Indonesia, Malaysia |
+| *Gonystylus velutinus* | II | #4 |  | Brunei Darussalam, Malaysia |
+| *Gonystylus warburgianus* | II | #4 |  | Indonesia |
+| *Gonystylus xylocarpus* | II | #4 |  | Brunei Darussalam, Indonesia, Malaysia |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

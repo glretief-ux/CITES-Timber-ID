@@ -16,11 +16,9 @@
 
 The annotation above decides which products need a document at all. Details, validity, codes and a document check: [CITES documents guide](../guides/cites-documents.md).
 
-## 10x end-grain view
+## End-grain view
 
-| Real photographs (reference specimens) | Schematic |
-|---|---|
-| See [`photos/cedrela-spp/`](../photos/cedrela-spp/) and the image links below | ![schematic](../docs/schematics/cedrela-spp.svg) |
+Schematic drawing (not a photograph): ![schematic](../docs/schematics/cedrela-spp.svg)
 
 ## Key diagnostic summary
 
@@ -65,17 +63,29 @@ Light, soft, aromatic reddish wood that is ring/semi-ring porous with marginal p
 
 Toona vs Cedrela: microscopy/DNA.
 
-## Species included in this listing
+## Listed species covered by this entry (17)
 
-| Taxon | Trade name | Range | Notes |
-|---|---|---|---|
-| *Cedrela odorata* | Spanish cedar, cedro amargo | Mexico to Argentina, Caribbean | Main traded species. |
-| *Cedrela fissilis* | Cedro, cedro rosa | Costa Rica to Argentina |  |
-| *Cedrela montana* | Cedro de montaña | Andes |  |
-| *Cedrela angustifolia, C. lilloi, C. salvadorensis, C. tonduzii, C. saltensis and others (c. 17 spp.)* | Cedro | Neotropics | All covered at genus level. |
-| *Cedrela angustifolia (= C. lilloi)* | Cedro | Andes - App. III #5 (some countries) |  |
-| *Cedrela oaxacensis* | Cedro | Mexico |  |
-| *Cedrela tonduzii* | Cedro dulce | Central America |  |
+From the Species+ checklist.
+
+| Taxon | Appendix | Annotation | Trade name | Native distribution |
+|---|---|---|---|---|
+| *Cedrela angustifolia* | II | #6 | Cedro | Argentina, Bolivia (Plurinational State of), Brazil, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, Guyana, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Venezuela (Bolivarian Republic of) |
+| *Cedrela balansae* | II | #6 |  | Argentina, Bolivia (Plurinational State of), Paraguay |
+| *Cedrela discolor* | II | #6 |  | Mexico |
+| *Cedrela dugesii* | II | #6 |  | Mexico |
+| *Cedrela fissilis* | II | #6 | Cedro, cedro rosa | Argentina, Bolivia (Plurinational State of), Brazil, Colombia, Costa Rica, Ecuador, Panama, Paraguay, Peru, Suriname, Venezuela (Bolivarian Republic of) |
+| *Cedrela kuelapensis* | II | #6 |  | Peru |
+| *Cedrela longipetiolulata* | II | #6 |  | Peru |
+| *Cedrela molinensis* | II | #6 |  | Peru |
+| *Cedrela monroensis* | II | #6 |  | El Salvador |
+| *Cedrela montana* | II | #6 | Cedro de montaña | Bolivia (Plurinational State of), Colombia, Ecuador, Peru, Venezuela (Bolivarian Republic of) |
+| *Cedrela nebulosa* | II | #6 |  | Peru |
+| *Cedrela oaxacensis* | II | #6 | Cedro | Mexico |
+| *Cedrela odorata* | II | #6 | Spanish cedar, cedro amargo | Antigua and Barbuda, Argentina, Barbados, Belize, Bolivia (Plurinational State of), Brazil, Cayman Islands (United Kingdom), Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, French Guiana [FR], Grenada, Guadeloupe, Guatemala, Guyana, Haiti, Honduras, Jamaica, Martinique, Mexico, Montserrat (United Kingdom), Netherlands Antilles, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Saint Kitts and Nevis, Saint Lucia, Suriname, Trinidad and Tobago, Venezuela (Bolivarian Republic of), Virgin Islands of the USA |
+| *Cedrela saltensis* | II | #6 |  | Argentina, Peru |
+| *Cedrela salvadorensis* | II | #6 |  | Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama |
+| *Cedrela tonduzii* | II | #6 | Cedro dulce | Belize, Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama |
+| *Cedrela weberbaueri* | II | #6 |  | Peru |
 
 ## View 10x end-grain photographs (CITESwoodID)
 

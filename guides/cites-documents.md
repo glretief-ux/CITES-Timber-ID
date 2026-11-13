@@ -6,7 +6,7 @@ Purpose: tell an officer **which CITES document must accompany a timber consignm
 
 ## 1. First question: is a CITES document needed at all?
 
-A document is only needed if **all four** are true. Use the [species lookup](../docs/search.html) for steps 1–3.
+A document is only needed if **all four** are true. Use the [species lookup](../docs/index.html) for steps 1–3.
 
 1. The wood is a **listed taxon** (Appendix I, II or III).
 2. The **origin is inside the listed population** (e.g. *Khaya* and *Afzelia* = Africa only; *Cedrela* = Neotropics only; Appendix III = listing country only).
@@ -27,7 +27,7 @@ A document is only needed if **all four** are true. Use the [species lookup](../
 ## 3. Appendix by Appendix
 
 ### Appendix I — highest protection (CITES Art. III)
-Timber taxa in this repository: *Dalbergia nigra*, *Abies guatemalensis*, *Araucaria araucana*, *Fitzroya cupressoides*, *Pilgerodendron uviferum*, *Podocarpus parlatorei*. None has an annotation, so **every part and product** is covered, including finished goods.
+Timber taxa in this repository: *Dalbergia nigra*, *Abies guatemalensis*, *Araucaria araucana*, *Fitzroya cupressoides*, *Pilgerodendron uviferum*. (*Podocarpus parlatorei* moved to Appendix II on 5 March 2026 with a zero export quota for wild-taken specimens for commercial purposes.) None has an annotation, so **every part and product** is covered, including finished goods.
 
 **Export permit** — the exporting country's authorities must be satisfied that:
 - the Scientific Authority found the export will **not be detrimental** to the survival of the species;
@@ -149,4 +149,4 @@ Some species are placed in a higher Annex than their Appendix. Other EU rules (t
 - [Council Regulation (EC) No 338/97](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31997R0338) — EU implementation
 
 ---
-[← Back to README](../README.md) · [Field procedure](field-procedure.md) · [Feature glossary](feature-glossary.md) · [Species lookup](../docs/search.html)
+[← Back to README](../README.md) · [Field procedure](field-procedure.md) · [Feature glossary](feature-glossary.md) · [Species lookup](../docs/index.html)
