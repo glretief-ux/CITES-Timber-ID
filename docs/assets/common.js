@@ -7,7 +7,6 @@
     ["map", "map.html", "Country map"],
     ["key", "key.html", "10x key"],
     ["delta", "delta.html", "DELTA keys"],
-    ["delta", "delta.html", "DELTA keys"],
     ["check", "check.html", "Consignment check"],
     ["field", "field.html", "Field procedure"],
     ["identify", "identify/index.html", "Photo ID (trial)"],
