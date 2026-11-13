@@ -12,7 +12,7 @@
 <body data-page="map">
 <section class="hero small"><div class="wrap">
   <h1>What is CITES-listed in this country?</h1>
-  <p>Tap a country on the map or pick it from the list. You get every listed species that grows there naturally, so you know what could legitimately originate from it.</p>
+  <p>Tap a country on the map or pick it from the list. You get every listed species that grows there naturally, so you know what could legitimately originate from it. Pinch or use + and &minus; to zoom; drag to move.</p>
   <div class="scope" role="tablist" aria-label="What to show">
     <button role="tab" data-scope="timber" aria-selected="true">Timber</button>
     <button role="tab" data-scope="flora" aria-selected="false">All plants</button>
@@ -23,7 +23,7 @@
 <main id="main" class="wrap">
   <section class="card block" style="padding:10px">
     <div class="mapbox"><svg id="world" viewBox="0 0 1000 500" role="img" aria-label="World map"></svg>
-      <div class="mapctl"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">&minus;</button><button id="zreset" aria-label="Reset map">Reset</button></div></div>
+      <div id="tip" class="maptip"></div><div class="mapctl"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">&minus;</button><button id="zreset" aria-label="Reset map">Reset</button></div></div>
     <div class="legend" id="legend"></div>
   </section>
   <div id="res" aria-live="polite"><div class="card muted">No country selected yet.</div></div>
