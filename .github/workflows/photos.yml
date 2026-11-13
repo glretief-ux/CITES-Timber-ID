@@ -2,6 +2,11 @@ name: Fetch open-licence end-grain photos
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/fetch_photos.py"
+      - ".github/workflows/photos.yml"
 
 permissions:
   contents: write
@@ -16,8 +21,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pillow
-      - name: Fetch photos (commits progress after every archive)
+      - name: Fetch photos (commits progress as it goes; skips what is already in the manifest)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           python tools/fetch_photos.py
+      - name: Rebuild site data and commit
+        run: |
+          git pull --rebase
+          python tools/build.py
+          git add docs data species photos tools
+          git diff --cached --quiet || git commit -m "Add open-licence end-grain photos and rebuild"
+          git push
