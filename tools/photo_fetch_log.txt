@@ -16,3 +16,4 @@
 09:29:30 Gonystylus bancanus.zip: 34 images, kept 3, 128 MB in 23s; dirs=['Gonystylus bancanus']
 09:29:40 Diospyros spp. 2.zip: 55 images, kept 2, 144 MB in 63s; dirs=['Diospyros spp. 2']
 09:29:59 Gonystylus spp.zip: 22 images, kept 2, 87 MB in 25s; dirs=['Gonystylus spp']
+09:30:15 Dalbergia sissoo.zip: 106 images, kept 3, 486 MB in 181s; dirs=['Dalbergia sissoo']
