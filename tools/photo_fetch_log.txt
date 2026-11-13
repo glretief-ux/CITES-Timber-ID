@@ -34,3 +34,4 @@
 09:36:01 Swietenia humilis.zip: 113 images, kept 3, 449 MB in 115s; dirs=['Swietenia humilis']
 09:36:23 Swietenia macrophylla.zip: 98 images, kept 3, 412 MB in 117s; dirs=['Swietenia macrophylla']
 09:36:57 Taxus cuspidata.zip: 83 images, kept 4, 306 MB in 84s; dirs=['Taxus cuspidata']
+09:37:01 Swietenia mahagoni.zip: 103 images, kept 3, 396 MB in 119s; dirs=['Swietenia mahagoni']
