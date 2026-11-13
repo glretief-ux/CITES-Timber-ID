@@ -249,17 +249,71 @@ def commons_candidates():
     checkpoint("commons candidates listed")
 
 
+# Hand-picked Wikimedia Commons cross-sections for timbers GOIMAI does not cover.
+# (title, taxon id, species shown, text that must appear on the file page, optics note)
+COMMONS_PICKS = [
+    ("File:A. bipindensis Mikroskopisch Querschnitt.jpg", "afzelia-spp", "Afzelia bipindensis", "bipindensis",
+     "stained microscope section, scale bar 500 micrometres (more magnified than a hand lens)"),
+    ("File:Erinaceus q500.jpg", "pterocarpus-erinaceus", "Pterocarpus erinaceus", "pterocarpus",
+     "microscope section, scale bar 500 micrometres (more magnified than a hand lens)"),
+    ("File:Cross section of Khaya wood.jpg", "khaya-spp", "Khaya sp.", "khaya", "end grain through a hand lens"),
+]
+
+
+def commons_picks():
+    for title, tid, species, must, optics in COMMONS_PICKS:
+        if any(r.get("orig") == title for r in (json.load(open(MPATH)) if os.path.exists(MPATH) else [])):
+            continue
+        url = ("https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo|categories&cllimit=50"
+               "&iiprop=url|extmetadata|size&iiurlwidth=2000&titles=" + urllib.parse.quote(title))
+        try:
+            js = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60))
+            p = list(js["query"]["pages"].values())[0]
+            ii = p["imageinfo"][0]
+            md = ii.get("extmetadata", {})
+            cats = [c["title"] for c in p.get("categories", [])]
+            strip = lambda k: re.sub("<[^>]+>", "", (md.get(k) or {}).get("value", "")).strip()
+            text = " ".join([title, strip("ImageDescription"), strip("ObjectName")] + cats).lower()
+            lic, artist = strip("LicenseShortName"), strip("Artist")
+            info = f"{title}: licence={lic}; artist={artist}; cats={cats}; desc={strip('ImageDescription')[:160]}"
+            if must not in text or not re.match(r"(CC0|CC BY(-SA)? [0-9.]+|Public domain)", lic):
+                checkpoint("SKIPPED commons pick (identity or licence not confirmed) " + info)
+                continue
+            tmp = os.path.join(TMP, "c.img")
+            if not download(ii.get("thumburl") or ii["url"], tmp, tries=3):
+                checkpoint("FAILED commons download " + title)
+                continue
+            im = ImageOps.exif_transpose(Image.open(tmp)).convert("RGB")
+            d = os.path.join(OUT, tid)
+            os.makedirs(d, exist_ok=True)
+            base = f"{slug(species)}-commons-1"
+            im.thumbnail((2000, 2000), Image.LANCZOS)
+            im.save(os.path.join(d, base + ".jpg"), "JPEG", quality=80, optimize=True, progressive=True)
+            ImageOps.fit(im, (480, 360), Image.LANCZOS).save(os.path.join(d, base + "-thumb.jpg"), "JPEG", quality=72, optimize=True)
+            rec = {"taxon": tid, "species": species, "listed": True, "file": f"{tid}/{base}.jpg", "thumb": f"{tid}/{base}-thumb.jpg",
+                   "w": im.size[0], "h": im.size[1], "orig": title, "surface": "transverse (cross-section)", "optics": optics,
+                   "source": "Wikimedia Commons", "credit": f"{artist}, Wikimedia Commons", "licence": lic,
+                   "licence_url": (md.get("LicenseUrl") or {}).get("value", ""), "source_url": ii.get("descriptionurl", "")}
+            with LOCK:
+                old = json.load(open(MPATH)) if os.path.exists(MPATH) else []
+                json.dump(old + [rec], open(MPATH, "w"), indent=1, ensure_ascii=False)
+            checkpoint("commons pick added " + info)
+        except Exception as e:  # noqa
+            checkpoint(f"FAILED commons pick {title}: {e}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per", type=int)
     ap.add_argument("--only", nargs="*")
-    ap.add_argument("--no-commons", action="store_true")
+    ap.add_argument("--list-commons", action="store_true", help="list Commons candidates for manual review")
     ap.add_argument("--no-goimai", action="store_true")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
     if not a.no_goimai:
         process_goimai(a.only, a.per)
-    if not a.no_commons:
+    commons_picks()
+    if a.list_commons:
         commons_candidates()
 
 
