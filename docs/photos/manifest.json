@@ -2638,5 +2638,22 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "afzelia-spp",
+  "species": "Afzelia bipindensis",
+  "listed": true,
+  "file": "afzelia-spp/afzelia-bipindensis-commons-1.jpg",
+  "thumb": "afzelia-spp/afzelia-bipindensis-commons-1-thumb.jpg",
+  "w": 1600,
+  "h": 1200,
+  "orig": "File:A. bipindensis Mikroskopisch Querschnitt.jpg",
+  "surface": "transverse (cross-section)",
+  "optics": "stained microscope section, scale bar 500 micrometres (more magnified than a hand lens)",
+  "source": "Wikimedia Commons",
+  "credit": "Volker Haag, Wikimedia Commons",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source_url": "https://commons.wikimedia.org/wiki/File:A._bipindensis_Mikroskopisch_Querschnitt.jpg"
  }
 ]

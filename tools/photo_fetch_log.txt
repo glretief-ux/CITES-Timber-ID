@@ -38,3 +38,4 @@
 09:37:16 Tabebuia rosea.zip: 26 images, kept 2, 108 MB in 131s; dirs=['Tabebuia rosea']
 09:41:07 commons candidates listed
 09:42:45 start, 37 archives
+09:42:48 commons pick added File:A. bipindensis Mikroskopisch Querschnitt.jpg: licence=CC BY-SA 4.0; artist=Volker Haag; cats=['Category:CC-BY-SA-4.0', 'Category:Microscopic images of Afzelia bipindensis wood']; desc=Querschnitt A. bipindensis
