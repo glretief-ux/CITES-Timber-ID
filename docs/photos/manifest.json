@@ -2220,5 +2220,93 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "prunus-africana",
+  "species": "Prunus africana",
+  "listed": true,
+  "file": "prunus-africana/prunus-africana-goimai-1.jpg",
+  "thumb": "prunus-africana/prunus-africana-goimai-1-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Prunus africana.zip:Prunus africana/20190821_084819.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 4006.0,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "prunus-africana",
+  "species": "Prunus africana",
+  "listed": true,
+  "file": "prunus-africana/prunus-africana-goimai-2.jpg",
+  "thumb": "prunus-africana/prunus-africana-goimai-2-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Prunus africana.zip:Prunus africana/20190821_084923.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3514.0,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "prunus-africana",
+  "species": "Prunus africana",
+  "listed": true,
+  "file": "prunus-africana/prunus-africana-goimai-3.jpg",
+  "thumb": "prunus-africana/prunus-africana-goimai-3-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Prunus africana.zip:Prunus africana/20190821_084931.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3980.6,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "prunus-africana",
+  "species": "Prunus africana",
+  "listed": true,
+  "file": "prunus-africana/prunus-africana-goimai-4.jpg",
+  "thumb": "prunus-africana/prunus-africana-goimai-4-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Prunus africana.zip:Prunus africana/20190821_085102.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3527.0,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]

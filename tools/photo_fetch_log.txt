@@ -30,3 +30,4 @@
 09:34:20 Platymiscium parviflorum.zip: 48 images, kept 4, 262 MB in 82s; dirs=['Platymiscium parviflorum']
 09:34:57 Pericopsis elata.zip: 98 images, kept 4, 558 MB in 153s; dirs=['Pericopsis elata']
 09:35:00 Podocarpus neriifolius.zip: 44 images, kept 4, 180 MB in 60s; dirs=['Podocarpus neriifolius']
+09:35:27 Prunus africana.zip: 61 images, kept 4, 257 MB in 86s; dirs=['Prunus africana']
