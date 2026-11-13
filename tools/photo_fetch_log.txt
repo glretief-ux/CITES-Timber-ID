@@ -6,3 +6,4 @@
 09:25:18 Araucaria araucana.zip: 22 images, kept 4, 83 MB in 65s; dirs=['Araucaria araucana']
 09:25:28 Aniba rosodora.zip: 43 images, kept 4, 190 MB in 84s; dirs=['Aniba rosodora']
 09:26:15 Cedrela odorata.zip: 68 images, kept 4, 237 MB in 63s; dirs=['Cedrela odorata']
+09:27:08 Dalbergia latifolia.zip: 32 images, kept 3, 129 MB in 104s; dirs=['Dalbergia latifolia']
