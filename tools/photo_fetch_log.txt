@@ -37,3 +37,4 @@
 09:37:01 Swietenia mahagoni.zip: 103 images, kept 3, 396 MB in 119s; dirs=['Swietenia mahagoni']
 09:37:16 Tabebuia rosea.zip: 26 images, kept 2, 108 MB in 131s; dirs=['Tabebuia rosea']
 09:41:07 commons candidates listed
+09:42:45 start, 37 archives
