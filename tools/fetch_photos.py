@@ -327,6 +327,85 @@ def commons_micro_list():
     checkpoint(f"commons micro categories: {len(cats)} total, {len(out)} matched")
 
 
+# Source 3: Rosa da Silva et al. (2017), Wood transverse cross-section micro-imagery from 77 commercial
+# Central-African timber species, Royal Museum for Central Africa (Tervuren). Zenodo doi:10.5281/zenodo.235668, CC BY 4.0.
+RMCA_URL = "https://zenodo.org/records/235668/files/database%20transversal%20semi-thin%20section.zip?download=1"
+RMCA_CREDIT = ("Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., "
+               "Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668")
+RMCA_TARGETS = [  # (text that must appear in the file path, taxon id, species shown, listed, images to keep)
+    ("pterocarpus soyauxii", "pterocarpus-africa", "Pterocarpus soyauxii", True, 3),
+    ("pterocarpus angolensis", "pterocarpus-africa", "Pterocarpus angolensis", True, 2),
+    ("pterocarpus tinctorius", "pterocarpus-tinctorius", "Pterocarpus tinctorius", True, 3),
+    ("guibourtia demeusei", "guibourtia-bubinga", "Guibourtia demeusei", True, 3),
+    ("guibourtia pellegriniana", "guibourtia-bubinga", "Guibourtia pellegriniana", True, 2),
+    ("guibourtia tessmannii", "guibourtia-bubinga", "Guibourtia tessmannii", True, 2),
+    ("afzelia bipindensis", "afzelia-spp", "Afzelia bipindensis", True, 2),
+    ("afzelia pachyloba", "afzelia-spp", "Afzelia pachyloba", True, 1),
+    ("khaya anthotheca", "khaya-spp", "Khaya anthotheca", True, 2),
+    ("khaya grandifoliola", "khaya-spp", "Khaya grandifoliola", True, 1),
+    ("entandrophragma cylindricum", "khaya-spp", "Entandrophragma cylindricum", False, 1),
+    ("entandrophragma utile", "khaya-spp", "Entandrophragma utile", False, 1),
+    ("milicia excelsa", "pericopsis-elata", "Milicia excelsa", False, 1),
+]
+
+
+def rmca():
+    done = json.load(open(MPATH)) if os.path.exists(MPATH) else []
+    if any(r.get("source", "").startswith("RMCA") for r in done):
+        return
+    zpath = os.path.join(TMP, "rmca.zip")
+    if not download(RMCA_URL, zpath):
+        checkpoint("FAILED download RMCA Central-African micro-imagery")
+        return
+    z = zipfile.ZipFile(zpath)
+    names = sorted(n for n in z.namelist() if n.lower().endswith((".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp"))
+                   and "__macosx" not in n.lower())
+    norm = lambda n: re.sub(r"[_\-.]+", " ", n.lower())
+    dirs = sorted({os.path.dirname(n) for n in names})
+    json.dump({"n": len(names), "dirs": dirs, "sample": names[:40]},
+              open(os.path.join(ROOT, "tools", "rmca_listing.json"), "w"), indent=1, ensure_ascii=False)
+    if os.environ.get("CI"):
+        git("add", "tools/rmca_listing.json")
+    recs = []
+    for key, tid, species, listed, per in RMCA_TARGETS:
+        hits = [n for n in names if key in norm(n)]
+        if not hits:
+            continue
+        d = os.path.join(OUT, tid)
+        os.makedirs(d, exist_ok=True)
+        for k in range(per):
+            sl = hits[k * len(hits) // per:(k + 1) * len(hits) // per]
+            best = None
+            for n in sl[::max(1, len(sl) // 4)][:4]:
+                try:
+                    im = ImageOps.exif_transpose(Image.open(io.BytesIO(z.read(n)))).convert("RGB")
+                except Exception:  # noqa
+                    continue
+                s_ = sharpness(im)
+                if best is None or s_ > best[0]:
+                    best = (s_, n, im)
+            if not best:
+                continue
+            s_, n, im = best
+            base = f"{slug(species)}-rmca-{k + 1}"
+            W, H = im.size
+            full = im.copy()
+            full.thumbnail((2000, 2000), Image.LANCZOS)
+            full.save(os.path.join(d, base + ".jpg"), "JPEG", quality=78, optimize=True, progressive=True)
+            ImageOps.fit(im, (480, 360), Image.LANCZOS).save(os.path.join(d, base + "-thumb.jpg"), "JPEG", quality=72, optimize=True)
+            recs.append({"taxon": tid, "species": species, "listed": listed, "file": f"{tid}/{base}.jpg", "thumb": f"{tid}/{base}-thumb.jpg",
+                         "w": full.size[0], "h": full.size[1], "orig": "RMCA:" + n, "orig_px": [W, H],
+                         "surface": "transverse (cross-section)", "optics": "microscope section (more magnified than a hand lens)",
+                         "source": "RMCA Tervuren", "credit": RMCA_CREDIT, "licence": "CC BY 4.0",
+                         "licence_url": "https://creativecommons.org/licenses/by/4.0/", "source_url": "https://doi.org/10.5281/zenodo.235668"})
+    z.close()
+    os.remove(zpath)
+    with LOCK:
+        old = json.load(open(MPATH)) if os.path.exists(MPATH) else []
+        json.dump(old + recs, open(MPATH, "w"), indent=1, ensure_ascii=False)
+    checkpoint(f"RMCA: {len(names)} images in archive, kept {len(recs)}: " + ", ".join(sorted({r['species'] for r in recs})))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per", type=int)
@@ -339,6 +418,7 @@ def main():
     if not a.no_goimai:
         process_goimai(a.only, a.per)
     commons_picks()
+    rmca()
     if a.list_micro:
         commons_micro_list()
     if a.list_commons:
