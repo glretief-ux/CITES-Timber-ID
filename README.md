@@ -13,6 +13,8 @@ Open it: **https://glretief-ux.github.io/CITES-Timber-ID/docs/** (works on a pho
 | [Lookup](docs/index.html) | Type any scientific, trade or common name (English, Spanish, French) or an old synonym. Every one of the 696 CITES-listed tree taxa resolves to a profile with end-grain photographs, what the listing controls, required documents, 10x features, look-alikes and the complete list of listed species with native distribution. Non-listed look-alikes are flagged. Two more tabs search every CITES-listed plant (34,363 taxa) and animal (6,678 taxa). |
 | [Country map](docs/map.html) | Tap a country to list every CITES-listed timber, plant or animal that is native to it. |
 | [10x key](docs/key.html) | Tick what you see on the end grain; the listed timbers that fit are ranked. |
+| [DELTA keys](docs/delta.html) | Direct links to the CITESwoodID (DELTA-Intkey) description of every listed timber and its common look-alikes. |
+| [DELTA keys](docs/delta.html) | Direct links to the CITESwoodID (DELTA-Intkey) description, 10x photo and interactive key for every listed timber. |
 | [Consignment check](docs/check.html) | Pick the timber and the product form (by HS heading) to see whether CITES documents are required and which ones. Includes the five checks, a permit checklist, source and purpose codes, the annotation matrix and worked examples. |
 | [Field procedure](docs/field.html) | Red flags, kit, how to cut and read end grain, quick tests, sampling and chain of custody, what each laboratory method can answer, feature glossary. |
 | [Photo ID trial](docs/identify/index.html) | Experimental photo recognition for African timbers. Demonstration model only; not for casework. |

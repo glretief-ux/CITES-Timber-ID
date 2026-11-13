@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a322e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<title>DELTA keys | CITES Timber ID</title>
+</head>
+<body data-page="delta">
+<section class="hero small"><div class="wrap">
+  <h1>DELTA keys for CITES timbers</h1>
+  <p>Direct links to the CITESwoodID descriptions on DELTA-Intkey: each page has the 10x end-grain photograph, the full description and the features used in the identification key.</p>
+  <div class="actions" style="margin-top:14px">
+    <a class="btn" id="bkey" style="background:#fff;color:var(--brand-d);border-color:#fff" target="_blank" rel="noopener" href="https://www.delta-intkey.com/citeswood/en/ident.htm">Open the interactive key</a>
+    <a class="btn" style="background:transparent;border-color:#fff" target="_blank" rel="noopener" href="https://www.delta-intkey.com/citeswood/en/index.htm">All DELTA descriptions</a>
+    <a class="btn" style="background:transparent;border-color:#fff" target="_blank" rel="noopener" href="https://www.delta-intkey.com/citeswood/en/www/chars.htm">Character list and notes</a>
+  </div>
+</div></section>
+<main id="main" class="wrap">
+  <section class="card block">
+    <div class="filters"><input id="df" placeholder="Filter by scientific or trade name" style="font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:6px;flex:1;min-width:200px;max-width:380px"><span class="count" id="dc"></span></div>
+    <div class="scroll"><table><thead><tr><th>Listed timber</th><th>Appendix</th><th>Trade names</th><th>DELTA description (opens delta-intkey.com)</th></tr></thead><tbody id="db"></tbody></table></div>
+  </section>
+  <section class="card block"><h2>Look-alikes that are not CITES-listed</h2>
+    <p class="small muted">DELTA also describes the woods most often confused with listed timbers. Compare these when the declared name is one of them.</p>
+    <div class="pills" id="dl"></div>
+  </section>
+  <p class="small muted">CITESwoodID: Richter H.G., Gembruch K., Koch G. (2014 onwards), Th&uuml;nen Institute, version 4 April 2023. The photographs on DELTA are copyright of the Th&uuml;nen Institute and may not be redistributed without its permission, so this site links to them instead of copying them.</p>
+</main>
+<script src="assets/common.js"></script>
+<script>
+TID.loadTimber().then(function (D) {
+  var e = TID.esc, q = TID.$;
+  var rows = D.taxa.slice().sort(function (a, b) { return a.scientific_name.localeCompare(b.scientific_name); });
+  function draw() {
+    var f = q("#df").value.toLowerCase(), n = 0;
+    q("#db").innerHTML = rows.filter(function (t) {
+      return !f || (t.scientific_name + " " + t.common_names.join(" ") + " " + t.photo_links.map(function (l) { return l.taxon; }).join(" ")).toLowerCase().indexOf(f) >= 0;
+    }).map(function (t) {
+      n++;
+      var links = t.photo_links.length ? '<div class="pills">' + t.photo_links.map(function (l) { return '<a class="sci" target="_blank" rel="noopener" href="' + e(l.url) + '">' + e(l.taxon) + "</a>"; }).join("") + "</div>"
+        : '<span class="small muted">No DELTA description. Use the <a target="_blank" rel="noopener" href="' + D.delta.key + '">interactive key</a>.</span>';
+      return '<tr><td><a class="sci" href="index.html#t/' + t.id + '">' + e(t.scientific_name.split("(")[0]) + "</a></td><td>" + TID.chip(t.appendix) + '</td><td class="small">' + e(t.common_names.slice(0, 3).join(", ")) + "</td><td>" + links + "</td></tr>";
+    }).join("");
+    q("#dc").textContent = n + " of " + rows.length + " timbers";
+  }
+  q("#df").oninput = draw; draw();
+  var L = D.delta.lookalikes, seen = {};
+  q("#dl").innerHTML = Object.keys(L).sort().filter(function (k) { if (seen[L[k]]) return false; seen[L[k]] = 1; return true; }).map(function (k) { return '<a class="sci" target="_blank" rel="noopener" href="' + L[k] + '">' + e(k) + "</a>"; }).join("");
+});
+</script>
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="byte-config.js"></script>
+<script src="byte.js"></script>
+</body>
+</html>

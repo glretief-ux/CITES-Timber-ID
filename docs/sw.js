@@ -1,6 +1,6 @@
 /* Offline support. Pages and data: network first, cache as fallback. Photos, drawings, fonts: cache first. */
-const V = "timberid-v4";
-const CORE = ["index.html", "key.html", "check.html", "field.html", "about.html", "map.html", "assets/map.js", "assets/world.json", "assets/app.css", "assets/common.js", "assets/lookup.js", "assets/key.js", "assets/check.js", "assets/icon.svg", "data/timber.json", "byte.js", "byte-config.js"];
+const V = "timberid-v5";
+const CORE = ["index.html", "key.html", "check.html", "field.html", "about.html", "map.html", "delta.html", "delta.html", "assets/map.js", "assets/world.json", "assets/app.css", "assets/common.js", "assets/lookup.js", "assets/key.js", "assets/check.js", "assets/icon.svg", "data/timber.json", "byte.js", "byte-config.js"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {

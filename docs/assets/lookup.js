@@ -81,7 +81,7 @@
     }).join("");
   }
   function gallery(t) {
-    if (!t.photos.length) return '<div class="alert grey">No openly licensed end-grain photograph of this taxon has been found yet. Use the drawing and the published photo links below. ' +
+    if (!t.photos.length) return '<div class="alert grey">' + (t.photo_links.length ? '<a class="btn" style="float:right;margin:0 0 6px 10px" target="_blank" rel="noopener" href="' + esc(t.photo_links[0].url) + '">See the 10x end-grain photo on DELTA</a>' : "") + 'No end-grain photograph that may legally be copied here has been found for this timber yet. ' + (t.photo_links.length ? "The published 10x photograph is one tap away on DELTA. " : "") +
       'If you hold a verified reference specimen, <a href="field.html#photos">add your own photo</a>.</div>';
     cur = t.photos;
     return '<div class="gallery">' + t.photos.map((p, i) =>
