@@ -1,1 +1,2 @@
 09:23:57 start, 37 archives
+09:24:07 Quercus mongolica.zip: 10 images, kept 4, 4 MB in 7s; dirs=['Quercus mongolica']
