@@ -1,1 +1,2 @@
 20:01:38 start, 37 archives
+20:05:15 RMCA: 1219 images in archive, kept 17: Afzelia bipindensis, Afzelia pachyloba, Entandrophragma cylindricum, Entandrophragma utile, Guibourtia demeusei, Khaya anthotheca, Milicia excelsa, Pterocarpus soyauxii, Pterocarpus tinctorius

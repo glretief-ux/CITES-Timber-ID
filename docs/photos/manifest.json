@@ -2689,5 +2689,362 @@
   "licence": "CC0",
   "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "source_url": "https://commons.wikimedia.org/wiki/File:Cross_section_of_Khaya_wood.jpg"
+ },
+ {
+  "taxon": "pterocarpus-africa",
+  "species": "Pterocarpus soyauxii",
+  "listed": true,
+  "file": "pterocarpus-africa/pterocarpus-soyauxii-rmca-1.jpg",
+  "thumb": "pterocarpus-africa/pterocarpus-soyauxii-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_soyauxii/Pterocarpus_soyauxii061.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pterocarpus-africa",
+  "species": "Pterocarpus soyauxii",
+  "listed": true,
+  "file": "pterocarpus-africa/pterocarpus-soyauxii-rmca-2.jpg",
+  "thumb": "pterocarpus-africa/pterocarpus-soyauxii-rmca-2-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_soyauxii/Tw1826_Tv_2_5x_1.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pterocarpus-africa",
+  "species": "Pterocarpus soyauxii",
+  "listed": true,
+  "file": "pterocarpus-africa/pterocarpus-soyauxii-rmca-3.jpg",
+  "thumb": "pterocarpus-africa/pterocarpus-soyauxii-rmca-3-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_soyauxii/Tw6968_Tv_2_5x_3.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pterocarpus-tinctorius",
+  "species": "Pterocarpus tinctorius",
+  "listed": true,
+  "file": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-1.jpg",
+  "thumb": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_tinctorius/Pterocarpus_tinctorius002.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pterocarpus-tinctorius",
+  "species": "Pterocarpus tinctorius",
+  "listed": true,
+  "file": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-2.jpg",
+  "thumb": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-2-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_tinctorius/Tw26_Tv_2_5x_2.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pterocarpus-tinctorius",
+  "species": "Pterocarpus tinctorius",
+  "listed": true,
+  "file": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-3.jpg",
+  "thumb": "pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-3-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Pterocarpus_tinctorius/Tw30_Tv_2_5x_3.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "guibourtia-bubinga",
+  "species": "Guibourtia demeusei",
+  "listed": true,
+  "file": "guibourtia-bubinga/guibourtia-demeusei-rmca-1.jpg",
+  "thumb": "guibourtia-bubinga/guibourtia-demeusei-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Guibourtia_demeusei/Guibourtia_demeusei09.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "guibourtia-bubinga",
+  "species": "Guibourtia demeusei",
+  "listed": true,
+  "file": "guibourtia-bubinga/guibourtia-demeusei-rmca-2.jpg",
+  "thumb": "guibourtia-bubinga/guibourtia-demeusei-rmca-2-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Guibourtia_demeusei/Tw17698_Tv_2_5x_3.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "guibourtia-bubinga",
+  "species": "Guibourtia demeusei",
+  "listed": true,
+  "file": "guibourtia-bubinga/guibourtia-demeusei-rmca-3.jpg",
+  "thumb": "guibourtia-bubinga/guibourtia-demeusei-rmca-3-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Guibourtia_demeusei/Tw44832_Tv_2_5x_2.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "afzelia-spp",
+  "species": "Afzelia bipindensis",
+  "listed": true,
+  "file": "afzelia-spp/afzelia-bipindensis-rmca-1.jpg",
+  "thumb": "afzelia-spp/afzelia-bipindensis-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Afzelia_bipindensis/Tw45117_Tv_2_5x_1.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "afzelia-spp",
+  "species": "Afzelia bipindensis",
+  "listed": true,
+  "file": "afzelia-spp/afzelia-bipindensis-rmca-2.jpg",
+  "thumb": "afzelia-spp/afzelia-bipindensis-rmca-2-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Afzelia_bipindensis/Tw52907_Tv_2_5x_1.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "afzelia-spp",
+  "species": "Afzelia pachyloba",
+  "listed": true,
+  "file": "afzelia-spp/afzelia-pachyloba-rmca-1.jpg",
+  "thumb": "afzelia-spp/afzelia-pachyloba-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Afzelia_pachyloba/Tw3901_a_pachyloba_Tr_vessels_2_5x.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "khaya-spp",
+  "species": "Khaya anthotheca",
+  "listed": true,
+  "file": "khaya-spp/khaya-anthotheca-rmca-1.jpg",
+  "thumb": "khaya-spp/khaya-anthotheca-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Khaya_anthotheca/Tw1570_Tv_2_5x_1.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "khaya-spp",
+  "species": "Khaya anthotheca",
+  "listed": true,
+  "file": "khaya-spp/khaya-anthotheca-rmca-2.jpg",
+  "thumb": "khaya-spp/khaya-anthotheca-rmca-2-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Khaya_anthotheca/Tw26483_Tv_2_5x_1.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "khaya-spp",
+  "species": "Entandrophragma cylindricum",
+  "listed": false,
+  "file": "khaya-spp/entandrophragma-cylindricum-rmca-1.jpg",
+  "thumb": "khaya-spp/entandrophragma-cylindricum-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Entandrophragma_cylindricum/Tw54817_Tv_2_5x_2.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "khaya-spp",
+  "species": "Entandrophragma utile",
+  "listed": false,
+  "file": "khaya-spp/entandrophragma-utile-rmca-1.jpg",
+  "thumb": "khaya-spp/entandrophragma-utile-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Entandrophragma_utile/Tw44043_Tv_2_5x_2.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
+ },
+ {
+  "taxon": "pericopsis-elata",
+  "species": "Milicia excelsa",
+  "listed": false,
+  "file": "pericopsis-elata/milicia-excelsa-rmca-1.jpg",
+  "thumb": "pericopsis-elata/milicia-excelsa-rmca-1-thumb.jpg",
+  "w": 2000,
+  "h": 1442,
+  "orig": "RMCA:database transversal semi-thin section/Milicia_excelsa/Tw1549_Tv_2_5x_3.jpg",
+  "orig_px": [
+   2080,
+   1500
+  ],
+  "surface": "transverse (cross-section)",
+  "optics": "microscope section (more magnified than a hand lens)",
+  "source": "RMCA Tervuren",
+  "credit": "Rosa da Silva N., De Ridder M., Baetens J.M., Van den Bulcke J., Rousseau M., Martinez Bruno O., Beeckman H., Van Acker J., De Baets B. (2017), Royal Museum for Central Africa, Zenodo, doi:10.5281/zenodo.235668",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.235668"
  }
 ]
