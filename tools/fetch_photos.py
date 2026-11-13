@@ -113,7 +113,9 @@ def checkpoint(msg, recs=None, arch=None):
             keep = [r for r in old if r.get("orig", "").split(":")[0] != arch]
             json.dump(keep + recs, open(MPATH, "w"), indent=1, ensure_ascii=False)
         if os.environ.get("CI"):
-            git("add", "docs/photos", "tools/photo_fetch_log.txt", "tools/goimai_listing.json", "_candidates")
+            for path in ("docs/photos", "tools/photo_fetch_log.txt", "_candidates"):
+                if os.path.exists(os.path.join(ROOT, path)):
+                    git("add", path)
             if git("diff", "--cached", "--quiet").returncode:
                 git("commit", "-m", "Photos: " + msg[:60])
                 for _ in range(3):
