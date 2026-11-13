@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Swietenia humilis end grain](../docs/photos/swietenia-spp/swietenia-humilis-goimai-1.jpg)  
+*Swietenia humilis* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Swietenia humilis end grain](../docs/photos/swietenia-spp/swietenia-humilis-goimai-2.jpg)  
+*Swietenia humilis* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Swietenia humilis end grain](../docs/photos/swietenia-spp/swietenia-humilis-goimai-3.jpg)  
+*Swietenia humilis* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Swietenia macrophylla end grain](../docs/photos/swietenia-spp/swietenia-macrophylla-goimai-1.jpg)  
+*Swietenia macrophylla* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/swietenia-spp.svg)
 
 ## Key diagnostic summary

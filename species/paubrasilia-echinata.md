@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Paubrasilia echinata end grain](../docs/photos/paubrasilia-echinata/paubrasilia-echinata-goimai-1.jpg)  
+*Paubrasilia echinata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Paubrasilia echinata end grain](../docs/photos/paubrasilia-echinata/paubrasilia-echinata-goimai-2.jpg)  
+*Paubrasilia echinata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Paubrasilia echinata end grain](../docs/photos/paubrasilia-echinata/paubrasilia-echinata-goimai-1.jpg)  
+*Paubrasilia echinata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Paubrasilia echinata end grain](../docs/photos/paubrasilia-echinata/paubrasilia-echinata-goimai-2.jpg)  
+*Paubrasilia echinata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/paubrasilia-echinata.svg)
 
 ## Key diagnostic summary

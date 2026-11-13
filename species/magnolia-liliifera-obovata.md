@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Magnolia liliifera var. obovata end grain](../docs/photos/magnolia-liliifera-obovata/magnolia-liliifera-var-obovata-goimai-1.jpg)  
+*Magnolia liliifera var. obovata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Magnolia liliifera var. obovata end grain](../docs/photos/magnolia-liliifera-obovata/magnolia-liliifera-var-obovata-goimai-2.jpg)  
+*Magnolia liliifera var. obovata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Magnolia liliifera var. obovata end grain](../docs/photos/magnolia-liliifera-obovata/magnolia-liliifera-var-obovata-goimai-3.jpg)  
+*Magnolia liliifera var. obovata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Magnolia liliifera var. obovata end grain](../docs/photos/magnolia-liliifera-obovata/magnolia-liliifera-var-obovata-goimai-4.jpg)  
+*Magnolia liliifera var. obovata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/magnolia-liliifera-obovata.svg)
 
 ## Key diagnostic summary

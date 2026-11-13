@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Platymiscium parviflorum end grain](../docs/photos/platymiscium-pleiostachyum/platymiscium-parviflorum-goimai-1.jpg)  
+*Platymiscium parviflorum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Platymiscium parviflorum end grain](../docs/photos/platymiscium-pleiostachyum/platymiscium-parviflorum-goimai-2.jpg)  
+*Platymiscium parviflorum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Platymiscium parviflorum end grain](../docs/photos/platymiscium-pleiostachyum/platymiscium-parviflorum-goimai-3.jpg)  
+*Platymiscium parviflorum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Platymiscium parviflorum end grain](../docs/photos/platymiscium-pleiostachyum/platymiscium-parviflorum-goimai-4.jpg)  
+*Platymiscium parviflorum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/platymiscium-pleiostachyum.svg)
 
 ## Key diagnostic summary

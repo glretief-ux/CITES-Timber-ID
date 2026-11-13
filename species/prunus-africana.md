@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Prunus africana end grain](../docs/photos/prunus-africana/prunus-africana-goimai-1.jpg)  
+*Prunus africana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Prunus africana end grain](../docs/photos/prunus-africana/prunus-africana-goimai-2.jpg)  
+*Prunus africana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Prunus africana end grain](../docs/photos/prunus-africana/prunus-africana-goimai-3.jpg)  
+*Prunus africana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Prunus africana end grain](../docs/photos/prunus-africana/prunus-africana-goimai-4.jpg)  
+*Prunus africana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/prunus-africana.svg)
 
 ## Key diagnostic summary

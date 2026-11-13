@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Gonystylus bancanus end grain](../docs/photos/gonystylus-spp/gonystylus-bancanus-goimai-1.jpg)  
+*Gonystylus bancanus* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Gonystylus bancanus end grain](../docs/photos/gonystylus-spp/gonystylus-bancanus-goimai-2.jpg)  
+*Gonystylus bancanus* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Gonystylus bancanus end grain](../docs/photos/gonystylus-spp/gonystylus-bancanus-goimai-3.jpg)  
+*Gonystylus bancanus* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Gonystylus sp. end grain](../docs/photos/gonystylus-spp/gonystylus-sp-goimai-1.jpg)  
+*Gonystylus sp.* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/gonystylus-spp.svg)
 
 ## Key diagnostic summary

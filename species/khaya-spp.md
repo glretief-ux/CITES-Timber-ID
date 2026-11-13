@@ -18,6 +18,9 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Khaya sp. end grain](../docs/photos/khaya-spp/khaya-sp-commons-1.jpg)  
+*Khaya sp.* - transverse (cross-section), end grain through a hand lens. Wikimedia Commons, CC0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/khaya-spp.svg)
 
 ## Key diagnostic summary

@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Dalbergia nigra end grain](../docs/photos/dalbergia-nigra/dalbergia-nigra-goimai-1.jpg)  
+*Dalbergia nigra* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia nigra end grain](../docs/photos/dalbergia-nigra/dalbergia-nigra-goimai-2.jpg)  
+*Dalbergia nigra* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia nigra end grain](../docs/photos/dalbergia-nigra/dalbergia-nigra-goimai-3.jpg)  
+*Dalbergia nigra* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia nigra end grain](../docs/photos/dalbergia-nigra/dalbergia-nigra-goimai-4.jpg)  
+*Dalbergia nigra* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/dalbergia-nigra.svg)
 
 ## Key diagnostic summary

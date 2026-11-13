@@ -18,6 +18,9 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Afzelia bipindensis end grain](../docs/photos/afzelia-spp/afzelia-bipindensis-commons-1.jpg)  
+*Afzelia bipindensis* - transverse (cross-section), stained microscope section, scale bar 500 micrometres (more magnified than a hand lens). Wikimedia Commons, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/afzelia-spp.svg)
 
 ## Key diagnostic summary

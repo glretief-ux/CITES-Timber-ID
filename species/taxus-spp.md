@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Taxus cuspidata end grain](../docs/photos/taxus-spp/taxus-cuspidata-goimai-1.jpg)  
+*Taxus cuspidata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Taxus cuspidata end grain](../docs/photos/taxus-spp/taxus-cuspidata-goimai-2.jpg)  
+*Taxus cuspidata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Taxus cuspidata end grain](../docs/photos/taxus-spp/taxus-cuspidata-goimai-3.jpg)  
+*Taxus cuspidata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Taxus cuspidata end grain](../docs/photos/taxus-spp/taxus-cuspidata-goimai-4.jpg)  
+*Taxus cuspidata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/taxus-spp.svg)
 
 ## Key diagnostic summary

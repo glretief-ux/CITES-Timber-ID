@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Araucaria araucana end grain](../docs/photos/araucaria-araucana/araucaria-araucana-goimai-1.jpg)  
+*Araucaria araucana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Araucaria araucana end grain](../docs/photos/araucaria-araucana/araucaria-araucana-goimai-2.jpg)  
+*Araucaria araucana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Araucaria araucana end grain](../docs/photos/araucaria-araucana/araucaria-araucana-goimai-3.jpg)  
+*Araucaria araucana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Araucaria araucana end grain](../docs/photos/araucaria-araucana/araucaria-araucana-goimai-4.jpg)  
+*Araucaria araucana* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/araucaria-araucana.svg)
 
 ## Key diagnostic summary

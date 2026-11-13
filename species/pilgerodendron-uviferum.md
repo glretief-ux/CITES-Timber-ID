@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Pilgerodendron uviferum end grain](../docs/photos/pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-1.jpg)  
+*Pilgerodendron uviferum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Pilgerodendron uviferum end grain](../docs/photos/pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-2.jpg)  
+*Pilgerodendron uviferum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Pilgerodendron uviferum end grain](../docs/photos/pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-3.jpg)  
+*Pilgerodendron uviferum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Pilgerodendron uviferum end grain](../docs/photos/pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-4.jpg)  
+*Pilgerodendron uviferum* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/pilgerodendron-uviferum.svg)
 
 ## Key diagnostic summary

@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Diospyros sp. (set 1) end grain](../docs/photos/diospyros-madagascar/diospyros-sp-set-1-goimai-1.jpg)  
+*Diospyros sp. (set 1)* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Diospyros sp. (set 1) end grain](../docs/photos/diospyros-madagascar/diospyros-sp-set-1-goimai-2.jpg)  
+*Diospyros sp. (set 1)* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Diospyros sp. (set 3) end grain](../docs/photos/diospyros-madagascar/diospyros-sp-set-3-goimai-1.jpg)  
+*Diospyros sp. (set 3)* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Diospyros sp. (set 3) end grain](../docs/photos/diospyros-madagascar/diospyros-sp-set-3-goimai-2.jpg)  
+*Diospyros sp. (set 3)* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/diospyros-madagascar.svg)
 
 ## Key diagnostic summary

@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Caryocar costaricense end grain](../docs/photos/caryocar-costaricense/caryocar-costaricense-goimai-1.jpg)  
+*Caryocar costaricense* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Caryocar costaricense end grain](../docs/photos/caryocar-costaricense/caryocar-costaricense-goimai-2.jpg)  
+*Caryocar costaricense* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Caryocar costaricense end grain](../docs/photos/caryocar-costaricense/caryocar-costaricense-goimai-3.jpg)  
+*Caryocar costaricense* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Caryocar costaricense end grain](../docs/photos/caryocar-costaricense/caryocar-costaricense-goimai-4.jpg)  
+*Caryocar costaricense* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/caryocar-costaricense.svg)
 
 ## Key diagnostic summary

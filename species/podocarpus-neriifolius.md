@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Podocarpus neriifolius end grain](../docs/photos/podocarpus-neriifolius/podocarpus-neriifolius-goimai-1.jpg)  
+*Podocarpus neriifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Podocarpus neriifolius end grain](../docs/photos/podocarpus-neriifolius/podocarpus-neriifolius-goimai-2.jpg)  
+*Podocarpus neriifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Podocarpus neriifolius end grain](../docs/photos/podocarpus-neriifolius/podocarpus-neriifolius-goimai-3.jpg)  
+*Podocarpus neriifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Podocarpus neriifolius end grain](../docs/photos/podocarpus-neriifolius/podocarpus-neriifolius-goimai-4.jpg)  
+*Podocarpus neriifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/podocarpus-neriifolius.svg)
 
 ## Key diagnostic summary

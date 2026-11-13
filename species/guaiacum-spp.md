@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Guaiacum officinale end grain](../docs/photos/guaiacum-spp/guaiacum-officinale-goimai-1.jpg)  
+*Guaiacum officinale* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Guaiacum officinale end grain](../docs/photos/guaiacum-spp/guaiacum-officinale-goimai-2.jpg)  
+*Guaiacum officinale* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Guaiacum officinale end grain](../docs/photos/guaiacum-spp/guaiacum-officinale-goimai-3.jpg)  
+*Guaiacum officinale* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Guaiacum officinale end grain](../docs/photos/guaiacum-spp/guaiacum-officinale-goimai-4.jpg)  
+*Guaiacum officinale* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/guaiacum-spp.svg)
 
 ## Key diagnostic summary

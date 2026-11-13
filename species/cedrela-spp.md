@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Cedrela odorata end grain](../docs/photos/cedrela-spp/cedrela-odorata-goimai-1.jpg)  
+*Cedrela odorata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Cedrela odorata end grain](../docs/photos/cedrela-spp/cedrela-odorata-goimai-2.jpg)  
+*Cedrela odorata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Cedrela odorata end grain](../docs/photos/cedrela-spp/cedrela-odorata-goimai-3.jpg)  
+*Cedrela odorata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Cedrela odorata end grain](../docs/photos/cedrela-spp/cedrela-odorata-goimai-4.jpg)  
+*Cedrela odorata* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/cedrela-spp.svg)
 
 ## Key diagnostic summary

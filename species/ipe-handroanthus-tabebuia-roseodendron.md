@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Handroanthus serratifolius end grain](../docs/photos/ipe-handroanthus-tabebuia-roseodendron/handroanthus-serratifolius-goimai-1.jpg)  
+*Handroanthus serratifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Handroanthus serratifolius end grain](../docs/photos/ipe-handroanthus-tabebuia-roseodendron/handroanthus-serratifolius-goimai-2.jpg)  
+*Handroanthus serratifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Handroanthus serratifolius end grain](../docs/photos/ipe-handroanthus-tabebuia-roseodendron/handroanthus-serratifolius-goimai-3.jpg)  
+*Handroanthus serratifolius* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Handroanthus heptaphyllus end grain](../docs/photos/ipe-handroanthus-tabebuia-roseodendron/handroanthus-heptaphyllus-goimai-1.jpg)  
+*Handroanthus heptaphyllus* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/ipe-handroanthus-tabebuia-roseodendron.svg)
 
 ## Key diagnostic summary

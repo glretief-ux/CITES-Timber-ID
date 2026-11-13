@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Aniba canelilla end grain](../docs/photos/aniba-rosaeodora/aniba-canelilla-goimai-1.jpg)  
+*Aniba canelilla* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Aniba canelilla end grain](../docs/photos/aniba-rosaeodora/aniba-canelilla-goimai-2.jpg)  
+*Aniba canelilla* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Aniba canelilla end grain](../docs/photos/aniba-rosaeodora/aniba-canelilla-goimai-3.jpg)  
+*Aniba canelilla* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Aniba rosaeodora end grain](../docs/photos/aniba-rosaeodora/aniba-rosaeodora-goimai-1.jpg)  
+*Aniba rosaeodora* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/aniba-rosaeodora.svg)
 
 ## Key diagnostic summary

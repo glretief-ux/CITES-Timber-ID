@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Dalbergia latifolia end grain](../docs/photos/dalbergia-spp/dalbergia-latifolia-goimai-1.jpg)  
+*Dalbergia latifolia* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia latifolia end grain](../docs/photos/dalbergia-spp/dalbergia-latifolia-goimai-2.jpg)  
+*Dalbergia latifolia* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia latifolia end grain](../docs/photos/dalbergia-spp/dalbergia-latifolia-goimai-3.jpg)  
+*Dalbergia latifolia* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Dalbergia retusa end grain](../docs/photos/dalbergia-spp/dalbergia-retusa-goimai-1.jpg)  
+*Dalbergia retusa* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/dalbergia-spp.svg)
 
 ## Key diagnostic summary

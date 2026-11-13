@@ -18,6 +18,9 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Pterocarpus erinaceus end grain](../docs/photos/pterocarpus-erinaceus/pterocarpus-erinaceus-commons-1.jpg)  
+*Pterocarpus erinaceus* - transverse (cross-section), microscope section, scale bar 500 micrometres (more magnified than a hand lens). Wikimedia Commons, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-erinaceus.svg)
 
 ## Key diagnostic summary

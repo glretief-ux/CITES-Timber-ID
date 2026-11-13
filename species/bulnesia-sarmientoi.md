@@ -18,6 +18,18 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Bulnesia sarmientoi end grain](../docs/photos/bulnesia-sarmientoi/bulnesia-sarmientoi-goimai-1.jpg)  
+*Bulnesia sarmientoi* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Bulnesia sarmientoi end grain](../docs/photos/bulnesia-sarmientoi/bulnesia-sarmientoi-goimai-2.jpg)  
+*Bulnesia sarmientoi* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Bulnesia sarmientoi end grain](../docs/photos/bulnesia-sarmientoi/bulnesia-sarmientoi-goimai-3.jpg)  
+*Bulnesia sarmientoi* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
+![Bulnesia sarmientoi end grain](../docs/photos/bulnesia-sarmientoi/bulnesia-sarmientoi-goimai-4.jpg)  
+*Bulnesia sarmientoi* - transverse (end grain), phone camera + 24x macro lens. GOIMAI, CC BY-SA 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/bulnesia-sarmientoi.svg)
 
 ## Key diagnostic summary
