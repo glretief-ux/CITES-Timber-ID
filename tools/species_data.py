@@ -670,7 +670,7 @@ SPECIES = [
                      "deposits": None, "resin_canals": "no",
                      "special": ["Oil cells (Lauraceae) visible at higher magnification", "Mainly traded as essential oil"]},
         "key_diagnostic": "NOT a 'rosewood' timber in the Dalbergia sense; traded mostly as oil. Wood: fragrant yellowish-brown Lauraceae.",
-        "lookalikes": ["Other Aniba / Ocotea spp."],
+        "lookalikes": ["Aniba canelilla (preciosa, casca-preciosa)", "Other Aniba / Ocotea spp."],
         "lab_methods": "Oil GC-MS, DNA.",
         "species_included": [],
     },

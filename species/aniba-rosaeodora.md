@@ -65,6 +65,7 @@ NOT a 'rosewood' timber in the Dalbergia sense; traded mostly as oil. Wood: frag
 
 ## Look-alikes (check these before concluding)
 
+- Aniba canelilla (preciosa, casca-preciosa)
 - Other Aniba / Ocotea spp.
 
 ## Confirming beyond the hand lens

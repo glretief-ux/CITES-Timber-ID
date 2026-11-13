@@ -2,7 +2,7 @@
 (function () {
   const { esc, fold, chip, DOCS, loadTimber, thumb, $, BASE } = TID;
   const out = $("#out"), q = $("#q"), sugg = $("#sugg");
-  let DATA, INDEX = [], LISTED = new Set(), GENERA = new Map(), scope = "timber", active = -1, cur = [];
+  let DATA, INDEX = [], LISTED = new Set(), GENERA = new Map(), scope = "timber", active = -1, cur = [], LOOK = [];
   const spLink = n => "https://speciesplus.net/species#/taxon_concepts?taxonomy=cites_eu&taxon_concept_query=" + encodeURIComponent(n);
   const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
   const PH = { timber: "Scientific, trade or common name, e.g. kosso, bubinga, Dalbergia latifolia", flora: "Any plant: scientific name, genus, family or common name, e.g. Aloe ferox, orchid", fauna: "Any animal: scientific name, genus, family or common name, e.g. Varanus, pangolin" };
@@ -103,7 +103,22 @@
     h += '<div class="sect grid2"><div><h3 style="margin-bottom:8px">Features at 10x</h3><table class="kv">' + rows.map(r => "<tr><th>" + r[0] + "</th><td>" + esc(r[1]) + "</td></tr>").join("") + "</table></div>" +
       '<div><h3 style="margin-bottom:8px">In the hand</h3><table class="kv"><tr><th>Heartwood</th><td>' + esc(t.heartwood) + "</td></tr><tr><th>Sapwood</th><td>" + esc(t.sapwood) + "</td></tr><tr><th>Density</th><td>" + esc(t.density) +
       "</td></tr><tr><th>Smell</th><td>" + esc(t.odour) + "</td></tr><tr><th>Native range</th><td>" + esc(t.range) + "</td></tr><tr><th>Listed since</th><td>" + esc(t.listed_since) + "</td></tr></table></div></div>";
-    h += '<div class="sect"><h3>Look-alikes to rule out</h3><ul class="tight">' + t.lookalikes.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul><p><b>Beyond the hand lens:</b> " + esc(t.lab_methods) + "</p></div>";
+    const mine = t.photos.find(p => p.listed !== false);
+    LOOK = t.lookalikes.map(x => {
+      const m = x.match(/^([A-Z][a-z]+)(?: (spp\.?|[a-z-]+))?/), r = { text: x };
+      if (!m) return r;
+      const nm = m[2] && !/^spp/.test(m[2]) ? m[1] + " " + m[2] : "";
+      if (nm) { const e = INDEX.find(i => (i.kind === "species" || i.kind === "entry") && i.key === fold(nm)); if (e) { r.ti = e.ti; r.sp = nm; } else { const own = t.photos.find(p => p.listed === false && p.species === nm); if (own) r.photo = own; r.name = nm; } }
+      else if (GENERA.has(m[1].toLowerCase())) r.ti = GENERA.get(m[1].toLowerCase());
+      if (r.ti !== undefined) { const o = DATA.taxa[r.ti]; r.photo = o.photos.find(p => p.species === r.sp) || o.photos.find(p => p.listed !== false); r.o = o; }
+      return r;
+    });
+    h += '<div class="sect"><h3>Look-alikes to rule out</h3><ul class="look">' + LOOK.map((r, i) => {
+      const img = r.photo ? '<span class="lens sm ' + (r.o ? r.o.appendix : "") + '"><img loading="lazy" alt="" src="' + BASE + "photos/" + r.photo.thumb + '"></span>' : r.o ? '<span class="lens sm draw ' + r.o.appendix + '"><img loading="lazy" alt="" src="' + BASE + r.o.schematic + '"></span>' : '<span class="lens sm none"></span>';
+      const label = r.o ? '<a href="#t/' + r.o.id + (r.sp ? "/" + encodeURIComponent(r.sp) : "") + '">' + esc(r.text) + "</a> " + chip(r.o.appendix)
+        : esc(r.text) + ' <span class="chip nl">Not CITES-listed</span>' + (r.name ? ' <a class="small" target="_blank" rel="noopener" href="https://www.wood-database.com/?s=' + encodeURIComponent(r.name) + '">photos on The Wood Database</a>' : "");
+      return "<li>" + img + "<span>" + label + (r.photo && mine ? ' <button class="btn ghost sm cmpb" data-i="' + i + '">Compare end grain</button>' : "") + "</span></li>";
+    }).join("") + '</ul><div id="cmp"></div><p><b>Beyond the hand lens:</b> ' + esc(t.lab_methods) + "</p></div>";
     const srow = s => "<tr" + (fsp && s === fsp ? ' style="background:var(--a3b)"' : "") + '><td><a class="sci" href="#t/' + t.id + "/" + encodeURIComponent(s.name) + '">' + esc(s.name) + "</a></td><td>" + s.app + "</td><td>" + esc(s.ann === "none" ? "none" : s.ann) + "</td><td>" + esc(s.trade || "") + "</td><td>" + esc((s.dist || "").replace(/,/g, ", ")) + "</td></tr>";
     const stable = '<div class="scroll"><table><thead><tr><th>Listed taxon</th><th>App.</th><th>Annot.</th><th>Trade name</th><th>Native distribution</th></tr></thead><tbody id="sprows">' + sl.map(srow).join("") + "</tbody></table></div>";
     h += '<div class="sect"><h3>Every listed species under this entry (' + sl.length + ")</h3>" +
@@ -124,6 +139,11 @@
     $("#bcopy").onclick = ev => { navigator.clipboard && navigator.clipboard.writeText(location.href); ev.target.textContent = "Link copied"; };
     const f = $("#spf"); if (f) f.oninput = () => { const v = f.value.toLowerCase(); $("#sprows").innerHTML = sl.filter(s => (s.name + " " + s.dist + " " + s.trade).toLowerCase().includes(v)).map(srow).join(""); };
     out.querySelectorAll(".shot").forEach(b => b.onclick = () => openLB(+b.dataset.i));
+    out.querySelectorAll(".cmpb").forEach(b => b.onclick = () => {
+      const r = LOOK[+b.dataset.i], fig = (p, title, note) => '<figure><a href="' + BASE + "photos/" + p.file + '" target="_blank"><img src="' + BASE + "photos/" + p.file + '" alt="End grain of ' + esc(p.species) + '"></a><figcaption><b>' + title + '</b><br><span class="sci">' + esc(p.species) + "</span>" + note + '<br><span class="tiny muted">' + esc(p.optics || "") + ". " + esc(p.source) + ", " + esc(p.licence) + "</span></figcaption></figure>";
+      $("#cmp").innerHTML = '<div class="cmp">' + fig(mine, "This timber", "") + fig(r.photo, "Look-alike", r.o ? ", Appendix " + r.o.appendix : ", not CITES-listed") + '</div><p class="tiny muted">Tap a photo to open it full size. Magnification can differ between photos: compare the pattern of pores, pale tissue and rays, not their size.</p>';
+      $("#cmp").scrollIntoView({ block: "nearest" });
+    });
   }
   function showTimber(e) {
     if (e.kind === "look") {
