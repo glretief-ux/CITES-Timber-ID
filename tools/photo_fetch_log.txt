@@ -23,3 +23,4 @@
 09:32:09 Handroanthus serratifolius.zip: 24 images, kept 3, 93 MB in 105s; dirs=['Handroanthus serratifolius']
 09:32:17 Handroanthus heptaphyllus.zip: 65 images, kept 2, 243 MB in 118s; dirs=['Handroanthus heptaphyllus']
 09:32:28 Magnolia liliifera var. Obovata.zip: 67 images, kept 4, 311 MB in 67s; dirs=['Magnolia liliifera var. Obovata']
+09:32:51 Handroanthus chrysanthus.zip: 56 images, kept 2, 211 MB in 168s; dirs=['Handroanthus chrysanthus']
