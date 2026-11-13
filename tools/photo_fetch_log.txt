@@ -12,3 +12,4 @@
 09:28:33 Diospyros spp. 1.zip: 35 images, kept 2, 137 MB in 48s; dirs=['Diospyros spp. 1']
 09:28:45 Bulnesia sarmientoi.zip: 126 images, kept 4, 568 MB in 220s; dirs=['Bulnesia sarmientoi']
 09:28:47 Caryocar costaricense.zip: 98 images, kept 4, 487 MB in 220s; dirs=['Caryocar costaricense']
+09:29:02 Diospyros spp. 3.zip: 27 images, kept 2, 19 MB in 14s; dirs=['Diospyros spp. 3']
