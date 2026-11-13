@@ -9,3 +9,4 @@
 09:27:08 Dalbergia latifolia.zip: 32 images, kept 3, 129 MB in 104s; dirs=['Dalbergia latifolia']
 09:27:28 Dalbergia retusa.zip: 61 images, kept 3, 268 MB in 68s; dirs=['Dalbergia retusa']
 09:27:41 Dalbergia nigra.zip: 28 images, kept 4, 119 MB in 127s; dirs=['Dalbergia nigra']
+09:28:33 Diospyros spp. 1.zip: 35 images, kept 2, 137 MB in 48s; dirs=['Diospyros spp. 1']
