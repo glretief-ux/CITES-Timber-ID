@@ -1780,5 +1780,93 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "pilgerodendron-uviferum",
+  "species": "Pilgerodendron uviferum",
+  "listed": true,
+  "file": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-1.jpg",
+  "thumb": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-1-thumb.jpg",
+  "w": 2000,
+  "h": 1500,
+  "orig": "Pilgerodendron uviferum.zip:Pilgerodendron uviferum/20190803_200724.jpg",
+  "orig_px": [
+   4032,
+   3024
+  ],
+  "sharp": 1527.9,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "pilgerodendron-uviferum",
+  "species": "Pilgerodendron uviferum",
+  "listed": true,
+  "file": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-2.jpg",
+  "thumb": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-2-thumb.jpg",
+  "w": 2000,
+  "h": 1500,
+  "orig": "Pilgerodendron uviferum.zip:Pilgerodendron uviferum/20190803_201050.jpg",
+  "orig_px": [
+   4032,
+   3024
+  ],
+  "sharp": 1920.5,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "pilgerodendron-uviferum",
+  "species": "Pilgerodendron uviferum",
+  "listed": true,
+  "file": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-3.jpg",
+  "thumb": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-3-thumb.jpg",
+  "w": 2000,
+  "h": 1500,
+  "orig": "Pilgerodendron uviferum.zip:Pilgerodendron uviferum/20190803_201508.jpg",
+  "orig_px": [
+   4032,
+   3024
+  ],
+  "sharp": 1337.3,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "pilgerodendron-uviferum",
+  "species": "Pilgerodendron uviferum",
+  "listed": true,
+  "file": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-4.jpg",
+  "thumb": "pilgerodendron-uviferum/pilgerodendron-uviferum-goimai-4-thumb.jpg",
+  "w": 2000,
+  "h": 1500,
+  "orig": "Pilgerodendron uviferum.zip:Pilgerodendron uviferum/20190803_201717.jpg",
+  "orig_px": [
+   4032,
+   3024
+  ],
+  "sharp": 1413.8,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]
