@@ -4,3 +4,4 @@
 09:25:00 Abies guatemalensis.zip: 56 images, kept 4, 215 MB in 55s; dirs=['Abies guatemalensis']
 09:25:06 Aniba canelilla.zip: 51 images, kept 3, 197 MB in 64s; dirs=['Aniba canelilla']
 09:25:18 Araucaria araucana.zip: 22 images, kept 4, 83 MB in 65s; dirs=['Araucaria araucana']
+09:25:28 Aniba rosodora.zip: 43 images, kept 4, 190 MB in 84s; dirs=['Aniba rosodora']
