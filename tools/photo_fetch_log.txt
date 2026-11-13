@@ -19,3 +19,4 @@
 09:30:15 Dalbergia sissoo.zip: 106 images, kept 3, 486 MB in 181s; dirs=['Dalbergia sissoo']
 09:30:19 Fitzroya cupressoides.zip: 52 images, kept 4, 197 MB in 85s; dirs=['Fitzroya cupressoides']
 09:31:15 Guaiacum officinale.zip: 31 images, kept 4, 100 MB in 89s; dirs=['Guaiacum officinale']
+09:31:19 Dalbergia stevensonii.zip: 65 images, kept 3, 307 MB in 226s; dirs=['Dalbergia stevensonii']
