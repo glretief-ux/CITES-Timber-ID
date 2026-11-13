@@ -114,6 +114,8 @@ ul.look .btn{margin-left:6px;padding:5px 9px;font-size:13px}
 .mapctl button{font:600 16px var(--head);min-width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:4px;cursor:pointer;color:var(--ink)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:13px;padding:8px 4px 2px}
 .legend i{display:inline-block;width:14px;height:14px;border-radius:2px;margin-right:4px;vertical-align:-2px;border:1px solid rgba(0,0,0,.12)}
+.delta{border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:0 var(--r) var(--r) 0;background:var(--soft);padding:10px 12px;margin:12px 0}
+.delta .btn{margin:2px 2px 2px 0}
 /* profile */
 .phead{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
 .phead .lens{width:120px;height:120px}

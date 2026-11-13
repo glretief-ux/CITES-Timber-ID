@@ -1055,3 +1055,14 @@ REGIONS = {
     "Asia": ["dalbergia-spp", "pterocarpus-santalinus", "gonystylus-spp", "aquilaria-gyrinops", "taxus-spp", "pinus-koraiensis",
              "quercus-mongolica", "fraxinus-mandshurica", "podocarpus-neriifolius", "tetracentron-sinense", "magnolia-liliifera-obovata"],
 }
+
+
+# CITESwoodID (DELTA-Intkey) description pages for common NON-listed look-alikes, keyed by the start of the look-alike name.
+DELTA_BASE = "https://www.delta-intkey.com/citeswood/en/"
+DELTA_LOOKALIKES = {
+    "Intsia": "caesint", "Entandrophragma cylindricum": "melency", "Entandrophragma utile": "melenut", "Entandrophragma angolense": "melenan",
+    "Entandrophragma": "melency", "Machaerium scleroxylon": "fabmasc", "Carapa": "melcagu", "Hymenaea": "caeshym", "Araucaria angustifolia": "araang",
+    "Agathis": "araaga", "Sequoia sempervirens": "cupsese", "Thuja plicata": "cupthpl", "Toona": "meltoon", "Guarea": "melguar", "Swartzia": "caesswar",
+    "Bobgunnia": "caebobg", "Pterocarpus macrocarpus": "fabptma", "Colophospermum mopane": "caescol", "Brosimum rubescens": "morbrru",
+    "Chlorocardium rodiei": "lauchro", "Cordia glabrata": "borcogl", "Acosmium": "acosspp", "Coulteria platyloba": "caecaesp",
+}

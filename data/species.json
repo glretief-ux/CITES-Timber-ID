@@ -194,6 +194,35 @@
   "Beaucarnea spp. (elephant-foot trees; App. II)",
   "Boswellia spp. and other resin trees are NOT CITES-listed (EU-only Annex D / national rules)"
  ],
+ "delta": {
+  "index": "https://www.delta-intkey.com/citeswood/en/index.htm",
+  "key": "https://www.delta-intkey.com/citeswood/en/ident.htm",
+  "lookalikes": {
+   "Intsia": "https://www.delta-intkey.com/citeswood/en/www/caesint.htm",
+   "Entandrophragma cylindricum": "https://www.delta-intkey.com/citeswood/en/www/melency.htm",
+   "Entandrophragma utile": "https://www.delta-intkey.com/citeswood/en/www/melenut.htm",
+   "Entandrophragma angolense": "https://www.delta-intkey.com/citeswood/en/www/melenan.htm",
+   "Entandrophragma": "https://www.delta-intkey.com/citeswood/en/www/melency.htm",
+   "Machaerium scleroxylon": "https://www.delta-intkey.com/citeswood/en/www/fabmasc.htm",
+   "Carapa": "https://www.delta-intkey.com/citeswood/en/www/melcagu.htm",
+   "Hymenaea": "https://www.delta-intkey.com/citeswood/en/www/caeshym.htm",
+   "Araucaria angustifolia": "https://www.delta-intkey.com/citeswood/en/www/araang.htm",
+   "Agathis": "https://www.delta-intkey.com/citeswood/en/www/araaga.htm",
+   "Sequoia sempervirens": "https://www.delta-intkey.com/citeswood/en/www/cupsese.htm",
+   "Thuja plicata": "https://www.delta-intkey.com/citeswood/en/www/cupthpl.htm",
+   "Toona": "https://www.delta-intkey.com/citeswood/en/www/meltoon.htm",
+   "Guarea": "https://www.delta-intkey.com/citeswood/en/www/melguar.htm",
+   "Swartzia": "https://www.delta-intkey.com/citeswood/en/www/caesswar.htm",
+   "Bobgunnia": "https://www.delta-intkey.com/citeswood/en/www/caebobg.htm",
+   "Pterocarpus macrocarpus": "https://www.delta-intkey.com/citeswood/en/www/fabptma.htm",
+   "Colophospermum mopane": "https://www.delta-intkey.com/citeswood/en/www/caescol.htm",
+   "Brosimum rubescens": "https://www.delta-intkey.com/citeswood/en/www/morbrru.htm",
+   "Chlorocardium rodiei": "https://www.delta-intkey.com/citeswood/en/www/lauchro.htm",
+   "Cordia glabrata": "https://www.delta-intkey.com/citeswood/en/www/borcogl.htm",
+   "Acosmium": "https://www.delta-intkey.com/citeswood/en/www/acosspp.htm",
+   "Coulteria platyloba": "https://www.delta-intkey.com/citeswood/en/www/caecaesp.htm"
+  }
+ },
  "taxa": [
   {
    "id": "dalbergia-nigra",

@@ -58,6 +58,21 @@
   const kindLabel = e => e.kind === "look" ? "look-alike, not listed" : e.kind === "syn" ? "old name of " + e.acc : e.kind === "trade" ? "trade name" + (e.sp ? ", " + e.sp : "") : "Appendix " + DATA.taxa[e.ti].appendix;
 
   /* ---------------- timber profile ---------------- */
+  function deltaFor(t, name) { // CITESwoodID (DELTA) description page for one species of this entry
+    const L = t.photo_links || []; if (!L.length) return null;
+    const g = name.split(" ")[0];
+    return L.find(l => expand(l.taxon).some(n => n.toLowerCase() === name.toLowerCase())) || L.find(l => new RegExp("^" + g + " spp", "i").test(l.taxon) || new RegExp("(^|, )" + g + " spp", "i").test(l.taxon)) || (L.length === 1 ? L[0] : null);
+  }
+  function deltaBlock(t, fsp) {
+    const L = t.photo_links || [], hit = fsp && deltaFor(t, fsp.name);
+    let h = '<div class="delta"><b>DELTA key (CITESwoodID)</b> ';
+    if (hit) h += '<a class="btn sm" target="_blank" rel="noopener" href="' + esc(hit.url) + '">Open <span class="sci">' + esc(fsp.name) + "</span> on DELTA</a> ";
+    else if (L.length === 1) h += '<a class="btn sm" target="_blank" rel="noopener" href="' + esc(L[0].url) + '">Open <span class="sci">' + esc(L[0].taxon) + "</span> on DELTA</a> ";
+    if (L.length > 1) h += '<div class="pills" style="margin:8px 0 2px">' + L.map(l => '<a class="sci" target="_blank" rel="noopener" href="' + esc(l.url) + '">' + esc(l.taxon) + "</a>").join("") + "</div>";
+    if (!L.length) h += '<span class="small">CITESwoodID has no description page for this timber. </span>';
+    return h + '<a class="btn ghost sm" target="_blank" rel="noopener" href="' + DATA.delta.key + '">Interactive key</a> <a class="btn ghost sm" target="_blank" rel="noopener" href="' + DATA.delta.index + '">All DELTA descriptions</a>' +
+      '<p class="tiny muted" style="margin:6px 0 0">Description, macroscopic images and identification key by the Th\u00fcnen Institute (Richter, Gembruch and Koch). Opens on delta-intkey.com.</p></div>';
+  }
   function coverage(codes) {
     return codes.map(c => {
       const cv = DATA.coverage[c]; if (!cv) return "";
@@ -96,7 +111,7 @@
     h += '<div class="alert' + (t.appendix === "I" ? " red" : "") + '"><b>Population covered:</b> ' + esc(t.population_scope) + "</div>";
     h += '<div class="sect"><h3>What is controlled</h3>' + coverage(t.ann_codes) + (t.ann_codes.length > 1 ? '<p class="small">Listing text: ' + esc(t.annotation) + "</p>" : "") + "</div>";
     h += '<div class="sect"><h3>Documents the consignment needs</h3><p>' + DOCS[t.appendix] + '</p><p class="small"><a href="check.html#documents">How to check a permit</a></p></div>';
-    h += '<div class="sect"><h3>End grain under the lens</h3>' + gallery(t) +
+    h += '<div class="sect"><h3>End grain under the lens</h3>' + gallery(t) + deltaBlock(t, fsp) +
       '<div class="grid2" style="margin-top:12px"><div><p><b>What to look for.</b> ' + esc(t.key_diagnostic) + "</p>" +
       (e.special && e.special.length ? '<ul class="tight">' + e.special.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul>" : "") +
       '</div><figure style="margin:0"><img src="' + BASE + t.schematic + '" alt="Schematic drawing of the end grain" style="width:100%;max-width:340px;border:1px solid var(--line);border-radius:6px"><figcaption class="tiny muted">Schematic drawing built from the features below. Not a photograph.</figcaption></figure></div></div>';
@@ -115,12 +130,12 @@
     });
     h += '<div class="sect"><h3>Look-alikes to rule out</h3><ul class="look">' + LOOK.map((r, i) => {
       const img = r.photo ? '<span class="lens sm ' + (r.o ? r.o.appendix : "") + '"><img loading="lazy" alt="" src="' + BASE + "photos/" + r.photo.thumb + '"></span>' : r.o ? '<span class="lens sm draw ' + r.o.appendix + '"><img loading="lazy" alt="" src="' + BASE + r.o.schematic + '"></span>' : '<span class="lens sm none"></span>';
-      const label = r.o ? '<a href="#t/' + r.o.id + (r.sp ? "/" + encodeURIComponent(r.sp) : "") + '">' + esc(r.text) + "</a> " + chip(r.o.appendix)
-        : esc(r.text) + ' <span class="chip nl">Not CITES-listed</span>' + (r.name ? ' <a class="small" target="_blank" rel="noopener" href="https://www.wood-database.com/?s=' + encodeURIComponent(r.name) + '">photos on The Wood Database</a>' : "");
+      const label = r.o ? '<a href="#t/' + r.o.id + (r.sp ? "/" + encodeURIComponent(r.sp) : "") + '">' + esc(r.text) + "</a> " + chip(r.o.appendix) + ((d => d ? ' <a class="small" target="_blank" rel="noopener" href="' + esc(d.url) + '">DELTA key</a>' : "")(r.sp ? deltaFor(r.o, r.sp) : (r.o.photo_links || [])[0]))
+        : esc(r.text) + ' <span class="chip nl">Not CITES-listed</span>' + ((k => k ? ' <a class="small" target="_blank" rel="noopener" href="' + DATA.delta.lookalikes[k] + '">DELTA key</a>' : "")(Object.keys(DATA.delta.lookalikes).sort((x, y) => y.length - x.length).find(k => r.text.indexOf(k) === 0))) + (r.name ? ' <a class="small" target="_blank" rel="noopener" href="https://www.wood-database.com/?s=' + encodeURIComponent(r.name) + '">photos on The Wood Database</a>' : "");
       return "<li>" + img + "<span>" + label + (r.photo && mine ? ' <button class="btn ghost sm cmpb" data-i="' + i + '">Compare end grain</button>' : "") + "</span></li>";
     }).join("") + '</ul><div id="cmp"></div><p><b>Beyond the hand lens:</b> ' + esc(t.lab_methods) + "</p></div>";
-    const srow = s => "<tr" + (fsp && s === fsp ? ' style="background:var(--a3b)"' : "") + '><td><a class="sci" href="#t/' + t.id + "/" + encodeURIComponent(s.name) + '">' + esc(s.name) + "</a></td><td>" + s.app + "</td><td>" + esc(s.ann === "none" ? "none" : s.ann) + "</td><td>" + esc(s.trade || "") + "</td><td>" + esc((s.dist || "").replace(/,/g, ", ")) + "</td></tr>";
-    const stable = '<div class="scroll"><table><thead><tr><th>Listed taxon</th><th>App.</th><th>Annot.</th><th>Trade name</th><th>Native distribution</th></tr></thead><tbody id="sprows">' + sl.map(srow).join("") + "</tbody></table></div>";
+    const srow = s => "<tr" + (fsp && s === fsp ? ' style="background:var(--a3b)"' : "") + '><td><a class="sci" href="#t/' + t.id + "/" + encodeURIComponent(s.name) + '">' + esc(s.name) + "</a></td><td>" + s.app + "</td><td>" + esc(s.ann === "none" ? "none" : s.ann) + "</td><td>" + esc(s.trade || "") + "</td><td>" + esc((s.dist || "").replace(/,/g, ", ")) + "</td><td>" + ((d => d ? '<a target="_blank" rel="noopener" href="' + esc(d.url) + '">DELTA</a>' : "")(deltaFor(t, s.name))) + "</td></tr>";
+    const stable = '<div class="scroll"><table><thead><tr><th>Listed taxon</th><th>App.</th><th>Annot.</th><th>Trade name</th><th>Native distribution</th><th>Key</th></tr></thead><tbody id="sprows">' + sl.map(srow).join("") + "</tbody></table></div>";
     h += '<div class="sect"><h3>Every listed species under this entry (' + sl.length + ")</h3>" +
       (big ? '<details class="more"' + (fsp ? " open" : "") + "><summary>Show all " + sl.length + ' names with native distribution</summary><div><input id="spf" placeholder="Filter this list" style="font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;width:100%;max-width:320px;margin-bottom:8px">' + stable + "</div></details>" : stable) +
       '<p class="tiny muted">From the Species+ export of ' + esc(DATA.checklist.date) + ". Genus-wide listings cover every species of the genus within the stated populations, including names not shown here.</p></div>";
@@ -131,7 +146,7 @@
       h += "</div>";
     }
     h += '<div class="sect noprint"><h3>Published reference photographs and sources</h3><ul class="tight">' +
-      t.photo_links.map(p => '<li><a target="_blank" rel="noopener" href="' + esc(p.url) + '"><span class="sci">' + esc(p.taxon) + "</span>: 10x transverse section, " + esc(p.source) + "</a> (copyright, link only)</li>").join("") +
+      t.photo_links.map(p => '<li><a target="_blank" rel="noopener" href="' + esc(p.url) + '"><span class="sci">' + esc(p.taxon) + "</span>: DELTA description, " + esc(p.source) + "</a></li>").join("") +
       t.references.map(r => '<li><a target="_blank" rel="noopener" href="' + esc(r.url) + '">' + esc(r.title) + "</a></li>").join("") + "</ul></div></article>";
     out.innerHTML = h;
     document.title = t.scientific_name.split("(")[0].trim() + " | CITES Timber ID";

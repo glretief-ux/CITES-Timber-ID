@@ -29,7 +29,7 @@ from urllib.parse import quote_plus
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from species_data import (SPECIES, ANNOTATIONS, NON_TIMBER_LISTED_TREES, PHOTO_LINKS,  # noqa: E402
-                          CHECKLIST, PRODUCTS, COVERAGE, REGIONS)
+                          CHECKLIST, PRODUCTS, COVERAGE, REGIONS, DELTA_BASE, DELTA_LOOKALIKES)
 from wildlife_data import FAUNA, FLORA, FAUNA_GROUPS, FLORA_GROUPS  # noqa: E402
 
 
@@ -448,6 +448,8 @@ def main():
         "products": [{"id": a, "label": b, "hs": c} for a, b, c in PRODUCTS],
         "coverage": {k: {"cells": v[0], "note": v[1]} for k, v in COVERAGE.items()},
         "non_timber_listed_trees": NON_TIMBER_LISTED_TREES,
+        "delta": {"index": DELTA_BASE + "index.htm", "key": DELTA_BASE + "ident.htm",
+                  "lookalikes": {k: DELTA_BASE + "www/" + v + ".htm" for k, v in DELTA_LOOKALIKES.items()}},
         "taxa": [],
     }
     n_sp = 0
