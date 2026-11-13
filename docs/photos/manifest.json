@@ -724,5 +724,93 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "dalbergia-nigra",
+  "species": "Dalbergia nigra",
+  "listed": true,
+  "file": "dalbergia-nigra/dalbergia-nigra-goimai-1.jpg",
+  "thumb": "dalbergia-nigra/dalbergia-nigra-goimai-1-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Dalbergia nigra.zip:Dalbergia nigra/20190820_205300.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3327.8,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "dalbergia-nigra",
+  "species": "Dalbergia nigra",
+  "listed": true,
+  "file": "dalbergia-nigra/dalbergia-nigra-goimai-2.jpg",
+  "thumb": "dalbergia-nigra/dalbergia-nigra-goimai-2-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Dalbergia nigra.zip:Dalbergia nigra/20190820_205328.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 2922.5,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "dalbergia-nigra",
+  "species": "Dalbergia nigra",
+  "listed": true,
+  "file": "dalbergia-nigra/dalbergia-nigra-goimai-3.jpg",
+  "thumb": "dalbergia-nigra/dalbergia-nigra-goimai-3-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Dalbergia nigra.zip:Dalbergia nigra/20190820_205346.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 2412.1,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "dalbergia-nigra",
+  "species": "Dalbergia nigra",
+  "listed": true,
+  "file": "dalbergia-nigra/dalbergia-nigra-goimai-4.jpg",
+  "thumb": "dalbergia-nigra/dalbergia-nigra-goimai-4-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Dalbergia nigra.zip:Dalbergia nigra/20190820_205418.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 1887.4,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]

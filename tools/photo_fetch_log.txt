@@ -8,3 +8,4 @@
 09:26:15 Cedrela odorata.zip: 68 images, kept 4, 237 MB in 63s; dirs=['Cedrela odorata']
 09:27:08 Dalbergia latifolia.zip: 32 images, kept 3, 129 MB in 104s; dirs=['Dalbergia latifolia']
 09:27:28 Dalbergia retusa.zip: 61 images, kept 3, 268 MB in 68s; dirs=['Dalbergia retusa']
+09:27:41 Dalbergia nigra.zip: 28 images, kept 4, 119 MB in 127s; dirs=['Dalbergia nigra']
