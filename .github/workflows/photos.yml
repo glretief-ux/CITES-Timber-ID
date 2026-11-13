@@ -25,4 +25,4 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          python tools/fetch_photos.py
+          python tools/fetch_photos.py --list-micro

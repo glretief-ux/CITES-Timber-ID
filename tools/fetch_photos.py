@@ -302,10 +302,36 @@ def commons_picks():
             checkpoint(f"FAILED commons pick {title}: {e}")
 
 
+def commons_micro_list():
+    """List files in Commons categories 'Microscopic images of <species> wood' for listed genera (for manual review)."""
+    genera = sorted({j[2].split()[0] for j in GOIMAI} | {"Afzelia", "Khaya", "Guibourtia", "Pterocarpus", "Dipteryx", "Osyris", "Fraxinus",
+                    "Pinus", "Podocarpus", "Widdringtonia", "Tetracentron", "Oreomunnea", "Caesalpinia", "Paubrasilia", "Gyrinops", "Roseodendron"})
+    api = "https://commons.wikimedia.org/w/api.php?format=json&action=query&"
+    get = lambda q: json.load(urllib.request.urlopen(urllib.request.Request(api + q, headers={"User-Agent": UA}), timeout=60))
+    cats, cont = [], ""
+    while True:
+        js = get("list=allcategories&aclimit=500&acprefix=" + urllib.parse.quote("Microscopic images of ") + cont)
+        cats += [c["*"] for c in js["query"]["allcategories"]]
+        if "continue" not in js:
+            break
+        cont = "&accontinue=" + urllib.parse.quote(js["continue"]["accontinue"])
+    out = {}
+    for c in cats:
+        if any(g in c for g in genera):
+            js = get("list=categorymembers&cmlimit=100&cmtype=file&cmtitle=" + urllib.parse.quote("Category:" + c))
+            out[c] = [m["title"] for m in js["query"]["categorymembers"]]
+            time.sleep(0.3)
+    json.dump({"all_categories": len(cats), "matched": out}, open(os.path.join(ROOT, "tools", "commons_micro.json"), "w"), indent=1, ensure_ascii=False)
+    if os.environ.get("CI"):
+        git("add", "tools/commons_micro.json")
+    checkpoint(f"commons micro categories: {len(cats)} total, {len(out)} matched")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per", type=int)
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--list-micro", action="store_true")
     ap.add_argument("--list-commons", action="store_true", help="list Commons candidates for manual review")
     ap.add_argument("--no-goimai", action="store_true")
     a = ap.parse_args()
@@ -313,6 +339,8 @@ def main():
     if not a.no_goimai:
         process_goimai(a.only, a.per)
     commons_picks()
+    if a.list_micro:
+        commons_micro_list()
     if a.list_commons:
         commons_candidates()
 
