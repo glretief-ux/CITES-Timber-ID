@@ -2,3 +2,4 @@
 09:24:07 Quercus mongolica.zip: 10 images, kept 4, 4 MB in 7s; dirs=['Quercus mongolica']
 09:24:58 Aquilaria malaccensis.zip: 36 images, kept 4, 117 MB in 54s; dirs=['Aquilaria malaccensis']
 09:25:00 Abies guatemalensis.zip: 56 images, kept 4, 215 MB in 55s; dirs=['Abies guatemalensis']
+09:25:06 Aniba canelilla.zip: 51 images, kept 3, 197 MB in 64s; dirs=['Aniba canelilla']
