@@ -13,3 +13,4 @@
 09:28:45 Bulnesia sarmientoi.zip: 126 images, kept 4, 568 MB in 220s; dirs=['Bulnesia sarmientoi']
 09:28:47 Caryocar costaricense.zip: 98 images, kept 4, 487 MB in 220s; dirs=['Caryocar costaricense']
 09:29:02 Diospyros spp. 3.zip: 27 images, kept 2, 19 MB in 14s; dirs=['Diospyros spp. 3']
+09:29:30 Gonystylus bancanus.zip: 34 images, kept 3, 128 MB in 23s; dirs=['Gonystylus bancanus']

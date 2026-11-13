@@ -1076,5 +1076,71 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "gonystylus-spp",
+  "species": "Gonystylus bancanus",
+  "listed": true,
+  "file": "gonystylus-spp/gonystylus-bancanus-goimai-1.jpg",
+  "thumb": "gonystylus-spp/gonystylus-bancanus-goimai-1-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Gonystylus bancanus.zip:Gonystylus bancanus/20190821_084204.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3050.7,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "gonystylus-spp",
+  "species": "Gonystylus bancanus",
+  "listed": true,
+  "file": "gonystylus-spp/gonystylus-bancanus-goimai-2.jpg",
+  "thumb": "gonystylus-spp/gonystylus-bancanus-goimai-2-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Gonystylus bancanus.zip:Gonystylus bancanus/20190821_084312.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3277.9,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "gonystylus-spp",
+  "species": "Gonystylus bancanus",
+  "listed": true,
+  "file": "gonystylus-spp/gonystylus-bancanus-goimai-3.jpg",
+  "thumb": "gonystylus-spp/gonystylus-bancanus-goimai-3-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Gonystylus bancanus.zip:Gonystylus bancanus/20190821_084355.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 3484.4,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]
