@@ -64,7 +64,7 @@ CREDIT = ("GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyat
           "Zenodo, doi:10.5281/zenodo.11092208")
 
 
-def download(url, dest, tries=5):
+def download(url, dest, tries=4):
     for k in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -91,30 +91,57 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
-def process_goimai(only=None, per_override=None):
-    recs, listing = [], {}
-    for arch, tid, species, listed, per in GOIMAI:
-        if only and arch not in only:
-            continue
-        per = per_override or per
-        zpath = os.path.join(TMP, "g.zip")
-        print(f"== {arch}", flush=True)
-        if not download(ZENODO.format(urllib.parse.quote(arch)), zpath):
-            print("  SKIPPED (download failed)")
-            continue
-        try:
-            z = zipfile.ZipFile(zpath)
-        except Exception as e:  # noqa
-            print("  bad zip", e)
-            continue
+import subprocess, threading
+from concurrent.futures import ThreadPoolExecutor
+
+LOCK = threading.Lock()
+MPATH = os.path.join(OUT, "manifest.json")
+LOG = os.path.join(ROOT, "tools", "photo_fetch_log.txt")
+
+
+def git(*a):
+    return subprocess.run(["git", "-C", ROOT] + list(a), capture_output=True, text=True)
+
+
+def checkpoint(msg, recs=None, arch=None):
+    """Save progress: update the manifest and log, commit and push (when run in CI)."""
+    with LOCK:
+        with open(LOG, "a") as f:
+            f.write(time.strftime("%H:%M:%S ") + msg + "\n")
+        if recs is not None:
+            old = json.load(open(MPATH)) if os.path.exists(MPATH) else []
+            keep = [r for r in old if r.get("orig", "").split(":")[0] != arch]
+            json.dump(keep + recs, open(MPATH, "w"), indent=1, ensure_ascii=False)
+        if os.environ.get("CI"):
+            git("add", "docs/photos", "tools/photo_fetch_log.txt", "tools/goimai_listing.json", "_candidates")
+            if git("diff", "--cached", "--quiet").returncode:
+                git("commit", "-m", "Photos: " + msg[:60])
+                for _ in range(3):
+                    git("pull", "--rebase", "-X", "theirs")
+                    if git("push").returncode == 0:
+                        break
+                    time.sleep(5)
+
+
+def one_archive(job, per_override=None):
+    arch, tid, species, listed, per = job
+    per = per_override or per
+    done = json.load(open(MPATH)) if os.path.exists(MPATH) else []
+    if any(r.get("orig", "").split(":")[0] == arch for r in done):
+        return
+    zpath = os.path.join(TMP, slug(arch) + ".zip")
+    t0 = time.time()
+    if not download(ZENODO.format(urllib.parse.quote(arch)), zpath):
+        checkpoint(f"FAILED download {arch}")
+        return
+    mb = os.path.getsize(zpath) / 1e6
+    dl = time.time() - t0
+    recs = []
+    try:
+        z = zipfile.ZipFile(zpath)
         names = sorted(n for n in z.namelist()
                        if n.lower().endswith((".jpg", ".jpeg", ".png")) and "__macosx" not in n.lower()
                        and not os.path.basename(n).startswith("."))
-        listing[arch] = {"n": len(names), "sample": names[:6] + names[-3:],
-                         "dirs": sorted({os.path.dirname(n) for n in names})[:40]}
-        if not names:
-            continue
-        # spread candidates evenly over the archive, then keep the sharpest in each slice
         slices = [names[i * len(names) // per:(i + 1) * len(names) // per] for i in range(per)]
         d = os.path.join(OUT, tid)
         os.makedirs(d, exist_ok=True)
@@ -122,39 +149,49 @@ def process_goimai(only=None, per_override=None):
         for sl in slices:
             if not sl:
                 continue
-            cands = sl[::max(1, len(sl) // 6)][:6]
             best = None
-            for n in cands:
+            for n in sl[::max(1, len(sl) // 5)][:5]:
                 try:
                     im = ImageOps.exif_transpose(Image.open(io.BytesIO(z.read(n)))).convert("RGB")
                 except Exception as e:  # noqa
-                    print("  unreadable", n, e)
                     continue
-                s = sharpness(im)
-                if best is None or s > best[0]:
-                    best = (s, n, im)
+                s_ = sharpness(im)
+                if best is None or s_ > best[0]:
+                    best = (s_, n, im)
             if not best:
                 continue
-            s, n, im = best
+            s_, n, im = best
             k += 1
             base = f"{slug(species)}-goimai-{k}"
             W, H = im.size
             full = im.copy()
             full.thumbnail((2000, 2000), Image.LANCZOS)
             full.save(os.path.join(d, base + ".jpg"), "JPEG", quality=76, optimize=True, progressive=True)
-            th = ImageOps.fit(im, (480, 360), Image.LANCZOS)
-            th.save(os.path.join(d, base + "-thumb.jpg"), "JPEG", quality=72, optimize=True)
+            ImageOps.fit(im, (480, 360), Image.LANCZOS).save(os.path.join(d, base + "-thumb.jpg"), "JPEG", quality=72, optimize=True)
             recs.append({"taxon": tid, "species": species, "listed": listed, "file": f"{tid}/{base}.jpg",
                          "thumb": f"{tid}/{base}-thumb.jpg", "w": full.size[0], "h": full.size[1],
-                         "orig": f"{arch}:{n}", "orig_px": [W, H], "sharp": round(s, 1),
+                         "orig": f"{arch}:{n}", "orig_px": [W, H], "sharp": round(s_, 1),
                          "surface": "transverse (end grain)", "optics": "phone camera + 24x macro lens",
                          "source": "GOIMAI", "credit": CREDIT, "licence": "CC BY-SA 4.0",
                          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
                          "source_url": "https://doi.org/10.5281/zenodo.11092208"})
-            print(f"  kept {n} sharp={s:.0f} {W}x{H}", flush=True)
         z.close()
-        os.remove(zpath)
-    return recs, listing
+        msg = f"{arch}: {len(names)} images, kept {len(recs)}, {mb:.0f} MB in {dl:.0f}s; dirs={sorted({os.path.dirname(n) for n in names})[:4]}"
+    except Exception as e:  # noqa
+        msg = f"FAILED {arch}: {e}"
+    finally:
+        if os.path.exists(zpath):
+            os.remove(zpath)
+    checkpoint(msg, recs or None, arch)
+    print(msg, flush=True)
+
+
+def process_goimai(only=None, per_override=None):
+    jobs = sorted((j for j in GOIMAI if not only or j[0] in only), key=lambda j: j[0] != "Quercus mongolica.zip")
+    checkpoint(f"start, {len(jobs)} archives")
+    with ThreadPoolExecutor(5) as ex:
+        list(ex.map(lambda j: one_archive(j, per_override), jobs))
+    return [], {}
 
 
 COMMONS_TAXA = {
@@ -207,6 +244,7 @@ def commons_candidates():
                 time.sleep(0.5)
         print(tid, len(out[tid]), "commons candidates", flush=True)
     json.dump(out, open(os.path.join(cdir, "commons.json"), "w"), indent=1, ensure_ascii=False)
+    checkpoint("commons candidates listed")
 
 
 def main():
@@ -218,13 +256,7 @@ def main():
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
     if not a.no_goimai:
-        recs, listing = process_goimai(a.only, a.per)
-        mpath = os.path.join(OUT, "manifest.json")
-        old = json.load(open(mpath)) if os.path.exists(mpath) else []
-        keep = [r for r in old if r.get("source") != "GOIMAI" or (a.only and r["orig"].split(":")[0] not in a.only)]
-        json.dump(keep + recs, open(mpath, "w"), indent=1, ensure_ascii=False)
-        json.dump(listing, open(os.path.join(ROOT, "tools", "goimai_listing.json"), "w"), indent=1, ensure_ascii=False)
-        print(f"{len(recs)} GOIMAI photos written")
+        process_goimai(a.only, a.per)
     if not a.no_commons:
         commons_candidates()
 
