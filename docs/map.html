@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a322e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<title>Country map | CITES Timber ID</title>
+</head>
+<body data-page="map">
+<section class="hero small"><div class="wrap">
+  <h1>What is CITES-listed in this country?</h1>
+  <p>Tap a country on the map or pick it from the list. You get every listed species that grows there naturally, so you know what could legitimately originate from it.</p>
+  <div class="scope" role="tablist" aria-label="What to show">
+    <button role="tab" data-scope="timber" aria-selected="true">Timber</button>
+    <button role="tab" data-scope="flora" aria-selected="false">All plants</button>
+    <button role="tab" data-scope="fauna" aria-selected="false">All animals</button>
+  </div>
+  <div class="searchbox"><select id="csel" aria-label="Country" style="flex:1;min-width:0;font:400 17px var(--body);padding:11px 12px;border:2px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)"><option value="">Choose a country</option></select></div>
+</div></section>
+<main id="main" class="wrap">
+  <section class="card block" style="padding:10px">
+    <div class="mapbox"><svg id="world" viewBox="0 0 1000 500" role="img" aria-label="World map"></svg>
+      <div class="mapctl"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">&minus;</button><button id="zreset" aria-label="Reset map">Reset</button></div></div>
+    <div class="legend" id="legend"></div>
+  </section>
+  <div id="res" aria-live="polite"><div class="card muted">No country selected yet.</div></div>
+</main>
+<script src="assets/common.js"></script>
+<script src="assets/map.js"></script>
+<script data-goatcounter="https://gertberi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="byte-config.js"></script>
+<script src="byte.js"></script>
+</body>
+</html>

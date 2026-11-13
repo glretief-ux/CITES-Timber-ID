@@ -102,6 +102,15 @@ ul.look .btn{margin-left:6px;padding:5px 9px;font-size:13px}
 .cmp figure{margin:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
 .cmp img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .cmp figcaption{padding:8px 10px;font-size:14px;line-height:1.35}
+.mapbox{position:relative;background:#f4f7f6;border-radius:4px;overflow:hidden;touch-action:none}
+#world{display:block;width:100%;height:auto;cursor:grab}
+#world path,#world circle{stroke:#fff;stroke-width:.5;vector-effect:non-scaling-stroke;cursor:pointer}
+#world path:hover,#world circle:hover{stroke:var(--ink);stroke-width:1.2}
+#world .on{fill:var(--focus)!important;stroke:var(--ink);stroke-width:1.5}
+.mapctl{position:absolute;right:8px;top:8px;display:flex;gap:4px}
+.mapctl button{font:600 16px var(--head);min-width:38px;height:38px;border:1px solid var(--line);background:#fff;border-radius:4px;cursor:pointer;color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:13px;padding:8px 4px 2px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:2px;margin-right:4px;vertical-align:-2px;border:1px solid rgba(0,0,0,.12)}
 /* profile */
 .phead{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
 .phead .lens{width:120px;height:120px}
@@ -177,7 +186,7 @@ fieldset{border:0;padding:0;margin:0 0 16px} legend{font:600 16px var(--head);pa
   th,td{padding:6px 7px}
 }
 @media print{
-  .top,.status,.hero,.foot,.actions,#browse,.noprint,#byteBtn,#byteBox{display:none!important}
+  .top,.status,.hero,.foot,.actions,#browse,.noprint,#byteBtn,#byteBox,.mapbox,.legend,.filters{display:none!important}
   body{background:#fff;font-size:11pt}.card{border:0;padding:0}main{padding:0}
   .gallery{grid-template-columns:repeat(4,1fr)} details.more>div{display:block} a{color:inherit;text-decoration:none}
 }

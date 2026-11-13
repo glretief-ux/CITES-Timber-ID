@@ -4,6 +4,7 @@
   const page = document.body.dataset.page || "";
   const NAV = [
     ["lookup", "index.html", "Lookup"],
+    ["map", "map.html", "Country map"],
     ["key", "key.html", "10x key"],
     ["check", "check.html", "Consignment check"],
     ["field", "field.html", "Field procedure"],

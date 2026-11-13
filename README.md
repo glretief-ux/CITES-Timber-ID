@@ -11,6 +11,7 @@ Open it: **https://glretief-ux.github.io/CITES-Timber-ID/docs/** (works on a pho
 | Page | Use it to |
 |---|---|
 | [Lookup](docs/index.html) | Type any scientific, trade or common name (English, Spanish, French) or an old synonym. Every one of the 696 CITES-listed tree taxa resolves to a profile with end-grain photographs, what the listing controls, required documents, 10x features, look-alikes and the complete list of listed species with native distribution. Non-listed look-alikes are flagged. Two more tabs search every CITES-listed plant (34,363 taxa) and animal (6,678 taxa). |
+| [Country map](docs/map.html) | Tap a country to list every CITES-listed timber, plant or animal that is native to it. |
 | [10x key](docs/key.html) | Tick what you see on the end grain; the listed timbers that fit are ranked. |
 | [Consignment check](docs/check.html) | Pick the timber and the product form (by HS heading) to see whether CITES documents are required and which ones. Includes the five checks, a permit checklist, source and purpose codes, the annotation matrix and worked examples. |
 | [Field procedure](docs/field.html) | Red flags, kit, how to cut and read end grain, quick tests, sampling and chain of custody, what each laboratory method can answer, feature glossary. |
@@ -55,6 +56,7 @@ Copyright atlases (CITESwoodID, The Wood Database, InsideWood, Pl@ntWood) are li
 | `tools/species_data.py` | **Single source** for the 39 entries: listing, annotation, features, look-alikes, annotation coverage table |
 | `tools/build.py` | Builds `docs/data/timber.json`, CSVs, `species/*.md`, schematic drawings. Attaches the full species lists, synonyms and common names from the Species+ export |
 | `tools/build_checklist.py`, `tools/build_names.py` | Rebuild the plant and animal checklist from a new Species+ export |
+| `tools/build_map.js` | Builds the world map outlines and country-name lookup (`docs/assets/world.json`) |
 | `tools/fetch_photos.py`, `.github/workflows/photos.yml` | Fetch open-licence photographs (run from the Actions tab) |
 | `docs/` | The website (GitHub Pages) |
 | `species/`, `data/` | Field-guide pages in Markdown and the database as CSV and JSON |
