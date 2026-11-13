@@ -21,6 +21,15 @@ The annotation above decides which products need a document at all. Details, val
 ![Khaya sp. end grain](../docs/photos/khaya-spp/khaya-sp-commons-1.jpg)  
 *Khaya sp.* - transverse (cross-section), end grain through a hand lens. Wikimedia Commons, CC0.
 
+![Khaya anthotheca end grain](../docs/photos/khaya-spp/khaya-anthotheca-rmca-1.jpg)  
+*Khaya anthotheca* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Khaya anthotheca end grain](../docs/photos/khaya-spp/khaya-anthotheca-rmca-2.jpg)  
+*Khaya anthotheca* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Entandrophragma cylindricum end grain](../docs/photos/khaya-spp/entandrophragma-cylindricum-rmca-1.jpg)  
+*Entandrophragma cylindricum* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/khaya-spp.svg)
 
 ## Key diagnostic summary

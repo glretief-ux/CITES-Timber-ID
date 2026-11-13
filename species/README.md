@@ -9,7 +9,7 @@ Generated from `tools/species_data.py`. CITES Appendices in force from 5 March 2
 | I | [*Dalbergia nigra*](dalbergia-nigra.md) | Fabaceae | Brazilian rosewood, Rio rosewood, Bahia rosewood | none | 1 | 4 |
 | I | [*Fitzroya cupressoides*](fitzroya-cupressoides.md) | Cupressaceae | Alerce, Patagonian cypress, lahuán | none | 1 | 4 |
 | I | [*Pilgerodendron uviferum*](pilgerodendron-uviferum.md) | Cupressaceae | Guaitecas cypress, ciprés de las Guaitecas | none | 1 | 4 |
-| II | [*Afzelia spp. (African populations)*](afzelia-spp.md) | Fabaceae | Doussié, afzelia, pod mahogany | #17 | 7 | 1 |
+| II | [*Afzelia spp. (African populations)*](afzelia-spp.md) | Fabaceae | Doussié, afzelia, pod mahogany | #17 | 7 | 4 |
 | II | [*Aniba rosaeodora*](aniba-rosaeodora.md) | Lauraceae | Brazilian rosewood (oil), pau-rosa, bois de rose (oil) | #12 | 1 | 7 |
 | II | [*Aquilaria spp. and Gyrinops spp.*](aquilaria-gyrinops.md) | Thymelaeaceae | Agarwood, gaharu, oud | #14 | 30 | 4 |
 | II | [*Bulnesia sarmientoi*](bulnesia-sarmientoi.md) | Zygophyllaceae | Argentine lignum vitae, palo santo (Gran Chaco), verawood (trade) | #11 | 1 | 4 |
@@ -20,20 +20,20 @@ Generated from `tools/species_data.py`. CITES Appendices in force from 5 March 2
 | II | [*Dipteryx spp.*](dipteryx-spp.md) | Fabaceae | Cumaru, shihuahuaco, Brazilian teak | #17 | 12 | 0 |
 | II | [*Gonystylus spp.*](gonystylus-spp.md) | Thymelaeaceae | Ramin, melawis, lanutan-bagyo | #4 | 39 | 5 |
 | II | [*Guaiacum spp.*](guaiacum-spp.md) | Zygophyllaceae | Lignum vitae, guayacán, gaïac | #2 | 5 | 4 |
-| II | [*Guibourtia demeusei, G. pellegriniana, G. tessmannii*](guibourtia-bubinga.md) | Fabaceae | Bubinga, kevazingo (rotary veneer), African rosewood | #15 | 3 | 0 |
+| II | [*Guibourtia demeusei, G. pellegriniana, G. tessmannii*](guibourtia-bubinga.md) | Fabaceae | Bubinga, kevazingo (rotary veneer), African rosewood | #15 | 3 | 3 |
 | II | [*Handroanthus spp., Roseodendron spp., Tabebuia spp.*](ipe-handroanthus-tabebuia-roseodendron.md) | Bignoniaceae | Ipê, ipe, lapacho | #17 | 113 | 9 |
-| II | [*Khaya spp. (African populations)*](khaya-spp.md) | Meliaceae | African mahogany, acajou d'Afrique, khaya | #17 | 8 | 1 |
+| II | [*Khaya spp. (African populations)*](khaya-spp.md) | Meliaceae | African mahogany, acajou d'Afrique, khaya | #17 | 8 | 5 |
 | II | [*Oreomunnea pterocarpa*](oreomunnea-pterocarpa.md) | Juglandaceae | Gavilán, caribe | #4 | 1 | 0 |
 | II | [*Osyris lanceolata*](osyris-lanceolata.md) | Santalaceae | East African sandalwood, African sandalwood | #2 | 1 | 0 |
 | II | [*Paubrasilia echinata (syn. Caesalpinia echinata)*](paubrasilia-echinata.md) | Fabaceae | Pernambuco, pau-brasil, Brazilwood | #10 | 1 | 4 |
-| II | [*Pericopsis elata*](pericopsis-elata.md) | Fabaceae | Afrormosia, assamela, kokrodua | #17 | 1 | 4 |
+| II | [*Pericopsis elata*](pericopsis-elata.md) | Fabaceae | Afrormosia, assamela, kokrodua | #17 | 1 | 5 |
 | II | [*Platymiscium parviflorum (syn. Platymiscium pleiostachyum)*](platymiscium-pleiostachyum.md) | Fabaceae | Cristobal, Macacauba, Trebol | #4 | 1 | 4 |
 | II | [*Podocarpus parlatorei*](podocarpus-parlatorei.md) | Podocarpaceae | Parlatore's podocarp, pino del cerro | none | 1 | 0 |
 | II | [*Prunus africana*](prunus-africana.md) | Rosaceae | African cherry, pygeum, red stinkwood | #4 | 1 | 4 |
 | II | [*Pterocarpus erinaceus*](pterocarpus-erinaceus.md) | Fabaceae | Kosso, African rosewood, vène | #17 | 1 | 1 |
 | II | [*Pterocarpus santalinus*](pterocarpus-santalinus.md) | Fabaceae | Red sanders, red sandalwood, rakta chandana | #7 | 1 | 0 |
-| II | [*Pterocarpus spp. (African populations)*](pterocarpus-africa.md) | Fabaceae | African padauk, muninga, mukwa | #17 | 22 | 0 |
-| II | [*Pterocarpus tinctorius*](pterocarpus-tinctorius.md) | Fabaceae | Mukula, African padauk (east/south), mulombe | #17 | 1 | 0 |
+| II | [*Pterocarpus spp. (African populations)*](pterocarpus-africa.md) | Fabaceae | African padauk, muninga, mukwa | #17 | 22 | 3 |
+| II | [*Pterocarpus tinctorius*](pterocarpus-tinctorius.md) | Fabaceae | Mukula, African padauk (east/south), mulombe | #17 | 1 | 3 |
 | II | [*Swietenia macrophylla, S. humilis, S. mahagoni*](swietenia-spp.md) | Meliaceae | Big-leaf mahogany, Honduras mahogany, genuine mahogany | S. macrophylla #6 (Neotropical populations); S. humilis #4; S. mahagoni #5 | 3 | 9 |
 | II | [*Taxus chinensis, T. cuspidata, T. fuana, T. sumatrana, T. wallichiana (and their infraspecific taxa)*](taxus-spp.md) | Taxaceae | Asian yews, Chinese yew, Japanese yew | #2 | 5 | 4 |
 | II | [*Widdringtonia whytei*](widdringtonia-whytei.md) | Cupressaceae | Mulanje cedar | none | 1 | 0 |

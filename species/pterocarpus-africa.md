@@ -18,6 +18,15 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Pterocarpus soyauxii end grain](../docs/photos/pterocarpus-africa/pterocarpus-soyauxii-rmca-1.jpg)  
+*Pterocarpus soyauxii* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Pterocarpus soyauxii end grain](../docs/photos/pterocarpus-africa/pterocarpus-soyauxii-rmca-2.jpg)  
+*Pterocarpus soyauxii* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Pterocarpus soyauxii end grain](../docs/photos/pterocarpus-africa/pterocarpus-soyauxii-rmca-3.jpg)  
+*Pterocarpus soyauxii* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-africa.svg)
 
 ## Key diagnostic summary

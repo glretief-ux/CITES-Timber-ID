@@ -18,6 +18,15 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Guibourtia demeusei end grain](../docs/photos/guibourtia-bubinga/guibourtia-demeusei-rmca-1.jpg)  
+*Guibourtia demeusei* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Guibourtia demeusei end grain](../docs/photos/guibourtia-bubinga/guibourtia-demeusei-rmca-2.jpg)  
+*Guibourtia demeusei* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Guibourtia demeusei end grain](../docs/photos/guibourtia-bubinga/guibourtia-demeusei-rmca-3.jpg)  
+*Guibourtia demeusei* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/guibourtia-bubinga.svg)
 
 ## Key diagnostic summary

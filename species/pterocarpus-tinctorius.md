@@ -18,6 +18,15 @@ The annotation above decides which products need a document at all. Details, val
 
 ## End-grain view
 
+![Pterocarpus tinctorius end grain](../docs/photos/pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-1.jpg)  
+*Pterocarpus tinctorius* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Pterocarpus tinctorius end grain](../docs/photos/pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-2.jpg)  
+*Pterocarpus tinctorius* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Pterocarpus tinctorius end grain](../docs/photos/pterocarpus-tinctorius/pterocarpus-tinctorius-rmca-3.jpg)  
+*Pterocarpus tinctorius* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/pterocarpus-tinctorius.svg)
 
 ## Key diagnostic summary

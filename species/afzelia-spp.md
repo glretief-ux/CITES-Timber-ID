@@ -21,6 +21,15 @@ The annotation above decides which products need a document at all. Details, val
 ![Afzelia bipindensis end grain](../docs/photos/afzelia-spp/afzelia-bipindensis-commons-1.jpg)  
 *Afzelia bipindensis* - transverse (cross-section), stained microscope section, scale bar 500 micrometres (more magnified than a hand lens). Wikimedia Commons, CC BY-SA 4.0.
 
+![Afzelia bipindensis end grain](../docs/photos/afzelia-spp/afzelia-bipindensis-rmca-1.jpg)  
+*Afzelia bipindensis* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Afzelia bipindensis end grain](../docs/photos/afzelia-spp/afzelia-bipindensis-rmca-2.jpg)  
+*Afzelia bipindensis* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
+![Afzelia pachyloba end grain](../docs/photos/afzelia-spp/afzelia-pachyloba-rmca-1.jpg)  
+*Afzelia pachyloba* - transverse (cross-section), microscope section (more magnified than a hand lens). RMCA Tervuren, CC BY 4.0.
+
 Schematic drawing (not a photograph): ![schematic](../docs/schematics/afzelia-spp.svg)
 
 ## Key diagnostic summary
