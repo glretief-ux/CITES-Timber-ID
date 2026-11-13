@@ -1,2 +1,3 @@
 09:23:57 start, 37 archives
 09:24:07 Quercus mongolica.zip: 10 images, kept 4, 4 MB in 7s; dirs=['Quercus mongolica']
+09:24:58 Aquilaria malaccensis.zip: 36 images, kept 4, 117 MB in 54s; dirs=['Aquilaria malaccensis']

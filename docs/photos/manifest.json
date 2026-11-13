@@ -86,5 +86,93 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "aquilaria-gyrinops",
+  "species": "Aquilaria malaccensis",
+  "listed": true,
+  "file": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-1.jpg",
+  "thumb": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-1-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Aquilaria malaccensis.zip:Aquilaria malaccensis/20190821_091640.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 2240.7,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "aquilaria-gyrinops",
+  "species": "Aquilaria malaccensis",
+  "listed": true,
+  "file": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-2.jpg",
+  "thumb": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-2-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Aquilaria malaccensis.zip:Aquilaria malaccensis/20190821_091656.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 2168.9,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "aquilaria-gyrinops",
+  "species": "Aquilaria malaccensis",
+  "listed": true,
+  "file": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-3.jpg",
+  "thumb": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-3-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Aquilaria malaccensis.zip:Aquilaria malaccensis/20190821_091728.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 1545.0,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
+ },
+ {
+  "taxon": "aquilaria-gyrinops",
+  "species": "Aquilaria malaccensis",
+  "listed": true,
+  "file": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-4.jpg",
+  "thumb": "aquilaria-gyrinops/aquilaria-malaccensis-goimai-4-thumb.jpg",
+  "w": 1500,
+  "h": 2000,
+  "orig": "Aquilaria malaccensis.zip:Aquilaria malaccensis/20190821_091751.jpg",
+  "orig_px": [
+   3024,
+   4032
+  ],
+  "sharp": 2583.3,
+  "surface": "transverse (end grain)",
+  "optics": "phone camera + 24x macro lens",
+  "source": "GOIMAI",
+  "credit": "GOIMAI DataSet Phase I - Montes R., Herrera Poyatos D., Herrera-Poyatos A., Herrera F., de Palacios P., de Marco Blanco A., Garcia Iruela A., Garcia-Fernandez F., Esteban L.G. (2024), Zenodo, doi:10.5281/zenodo.11092208",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_url": "https://doi.org/10.5281/zenodo.11092208"
  }
 ]
