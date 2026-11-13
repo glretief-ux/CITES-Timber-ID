@@ -27,3 +27,4 @@
 09:33:54 Pilgerodendron uviferum.zip: 68 images, kept 4, 260 MB in 80s; dirs=['Pilgerodendron uviferum']
 09:33:56 Paubrasilia echinata 1.zip: 50 images, kept 2, 202 MB in 150s; dirs=['Paubrasilia echinata 1']
 09:34:01 Paubrasilia echinata 2.zip: 59 images, kept 2, 249 MB in 108s; dirs=['Paubrasilia echinata 2']
+09:34:20 Platymiscium parviflorum.zip: 48 images, kept 4, 262 MB in 82s; dirs=['Platymiscium parviflorum']
