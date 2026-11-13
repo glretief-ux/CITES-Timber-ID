@@ -2672,5 +2672,22 @@
   "licence": "CC BY-SA 4.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "source_url": "https://commons.wikimedia.org/wiki/File:Erinaceus_q500.jpg"
+ },
+ {
+  "taxon": "khaya-spp",
+  "species": "Khaya sp.",
+  "listed": true,
+  "file": "khaya-spp/khaya-sp-commons-1.jpg",
+  "thumb": "khaya-spp/khaya-sp-commons-1-thumb.jpg",
+  "w": 2000,
+  "h": 1235,
+  "orig": "File:Cross section of Khaya wood.jpg",
+  "surface": "transverse (cross-section)",
+  "optics": "end grain through a hand lens",
+  "source": "Wikimedia Commons",
+  "credit": "XyloNerd, Wikimedia Commons",
+  "licence": "CC0",
+  "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Cross_section_of_Khaya_wood.jpg"
  }
 ]
