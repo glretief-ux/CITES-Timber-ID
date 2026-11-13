@@ -31,3 +31,4 @@
 09:34:57 Pericopsis elata.zip: 98 images, kept 4, 558 MB in 153s; dirs=['Pericopsis elata']
 09:35:00 Podocarpus neriifolius.zip: 44 images, kept 4, 180 MB in 60s; dirs=['Podocarpus neriifolius']
 09:35:27 Prunus africana.zip: 61 images, kept 4, 257 MB in 86s; dirs=['Prunus africana']
+09:36:01 Swietenia humilis.zip: 113 images, kept 3, 449 MB in 115s; dirs=['Swietenia humilis']
